@@ -1,8 +1,13 @@
 // Copy for the eight product entries. Every fact here is listed with its
-// source in docs/03-content-fact-sheet.md. Change a fact in both places.
+// source in docs/03-fact-sheet.md. Change a fact in both places.
 //
 // Placeholders in [square brackets] are registration details that only
 // the firm can fill in (ARN, APRN, IRDAI registration and so on).
+//
+// Insurance copy follows the tone guide in docs/02-framework.md: talk about
+// the family and its plans, not about death. "If something happens to you"
+// and "in your absence" are the phrases Indian insurers use; formal terms
+// appear only where a fact needs them.
 
 export const meta = {
   firm: "Ram Investments",
@@ -21,46 +26,46 @@ export const products = [
     job: "protect",
     short: "Term insurance",
     title: "Term Insurance",
-    formal: "Pure term life cover · regulated by IRDAI",
+    formal: "Pure life cover for your family · regulated by IRDAI",
     oneLine:
-      "You pay a premium every year. If you die during the policy term, your nominee receives the full sum assured. " +
-      "If you outlive the term, nothing is paid, which is why a large cover stays affordable.",
-    plateTitle: "How it works",
+      "Term insurance keeps your family’s plans on track if you are not there to provide for them. You pay a premium each year, and if " +
+      "something happens to you during the term, your family receives the full cover amount.",
+    plateTitle: "How it protects a family",
     marks: [
-      "Pays only if you die during the term. There is no maturity value.",
+      "Replaces your income for your family, so loans, school fees and monthly expenses stay covered.",
       "The premium is fixed when you buy and usually stays the same for the whole term.",
-      "Riders can add cover for accidental death, critical illness or waiver of premium.",
+      "Your family can receive the amount at once, as a monthly income, or both, as you choose.",
     ],
     confused: [
       {
         name: "Return-of-premium and endowment plans",
-        text: "They pay money back if you survive, but cost much more for the same cover. A term plan keeps protection and saving separate.",
+        text: "They give money back at the end, but cost much more for the same cover. Some term plans offer a ‘special exit’ instead: stop at a set age and get your base premiums back.",
       },
     ],
     glance: [
       ["Regulator", "IRDAI"],
-      ["What you pay", "A premium, yearly or monthly. It depends on your age, health, habits, cover and term."],
+      ["What you pay", "A premium, yearly or monthly, fixed when you buy. It depends on your age, health, habits, cover and term."],
       ["Time commitment", "The term you choose, usually until your earning years end (age 60–70). You get 30 days to return a new policy (free look)."],
-      ["When it pays", "On death during the term, to your nominee. IRDAI allows 15 days to settle a claim, or 45 if it needs investigation."],
+      ["When it pays", "To your family (your nominee) if something happens to you during the term. IRDAI allows 15 days to settle a claim, or 45 if it needs investigation."],
       ["Costs", "Only the premium. No GST on individual policies since 22 September 2025."],
-      ["Tax in brief", "Old regime: premium deductible under Sec. 123 (earlier 80C). The payout to your nominee is tax-free."],
+      ["Tax in brief", "Old regime: premium deductible under Sec. 123 (earlier 80C). The amount your family receives is tax-free."],
     ],
     gaugeTitle: "Work out your cover",
     gaugeAside: "Rule of thumb: 10 to 15 times yearly income",
     suits: [
-      "Someone depends on your income: spouse, children or parents.",
-      "You have a home loan or other debts your family would inherit.",
+      "Your family depends on your income, now or in the years ahead.",
+      "You have a home loan or other commitments your family would carry.",
       "You want the largest cover for the lowest premium.",
     ],
     twice: [
-      "No one depends on your income and you have no debts.",
-      "You want money back at the end. That is a savings goal.",
-      "You cannot disclose your health and habits fully. Non-disclosure can get a claim rejected.",
+      "No one depends on your income and you have no loans.",
+      "You want money back at the end. That is a savings goal; keep it separate.",
+      "You are not ready to share your full health details. Honest disclosure keeps claims smooth.",
     ],
     ask: [
-      "Is the cover enough for my family, including my loans?",
-      "Have I disclosed every illness, habit and existing policy?",
-      "Who is my nominee, and does my family know this policy exists?",
+      "Is the cover enough for my family’s plans, including my loans?",
+      "Have I shared every health detail, habit and existing policy?",
+      "Who is my nominee, and does my family know about this policy?",
       "What is the insurer’s claim settlement record?",
     ],
     notes: ["Insurer", "Cover ₹", "Premium due", "Nominee"],
@@ -73,10 +78,10 @@ export const products = [
     job: "protect",
     short: "Health insurance",
     title: "Health Insurance",
-    formal: "Indemnity health cover · regulated by IRDAI",
+    formal: "Hospital cover for your family · regulated by IRDAI",
     oneLine:
-      "You pay a premium every year. If you are admitted to hospital, the insurer pays the bills up to your sum insured, " +
-      "either directly to the hospital (cashless) or by repaying you later.",
+      "You pay a premium every year. If you need hospital treatment, the insurer pays the bills up to your sum insured, directly to the " +
+      "hospital (cashless) or by repaying you, so the focus stays on getting better.",
     plateTitle: "How a big bill gets paid",
     marks: [
       "Pays actual hospital bills up to the sum insured, for one person or the whole family (floater).",
@@ -106,7 +111,7 @@ export const products = [
     suits: [
       "A large hospital bill would eat into your savings.",
       "Your only cover today comes from your employer.",
-      "You have parents or senior family members to protect.",
+      "You have parents or senior family members to look after.",
     ],
     twice: [
       "You are buying mainly for the tax deduction.",
@@ -142,7 +147,7 @@ export const products = [
     confused: [
       {
         name: "SIF",
-        text: "Also run by mutual fund houses, but needs ₹10 lakh and can bet against markets (short) for up to 25%. See entry 05.",
+        text: "Run by mutual fund houses with the same tax rules, plus tools for falling and sideways markets. Read it next: entry 04.",
       },
       {
         name: "ULIP",
@@ -182,8 +187,67 @@ export const products = [
   },
 
   {
-    id: "ncd",
+    id: "sif",
     no: "04",
+    job: "build",
+    short: "SIF",
+    title: "SIF",
+    formal: "Specialised investment funds · regulated by SEBI",
+    oneLine:
+      "A SIF is a mutual fund with a bigger toolkit. It is run by a mutual fund house under SEBI’s mutual fund rules and taxed the same way, " +
+      "but the manager can also bet on falls, move between asset classes, and turn market exposure up or down.",
+    plateTitle: "One fund, three kinds of market",
+    marks: [
+      "Built for rising, falling and sideways markets: the manager can raise or cut exposure, and bet on falls for up to 25% of the fund.",
+      "Taxed like a mutual fund: no tax inside the fund, only when you redeem.",
+      "Can be conservative or adventurous, from arbitrage-and-debt strategies to equity long-short. The Risk Band (Level 1 to 5) tells you which.",
+    ],
+    confused: [
+      {
+        name: "Mutual funds",
+        text: "Same family, same tax rules. A SIF adds tools for falling and sideways markets, and starts at ₹10 lakh.",
+      },
+      {
+        name: "Category III AIFs and PMS",
+        text: "Similar long-short tools, but taxed every year. A SIF defers tax until you redeem. More on the next spread.",
+      },
+    ],
+    glance: [
+      ["Regulator", "SEBI, under the mutual fund regulations, through eligible fund houses."],
+      ["Minimum", "₹10 lakh per investor, across one fund house’s SIF strategies.", { min: 1e6, label: "from ₹10 lakh" }],
+      ["Time commitment", "No lock-in for most strategies. Some are interval or close-ended."],
+      ["Money out", "Equity strategies usually any business day. Hybrid strategies on set days (at least twice a week), with up to 15 working days’ notice."],
+      ["Costs", "An expense ratio taken from the NAV, as with mutual funds."],
+      ["Tax in brief", "Same as mutual funds. Equity-oriented strategies: 12.5% on long-term gains above ₹1.25 lakh (after 12 months), 20% if sooner."],
+    ],
+    gaugeTitle: "Tax check: why the wrapper matters",
+    gaugeAside: "Highest tax bracket, illustration",
+    suits: [
+      "You invest in mutual funds and want strategies that can also manage falls and flat markets.",
+      "You want one fund that can be a complete portfolio, or its steadier part.",
+      "You prefer mutual-fund tax treatment to AIF or PMS taxation.",
+    ],
+    twice: [
+      "₹10 lakh would be most of your investable money.",
+      "You must be able to withdraw on any day without notice.",
+      "You expect gains every month. These strategies manage risk; they cannot remove it.",
+    ],
+    ask: [
+      "Which strategy is this, and what is its Risk Band today?",
+      "How does the manager change exposure as markets rise, fall or drift?",
+      "Is it equity-oriented for tax, and how often can I redeem?",
+      "What are the total costs?",
+    ],
+    notes: ["SIF / strategy", "Amount ₹", "Risk band", "Redemption days"],
+    legal:
+      '<span class="warn">Investments in SIFs are subject to market risks, read all investment strategy related documents carefully.</span> ' +
+      "{{firm}} is an AMFI Registered Mutual Fund Distributor and SIF Distributor (ARN-[____]).",
+    extra: "extra-sif.html",
+  },
+
+  {
+    id: "ncd",
+    no: "05",
     job: "build",
     short: "NCDs",
     title: "NCDs",
@@ -233,58 +297,6 @@ export const products = [
     legal:
       '<span class="warn">Investments in debt securities are subject to risks including delay and/or default in payment. Read all the offer related documents carefully.</span> ' +
       "Ratings are opinions, not guarantees. {{firm}} [stock broker / online bond platform registration: ____].",
-  },
-
-  {
-    id: "sif",
-    no: "05",
-    job: "special",
-    short: "SIF",
-    title: "SIF",
-    formal: "Specialised investment funds · regulated by SEBI",
-    oneLine:
-      "A SIF is a newer SEBI category, run by eligible mutual fund houses under a separate brand. It can use tools a regular mutual fund cannot, " +
-      "such as betting against (shorting) stocks or bonds for up to 25% of the portfolio.",
-    plateTitle: "Long-short, in one picture",
-    marks: [
-      "Run by a mutual fund house under SEBI’s mutual fund rules, but sold under its own brand.",
-      "Every strategy is long-short: it can hold bets that gain if prices rise and bets that gain if they fall.",
-      "Uses a five-level Risk Band instead of the mutual fund riskometer.",
-    ],
-    confused: [
-      { name: "Mutual funds", text: "Lower minimum, and no unhedged shorting." },
-      { name: "PMS", text: "₹50 lakh minimum, with shares held in your own name. A SIF sits between the two." },
-    ],
-    glance: [
-      ["Regulator", "SEBI, under the mutual fund regulations. The first SIFs launched in 2025."],
-      ["Minimum", "₹10 lakh per investor, across strategies of one SIF.", { min: 1e6, label: "from ₹10 lakh" }],
-      ["Time commitment", "Depends on the strategy. Some allow redemption only on set days or with notice."],
-      ["Money out", "As per the strategy’s redemption frequency and notice period."],
-      ["Costs", "An expense ratio taken from the NAV, as with mutual funds."],
-      ["Tax in brief", "Taxed like mutual funds. The rate depends on the strategy’s mix of equity and debt."],
-    ],
-    gaugeTitle: "Risk check: the risk band",
-    gaugeAside: "Disclosed for every strategy",
-    suits: [
-      "You can invest ₹10 lakh and it is a modest part of your portfolio.",
-      "You want a strategy that tries to soften falls, not just ride the market.",
-      "You are comfortable with derivatives being part of the strategy.",
-    ],
-    twice: [
-      "₹10 lakh is most of your investable money.",
-      "You may need daily access to the money.",
-      "You expect mutual-fund-like simplicity. These strategies are more complex.",
-    ],
-    ask: [
-      "Which strategy is this, and what is its Risk Band today?",
-      "How often can I redeem, and with how much notice?",
-      "How does the short side work, and when could it hurt returns?",
-      "What are the total costs?",
-    ],
-    notes: ["SIF / strategy", "Amount ₹", "Risk band", "Redemption window"],
-    legal:
-      '<span class="warn">Investments in SIFs are subject to market risks, read all investment strategy related documents carefully.</span> ' +
-      "{{firm}} is an AMFI Registered Mutual Fund Distributor and SIF Distributor (ARN-[____]).",
   },
 
   {
@@ -347,12 +359,12 @@ export const products = [
     title: "AIF",
     formal: "Alternative investment funds · regulated by SEBI",
     oneLine:
-      "An AIF is a privately pooled fund for sophisticated investors. It can invest where ordinary funds cannot: unlisted companies, private credit, " +
-      "real estate, start-ups, or complex strategies in listed markets.",
+      "An AIF is a privately pooled fund that reaches where public markets cannot: companies in the years before they list, private credit, " +
+      "real estate and start-ups, as well as specialist strategies in listed markets.",
     plateTitle: "The life of a closed-ended fund",
     marks: [
+      "Gives you a share of companies in their private years, often a decade or more before they list.",
       "You commit an amount, and the manager draws it in parts (capital calls) as deals are found.",
-      "There is no daily price. The fund’s value is reported only periodically.",
       "Offered only by private placement, to at most 1,000 investors per scheme.",
     ],
     confused: [
@@ -372,14 +384,14 @@ export const products = [
     gaugeTitle: "Cost check: how profits are shared",
     gaugeAside: "The distribution waterfall",
     suits: [
-      "You have a large portfolio and can leave money untouched for years.",
-      "You want access to private equity, private credit or venture capital.",
-      "You can judge the manager’s record across earlier funds.",
+      "You have ₹1 crore or more that you will not need for 7 to 10 years.",
+      "You want a share of the growth that happens before companies list.",
+      "Your protection and core portfolio are already in place.",
     ],
     twice: [
       "You may need this money before the fund ends.",
       "₹1 crore is a large share of your net worth.",
-      "You are not sure you can meet capital calls on time.",
+      "You are not prepared for some investments to fail. Results vary widely between funds.",
     ],
     ask: [
       "What does the fund invest in, and how did the manager’s earlier funds do?",
@@ -391,6 +403,7 @@ export const products = [
     legal:
       "AIFs are offered only by private placement to eligible investors, through the fund’s private placement memorandum. " +
       "This page is investor education. It is not an offer or a solicitation. {{firm}} [AIF distribution arrangement: ____].",
+    extra: "extra-aif.html",
   },
 
   {

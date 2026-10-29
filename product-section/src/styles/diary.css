@@ -293,7 +293,7 @@ strong, b, .b { font-weight: 700; }
 .sbs tr.h-best td { height: 12.8mm; }
 
 .glossary { columns: 2; column-gap: 5mm; margin-top: 4mm; font-size: 7.6pt; line-height: 1.3; }
-.glossary p { break-inside: avoid; margin-bottom: 1.7mm; text-wrap: pretty; }
+.glossary p { break-inside: avoid; margin-bottom: 1.35mm; text-wrap: pretty; }
 .glossary b { font-weight: 700; color: var(--ink); }
 
 .checkup { width: 100%; border-collapse: collapse; margin-top: 4mm; font-size: 7.8pt; line-height: 1.25; }
@@ -318,6 +318,43 @@ strong, b, .b { font-weight: 700; }
 .info .warnings p b { color: var(--ink); }
 .info .us { margin-top: 3mm; padding: 2.6mm 3mm; background: var(--panel); color: var(--ink); }
 .info .us p { font-size: 7.4pt; }
+
+/* In-depth spreads (SIF, AIF) */
+.deep-head { flex: none; }
+.deep-head .label { margin-bottom: 1.4mm; }
+.deep-section { margin-top: 3.8mm; flex: none; }
+.deep-section > .label { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 1.4mm; border-bottom: .25mm solid var(--rule); margin-bottom: 2mm; }
+.deep-section > .label .aside { color: var(--ink-3); letter-spacing: .06em; font-weight: 500; text-transform: none; font-family: var(--text); font-stretch: 100%; font-size: 6.6pt; }
+.deep-section svg { display: block; width: 100%; height: auto; overflow: visible; }
+.deep-note { font-size: 7pt; line-height: 1.3; color: var(--ink-2); margin-top: 1.6mm; text-wrap: pretty; }
+
+.abilities { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 7.4pt; line-height: 1.2; margin-top: 3.4mm; }
+.abilities th { font-family: var(--display); font-weight: 650; font-stretch: 87.5%; font-size: 6.4pt; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); text-align: left; padding: 0 1.2mm 1.4mm; border-bottom: .35mm solid var(--ink); vertical-align: bottom; }
+.abilities th:first-child { padding-left: 0; }
+.abilities td { padding: 1.35mm 1.2mm 1.2mm; border-bottom: .25mm solid var(--rule-2); vertical-align: top; }
+.abilities td:first-child { padding-left: 0; font-weight: 600; color: var(--ink); }
+.abilities .sif { background: var(--job-tint); }
+.abilities th.sif { color: var(--job-deep); }
+.abilities td.sif { font-weight: 700; color: var(--job-deep); }
+.mk { display: inline-block; width: 2.1mm; height: 2.1mm; margin-right: 1mm; vertical-align: -.25mm; border-radius: 50%; box-sizing: border-box; }
+.mk.y { background: var(--job); }
+.mk.n { border: .3mm solid var(--ink-3); }
+.mk.p { border: .3mm solid var(--job); background: linear-gradient(90deg, var(--job) 50%, transparent 50%); }
+
+.cards3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3.4mm; }
+.cards3 .card { background: var(--job-tint); padding: 2.2mm 2.4mm 2.6mm; }
+.cards3 .card svg { display: block; width: 100%; height: auto; margin-bottom: 1.6mm; }
+.cards3 h3 { font-family: var(--display); font-weight: 700; font-size: 8.6pt; line-height: 1.1; color: var(--job-deep); margin-bottom: 1mm; }
+.cards3 p { font-size: 7.3pt; line-height: 1.27; color: var(--ink); text-wrap: pretty; }
+
+.stats3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3.4mm; margin-top: 3.6mm; }
+.stats3 .stat { border-top: .8mm solid var(--job); padding-top: 1.8mm; }
+.stats3 .big { font-family: var(--display); font-weight: 750; font-stretch: 95%; font-size: 15pt; line-height: 1; color: var(--job-deep); font-variant-numeric: tabular-nums; }
+.stats3 p { margin-top: 1.2mm; font-size: 7.3pt; line-height: 1.27; color: var(--ink); text-wrap: pretty; }
+.stats3 .src { display: block; margin-top: .8mm; font-size: 6.3pt; color: var(--ink-3); }
+.deep-callout { margin-top: 6mm; padding: 3.4mm 4mm 3.6mm; background: var(--job-tint); border-left: .8mm solid var(--job); }
+.deep-callout h3 { font-family: var(--display); font-weight: 700; font-stretch: 87.5%; font-size: 6.6pt; letter-spacing: .08em; text-transform: uppercase; color: var(--job-deep); margin-bottom: 1.4mm; }
+.deep-callout p { font-size: 8pt; line-height: 1.36; color: var(--ink); text-wrap: pretty; }
 
 /* ---------- Gauges written in HTML ---------- */
 

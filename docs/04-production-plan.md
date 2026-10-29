@@ -2,7 +2,7 @@
 
 ## Recommendation
 
-Treat this repository as the approved **design master**: structure, copy, diagrams and the full page layout are already resolved. Hire one experienced editorial or information designer to rebuild it in InDesign for print. Run compliance review in parallel, test the proof with five clients, and print the section as a 24-page insert on matt art paper.
+Treat this repository as the approved **design master**: structure, copy, diagrams and the full page layout are already resolved. Hire one experienced editorial or information designer to rebuild it in InDesign for print. Run compliance review in parallel, test the proof with five clients, and print the section as a 28-page insert on matt art paper.
 
 This is faster and cheaper than briefing an agency from scratch, because the slow parts (deciding what goes on each page and checking every fact) are done. The designer's job is craft and prepress.
 
@@ -51,7 +51,8 @@ Diwali falls on Sunday 8 November 2026, so expect approvals and printers to slow
 - Keep the anatomy, the order and the six "At a glance" rows identical on every entry.
 - Do not redraw regulator scales into new shapes or colours (riskometer, risk band, rating ladder).
 - Legal text no smaller than 6 pt. Body text no smaller than 8.5 pt on A5.
-- No return figures, performance tables, stock photos or product names.
+- No returns of any kind: no return figures, projections, growth illustrations or performance tables (house rule). No stock photos or product names.
+- Keep the Protect pages' wording exactly as approved; it follows the tone guide in section 5 of the framework.
 - Any wording change goes back to compliance.
 
 ## Printer brief
@@ -60,7 +61,7 @@ Diwali falls on Sunday 8 November 2026, so expect approvals and printers to slow
 |---|---|
 | Trim | A5, 148 × 210 mm portrait. B5 (176 × 250 mm) is a straight 119% scale-up |
 | Bleed | 3 mm on all sides |
-| Extent | 24 pages, four colours both sides. Section starts on a right-hand page |
+| Extent | 28 pages, four colours both sides. Section starts on a right-hand page |
 | Paper | 100–120 gsm matt art (coated). It takes ballpoint and pencil and holds colour better than maplitho. If the diary body is 70 gsm maplitho, print this section as a separate insert |
 | Finish | No gloss lamination or varnish on these pages, so people can write on them |
 | Binding | As for the diary. Section-sewn case binding lies flat; a 15 mm inside margin is built in |
@@ -85,8 +86,10 @@ Diwali falls on Sunday 8 November 2026, so expect approvals and printers to slow
 - [ ] Mutual fund standard warning printed verbatim and legibly. "AMFI Registered Mutual Fund Distributor" with the ARN.
 - [ ] SIF warning wording confirmed. SIFD shown. Staff selling SIFs hold NISM Series V-D (or a valid Series XIII plus V-A until it expires).
 - [ ] PMS pages show the APRN, make no performance claims, and fit the advertising code in the 2026 PMS regulations.
-- [ ] AIF page is education only: no scheme names, private placement stated, "not an offer" stated.
-- [ ] Insurance pages approved in writing by each insurer partner. IRDAI registration shown. No wording that disparages other insurance products.
+- [ ] **No returns anywhere**: no return figures (past, typical or illustrative), no projections of what an investment will grow to, no performance comparisons. Industry figures (SIF assets, AIF commitments, PE-VC investment) are labelled, dated and sourced, and refreshed at the last proof.
+- [ ] AIF entry and AIF in-depth spread are education only: no scheme names, private placement stated, "not an offer" stated. The private-markets facts (Orios, Bain and IVCA, Apollo) are verified, and the balance on the spread ("results vary widely", "Is it for you?", companies that never list) stays.
+- [ ] SIF tax statements (highest-bracket rates on p.11, when tax is paid on p.13) signed off by a tax adviser. The mutual fund comparison on the SIF plate ("it can hedge, but cannot bet on falls") confirmed.
+- [ ] Insurance pages approved in writing by each insurer partner. IRDAI registration shown. No wording that disparages other insurance products. The family-first wording ("if something happens to you", "in your absence") is kept through edits.
 - [ ] NCD page shows the channel's registration (stock broker or online bond platform). No named issues or rates.
 - [ ] GIFT City page: LRS and TCS figures current at print. IFSC distribution arrangement disclosed. No tax claims beyond what is printed.
 - [ ] No assured-return language, no celebrities, and the firm is not described as an "adviser" (AMFI naming rules for distributors).
@@ -98,7 +101,9 @@ Before the final proof goes to the printer, give it to five clients of different
 
 1. Find the minimum for a PMS, and say when they could get money out of an AIF.
 2. Pick a product for a scenario you describe ("I want regular income and can wait three years").
-3. Fill in "Work out your cover" for themselves.
+3. Fill in "Work out your cover" for themselves, then say whether anything on the term pages felt uncomfortable to read.
+4. Explain in their own words what a SIF can do that a mutual fund cannot, and when the tax is paid.
+5. Say whether an AIF suits them, using the "Is it for you?" list on page 21.
 
 Watch where they hesitate or misread. If two of the five stumble on the same line, rewrite it. Consumer-testing research on financial disclosures finds that small wording changes make a measurable difference to understanding.
 
@@ -109,7 +114,8 @@ Print a QR code on page 1 that opens an online copy of the section. The HTML in 
 - the new PMS regulations take effect (1 April 2027);
 - the Union Budget changes tax rates or TCS (1 February 2027);
 - DICGC deposit insurance cover changes;
-- SEBI changes SIF, mutual fund or AIF rules.
+- SEBI changes SIF, mutual fund or AIF rules;
+- AMFI and SEBI publish new SIF asset and AIF commitment figures (the in-depth spreads show them).
 
 ## Later editions
 

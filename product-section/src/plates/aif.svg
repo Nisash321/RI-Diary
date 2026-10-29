@@ -1,5 +1,5 @@
 <svg viewBox="0 0 122 80" role="img" aria-labelledby="aif-plate-t">
-  <title id="aif-plate-t">Phases of a closed-ended AIF over eight years with an illustrative J-curve of net cash, and the three SEBI categories.</title>
+  <title id="aif-plate-t">Phases of a closed-ended AIF over eight years with an illustrative curve of your net cash position, which can end above or below zero, and the three SEBI categories.</title>
 
   <!-- Phases -->
   <rect x="12" y="1" width="40.5" height="4.4" class="f-job"/>
@@ -13,11 +13,14 @@
   <!-- J-curve -->
   <line x1="12" y1="33" x2="120" y2="33" class="s-ink3 hair dash"/>
   <text x="10.6" y="33.8" class="t-sm end">0</text>
+  <path d="M52.5,42.5 C70,41.6 95,39.4 120,37.6" class="f-none s-ink3 dash" style="stroke-width:.5"/>
+  <circle cx="120" cy="37.6" r=".9" class="f-paper s-ink3 thin"/>
   <path d="M12,33 C24,39 38,43.5 52.5,42.5 C66,41.5 72,37.5 82,33 C94,27.5 106,24 120,22" class="f-none s-job" style="stroke-width:.85"/>
   <circle cx="120" cy="22" r=".9" class="f-job"/>
-  <text x="120" y="19.8" class="t-sm b end t-job">Your net cash position</text>
+  <text x="14" y="29.4" class="t-sm b t-job">Your net cash position</text>
+  <text x="120" y="19.8" class="t-sm b end t-job">Money back, if investments do well</text>
+  <text x="120" y="44.8" class="t-sm end t-ink3">Less than you put in, if they do not</text>
   <text x="22" y="46.6" class="t-sm t-ink3">Money out: capital called, fees paid</text>
-  <text x="84.5" y="37.6" class="t-sm t-job">Money back, if investments do well</text>
 
   <!-- Year axis -->
   <line x1="12" y1="49.4" x2="120" y2="49.4" class="s-ink thin"/>

@@ -1,12 +1,12 @@
 <svg viewBox="0 0 122 80" role="img" aria-labelledby="ncd-plate-t">
-  <title id="ncd-plate-t">Cash flows of ₹1,00,000 in a 3-year NCD at 9% with yearly or cumulative payout, and who is paid first if the company fails.</title>
+  <title id="ncd-plate-t">How a 3-year NCD pays you. With regular payouts you receive interest along the way and your money back at maturity. With the cumulative option, interest is added each year and paid with your money at maturity. Below, who is paid first if the company fails.</title>
   <defs>
     <marker id="ah-ncd" viewBox="0 0 6 6" refX="3" refY="3" markerWidth="3" markerHeight="3" orient="auto">
       <path d="M0,0 L6,3 L0,6 z" class="f-ink3"/>
     </marker>
   </defs>
 
-  <text x="0" y="3.4" class="t-bd"><tspan class="b">Example.</tspan> ₹1,00,000 in a 3-year NCD at 9% a year (illustration, not an offer).</text>
+  <text x="0" y="3.4" class="t-bd"><tspan class="b">How you are paid.</tspan> The rate is fixed when you invest and stays the same to maturity.</text>
 
   <g class="t-cap">
     <text x="44" y="9.6" class="t-cap mid">Today</text>
@@ -15,33 +15,35 @@
     <text x="113" y="9.6" class="t-cap mid">Year 3</text>
   </g>
 
-  <!-- Yearly payout -->
-  <text x="0" y="16.4" class="t-cap job">Yearly payout</text>
-  <text x="0" y="19.8" class="t-sm">Interest every year,</text>
+  <!-- Regular payout -->
+  <text x="0" y="16.4" class="t-cap job">Regular payout</text>
+  <text x="0" y="19.8" class="t-sm">Interest along the way,</text>
   <text x="0" y="23.1" class="t-sm">money back at the end</text>
   <line x1="44" y1="19" x2="113" y2="19" class="s-rule hair"/>
-  <circle cx="44" cy="19" r="4.7" class="f-paper s-ink2 thin"/>
-  <circle cx="67" cy="19" r="1.41" class="f-job"/>
-  <circle cx="90" cy="19" r="1.41" class="f-job"/>
-  <circle cx="113" cy="19" r="4.91" class="f-job"/>
-  <text x="44" y="28.6" class="t-sm mid t-num">−₹1,00,000</text>
-  <text x="67" y="28.6" class="t-sm mid t-num">+₹9,000</text>
-  <text x="90" y="28.6" class="t-sm mid t-num">+₹9,000</text>
-  <text x="113" y="28.6" class="t-sm mid b t-num">+₹1,09,000</text>
+  <circle cx="44" cy="19" r="4.2" class="f-paper s-ink2 thin"/>
+  <circle cx="67" cy="19" r="1.5" class="f-job"/>
+  <circle cx="90" cy="19" r="1.5" class="f-job"/>
+  <circle cx="113" cy="19" r="4.4" class="f-job"/>
+  <text x="44" y="28.6" class="t-sm mid">You invest</text>
+  <text x="67" y="28.6" class="t-sm mid">Interest</text>
+  <text x="90" y="28.6" class="t-sm mid">Interest</text>
+  <text x="118.4" y="28.6" class="t-sm end b">Money + interest</text>
 
   <!-- Cumulative -->
   <text x="0" y="37.4" class="t-cap job">Cumulative</text>
-  <text x="0" y="40.8" class="t-sm">All interest, compounded,</text>
-  <text x="0" y="44.1" class="t-sm">paid at the end</text>
+  <text x="0" y="40.8" class="t-sm">Interest added each year,</text>
+  <text x="0" y="44.1" class="t-sm">all paid at the end</text>
   <line x1="44" y1="40" x2="113" y2="40" class="s-rule hair"/>
-  <circle cx="44" cy="40" r="4.7" class="f-paper s-ink2 thin"/>
-  <circle cx="67" cy="40" r="0.55" class="f-rule"/>
-  <circle cx="90" cy="40" r="0.55" class="f-rule"/>
-  <circle cx="113" cy="40" r="5.35" class="f-deep"/>
-  <text x="44" y="49.8" class="t-sm mid t-num">−₹1,00,000</text>
-  <text x="113" y="49.8" class="t-sm mid b t-num">+₹1,29,503</text>
+  <circle cx="44" cy="40" r="4.2" class="f-paper s-ink2 thin"/>
+  <circle cx="67" cy="40" r="1.5" class="f-paper s-job thin"/>
+  <circle cx="90" cy="40" r="1.5" class="f-paper s-job thin"/>
+  <circle cx="113" cy="40" r="4.4" class="f-deep"/>
+  <text x="44" y="49.8" class="t-sm mid">You invest</text>
+  <text x="67" y="49.8" class="t-sm mid">Added</text>
+  <text x="90" y="49.8" class="t-sm mid">Added</text>
+  <text x="118.4" y="49.8" class="t-sm end b">Money + all interest</text>
 
-  <text x="0" y="54.6" class="t-sm">In all, ₹1,27,000 with yearly payouts and ₹1,29,503 cumulative. Circle areas are to scale.</text>
+  <text x="0" y="54.6" class="t-sm">Regular payouts give you income along the way. Cumulative pays it all at maturity.</text>
 
   <!-- Who is paid first -->
   <line x1="0" y1="57.8" x2="122" y2="57.8" class="s-rule hair"/>

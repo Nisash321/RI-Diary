@@ -1,61 +1,56 @@
-<svg viewBox="0 0 122 78" role="img" aria-labelledby="term-plate-t">
-  <title id="term-plate-t">Timeline of a ₹1 crore term plan bought at 30 for 30 years, with what happens if the holder dies at 45 or is alive at 60.</title>
-  <defs>
-    <marker id="ah-term" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="3.2" markerHeight="3.2" orient="auto-start-reverse">
-      <path d="M0,0 L6,3 L0,6 z" class="f-ink2"/>
-    </marker>
-  </defs>
+<svg viewBox="0 0 122 82" role="img" aria-labelledby="term-plate-t">
+  <title id="term-plate-t">Illustration for Rohan, 30: ₹1 crore of term cover runs from 30 to 60, the years his family relies on his income. It protects the home loan until it is repaid at 50, the children’s education until about 52, and his income for the household until 60.</title>
 
-  <text x="0" y="3.2" class="t-bd"><tspan class="b">Example.</tspan> Rohan is 30. He buys ₹1 crore of cover for 30 years.</text>
+  <text x="0" y="3.4" class="t-bd"><tspan class="b">Example.</tspan> Rohan, 30, with young children and a home loan, takes ₹1 crore of cover.</text>
 
-  <!-- Lane 1: cover -->
-  <text x="0" y="13.1" class="t-cap job">Cover</text>
-  <rect x="18" y="8" width="102" height="8" class="f-job"/>
-  <text x="20.6" y="13.1" class="t-bd b t-white">₹1 crore of cover, every day for 30 years</text>
+  <!-- the cover -->
+  <text x="0" y="10.9" class="t-sm b t-job">His term cover</text>
+  <rect x="30.00" y="7.4" width="88.00" height="5" class="f-job"/>
+  <text x="32.00" y="10.9" class="t-sm b t-white">₹1 crore of cover</text>
+  <text x="116.00" y="10.9" class="t-sm b t-white end">until 60</text>
 
-  <!-- Lane 2: premium, one coin per year -->
-  <text x="0" y="22.3" class="t-cap job">Premium</text>
-  <text x="0" y="25.4" class="t-sm" style="font-size:2.1px">same every year</text>
-  <g class="coins">
-    <circle cx="19.7" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="23.1" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="26.5" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="29.9" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="33.3" cy="23" r="1.25" class="f-tint s-job hair"/>
-    <circle cx="36.7" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="40.1" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="43.5" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="46.9" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="50.3" cy="23" r="1.25" class="f-tint s-job hair"/>
-    <circle cx="53.7" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="57.1" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="60.5" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="63.9" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="67.3" cy="23" r="1.25" class="f-tint s-job hair"/>
-    <circle cx="70.7" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="74.1" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="77.5" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="80.9" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="84.3" cy="23" r="1.25" class="f-tint s-job hair"/>
-    <circle cx="87.7" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="91.1" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="94.5" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="97.9" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="101.3" cy="23" r="1.25" class="f-tint s-job hair"/>
-    <circle cx="104.7" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="108.1" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="111.5" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="114.9" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="118.3" cy="23" r="1.25" class="f-tint s-job hair"/>
-  </g>
+  <text x="30.00" y="17.4" class="t-cap job">What the cover protects</text>
 
-  <!-- Age axis -->
-  <text x="0" y="35.2" class="t-cap">Age</text>
-  <line x1="18" y1="31" x2="120" y2="31" class="s-ink thin"/>
-  <g class="t-sm t-num">
-    <line x1="18" y1="30" x2="18" y2="32" class="s-ink thin"/><text x="18" y="35.2" class="t-sm mid">30</text>
-    <line x1="35" y1="30" x2="35" y2="32" class="s-ink thin"/><text x="35" y="35.2" class="t-sm mid">35</text>
-    <line x1="52" y1="30" x2="52" y2="32" class="s-ink thin"/><text x="52" y="35.2" class="t-sm mid">40</text>
-    <text x="69" y="35.2" class="t-sm mid b">45</text>
-    <line x1="86" y1="30" x2="86" y2="32" class="s-ink thin"/><text x="86" y="35.2" class="t-sm mid">50</text>
-    <line x1="103" y1="30" x2="103" y2="32" class="s-ink thin"/><text x="103" y="35.2" class="t-sm mid">55</text>
-    <text x="120" y="35.2" class="t-sm mid b">60</text>
-  </g>
+  <!-- home loan: what is owed shrinks to nothing by 50 -->
+  <text x="0" y="22.9" class="t-sm b">Home loan</text>
+  <path d="M30.00,19.40 L88.67,23.80 L88.67,24.40 L30.00,24.40 Z" class="f-tint"/>
+  <text x="90.27" y="22.9" class="t-sm">repaid by 50</text>
 
-  <!-- Two possible outcomes -->
-  <line x1="69" y1="6.5" x2="69" y2="31" class="s-ink2 thin dash"/>
-  <circle cx="69" cy="31" r="1.3" class="f-ink"/>
-  <circle cx="120" cy="31" r="1.3" class="f-paper s-ink thin"/>
-  <path d="M69,36.8 V40.6 H29.5 V43.4" class="f-none s-ink2 thin" marker-end="url(#ah-term)"/>
-  <path d="M120,36.8 V40.6 H92.5 V43.4" class="f-none s-ink2 thin" marker-end="url(#ah-term)"/>
+  <!-- children's education -->
+  <text x="0" y="29.9" class="t-sm b">Children’s education</text>
+  <rect x="30.00" y="26.4" width="64.53" height="5" class="f-tint"/>
+  <text x="32.00" y="29.9" class="t-sm">School and college for two children</text>
+  <text x="96.13" y="29.9" class="t-sm">by about 52</text>
 
-  <rect x="0" y="44.4" width="59" height="33" class="f-tint"/>
-  <text x="3" y="49.2" class="t-cap job">If Rohan dies at 45</text>
-  <text x="3" y="57.4" class="t-xl t-job">₹1 crore</text>
-  <text x="3" y="62.6" class="t-sm">goes to his family, as a lump sum or</text>
-  <text x="3" y="65.9" class="t-sm">as a monthly income if he chose that.</text>
-  <text x="3" y="69.2" class="t-sm">The policy then ends.</text>
+  <!-- income for the household -->
+  <text x="0" y="36.9" class="t-sm b">His income</text>
+  <path d="M30.00,33.40 L118.00,36.80 L118.00,38.40 L30.00,38.40 Z" class="f-tint"/>
+  <text x="32.00" y="36.9" class="t-sm">What his salary pays for at home, every month</text>
 
-  <rect x="63" y="44.4" width="59" height="33" class="f-panel"/>
-  <text x="66" y="49.2" class="t-cap">If Rohan is alive at 60</text>
-  <text x="66" y="57.4" class="t-xl" style="fill:var(--ink-2)">Cover ends</text>
-  <text x="66" y="62.6" class="t-sm">Nothing is paid and no premium comes</text>
-  <text x="66" y="65.9" class="t-sm">back. Paying only for protection is</text>
-  <text x="66" y="69.2" class="t-sm">what keeps the premium low.</text>
+  <!-- axis -->
+  <line x1="30.00" y1="42.0" x2="118.00" y2="42.0" class="s-ink thin"/>
+  <text x="0" y="46.0" class="t-cap">Age</text>
+  <line x1="30.00" y1="42.0" x2="30.00" y2="43.2" class="s-ink3 hair"/><text x="30.00" y="46.0" class="t-sm mid">30</text>
+  <line x1="44.67" y1="42.0" x2="44.67" y2="43.2" class="s-ink3 hair"/><text x="44.67" y="46.0" class="t-sm mid">35</text>
+  <line x1="59.33" y1="42.0" x2="59.33" y2="43.2" class="s-ink3 hair"/><text x="59.33" y="46.0" class="t-sm mid">40</text>
+  <line x1="74.00" y1="42.0" x2="74.00" y2="43.2" class="s-ink3 hair"/><text x="74.00" y="46.0" class="t-sm mid">45</text>
+  <line x1="88.67" y1="42.0" x2="88.67" y2="43.2" class="s-ink3 hair"/><text x="88.67" y="46.0" class="t-sm mid">50</text>
+  <line x1="103.33" y1="42.0" x2="103.33" y2="43.2" class="s-ink3 hair"/><text x="103.33" y="46.0" class="t-sm mid">55</text>
+  <line x1="118.00" y1="42.0" x2="118.00" y2="43.2" class="s-ink3 hair"/><text x="118.00" y="46.0" class="t-sm mid">60</text>
+  <text x="0" y="51.2" class="t-sm t-ink3" style="font-size:2.2px">Each need gets smaller as the years pass. The term is chosen to last while the family relies on his income.</text>
+
+  <!-- outcomes -->
+  <rect x="0" y="55" width="59" height="27" class="f-tint"/>
+  <text x="3" y="59.8" class="t-cap job">If something happens to Rohan</text>
+  <text x="3" y="67.6" class="t-xl t-job">₹1 crore</text>
+  <text x="3" y="72.8" class="t-sm">goes to his family to clear the home loan,</text>
+  <text x="3" y="76.1" class="t-sm">keep the children’s education on track</text>
+  <text x="3" y="79.4" class="t-sm">and replace his income.</text>
+
+  <rect x="63" y="55" width="59" height="27" class="f-panel"/>
+  <text x="66" y="59.8" class="t-cap">When Rohan turns 60</text>
+  <text x="66" y="67.6" class="t-xl" style="fill:var(--ink-2)">Job done</text>
+  <text x="66" y="72.8" class="t-sm">The cover ends. The loan is repaid, the</text>
+  <text x="66" y="76.1" class="t-sm">children are independent, and paying only</text>
+  <text x="66" y="79.4" class="t-sm">for protection kept the premium low.</text>
 </svg>
