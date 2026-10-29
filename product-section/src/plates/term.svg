@@ -1,0 +1,61 @@
+<svg viewBox="0 0 122 78" role="img" aria-labelledby="term-plate-t">
+  <title id="term-plate-t">Timeline of a ₹1 crore term plan bought at 30 for 30 years, with what happens if the holder dies at 45 or is alive at 60.</title>
+  <defs>
+    <marker id="ah-term" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="3.2" markerHeight="3.2" orient="auto-start-reverse">
+      <path d="M0,0 L6,3 L0,6 z" class="f-ink2"/>
+    </marker>
+  </defs>
+
+  <text x="0" y="3.2" class="t-bd"><tspan class="b">Example.</tspan> Rohan is 30. He buys ₹1 crore of cover for 30 years.</text>
+
+  <!-- Lane 1: cover -->
+  <text x="0" y="13.1" class="t-cap job">Cover</text>
+  <rect x="18" y="8" width="102" height="8" class="f-job"/>
+  <text x="20.6" y="13.1" class="t-bd b t-white">₹1 crore of cover, every day for 30 years</text>
+
+  <!-- Lane 2: premium, one coin per year -->
+  <text x="0" y="22.3" class="t-cap job">Premium</text>
+  <text x="0" y="25.4" class="t-sm" style="font-size:2.1px">same every year</text>
+  <g class="coins">
+    <circle cx="19.7" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="23.1" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="26.5" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="29.9" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="33.3" cy="23" r="1.25" class="f-tint s-job hair"/>
+    <circle cx="36.7" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="40.1" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="43.5" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="46.9" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="50.3" cy="23" r="1.25" class="f-tint s-job hair"/>
+    <circle cx="53.7" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="57.1" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="60.5" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="63.9" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="67.3" cy="23" r="1.25" class="f-tint s-job hair"/>
+    <circle cx="70.7" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="74.1" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="77.5" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="80.9" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="84.3" cy="23" r="1.25" class="f-tint s-job hair"/>
+    <circle cx="87.7" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="91.1" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="94.5" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="97.9" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="101.3" cy="23" r="1.25" class="f-tint s-job hair"/>
+    <circle cx="104.7" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="108.1" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="111.5" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="114.9" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="118.3" cy="23" r="1.25" class="f-tint s-job hair"/>
+  </g>
+
+  <!-- Age axis -->
+  <text x="0" y="35.2" class="t-cap">Age</text>
+  <line x1="18" y1="31" x2="120" y2="31" class="s-ink thin"/>
+  <g class="t-sm t-num">
+    <line x1="18" y1="30" x2="18" y2="32" class="s-ink thin"/><text x="18" y="35.2" class="t-sm mid">30</text>
+    <line x1="35" y1="30" x2="35" y2="32" class="s-ink thin"/><text x="35" y="35.2" class="t-sm mid">35</text>
+    <line x1="52" y1="30" x2="52" y2="32" class="s-ink thin"/><text x="52" y="35.2" class="t-sm mid">40</text>
+    <text x="69" y="35.2" class="t-sm mid b">45</text>
+    <line x1="86" y1="30" x2="86" y2="32" class="s-ink thin"/><text x="86" y="35.2" class="t-sm mid">50</text>
+    <line x1="103" y1="30" x2="103" y2="32" class="s-ink thin"/><text x="103" y="35.2" class="t-sm mid">55</text>
+    <text x="120" y="35.2" class="t-sm mid b">60</text>
+  </g>
+
+  <!-- Two possible outcomes -->
+  <line x1="69" y1="6.5" x2="69" y2="31" class="s-ink2 thin dash"/>
+  <circle cx="69" cy="31" r="1.3" class="f-ink"/>
+  <circle cx="120" cy="31" r="1.3" class="f-paper s-ink thin"/>
+  <path d="M69,36.8 V40.6 H29.5 V43.4" class="f-none s-ink2 thin" marker-end="url(#ah-term)"/>
+  <path d="M120,36.8 V40.6 H92.5 V43.4" class="f-none s-ink2 thin" marker-end="url(#ah-term)"/>
+
+  <rect x="0" y="44.4" width="59" height="33" class="f-tint"/>
+  <text x="3" y="49.2" class="t-cap job">If Rohan dies at 45</text>
+  <text x="3" y="57.4" class="t-xl t-job">₹1 crore</text>
+  <text x="3" y="62.6" class="t-sm">goes to his family, as a lump sum or</text>
+  <text x="3" y="65.9" class="t-sm">as a monthly income if he chose that.</text>
+  <text x="3" y="69.2" class="t-sm">The policy then ends.</text>
+
+  <rect x="63" y="44.4" width="59" height="33" class="f-panel"/>
+  <text x="66" y="49.2" class="t-cap">If Rohan is alive at 60</text>
+  <text x="66" y="57.4" class="t-xl" style="fill:var(--ink-2)">Cover ends</text>
+  <text x="66" y="62.6" class="t-sm">Nothing is paid and no premium comes</text>
+  <text x="66" y="65.9" class="t-sm">back. Paying only for protection is</text>
+  <text x="66" y="69.2" class="t-sm">what keeps the premium low.</text>
+</svg>

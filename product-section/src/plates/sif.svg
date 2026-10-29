@@ -1,0 +1,64 @@
+<svg viewBox="0 0 122 90" role="img" aria-labelledby="sif-plate-t">
+  <title id="sif-plate-t">A long position that gains when prices rise, a short position of up to 25% that gains when prices fall, and SEBI's seven SIF strategies in three families.</title>
+
+  <!-- Where a SIF sits on the ticket-size ladder -->
+  <text x="0" y="2.6" class="t-cap job">Where a SIF sits</text>
+  <text x="122" y="2.6" class="t-cap end">Minimum to invest</text>
+  <rect x="0" y="4.2" width="29.75" height="6" class="f-panel"/>
+  <text x="2" y="8.2" class="t-sm"><tspan class="b">Mutual funds</tspan>  ₹100+</text>
+  <rect x="30.75" y="4.2" width="29.75" height="6" class="f-job"/>
+  <text x="32.75" y="8.2" class="t-sm t-white"><tspan class="b">SIF</tspan>  ₹10 lakh+</text>
+  <rect x="61.5" y="4.2" width="29.75" height="6" class="f-panel"/>
+  <text x="63.5" y="8.2" class="t-sm"><tspan class="b">PMS</tspan>  ₹50 lakh+</text>
+  <rect x="92.25" y="4.2" width="29.75" height="6" class="f-panel"/>
+  <text x="94.25" y="8.2" class="t-sm"><tspan class="b">AIF</tspan>  ₹1 crore+</text>
+  <line x1="0" y1="13.4" x2="122" y2="13.4" class="s-rule hair"/>
+
+  <g transform="translate(0,15.6)">
+
+  <!-- Long and short bars -->
+  <line x1="4" y1="30" x2="60" y2="30" class="s-ink thin"/>
+  <rect x="8" y="6" width="18" height="24" class="f-job"/>
+  <text x="17" y="10.6" class="t-cap mid t-white">Long</text>
+  <rect x="32" y="30" width="18" height="6" class="f-deep"/>
+  <text x="41" y="34" class="t-cap mid t-white">Short</text>
+  <path d="M51.6,30.2 h1.2 v5.6 h-1.2" class="f-none s-ink2 thin"/>
+  <text x="54" y="34" class="t-sm b">up to 25%</text>
+
+  <text x="17" y="40.6" class="t-sm mid">Bets that gain</text>
+  <text x="17" y="43.9" class="t-sm mid">if prices rise</text>
+  <text x="41" y="40.6" class="t-sm mid">Bets that gain</text>
+  <text x="41" y="43.9" class="t-sm mid">if prices fall</text>
+
+  <!-- What it does -->
+  <text x="69" y="9" class="t-bd b">When markets fall</text>
+  <text x="69" y="12.4" class="t-sm">the short side can soften the loss.</text>
+  <text x="69" y="19.6" class="t-bd b">When markets rise</text>
+  <text x="69" y="23" class="t-sm">the short side can hold returns back.</text>
+  <text x="69" y="30.2" class="t-bd b">Unhedged</text>
+  <text x="69" y="33.6" class="t-sm">Shorts are taken through derivatives,</text>
+  <text x="69" y="36.9" class="t-sm">as bets in their own right, not just as</text>
+  <text x="69" y="40.2" class="t-sm">insurance on shares already held.</text>
+
+  <!-- Strategies -->
+  <line x1="0" y1="48.4" x2="122" y2="48.4" class="s-rule hair"/>
+  <text x="0" y="52.6" class="t-cap job">Seven strategies in three families</text>
+
+  <rect x="0" y="55" width="38" height="5.4" class="f-tint"/>
+  <text x="2" y="58.6" class="t-cap job">Equity · 3</text>
+  <rect x="0" y="62.6" width="1.1" height="1.1" class="f-job"/><text x="2.6" y="63.9" class="t-sm">Equity Long-Short</text>
+  <rect x="0" y="66.6" width="1.1" height="1.1" class="f-job"/><text x="2.6" y="67.9" class="t-sm">Equity Ex-Top 100 Long-Short</text>
+  <rect x="0" y="70.6" width="1.1" height="1.1" class="f-job"/><text x="2.6" y="71.9" class="t-sm">Sector Rotation Long-Short</text>
+
+  <rect x="42" y="55" width="38" height="5.4" class="f-tint"/>
+  <text x="44" y="58.6" class="t-cap job">Debt · 2</text>
+  <rect x="42" y="62.6" width="1.1" height="1.1" class="f-job"/><text x="44.6" y="63.9" class="t-sm">Debt Long-Short</text>
+  <rect x="42" y="66.6" width="1.1" height="1.1" class="f-job"/><text x="44.6" y="67.9" class="t-sm">Sectoral Debt Long-Short</text>
+
+  <rect x="84" y="55" width="38" height="5.4" class="f-tint"/>
+  <text x="86" y="58.6" class="t-cap job">Hybrid · 2</text>
+  <rect x="84" y="62.6" width="1.1" height="1.1" class="f-job"/><text x="86.6" y="63.9" class="t-sm">Active Asset Allocator</text>
+  <text x="86.6" y="67.1" class="t-sm">Long-Short</text>
+  <rect x="84" y="70" width="1.1" height="1.1" class="f-job"/><text x="86.6" y="71.3" class="t-sm">Hybrid Long-Short</text>
+  </g>
+</svg>

@@ -1,0 +1,82 @@
+/*
+  Know Your Products — design tokens
+  Print target: A5 (148 x 210 mm). A5 and B5 share the 1:√2 ratio, so the
+  whole section scales to B5 (176 x 250 mm) without relayout.
+
+  Colours are chosen to reproduce in CMYK on coated and uncoated stock.
+  CMYK builds for the printer are listed in docs/04-production-plan.md.
+*/
+
+@font-face {
+  font-family: "Anek Latin";
+  src: url("../assets/fonts/AnekLatin[wdth,wght].ttf") format("truetype");
+  font-weight: 100 800;
+  font-stretch: 75% 125%;
+}
+@font-face { font-family: "Mukta"; src: url("../assets/fonts/Mukta-Light.ttf") format("truetype"); font-weight: 300; }
+@font-face { font-family: "Mukta"; src: url("../assets/fonts/Mukta-Regular.ttf") format("truetype"); font-weight: 400; }
+@font-face { font-family: "Mukta"; src: url("../assets/fonts/Mukta-Medium.ttf") format("truetype"); font-weight: 500; }
+@font-face { font-family: "Mukta"; src: url("../assets/fonts/Mukta-SemiBold.ttf") format("truetype"); font-weight: 600; }
+@font-face { font-family: "Mukta"; src: url("../assets/fonts/Mukta-Bold.ttf") format("truetype"); font-weight: 700; }
+@font-face { font-family: "Mukta"; src: url("../assets/fonts/Mukta-ExtraBold.ttf") format("truetype"); font-weight: 800; }
+
+:root {
+  /* Type: Anek Latin (Ek Type) for display and labels, Mukta (Ek Type) for
+     reading. Both are Indian-made, carry the ₹ sign, and have Devanagari /
+     Tamil companions for a future regional-language edition. */
+  --display: "Anek Latin", "Mukta", sans-serif;
+  --text: "Mukta", "Anek Latin", sans-serif;
+
+  /* Ink and paper */
+  --ink: #1e1c1a;
+  --ink-2: #4a4740;
+  --ink-3: #78746b;
+  --rule: #cdc8be;
+  --rule-2: #e6e2da;
+  --paper: #ffffff;
+  --panel: #f1f1ed;
+
+  /* The four jobs. Each has a solid, a deep (text on white) and a tint. */
+  --protect: #2d6a4f;      /* neem green */
+  --protect-deep: #1f4f3a;
+  --protect-tint: #e2efe7;
+
+  --build: #2b3f87;        /* neel indigo */
+  --build-deep: #1d2c63;
+  --build-tint: #e3e7f4;
+
+  --special: #7a2e5c;      /* jamun */
+  --special-deep: #5a1f43;
+  --special-tint: #f3e3ec;
+
+  --global: #c47f0f;       /* haldi */
+  --global-deep: #8c5a07;
+  --global-tint: #f9ecd2;
+
+  /* Regulator-style risk ramp (SEBI riskometer colours, simplified) */
+  --risk-1: #1f8a3d;
+  --risk-2: #7cb342;
+  --risk-3: #f2c318;
+  --risk-4: #f39a1e;
+  --risk-5: #e2531f;
+  --risk-6: #b3202a;
+
+  /* Type scale (pt). Body never drops below 8.5 pt; legal never below 6.3 pt. */
+  --fs-legal: 6.3pt;
+  --fs-label: 6.4pt;
+  --fs-small: 7.4pt;
+  --fs-body: 8.6pt;
+  --fs-lead: 10.2pt;
+  --fs-h3: 9.6pt;
+  --fs-h2: 13pt;
+  --fs-title: 23pt;
+  --fs-entry: 40pt;
+
+  /* Page geometry (mm) */
+  --page-w: 148mm;
+  --page-h: 210mm;
+  --m-top: 11mm;
+  --m-bottom: 12mm;
+  --m-inner: 15mm;
+  --m-outer: 11mm;
+}

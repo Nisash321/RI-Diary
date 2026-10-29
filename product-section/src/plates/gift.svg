@@ -1,0 +1,71 @@
+<svg viewBox="0 0 122 80" role="img" aria-labelledby="gift-plate-t">
+  <title id="gift-plate-t">Money moves from your Indian bank account through LRS to GIFT IFSC, where it goes into US-dollar products that reach global markets; proceeds come back in dollars. Below, how the yearly LRS limit is shared.</title>
+  <defs>
+    <marker id="ah-gift" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="3.2" markerHeight="3.2" orient="auto">
+      <path d="M0,0 L6,3 L0,6 z" class="f-ink2"/>
+    </marker>
+  </defs>
+
+  <!-- You -->
+  <g class="f-job">
+    <circle cx="9" cy="14.2" r="1.9"/><path d="M5.8,21 C5.8,16.9 12.2,16.9 12.2,21 Z"/>
+  </g>
+  <text x="9" y="25.6" class="t-bd b mid">You, in India</text>
+  <text x="9" y="29" class="t-sm mid">rupee account</text>
+
+  <line x1="19" y1="18" x2="39.6" y2="18" class="s-ink2 med" marker-end="url(#ah-gift)"/>
+  <text x="28.6" y="15.8" class="t-cap job mid">LRS</text>
+  <text x="28.6" y="21.8" class="t-sm mid" style="font-size:2.15px">up to USD 2,50,000</text>
+  <text x="28.6" y="24.6" class="t-sm mid" style="font-size:2.15px">a year, per person</text>
+
+  <!-- GIFT IFSC -->
+  <rect x="41" y="2" width="49" height="49.4" class="f-tint"/>
+  <text x="43.4" y="6.6" class="t-cap job">GIFT IFSC, Gujarat</text>
+  <text x="43.4" y="10" class="t-sm">In US dollars · regulated by IFSCA</text>
+  <g class="f-paper">
+    <rect x="43.4" y="12.8" width="44.2" height="6.2"/>
+    <rect x="43.4" y="20.2" width="44.2" height="6.2"/>
+    <rect x="43.4" y="27.6" width="44.2" height="6.2"/>
+    <rect x="43.4" y="35" width="44.2" height="6.2"/>
+    <rect x="43.4" y="42.4" width="44.2" height="6.2"/>
+  </g>
+  <text x="45.4" y="16.9" class="t-sm">Global funds (retail schemes)</text>
+  <text x="45.4" y="24.3" class="t-sm">AIFs · from USD 1,50,000</text>
+  <text x="45.4" y="31.7" class="t-sm">PMS · from USD 75,000</text>
+  <text x="45.4" y="39.1" class="t-sm">Global stocks via NSE IX</text>
+  <text x="45.4" y="46.5" class="t-sm">US-dollar deposits (IFSC banks)</text>
+
+  <line x1="91" y1="26" x2="100.4" y2="26" class="s-ink2 med" marker-end="url(#ah-gift)"/>
+
+  <!-- Globe -->
+  <g class="f-none s-job thin">
+    <circle cx="111" cy="20" r="9" class="f-paper"/>
+    <ellipse cx="111" cy="20" rx="4" ry="9"/>
+    <line x1="102" y1="20" x2="120" y2="20"/>
+    <path d="M103.2,15.5 H118.8 M103.2,24.5 H118.8"/>
+  </g>
+  <text x="111" y="33.4" class="t-bd b mid">Global markets</text>
+  <text x="111" y="36.8" class="t-sm mid">US, Europe, Asia</text>
+
+  <!-- Coming back -->
+  <path d="M65.5,51.4 V55 H9 V31.6" class="f-none s-ink2 thin dash" marker-end="url(#ah-gift)"/>
+  <text x="38" y="58.6" class="t-sm mid">Proceeds come back in US dollars, to your Indian bank account</text>
+
+  <!-- LRS limit -->
+  <line x1="0" y1="61.4" x2="122" y2="61.4" class="s-rule hair"/>
+  <text x="0" y="65.4" class="t-cap job">Your LRS limit is shared</text>
+  <text x="122" y="65.4" class="t-cap end">USD 2,50,000 per financial year</text>
+  <rect x="0" y="67.2" width="9.76" height="5" class="f-panel"/>
+  <rect x="9.76" y="67.2" width="24.4" height="5" class="f-rule2"/>
+  <rect x="34.16" y="67.2" width="4.88" height="5" class="f-rule"/>
+  <rect x="39.04" y="67.2" width="58.56" height="5" class="f-job"/>
+  <rect x="97.6" y="67.2" width="24.4" height="5" class="f-paper s-ink3 hair dash"/>
+  <g class="t-sm" style="font-size:2.1px">
+    <text x="4.9" y="75.4" class="t-sm mid" style="font-size:2.1px">Travel</text>
+    <text x="21.96" y="75.4" class="t-sm mid" style="font-size:2.1px">Education</text>
+    <text x="36.6" y="75.4" class="t-sm mid" style="font-size:2.1px">Gifts</text>
+    <text x="68.3" y="75.4" class="t-sm mid b" style="font-size:2.1px">GIFT City investments</text>
+    <text x="109.8" y="75.4" class="t-sm mid" style="font-size:2.1px">Still available</text>
+  </g>
+  <text x="0" y="79.4" class="t-sm t-ink3">Example split. Each family member has a separate limit.</text>
+</svg>

@@ -1,0 +1,2181 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Know Your Products · Ram Investments Diary 2027 (proof)</title>
+<style>
+/*
+  Know Your Products — design tokens
+  Print target: A5 (148 x 210 mm). A5 and B5 share the 1:√2 ratio, so the
+  whole section scales to B5 (176 x 250 mm) without relayout.
+
+  Colours are chosen to reproduce in CMYK on coated and uncoated stock.
+  CMYK builds for the printer are listed in docs/04-production-plan.md.
+*/
+
+@font-face {
+  font-family: "Anek Latin";
+  src: url("../assets/fonts/AnekLatin[wdth,wght].ttf") format("truetype");
+  font-weight: 100 800;
+  font-stretch: 75% 125%;
+}
+@font-face { font-family: "Mukta"; src: url("../assets/fonts/Mukta-Light.ttf") format("truetype"); font-weight: 300; }
+@font-face { font-family: "Mukta"; src: url("../assets/fonts/Mukta-Regular.ttf") format("truetype"); font-weight: 400; }
+@font-face { font-family: "Mukta"; src: url("../assets/fonts/Mukta-Medium.ttf") format("truetype"); font-weight: 500; }
+@font-face { font-family: "Mukta"; src: url("../assets/fonts/Mukta-SemiBold.ttf") format("truetype"); font-weight: 600; }
+@font-face { font-family: "Mukta"; src: url("../assets/fonts/Mukta-Bold.ttf") format("truetype"); font-weight: 700; }
+@font-face { font-family: "Mukta"; src: url("../assets/fonts/Mukta-ExtraBold.ttf") format("truetype"); font-weight: 800; }
+
+:root {
+  /* Type: Anek Latin (Ek Type) for display and labels, Mukta (Ek Type) for
+     reading. Both are Indian-made, carry the ₹ sign, and have Devanagari /
+     Tamil companions for a future regional-language edition. */
+  --display: "Anek Latin", "Mukta", sans-serif;
+  --text: "Mukta", "Anek Latin", sans-serif;
+
+  /* Ink and paper */
+  --ink: #1e1c1a;
+  --ink-2: #4a4740;
+  --ink-3: #78746b;
+  --rule: #cdc8be;
+  --rule-2: #e6e2da;
+  --paper: #ffffff;
+  --panel: #f1f1ed;
+
+  /* The four jobs. Each has a solid, a deep (text on white) and a tint. */
+  --protect: #2d6a4f;      /* neem green */
+  --protect-deep: #1f4f3a;
+  --protect-tint: #e2efe7;
+
+  --build: #2b3f87;        /* neel indigo */
+  --build-deep: #1d2c63;
+  --build-tint: #e3e7f4;
+
+  --special: #7a2e5c;      /* jamun */
+  --special-deep: #5a1f43;
+  --special-tint: #f3e3ec;
+
+  --global: #c47f0f;       /* haldi */
+  --global-deep: #8c5a07;
+  --global-tint: #f9ecd2;
+
+  /* Regulator-style risk ramp (SEBI riskometer colours, simplified) */
+  --risk-1: #1f8a3d;
+  --risk-2: #7cb342;
+  --risk-3: #f2c318;
+  --risk-4: #f39a1e;
+  --risk-5: #e2531f;
+  --risk-6: #b3202a;
+
+  /* Type scale (pt). Body never drops below 8.5 pt; legal never below 6.3 pt. */
+  --fs-legal: 6.3pt;
+  --fs-label: 6.4pt;
+  --fs-small: 7.4pt;
+  --fs-body: 8.6pt;
+  --fs-lead: 10.2pt;
+  --fs-h3: 9.6pt;
+  --fs-h2: 13pt;
+  --fs-title: 23pt;
+  --fs-entry: 40pt;
+
+  /* Page geometry (mm) */
+  --page-w: 148mm;
+  --page-h: 210mm;
+  --m-top: 11mm;
+  --m-bottom: 12mm;
+  --m-inner: 15mm;
+  --m-outer: 11mm;
+}
+
+/* ------------------------------------------------------------------
+   Know Your Products — page layout and components
+   Screen: pages shown as facing spreads on a desk-grey background.
+   Print:  one A5 page per PDF page (see @media print at the end).
+   ------------------------------------------------------------------ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+body {
+  margin: 0;
+  background: #d8d6d0;
+  color: var(--ink);
+  font-family: var(--text);
+  font-size: var(--fs-body);
+  line-height: 1.3;
+  font-kerning: normal;
+  text-rendering: geometricPrecision;
+}
+
+/* ---------- Screen presentation ---------- */
+
+.book { padding: 14mm 0 24mm; display: grid; gap: 14mm; justify-content: center; }
+
+.spread {
+  display: flex;
+  width: calc(var(--page-w) * 2);
+  box-shadow: 0 1.5mm 6mm rgba(40, 36, 30, 0.22);
+  position: relative;
+}
+.spread::after {               /* gutter shading, screen only */
+  content: "";
+  position: absolute; top: 0; bottom: 0; left: 50%; width: 10mm; margin-left: -5mm;
+  background: linear-gradient(90deg, transparent, rgba(30, 28, 26, 0.07) 45%, rgba(30, 28, 26, 0.07) 55%, transparent);
+  pointer-events: none;
+}
+.spread-label {
+  position: absolute; top: -6.5mm; left: 0;
+  font: 600 7pt/1 var(--display); letter-spacing: .12em; text-transform: uppercase; color: #6d6a63;
+}
+.blank { width: var(--page-w); height: var(--page-h); }
+.spread.single-recto { box-shadow: none; }
+.spread.single-recto .page, .spread.single-verso .page { box-shadow: 0 1.5mm 6mm rgba(40, 36, 30, 0.22); }
+.spread.single-verso { box-shadow: none; }
+.spread.single-recto::after, .spread.single-verso::after { display: none; }
+
+/* ---------- The page ---------- */
+
+.page {
+  width: var(--page-w);
+  height: var(--page-h);
+  flex: none;
+  position: relative;
+  overflow: hidden;
+  background: var(--paper);
+  padding: var(--m-top) var(--m-inner) var(--m-bottom) var(--m-outer);
+  display: flex;
+  flex-direction: column;
+}
+.page.verso { padding-left: var(--m-outer); padding-right: var(--m-inner); }
+.page.recto { padding-left: var(--m-inner); padding-right: var(--m-outer); }
+
+/* Job colour plumbing: every page sets --job, --job-deep, --job-tint */
+.page, .job-protect { --job: var(--protect); --job-deep: var(--protect-deep); --job-tint: var(--protect-tint); }
+[data-job="protect"] { --job: var(--protect); --job-deep: var(--protect-deep); --job-tint: var(--protect-tint); }
+[data-job="build"]   { --job: var(--build);   --job-deep: var(--build-deep);   --job-tint: var(--build-tint); }
+[data-job="special"] { --job: var(--special); --job-deep: var(--special-deep); --job-tint: var(--special-tint); }
+[data-job="global"]  { --job: var(--global);  --job-deep: var(--global-deep);  --job-tint: var(--global-tint); }
+[data-job="neutral"] { --job: var(--ink);     --job-deep: var(--ink);          --job-tint: var(--panel); }
+
+/* ---------- Shared typography ---------- */
+
+.label {
+  font-family: var(--display);
+  font-weight: 650;
+  font-stretch: 87.5%;
+  font-size: var(--fs-label);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--job-deep);
+  line-height: 1.1;
+}
+.label.muted { color: var(--ink-3); }
+
+h1, h2, h3, p, ul, ol, dl, dd, figure { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+strong, b, .b { font-weight: 700; }
+.num { font-variant-numeric: tabular-nums; }
+.nowrap { white-space: nowrap; }
+
+/* ---------- Running head and folio ---------- */
+
+.runhead {
+  display: flex; justify-content: space-between; align-items: center;
+  font-family: var(--display); font-weight: 600; font-stretch: 87.5%;
+  font-size: var(--fs-label); letter-spacing: .14em; text-transform: uppercase;
+  color: var(--ink-3);
+  padding-bottom: 1.8mm;
+  border-bottom: .25mm solid var(--rule);
+  margin-bottom: 4.2mm;
+  flex: none;
+}
+.chip { display: inline-flex; align-items: center; gap: 1.4mm; color: var(--job-deep); }
+.chip::before { content: ""; width: 2.1mm; height: 2.1mm; border-radius: 50%; background: var(--job); }
+
+.folio {
+  position: absolute; bottom: 5.2mm;
+  font-family: var(--display); font-weight: 600; font-stretch: 87.5%;
+  font-size: 7pt; letter-spacing: .06em; color: var(--ink-3);
+  display: flex; align-items: center; gap: 2mm;
+}
+.verso .folio { left: var(--m-outer); }
+.recto .folio { right: var(--m-outer); flex-direction: row-reverse; }
+.folio .pg { color: var(--ink); font-weight: 700; font-size: 8pt; }
+.folio .asof { font-weight: 500; letter-spacing: .04em; text-transform: none; font-family: var(--text); font-size: 6.3pt; }
+
+/* ---------- Entry head (left page) ---------- */
+
+.entry-head { display: grid; grid-template-columns: auto 1fr; column-gap: 3.6mm; align-items: end; flex: none; }
+.entry-no {
+  font-family: var(--display); font-weight: 700; font-stretch: 75%;
+  font-size: var(--fs-entry); line-height: .74; color: var(--job);
+  letter-spacing: -.01em; font-variant-numeric: tabular-nums;
+  padding-bottom: .4mm;
+}
+.entry-title {
+  font-family: var(--display); font-weight: 700; font-stretch: 108%;
+  font-size: var(--fs-title); line-height: .94; letter-spacing: -.012em;
+  color: var(--ink); text-wrap: balance;
+}
+.entry-formal {
+  margin-top: 1.4mm;
+  font-family: var(--display); font-weight: 550; font-stretch: 87.5%;
+  font-size: 7.2pt; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2);
+}
+.oneline {
+  margin-top: 3.6mm;
+  font-size: var(--fs-lead); line-height: 1.34; font-weight: 400; color: var(--ink);
+  text-wrap: pretty; flex: none;
+}
+.oneline b { font-weight: 700; }
+
+/* ---------- The plate (hero diagram) ---------- */
+
+.plate {
+  margin-top: 4.2mm; flex: 1 1 auto; display: flex; flex-direction: column;
+  border-top: .35mm solid var(--ink); border-bottom: .25mm solid var(--rule);
+  padding: 1.8mm 0 3.2mm;
+}
+.plate-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1.6mm; }
+.plate-head .fig { font-family: var(--display); font-weight: 600; font-stretch: 87.5%; font-size: var(--fs-label); letter-spacing: .12em; color: var(--ink-3); text-transform: uppercase; }
+.plate svg { display: block; width: 100%; height: auto; overflow: visible; margin: auto 0; }
+
+/* ---------- Left-page lower block ---------- */
+
+.lower { margin-top: 4mm; display: grid; grid-template-columns: 1.62fr 1fr; gap: 4.6mm; padding-bottom: 4mm; flex: none; }
+.block-title { margin-bottom: 1.8mm; }
+.marks { display: grid; gap: 1.5mm; }
+.marks li { position: relative; padding-left: 3.4mm; font-size: 8.3pt; line-height: 1.27; text-wrap: pretty; }
+.marks li::before {
+  content: ""; position: absolute; left: 0; top: 1.15mm;
+  width: 1.5mm; height: 1.5mm; background: var(--job);
+}
+.confused { background: var(--job-tint); padding: 2.8mm 3mm 3mm; align-self: start; }
+.confused p { font-size: 7.9pt; line-height: 1.3; text-wrap: pretty; }
+.confused .vs { font-weight: 700; color: var(--job-deep); }
+.confused p + p { margin-top: 1.4mm; }
+
+/* ---------- Right page ---------- */
+
+.glance { display: grid; grid-template-columns: 23mm 1fr; border-top: .35mm solid var(--ink); flex: none; }
+.glance dt, .glance dd { padding: 1.2mm 0 1.1mm; border-bottom: .25mm solid var(--rule-2); }
+.glance dt {
+  font-family: var(--display); font-weight: 650; font-stretch: 87.5%;
+  font-size: var(--fs-label); letter-spacing: .12em; text-transform: uppercase;
+  color: var(--job-deep); padding-right: 2mm; padding-top: 1.5mm;
+}
+.glance dd { font-size: 7.8pt; line-height: 1.25; text-wrap: pretty; }
+.glance dd .sub { color: var(--ink-2); }
+.glance .ruler { display: block; margin-top: .6mm; width: 100%; height: auto; }
+
+.section { margin-top: 3.1mm; flex: none; }
+.section > .label { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 1.4mm; border-bottom: .25mm solid var(--rule); margin-bottom: 2mm; }
+.section > .label .aside { color: var(--ink-3); letter-spacing: .06em; font-weight: 500; text-transform: none; font-family: var(--text); font-stretch: 100%; font-size: 6.6pt; }
+.gauge svg { display: block; width: 100%; height: auto; overflow: visible; }
+
+.fit { display: grid; grid-template-columns: 1fr 1fr; gap: 4.2mm; }
+.fit h3 { margin-bottom: 1.5mm; }
+.fit ul { display: grid; gap: 1.3mm; }
+.fit li { position: relative; padding-left: 3.6mm; font-size: 7.8pt; line-height: 1.24; text-wrap: pretty; }
+.fit .yes li::before {          /* tick */
+  content: ""; position: absolute; left: .45mm; top: .55mm;
+  width: 1.1mm; height: 2.1mm; border: solid var(--job); border-width: 0 .45mm .45mm 0; transform: rotate(42deg);
+}
+.fit .no li::before, .fit .no li::after {   /* cross */
+  content: ""; position: absolute; left: .1mm; top: 1.6mm; width: 2.3mm; height: .42mm; background: var(--ink-3);
+  transform: rotate(45deg);
+}
+.fit .no li::after { transform: rotate(-45deg); }
+.fit .yes h3 { color: var(--job-deep); }
+.fit .no h3 { color: var(--ink-2); }
+
+.ask { display: grid; grid-template-columns: 1fr 1fr; column-gap: 4.2mm; row-gap: 1.3mm; }
+.ask li { position: relative; padding-left: 4.2mm; font-size: 7.8pt; line-height: 1.24; text-wrap: pretty; }
+.ask li::before { content: ""; position: absolute; left: 0; top: .5mm; width: 2.5mm; height: 2.5mm; border: .3mm solid var(--ink-2); border-radius: .3mm; }
+
+.notes { display: grid; grid-template-columns: 1fr 1fr; column-gap: 4.2mm; row-gap: 0; }
+.notes .field { display: flex; align-items: flex-end; gap: 1.6mm; height: 6.1mm; border-bottom: .25mm dotted var(--ink-3); }
+.notes .field span { font-family: var(--display); font-weight: 600; font-stretch: 87.5%; font-size: 6.4pt; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); padding-bottom: .7mm; white-space: nowrap; }
+.notes .field.wide { grid-column: 1 / -1; }
+
+.legal {
+  margin-top: auto; padding-top: 1.6mm; margin-bottom: .4mm;
+  border-top: .25mm solid var(--rule);
+  font-size: var(--fs-legal); line-height: 1.32; color: var(--ink-2); text-wrap: pretty;
+  flex: none;
+}
+.legal .warn { font-weight: 700; color: var(--ink); }
+
+/* ---------- Front and back matter ---------- */
+
+.page-title {
+  font-family: var(--display); font-weight: 700; font-stretch: 108%;
+  font-size: 19pt; line-height: .98; letter-spacing: -.012em; color: var(--ink); text-wrap: balance;
+}
+.intro { margin-top: 2.6mm; font-size: 9.2pt; line-height: 1.38; color: var(--ink-2); text-wrap: pretty; max-width: 112mm; }
+.intro b { color: var(--ink); }
+
+.opener-eyebrow { margin-top: 9mm; }
+.opener-title {
+  margin-top: 2.4mm;
+  font-family: var(--display); font-weight: 750; font-stretch: 115%;
+  font-size: 38pt; line-height: .88; letter-spacing: -.022em; color: var(--ink);
+}
+.opener-lead { margin-top: 5mm; font-size: 10.4pt; line-height: 1.4; color: var(--ink); text-wrap: pretty; }
+.jobstrip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1mm; margin-top: 6mm; }
+.jobstrip span {
+  display: block; padding: 2.2mm 2mm 1.9mm; color: #fff;
+  font-family: var(--display); font-weight: 650; font-stretch: 87.5%; font-size: 6.6pt; letter-spacing: .14em; text-transform: uppercase;
+}
+.jobstrip .protect { background: var(--protect); }
+.jobstrip .build { background: var(--build); }
+.jobstrip .special { background: var(--special); }
+.jobstrip .global { background: var(--global); }
+
+.toc { margin-top: 6.5mm; display: grid; gap: 2.6mm; }
+.toc-group { display: grid; grid-template-columns: 22mm 1fr; column-gap: 2mm; padding-top: 1.6mm; border-top: .25mm solid var(--rule); }
+.toc-group .label { padding-top: .9mm; }
+.toc-rows { display: grid; gap: .9mm; }
+.toc-row { display: grid; grid-template-columns: 6.5mm auto 1fr auto; align-items: baseline; column-gap: 1.6mm; font-size: 9pt; }
+.toc-no { font-family: var(--display); font-weight: 700; font-stretch: 87.5%; color: var(--job); font-size: 9pt; }
+.toc-name b { font-weight: 700; }
+.toc-name .sub { color: var(--ink-3); font-size: 7.6pt; }
+.toc-dots { border-bottom: .3mm dotted var(--rule); transform: translateY(-.9mm); }
+.toc-pg { font-family: var(--display); font-weight: 650; font-variant-numeric: tabular-nums; }
+.opener-note { margin-top: auto; padding-top: 2mm; border-top: .25mm solid var(--rule); font-size: 7pt; line-height: 1.35; color: var(--ink-2); margin-bottom: .4mm; }
+
+.legend { display: grid; grid-template-columns: 1fr 1fr; column-gap: 5mm; row-gap: 1.8mm; margin-top: 4mm; }
+.legend li { display: grid; grid-template-columns: 4.6mm 1fr; column-gap: 1.2mm; font-size: 7.8pt; line-height: 1.28; }
+.legend .n {
+  width: 3.8mm; height: 3.8mm; border-radius: 50%; background: var(--ink); color: #fff;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-family: var(--display); font-weight: 700; font-size: 6.4pt; line-height: 1;
+}
+.legend b { display: block; }
+.figure { margin-top: 4.5mm; }
+.figure svg { display: block; width: 100%; height: auto; overflow: visible; }
+
+/* Side-by-side spread: two tables whose rows line up across the fold */
+.sbs-head { height: 25mm; flex: none; }
+.sbs-head .label { margin-bottom: 1.6mm; }
+.sbs { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 7.6pt; line-height: 1.24; }
+.sbs th, .sbs td { padding: 1.2mm 1.4mm 1mm 0; vertical-align: top; text-align: left; border-bottom: .25mm solid var(--rule-2); overflow: hidden; }
+.sbs thead th { padding: 0 1.4mm 1.4mm 0; border-bottom: .35mm solid var(--ink); vertical-align: bottom; }
+.sbs thead th .bar { display: block; height: 1.3mm; background: var(--job); margin-bottom: 1.3mm; }
+.sbs thead th .no { display: block; font-family: var(--display); font-weight: 700; font-stretch: 87.5%; font-size: 6.6pt; color: var(--job-deep); letter-spacing: .06em; }
+.sbs thead th .nm { display: block; font-family: var(--display); font-weight: 700; font-size: 8.6pt; color: var(--ink); line-height: 1.05; }
+.sbs thead th .pg { display: block; font-size: 6.2pt; color: var(--ink-3); font-weight: 400; margin-top: .4mm; }
+.sbs .rowlabel {
+  font-family: var(--display); font-weight: 650; font-stretch: 87.5%; font-size: 6.2pt; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--ink-3); padding-top: 1.4mm;
+}
+.sbs .right .rowlabel, .sbs td.rowlabel.right { text-align: right; padding-right: 0; padding-left: 1.4mm; }
+.sbs td b { font-weight: 700; }
+.sbs tr.h-line td { height: 15.2mm; }
+.sbs tr.h-reg td { height: 10.2mm; }
+.sbs tr.h-min td { height: 15.2mm; }
+.sbs tr.h-time td { height: 12.8mm; }
+.sbs tr.h-out td { height: 12.8mm; }
+.sbs tr.h-risk td { height: 12.8mm; }
+.sbs tr.h-tax td { height: 15.2mm; }
+.sbs tr.h-best td { height: 12.8mm; }
+
+.glossary { columns: 2; column-gap: 5mm; margin-top: 4mm; font-size: 7.6pt; line-height: 1.3; }
+.glossary p { break-inside: avoid; margin-bottom: 1.7mm; text-wrap: pretty; }
+.glossary b { font-weight: 700; color: var(--ink); }
+
+.checkup { width: 100%; border-collapse: collapse; margin-top: 4mm; font-size: 7.8pt; line-height: 1.25; }
+.checkup th { font-family: var(--display); font-weight: 650; font-stretch: 87.5%; font-size: 6.2pt; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); text-align: center; padding: 0 0 1.4mm; border-bottom: .35mm solid var(--ink); }
+.checkup th:first-child { text-align: left; }
+.checkup td { padding: 1.25mm 0 1.15mm; border-bottom: .25mm solid var(--rule-2); vertical-align: middle; }
+.checkup td.box { width: 11mm; text-align: center; }
+.checkup td.box::before { content: ""; display: inline-block; width: 2.6mm; height: 2.6mm; border: .3mm solid var(--ink-2); border-radius: .3mm; }
+.checkup tr.grp td {
+  padding-top: 2.2mm; border-bottom: none;
+  font-family: var(--display); font-weight: 650; font-stretch: 87.5%; font-size: 6.4pt; letter-spacing: .14em; text-transform: uppercase; color: var(--job-deep);
+}
+.review { margin-top: 4mm; display: grid; grid-template-columns: repeat(4, 1fr); column-gap: 3mm; }
+.review .field { display: flex; align-items: flex-end; gap: 1.4mm; height: 6.2mm; border-bottom: .25mm dotted var(--ink-3); }
+.review .field span { font-family: var(--display); font-weight: 600; font-stretch: 87.5%; font-size: 6.2pt; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); padding-bottom: .7mm; }
+.review .field.wide { grid-column: span 2; }
+
+.info { font-size: 7.3pt; line-height: 1.34; color: var(--ink-2); }
+.info h3 { margin-top: 3.4mm; margin-bottom: 1.1mm; }
+.info p + p { margin-top: 1.2mm; }
+.info .warnings p { padding-left: 2.6mm; border-left: .5mm solid var(--rule); }
+.info .warnings p b { color: var(--ink); }
+.info .us { margin-top: 3mm; padding: 2.6mm 3mm; background: var(--panel); color: var(--ink); }
+.info .us p { font-size: 7.4pt; }
+
+/* ---------- Gauges written in HTML ---------- */
+
+.worksheet { display: grid; grid-template-columns: 1fr 1fr; column-gap: 4.2mm; }
+.ws-row {
+  display: grid; grid-template-columns: 3mm 1fr 14mm; align-items: end; column-gap: 1.2mm;
+  height: 5.9mm; padding-bottom: .7mm; border-bottom: .25mm dotted var(--ink-3);
+  font-size: 7.5pt; line-height: 1.1;
+}
+.ws-key { font-family: var(--display); font-weight: 700; font-size: 6.6pt; color: var(--job-deep); }
+.ws-blank { color: var(--ink-3); font-size: 7.5pt; }
+.ws-result {
+  grid-column: 1 / -1; margin-top: 2.2mm; padding: 1.5mm 2.4mm;
+  display: flex; justify-content: space-between; align-items: center;
+  background: var(--job-tint); font-size: 8pt;
+}
+.ws-result b { color: var(--job-deep); }
+.ws-result .ws-blank { width: 38mm; border-bottom: .3mm solid var(--job-deep); padding-bottom: .4mm; color: var(--job-deep); font-weight: 700; }
+.ws-note { grid-column: 1 / -1; margin-top: 1.5mm; font-size: 7pt; color: var(--ink-2); }
+
+.fineprint { width: 100%; border-collapse: collapse; font-size: 7.3pt; line-height: 1.22; }
+.fineprint th {
+  text-align: left; font-family: var(--display); font-weight: 650; font-stretch: 87.5%;
+  font-size: 6.2pt; letter-spacing: .12em; text-transform: uppercase; padding: 0 2mm 1.1mm 0; color: var(--ink-3);
+}
+.fineprint th.good { color: var(--job-deep); }
+.fineprint th.watch { color: #9a4a12; }
+.fineprint td { padding: 1.05mm 2mm 1.05mm 0; border-top: .25mm solid var(--rule-2); vertical-align: top; }
+.fineprint td:first-child { font-weight: 700; width: 19mm; }
+.fineprint td.good { color: var(--ink); }
+.fineprint td.watch { color: var(--ink-2); }
+
+/* ---------- SVG vocabulary (1 user unit = 1 mm) ---------- */
+
+svg text { font-family: var(--text); }
+.t-cap  { font-family: var(--display); font-weight: 650; font-stretch: 87.5%; font-size: 2.2px; letter-spacing: .28px; text-transform: uppercase; fill: var(--ink-3); }
+.t-cap.job { fill: var(--job-deep); }
+.t-sm   { font-size: 2.42px; fill: var(--ink-2); }
+.t-bd   { font-size: 2.72px; fill: var(--ink); }
+.t-bd.b, .t-sm.b { font-weight: 700; }
+.t-md   { font-family: var(--display); font-weight: 700; font-stretch: 100%; font-size: 3.3px; fill: var(--ink); }
+.t-lg   { font-family: var(--display); font-weight: 700; font-stretch: 100%; font-size: 4.6px; fill: var(--ink); }
+.t-xl   { font-family: var(--display); font-weight: 700; font-stretch: 100%; font-size: 6.2px; fill: var(--ink); }
+.t-num  { font-variant-numeric: tabular-nums; }
+.t-white { fill: #fff; }
+.t-job  { fill: var(--job-deep); }
+.t-ink3 { fill: var(--ink-3); }
+.mid { text-anchor: middle; }
+.end { text-anchor: end; }
+
+.f-job { fill: var(--job); } .f-deep { fill: var(--job-deep); } .f-tint { fill: var(--job-tint); }
+.f-ink { fill: var(--ink); } .f-ink2 { fill: var(--ink-2); } .f-ink3 { fill: var(--ink-3); }
+.f-paper { fill: var(--paper); } .f-panel { fill: var(--panel); } .f-rule { fill: var(--rule); } .f-rule2 { fill: var(--rule-2); }
+.f-none { fill: none; }
+.s-job { stroke: var(--job); } .s-deep { stroke: var(--job-deep); } .s-ink { stroke: var(--ink); } .s-ink2 { stroke: var(--ink-2); } .s-ink3 { stroke: var(--ink-3); } .s-rule { stroke: var(--rule); } .s-paper { stroke: var(--paper); }
+.hair { stroke-width: .25; } .thin { stroke-width: .35; } .med { stroke-width: .5; } .bold { stroke-width: .8; }
+.dash { stroke-dasharray: .9 .7; } .dot { stroke-dasharray: .25 .6; stroke-linecap: round; }
+.f-protect { fill: var(--protect); } .f-build { fill: var(--build); } .f-special { fill: var(--special); } .f-global { fill: var(--global); }
+.f-protect-t { fill: var(--protect-tint); } .f-build-t { fill: var(--build-tint); } .f-special-t { fill: var(--special-tint); } .f-global-t { fill: var(--global-tint); }
+.f-r1 { fill: var(--risk-1); } .f-r2 { fill: var(--risk-2); } .f-r3 { fill: var(--risk-3); } .f-r4 { fill: var(--risk-4); } .f-r5 { fill: var(--risk-5); } .f-r6 { fill: var(--risk-6); }
+
+/* ---------- Print ---------- */
+
+@page { size: 148mm 210mm; margin: 0; }
+@media print {
+  body { background: none; }
+  .book { display: block; padding: 0; }
+  .spread { display: contents; }
+  .spread::after, .spread-label, .blank { display: none !important; }
+  .page { break-after: page; box-shadow: none !important; }
+}
+
+</style>
+</head>
+<body>
+<main class="book">
+<div class="spread single-recto"><span class="spread-label">Page 1</span><div class="blank"></div><section class="page recto" data-job="neutral" id="opener">
+  <header class="runhead"><span>Ram Investments · Diary 2027</span><span>Product guide</span></header>
+  <p class="label muted opener-eyebrow">A field guide to what we offer</p>
+  <h1 class="opener-title">Know Your<br>Products</h1>
+  <p class="opener-lead">Eight products, four jobs. Each entry explains one product the same way: what it is, how it works, who it suits and what to ask before you sign. Write your own numbers in the spaces provided and your finances stay in one place all year.</p>
+  <div class="jobstrip" aria-hidden="true"><span class="protect">Protect</span><span class="build">Build</span><span class="special">Specialise</span><span class="global">Globalise</span></div>
+  <nav class="toc" aria-label="Contents">
+    <div class="toc-group" data-job="protect">
+      <span class="label">Protect</span>
+      <div class="toc-rows">
+        <div class="toc-row"><span class="toc-no">01</span><span class="toc-name"><b>Term Insurance</b></span><span class="toc-dots"></span><span class="toc-pg">4</span></div>
+        <div class="toc-row"><span class="toc-no">02</span><span class="toc-name"><b>Health Insurance</b></span><span class="toc-dots"></span><span class="toc-pg">6</span></div>
+      </div>
+    </div>
+    <div class="toc-group" data-job="build">
+      <span class="label">Build</span>
+      <div class="toc-rows">
+        <div class="toc-row"><span class="toc-no">03</span><span class="toc-name"><b>Mutual Funds</b></span><span class="toc-dots"></span><span class="toc-pg">8</span></div>
+        <div class="toc-row"><span class="toc-no">04</span><span class="toc-name"><b>NCDs</b> <span class="sub">Non-convertible debentures</span></span><span class="toc-dots"></span><span class="toc-pg">10</span></div>
+      </div>
+    </div>
+    <div class="toc-group" data-job="special">
+      <span class="label">Specialise</span>
+      <div class="toc-rows">
+        <div class="toc-row"><span class="toc-no">05</span><span class="toc-name"><b>SIF</b> <span class="sub">Specialised investment funds</span></span><span class="toc-dots"></span><span class="toc-pg">12</span></div>
+        <div class="toc-row"><span class="toc-no">06</span><span class="toc-name"><b>PMS</b> <span class="sub">Portfolio management services</span></span><span class="toc-dots"></span><span class="toc-pg">14</span></div>
+        <div class="toc-row"><span class="toc-no">07</span><span class="toc-name"><b>AIF</b> <span class="sub">Alternative investment funds</span></span><span class="toc-dots"></span><span class="toc-pg">16</span></div>
+      </div>
+    </div>
+    <div class="toc-group" data-job="global">
+      <span class="label">Globalise</span>
+      <div class="toc-rows">
+        <div class="toc-row"><span class="toc-no">08</span><span class="toc-name"><b>GIFT City</b> <span class="sub">International investing</span></span><span class="toc-dots"></span><span class="toc-pg">18</span></div>
+      </div>
+    </div>
+    <div class="toc-group" data-job="neutral">
+      <span class="label muted">Also inside</span>
+      <div class="toc-rows">
+        <div class="toc-row"><span class="toc-no"></span><span class="toc-name">How to read an entry</span><span class="toc-dots"></span><span class="toc-pg">2</span></div>
+        <div class="toc-row"><span class="toc-no"></span><span class="toc-name">Side by side: all eight compared</span><span class="toc-dots"></span><span class="toc-pg">20</span></div>
+        <div class="toc-row"><span class="toc-no"></span><span class="toc-name">Words to know</span><span class="toc-dots"></span><span class="toc-pg">22</span></div>
+        <div class="toc-row"><span class="toc-no"></span><span class="toc-name">Your 2027 money check-up</span><span class="toc-dots"></span><span class="toc-pg">23</span></div>
+        <div class="toc-row"><span class="toc-no"></span><span class="toc-name">Important information</span><span class="toc-dots"></span><span class="toc-pg">24</span></div>
+      </div>
+    </div>
+  </nav>
+  <p class="opener-note">Facts are as of October 2026. Rules change, so check the latest with us before you invest. This section is investor education. It is not advice, and not an offer to buy or sell any product.</p>
+  <footer class="folio"><span class="pg">1</span></footer>
+</section>
+<!-- /page --></div>
+<div class="spread"><span class="spread-label">Pages 2–3</span><section class="page verso" data-job="neutral" id="how-to-read">
+  <header class="runhead"><span>Know your products</span><span>How to read an entry</span></header>
+  <h2 class="page-title">How to read an entry</h2>
+  <p class="intro">Every product gets the same two pages, laid out the same way, so you can compare one with another. The left page helps you <b>recognise</b> the product. The right page helps you <b>decide</b> whether it fits.</p>
+  <div class="figure">
+    <svg viewBox="0 0 122 82" role="img" aria-labelledby="htr-t">
+      <title id="htr-t">A miniature product spread with ten numbered parts.</title>
+      <!-- mini left page -->
+      <rect x="6" y="3" width="52" height="73.8" class="f-paper s-rule thin"/>
+      <line x1="9" y1="7.4" x2="55" y2="7.4" class="s-rule hair"/>
+      <circle cx="10" cy="5.6" r=".7" class="f-protect"/>
+      <rect x="9" y="9.4" width="7" height="6.2" class="f-protect"/>
+      <rect x="17.6" y="9.8" width="25" height="3.2" class="f-ink"/>
+      <rect x="17.6" y="14.2" width="19" height="1" class="f-ink3"/>
+      <rect x="9" y="18.2" width="46" height="1.1" class="f-ink2"/>
+      <rect x="9" y="20.4" width="44" height="1.1" class="f-ink2"/>
+      <rect x="9" y="22.6" width="28" height="1.1" class="f-ink2"/>
+      <line x1="9" y1="26" x2="55" y2="26" class="s-ink thin"/>
+      <rect x="9" y="28.2" width="46" height="25" class="f-protect-t"/>
+      <rect x="12" y="31" width="40" height="3" class="f-protect"/>
+      <g class="f-protect" style="opacity:.5">
+        <circle cx="13" cy="37.6" r=".8"/><circle cx="16" cy="37.6" r=".8"/><circle cx="19" cy="37.6" r=".8"/><circle cx="22" cy="37.6" r=".8"/><circle cx="25" cy="37.6" r=".8"/><circle cx="28" cy="37.6" r=".8"/><circle cx="31" cy="37.6" r=".8"/><circle cx="34" cy="37.6" r=".8"/><circle cx="37" cy="37.6" r=".8"/><circle cx="40" cy="37.6" r=".8"/><circle cx="43" cy="37.6" r=".8"/><circle cx="46" cy="37.6" r=".8"/><circle cx="49" cy="37.6" r=".8"/>
+      </g>
+      <rect x="12" y="42" width="18.5" height="9" class="f-paper"/>
+      <rect x="33.5" y="42" width="18.5" height="9" class="f-panel"/>
+      <line x1="9" y1="55.4" x2="55" y2="55.4" class="s-rule hair"/>
+      <rect x="9" y="58" width="1.2" height="1.2" class="f-protect"/><rect x="11.2" y="58" width="24" height="1" class="f-ink3"/>
+      <rect x="9" y="61.6" width="1.2" height="1.2" class="f-protect"/><rect x="11.2" y="61.6" width="22" height="1" class="f-ink3"/>
+      <rect x="9" y="65.2" width="1.2" height="1.2" class="f-protect"/><rect x="11.2" y="65.2" width="25" height="1" class="f-ink3"/>
+      <rect x="39" y="57.4" width="16" height="12.6" class="f-protect-t"/>
+      <rect x="41" y="60" width="11" height="1" class="f-protect"/>
+      <rect x="41" y="62.4" width="12" height="1" class="f-ink3"/><rect x="41" y="64.6" width="10" height="1" class="f-ink3"/>
+
+      <!-- mini right page -->
+      <rect x="64" y="3" width="52" height="73.8" class="f-paper s-rule thin"/>
+      <line x1="67" y1="7.4" x2="113" y2="7.4" class="s-rule hair"/>
+      <line x1="67" y1="10" x2="113" y2="10" class="s-ink thin"/>
+      <g class="f-protect">
+        <rect x="67" y="11.6" width="8" height="1"/><rect x="67" y="14.8" width="8" height="1"/><rect x="67" y="18" width="8" height="1"/><rect x="67" y="21.2" width="8" height="1"/><rect x="67" y="24.4" width="8" height="1"/><rect x="67" y="27.6" width="8" height="1"/>
+      </g>
+      <g class="f-ink3">
+        <rect x="77" y="11.6" width="30" height="1"/><rect x="77" y="14.8" width="34" height="1"/><rect x="77" y="18" width="26" height="1"/><rect x="77" y="21.2" width="33" height="1"/><rect x="77" y="24.4" width="28" height="1"/><rect x="77" y="27.6" width="31" height="1"/>
+      </g>
+      <line x1="77" y1="16.6" x2="111" y2="16.6" class="s-rule" style="stroke-width:.6"/>
+      <line x1="98" y1="16.6" x2="111" y2="16.6" class="s-job" style="stroke-width:.6;stroke:var(--protect)"/>
+      <line x1="67" y1="31" x2="113" y2="31" class="s-rule hair"/>
+      <rect x="67" y="32.6" width="46" height="9.6" class="f-protect-t"/>
+      <rect x="69" y="35.2" width="5" height="4" class="f-r1"/><rect x="74.4" y="35.2" width="5" height="4" class="f-r3"/><rect x="79.8" y="35.2" width="5" height="4" class="f-r5"/>
+      <rect x="87" y="35.6" width="22" height="1" class="f-ink3"/><rect x="87" y="37.8" width="17" height="1" class="f-ink3"/>
+      <path d="M67.4,46 l.8,.9 l1.6,-1.8" class="f-none" style="stroke:var(--protect);stroke-width:.4"/><rect x="70.6" y="45.6" width="16" height="1" class="f-ink3"/>
+      <path d="M67.4,49.4 l.8,.9 l1.6,-1.8" class="f-none" style="stroke:var(--protect);stroke-width:.4"/><rect x="70.6" y="49" width="14" height="1" class="f-ink3"/>
+      <path d="M91,45.4 l1.6,1.6 M92.6,45.4 l-1.6,1.6" class="f-none s-ink3" style="stroke-width:.4"/><rect x="94" y="45.6" width="15" height="1" class="f-ink3"/>
+      <path d="M91,48.8 l1.6,1.6 M92.6,48.8 l-1.6,1.6" class="f-none s-ink3" style="stroke-width:.4"/><rect x="94" y="49" width="13" height="1" class="f-ink3"/>
+      <rect x="67" y="54.4" width="1.6" height="1.6" class="f-none s-ink2" style="stroke-width:.25"/><rect x="69.6" y="54.6" width="17" height="1" class="f-ink3"/>
+      <rect x="91" y="54.4" width="1.6" height="1.6" class="f-none s-ink2" style="stroke-width:.25"/><rect x="93.6" y="54.6" width="15" height="1" class="f-ink3"/>
+      <rect x="67" y="57.6" width="1.6" height="1.6" class="f-none s-ink2" style="stroke-width:.25"/><rect x="69.6" y="57.8" width="15" height="1" class="f-ink3"/>
+      <rect x="91" y="57.6" width="1.6" height="1.6" class="f-none s-ink2" style="stroke-width:.25"/><rect x="93.6" y="57.8" width="12" height="1" class="f-ink3"/>
+      <line x1="67" y1="63.6" x2="88" y2="63.6" class="s-ink3 dot" style="stroke-width:.3"/><line x1="91" y1="63.6" x2="113" y2="63.6" class="s-ink3 dot" style="stroke-width:.3"/>
+      <line x1="67" y1="67.2" x2="88" y2="67.2" class="s-ink3 dot" style="stroke-width:.3"/><line x1="91" y1="67.2" x2="113" y2="67.2" class="s-ink3 dot" style="stroke-width:.3"/>
+      <line x1="67" y1="70.6" x2="113" y2="70.6" class="s-rule hair"/>
+      <rect x="67" y="71.8" width="44" height=".8" class="f-rule"/><rect x="67" y="73.4" width="30" height=".8" class="f-rule"/>
+
+      <!-- callouts -->
+      <g class="s-ink2" style="stroke-width:.25">
+        <line x1="3.2" y1="12.5" x2="9" y2="12.5"/><line x1="3.2" y1="20.4" x2="9" y2="20.4"/><line x1="3.2" y1="40" x2="9" y2="40"/><line x1="3.2" y1="62" x2="9" y2="62"/>
+        <line x1="55" y1="63.6" x2="59.4" y2="63.6"/>
+        <line x1="113" y1="19.6" x2="117.4" y2="19.6"/><line x1="113" y1="37.4" x2="117.4" y2="37.4"/><line x1="113" y1="47.6" x2="117.4" y2="47.6"/><line x1="113" y1="56.4" x2="117.4" y2="56.4"/><line x1="113" y1="65.4" x2="117.4" y2="65.4"/>
+      </g>
+      <g class="f-ink">
+        <circle cx="2.2" cy="12.5" r="2.1"/><circle cx="2.2" cy="20.4" r="2.1"/><circle cx="2.2" cy="40" r="2.1"/><circle cx="2.2" cy="62" r="2.1"/>
+        <circle cx="61" cy="63.6" r="2.1"/>
+        <circle cx="119.6" cy="19.6" r="2.1"/><circle cx="119.6" cy="37.4" r="2.1"/><circle cx="119.6" cy="47.6" r="2.1"/><circle cx="119.6" cy="56.4" r="2.1"/><circle cx="119.6" cy="65.4" r="2.1"/>
+      </g>
+      <g class="t-md t-white" style="font-size:2.5px">
+        <text x="2.2" y="13.4" class="t-md mid t-white" style="font-size:2.5px">1</text>
+        <text x="2.2" y="21.3" class="t-md mid t-white" style="font-size:2.5px">2</text>
+        <text x="2.2" y="40.9" class="t-md mid t-white" style="font-size:2.5px">3</text>
+        <text x="2.2" y="62.9" class="t-md mid t-white" style="font-size:2.5px">4</text>
+        <text x="61" y="64.5" class="t-md mid t-white" style="font-size:2.5px">5</text>
+        <text x="119.6" y="20.5" class="t-md mid t-white" style="font-size:2.5px">6</text>
+        <text x="119.6" y="38.3" class="t-md mid t-white" style="font-size:2.5px">7</text>
+        <text x="119.6" y="48.5" class="t-md mid t-white" style="font-size:2.5px">8</text>
+        <text x="119.6" y="57.3" class="t-md mid t-white" style="font-size:2.5px">9</text>
+        <text x="119.6" y="66.3" class="t-md mid t-white" style="font-size:2.5px">10</text>
+      </g>
+      <text x="32" y="80.6" class="t-cap mid">Left page: recognise it</text>
+      <text x="90" y="80.6" class="t-cap mid">Right page: decide if it fits</text>
+    </svg>
+  </div>
+  <ol class="legend">
+    <li><span class="n">1</span><span><b>Job colour and number</b>Green protects, indigo builds, jamun specialises, turmeric globalises.</span></li>
+    <li><span class="n">6</span><span><b>At a glance</b>The same six facts for every product. A ruler shows the minimum on one scale, ₹100 to ₹1 crore.</span></li>
+    <li><span class="n">2</span><span><b>In one line</b>The product in plain words.</span></li>
+    <li><span class="n">7</span><span><b>The check that matters most</b>The regulator’s own scale where one exists: riskometer, risk band or credit rating.</span></li>
+    <li><span class="n">3</span><span><b>How it works</b>One picture of the mechanism, usually with a worked example.</span></li>
+    <li><span class="n">8</span><span><b>Suits you if, think twice if</b>Who the product is for, and who it is not for.</span></li>
+    <li><span class="n">4</span><span><b>How to recognise it</b>The features that set it apart.</span></li>
+    <li><span class="n">9</span><span><b>Ask before you sign</b>Questions to put to us or the provider. Tick them off.</span></li>
+    <li><span class="n">5</span><span><b>Often confused with</b>The look-alike, and the difference.</span></li>
+    <li><span class="n">10</span><span><b>My notes</b>Space for your own numbers, so they stay with the explanation.</span></li>
+  </ol>
+  <footer class="folio"><span class="pg">2</span></footer>
+</section>
+<!-- /page --><section class="page recto" data-job="neutral" id="four-jobs">
+  <header class="runhead"><span>Know your products</span><span>Four jobs</span></header>
+  <h2 class="page-title">Four jobs your money can do</h2>
+  <p class="intro">Read from left to right. Each job works best once the one before it is in place: protection before investing, and a core portfolio before specialist strategies.</p>
+  <div class="figure">
+    <svg viewBox="0 0 122 113" role="img" aria-labelledby="jobs-t">
+      <title id="jobs-t">Four columns: Protect with term and health insurance, Build with mutual funds and NCDs, Specialise with SIF, PMS and AIF, and Globalise with GIFT City; below, the minimum ticket for each investment on one scale.</title>
+      <defs>
+        <marker id="ah-jobs" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="2.6" markerHeight="2.6" orient="auto"><path d="M0,0 L6,3 L0,6 z" class="f-ink3"/></marker>
+      </defs>
+
+      <g data-job="protect">
+        <rect x="0" y="0" width="28.75" height="7.6" class="f-job"/>
+        <text x="2" y="5" class="t-cap t-white" style="font-size:2.4px">1 · Protect</text>
+        <text x="0" y="12.6" class="t-bd">If something happens</text>
+        <text x="0" y="16" class="t-bd">to me, is my family</text>
+        <text x="0" y="19.4" class="t-bd">covered?</text>
+        <rect x="0" y="24" width="28.75" height="12" class="f-tint"/>
+        <text x="2" y="27.6" class="t-cap job">01</text><text x="2" y="31.5" class="t-bd b">Term insurance</text><text x="2" y="34.5" class="t-sm">priced by premium</text>
+        <rect x="0" y="38" width="28.75" height="12" class="f-tint"/>
+        <text x="2" y="41.6" class="t-cap job">02</text><text x="2" y="45.5" class="t-bd b">Health insurance</text><text x="2" y="48.5" class="t-sm">priced by premium</text>
+        <text x="0" y="69.6" class="t-cap job">Start</text>
+        <text x="0" y="73" class="t-sm">Before you invest.</text>
+      </g>
+
+      <g data-job="build">
+        <rect x="31.08" y="0" width="28.75" height="7.6" class="f-job"/>
+        <text x="33.08" y="5" class="t-cap t-white" style="font-size:2.4px">2 · Build</text>
+        <text x="31.08" y="12.6" class="t-bd">How do I grow wealth</text>
+        <text x="31.08" y="16" class="t-bd">and earn an income?</text>
+        <rect x="31.08" y="24" width="28.75" height="12" class="f-tint"/>
+        <text x="33.08" y="27.6" class="t-cap job">03</text><text x="33.08" y="31.5" class="t-bd b">Mutual funds</text><text x="33.08" y="34.5" class="t-sm">from ₹100</text>
+        <rect x="31.08" y="38" width="28.75" height="12" class="f-tint"/>
+        <text x="33.08" y="41.6" class="t-cap job">04</text><text x="33.08" y="45.5" class="t-bd b">NCDs</text><text x="33.08" y="48.5" class="t-sm">from ₹10,000</text>
+        <text x="31.08" y="69.6" class="t-cap job">Start</text>
+        <text x="31.08" y="73" class="t-sm">Once your family</text>
+        <text x="31.08" y="76.2" class="t-sm">is protected.</text>
+      </g>
+
+      <g data-job="special">
+        <rect x="62.17" y="0" width="28.75" height="7.6" class="f-job"/>
+        <text x="64.17" y="5" class="t-cap t-white" style="font-size:2.4px">3 · Specialise</text>
+        <text x="62.17" y="12.6" class="t-bd">My portfolio is large.</text>
+        <text x="62.17" y="16" class="t-bd">What more can I do?</text>
+        <rect x="62.17" y="24" width="28.75" height="12" class="f-tint"/>
+        <text x="64.17" y="27.6" class="t-cap job">05</text><text x="64.17" y="31.5" class="t-bd b">SIF</text><text x="64.17" y="34.5" class="t-sm">from ₹10 lakh</text>
+        <rect x="62.17" y="38" width="28.75" height="12" class="f-tint"/>
+        <text x="64.17" y="41.6" class="t-cap job">06</text><text x="64.17" y="45.5" class="t-bd b">PMS</text><text x="64.17" y="48.5" class="t-sm">from ₹50 lakh</text>
+        <rect x="62.17" y="52" width="28.75" height="12" class="f-tint"/>
+        <text x="64.17" y="55.6" class="t-cap job">07</text><text x="64.17" y="59.5" class="t-bd b">AIF</text><text x="64.17" y="62.5" class="t-sm">from ₹1 crore</text>
+        <text x="62.17" y="69.6" class="t-cap job">Start</text>
+        <text x="62.17" y="73" class="t-sm">When a core portfolio</text>
+        <text x="62.17" y="76.2" class="t-sm">is in place.</text>
+      </g>
+
+      <g data-job="global">
+        <rect x="93.25" y="0" width="28.75" height="7.6" class="f-job"/>
+        <text x="95.25" y="5" class="t-cap t-white" style="font-size:2.4px">4 · Globalise</text>
+        <text x="93.25" y="12.6" class="t-bd">How do I invest</text>
+        <text x="93.25" y="16" class="t-bd">beyond India?</text>
+        <rect x="93.25" y="24" width="28.75" height="12" class="f-tint"/>
+        <text x="95.25" y="27.6" class="t-cap job">08</text><text x="95.25" y="31.5" class="t-bd b">GIFT City</text><text x="95.25" y="34.5" class="t-sm">in US dollars, via LRS</text>
+        <text x="93.25" y="69.6" class="t-cap job">Start</text>
+        <text x="93.25" y="73" class="t-sm">To spread risk</text>
+        <text x="93.25" y="76.2" class="t-sm">beyond one country.</text>
+      </g>
+
+      <!-- Ticket-size ladder (ten-times scale) -->
+      <line x1="0" y1="81.4" x2="122" y2="81.4" class="s-rule hair"/>
+      <text x="0" y="85.8" class="t-cap">Minimum to start, on one scale</text>
+      <text x="122" y="85.8" class="t-cap end">Each gridline is ten times the last</text>
+      <g class="s-rule2 hair" style="stroke:var(--rule-2)">
+        <line x1="44" y1="88" x2="44" y2="110"/><line x1="56.17" y1="88" x2="56.17" y2="110"/><line x1="68.33" y1="88" x2="68.33" y2="110"/><line x1="80.5" y1="88" x2="80.5" y2="110"/><line x1="92.67" y1="88" x2="92.67" y2="110"/><line x1="104.83" y1="88" x2="104.83" y2="110"/><line x1="117" y1="88" x2="117" y2="110"/>
+      </g>
+      <g class="t-sm" style="font-size:1.9px">
+        <text x="56.17" y="112.6" class="t-sm mid" style="font-size:1.9px">₹100</text>
+        <text x="68.33" y="112.6" class="t-sm mid" style="font-size:1.9px">₹1,000</text>
+        <text x="80.5" y="112.6" class="t-sm mid" style="font-size:1.9px">₹10,000</text>
+        <text x="92.67" y="112.6" class="t-sm mid" style="font-size:1.9px">₹1 lakh</text>
+        <text x="104.83" y="112.6" class="t-sm mid" style="font-size:1.9px">₹10 lakh</text>
+        <text x="117" y="112.6" class="t-sm mid" style="font-size:1.9px">₹1 crore</text>
+      </g>
+      <g data-job="build">
+        <text x="0" y="90.6" class="t-sm b t-job">Mutual funds</text><rect x="44" y="88.6" width="12.17" height="2.6" class="f-job"/><text x="57.4" y="90.6" class="t-sm">₹100</text>
+        <text x="0" y="94.2" class="t-sm b t-job">NCDs</text><rect x="44" y="92.2" width="36.5" height="2.6" class="f-job"/><text x="81.7" y="94.2" class="t-sm">₹10,000</text>
+      </g>
+      <g data-job="special">
+        <text x="0" y="97.8" class="t-sm b t-job">SIF</text><rect x="44" y="95.8" width="60.83" height="2.6" class="f-job"/><text x="106" y="97.8" class="t-sm">₹10 lakh</text>
+        <text x="0" y="101.4" class="t-sm b t-job">PMS, mutual-fund route (PRIM)</text><rect x="44" y="99.4" width="65.68" height="2.6" class="f-job" style="opacity:.55"/><text x="110.9" y="101.4" class="t-sm">₹25 lakh</text>
+        <text x="0" y="105" class="t-sm b t-job">PMS</text><rect x="44" y="103" width="69.34" height="2.6" class="f-job"/><text x="112.4" y="104.95" class="t-sm b end t-white" style="font-size:2px">₹50 lakh</text>
+        <text x="0" y="108.6" class="t-sm b t-job">AIF</text><rect x="44" y="106.6" width="73" height="2.6" class="f-job"/><text x="116" y="108.55" class="t-sm b end t-white" style="font-size:2px">₹1 crore</text>
+      </g>
+    </svg>
+  </div>
+  <div class="section" style="margin-top:5mm">
+    <h2 class="label"><span>Before you move right</span><span class="aside">Tick what is already in place</span></h2>
+    <ul class="ask">
+      <li>Term cover that matches your family’s needs, often 10 to 15 times yearly income</li>
+      <li>Health cover for every member of your family, not only through an employer</li>
+      <li>An emergency fund of about six months’ expenses, easy to reach</li>
+      <li>A core portfolio, usually in mutual funds, linked to your goals</li>
+    </ul>
+  </div>
+  <p class="opener-note">PRIM is the mutual-fund-only PMS route that starts on 1 April 2027. Insurance is priced by premium and GIFT City minimums are in US dollars, so neither is on the scale above.</p>
+  <footer class="folio"><span class="pg">3</span></footer>
+</section>
+<!-- /page --></div>
+<div class="spread"><span class="spread-label">Pages 4–5</span><section class="page verso" data-job="protect" id="term">
+  <header class="runhead"><span class="chip">Protect</span><span>Know your products · 01 of 08</span></header>
+  <div class="entry-head">
+    <div class="entry-no">01</div>
+    <div>
+      <h1 class="entry-title">Term Insurance</h1>
+      <p class="entry-formal">Pure term life cover · regulated by IRDAI</p>
+    </div>
+  </div>
+  <p class="oneline">You pay a premium every year. If you die during the policy term, your nominee receives the full sum assured. If you outlive the term, nothing is paid, which is why a large cover stays affordable.</p>
+  <figure class="plate">
+    <figcaption class="plate-head"><span class="label">How it works</span><span class="fig">Fig. 01</span></figcaption>
+    <svg viewBox="0 0 122 78" role="img" aria-labelledby="term-plate-t">
+  <title id="term-plate-t">Timeline of a ₹1 crore term plan bought at 30 for 30 years, with what happens if the holder dies at 45 or is alive at 60.</title>
+  <defs>
+    <marker id="ah-term" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="3.2" markerHeight="3.2" orient="auto-start-reverse">
+      <path d="M0,0 L6,3 L0,6 z" class="f-ink2"/>
+    </marker>
+  </defs>
+
+  <text x="0" y="3.2" class="t-bd"><tspan class="b">Example.</tspan> Rohan is 30. He buys ₹1 crore of cover for 30 years.</text>
+
+  <!-- Lane 1: cover -->
+  <text x="0" y="13.1" class="t-cap job">Cover</text>
+  <rect x="18" y="8" width="102" height="8" class="f-job"/>
+  <text x="20.6" y="13.1" class="t-bd b t-white">₹1 crore of cover, every day for 30 years</text>
+
+  <!-- Lane 2: premium, one coin per year -->
+  <text x="0" y="22.3" class="t-cap job">Premium</text>
+  <text x="0" y="25.4" class="t-sm" style="font-size:2.1px">same every year</text>
+  <g class="coins">
+    <circle cx="19.7" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="23.1" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="26.5" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="29.9" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="33.3" cy="23" r="1.25" class="f-tint s-job hair"/>
+    <circle cx="36.7" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="40.1" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="43.5" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="46.9" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="50.3" cy="23" r="1.25" class="f-tint s-job hair"/>
+    <circle cx="53.7" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="57.1" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="60.5" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="63.9" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="67.3" cy="23" r="1.25" class="f-tint s-job hair"/>
+    <circle cx="70.7" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="74.1" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="77.5" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="80.9" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="84.3" cy="23" r="1.25" class="f-tint s-job hair"/>
+    <circle cx="87.7" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="91.1" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="94.5" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="97.9" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="101.3" cy="23" r="1.25" class="f-tint s-job hair"/>
+    <circle cx="104.7" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="108.1" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="111.5" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="114.9" cy="23" r="1.25" class="f-tint s-job hair"/><circle cx="118.3" cy="23" r="1.25" class="f-tint s-job hair"/>
+  </g>
+
+  <!-- Age axis -->
+  <text x="0" y="35.2" class="t-cap">Age</text>
+  <line x1="18" y1="31" x2="120" y2="31" class="s-ink thin"/>
+  <g class="t-sm t-num">
+    <line x1="18" y1="30" x2="18" y2="32" class="s-ink thin"/><text x="18" y="35.2" class="t-sm mid">30</text>
+    <line x1="35" y1="30" x2="35" y2="32" class="s-ink thin"/><text x="35" y="35.2" class="t-sm mid">35</text>
+    <line x1="52" y1="30" x2="52" y2="32" class="s-ink thin"/><text x="52" y="35.2" class="t-sm mid">40</text>
+    <text x="69" y="35.2" class="t-sm mid b">45</text>
+    <line x1="86" y1="30" x2="86" y2="32" class="s-ink thin"/><text x="86" y="35.2" class="t-sm mid">50</text>
+    <line x1="103" y1="30" x2="103" y2="32" class="s-ink thin"/><text x="103" y="35.2" class="t-sm mid">55</text>
+    <text x="120" y="35.2" class="t-sm mid b">60</text>
+  </g>
+
+  <!-- Two possible outcomes -->
+  <line x1="69" y1="6.5" x2="69" y2="31" class="s-ink2 thin dash"/>
+  <circle cx="69" cy="31" r="1.3" class="f-ink"/>
+  <circle cx="120" cy="31" r="1.3" class="f-paper s-ink thin"/>
+  <path d="M69,36.8 V40.6 H29.5 V43.4" class="f-none s-ink2 thin" marker-end="url(#ah-term)"/>
+  <path d="M120,36.8 V40.6 H92.5 V43.4" class="f-none s-ink2 thin" marker-end="url(#ah-term)"/>
+
+  <rect x="0" y="44.4" width="59" height="33" class="f-tint"/>
+  <text x="3" y="49.2" class="t-cap job">If Rohan dies at 45</text>
+  <text x="3" y="57.4" class="t-xl t-job">₹1 crore</text>
+  <text x="3" y="62.6" class="t-sm">goes to his family, as a lump sum or</text>
+  <text x="3" y="65.9" class="t-sm">as a monthly income if he chose that.</text>
+  <text x="3" y="69.2" class="t-sm">The policy then ends.</text>
+
+  <rect x="63" y="44.4" width="59" height="33" class="f-panel"/>
+  <text x="66" y="49.2" class="t-cap">If Rohan is alive at 60</text>
+  <text x="66" y="57.4" class="t-xl" style="fill:var(--ink-2)">Cover ends</text>
+  <text x="66" y="62.6" class="t-sm">Nothing is paid and no premium comes</text>
+  <text x="66" y="65.9" class="t-sm">back. Paying only for protection is</text>
+  <text x="66" y="69.2" class="t-sm">what keeps the premium low.</text>
+</svg>
+  </figure>
+  <div class="lower">
+    <div>
+      <h2 class="label block-title">How to recognise it</h2>
+      <ul class="marks">
+        <li>Pays only if you die during the term. There is no maturity value.</li>
+        <li>The premium is fixed when you buy and usually stays the same for the whole term.</li>
+        <li>Riders can add cover for accidental death, critical illness or waiver of premium.</li>
+      </ul>
+    </div>
+    <aside class="confused">
+      <h2 class="label block-title">Often confused with</h2>
+      <p><span class="vs">Return-of-premium and endowment plans.</span> They pay money back if you survive, but cost much more for the same cover. A term plan keeps protection and saving separate.</p>
+    </aside>
+  </div>
+  <footer class="folio"><span class="pg">4</span><span class="asof">Facts as of October 2026</span></footer>
+</section>
+<!-- /page --><section class="page recto" data-job="protect">
+  <header class="runhead"><span>01 · Term insurance</span><span class="chip">Protect</span></header>
+  <div class="label" style="display:flex;justify-content:space-between;padding-bottom:1.5mm"><span>At a glance</span><span class="muted" style="letter-spacing:.06em;text-transform:none;font-family:var(--text);font-stretch:100%;font-weight:500;font-size:6.6pt">The same six facts for every product</span></div>
+  <dl class="glance">
+      <dt>Regulator</dt><dd>IRDAI</dd>
+      <dt>What you pay</dt><dd>A premium, yearly or monthly. It depends on your age, health, habits, cover and term.</dd>
+      <dt>Time commitment</dt><dd>The term you choose, usually until your earning years end (age 60–70). You get 30 days to return a new policy (free look).</dd>
+      <dt>When it pays</dt><dd>On death during the term, to your nominee. IRDAI allows 15 days to settle a claim, or 45 if it needs investigation.</dd>
+      <dt>Costs</dt><dd>Only the premium. No GST on individual policies since 22 September 2025.</dd>
+      <dt>Tax in brief</dt><dd>Old regime: premium deductible under Sec. 123 (earlier 80C). The payout to your nominee is tax-free.</dd>
+  </dl>
+  <div class="section gauge">
+    <h2 class="label"><span>Work out your cover</span><span class="aside">Rule of thumb: 10 to 15 times yearly income</span></h2>
+    <div class="worksheet">
+  <div class="ws-row"><span class="ws-key">A</span><span class="ws-text">Yearly household expenses</span><span class="ws-blank">₹</span></div>
+  <div class="ws-row"><span class="ws-key">D</span><span class="ws-text">+ Loans still to repay</span><span class="ws-blank">₹</span></div>
+  <div class="ws-row"><span class="ws-key">B</span><span class="ws-text">× Years your family needs support</span><span class="ws-blank"></span></div>
+  <div class="ws-row"><span class="ws-key">E</span><span class="ws-text">+ Big goals: education, marriage</span><span class="ws-blank">₹</span></div>
+  <div class="ws-row"><span class="ws-key">C</span><span class="ws-text">= Income to replace (A × B)</span><span class="ws-blank">₹</span></div>
+  <div class="ws-row"><span class="ws-key">F</span><span class="ws-text">− Savings and existing cover</span><span class="ws-blank">₹</span></div>
+  <div class="ws-result"><span class="ws-text"><b>Cover you need</b> = C + D + E − F</span><span class="ws-blank">₹</span></div>
+</div>
+  </div>
+  <div class="section">
+    <div class="fit">
+      <div class="yes"><h3 class="label">Suits you if</h3><ul><li>Someone depends on your income: spouse, children or parents.</li><li>You have a home loan or other debts your family would inherit.</li><li>You want the largest cover for the lowest premium.</li></ul></div>
+      <div class="no"><h3 class="label">Think twice if</h3><ul><li>No one depends on your income and you have no debts.</li><li>You want money back at the end. That is a savings goal.</li><li>You cannot disclose your health and habits fully. Non-disclosure can get a claim rejected.</li></ul></div>
+    </div>
+  </div>
+  <div class="section">
+    <h2 class="label"><span>Ask before you sign</span><span class="aside">Tick when answered</span></h2>
+    <ul class="ask"><li>Is the cover enough for my family, including my loans?</li><li>Have I disclosed every illness, habit and existing policy?</li><li>Who is my nominee, and does my family know this policy exists?</li><li>What is the insurer’s claim settlement record?</li></ul>
+  </div>
+  <div class="section">
+    <h2 class="label"><span>My notes</span><span class="aside">Write your own numbers here</span></h2>
+    <div class="notes"><div class="field"><span>Insurer</span></div><div class="field"><span>Cover ₹</span></div><div class="field"><span>Premium due</span></div><div class="field"><span>Nominee</span></div></div>
+  </div>
+  <p class="legal">Insurance is underwritten by the insurer. Ram Investments is [IRDAI registration type and number]. For details on risk factors, terms and conditions, read the sales brochure carefully before concluding a sale.</p>
+  <footer class="folio"><span class="pg">5</span><span class="asof">Ram Investments · Diary 2027</span></footer>
+</section>
+<!-- /page --></div>
+<div class="spread"><span class="spread-label">Pages 6–7</span><section class="page verso" data-job="protect" id="health">
+  <header class="runhead"><span class="chip">Protect</span><span>Know your products · 02 of 08</span></header>
+  <div class="entry-head">
+    <div class="entry-no">02</div>
+    <div>
+      <h1 class="entry-title">Health Insurance</h1>
+      <p class="entry-formal">Indemnity health cover · regulated by IRDAI</p>
+    </div>
+  </div>
+  <p class="oneline">You pay a premium every year. If you are admitted to hospital, the insurer pays the bills up to your sum insured, either directly to the hospital (cashless) or by repaying you later.</p>
+  <figure class="plate">
+    <figcaption class="plate-head"><span class="label">How a big bill gets paid</span><span class="fig">Fig. 02</span></figcaption>
+    <svg viewBox="0 0 122 77" role="img" aria-labelledby="health-plate-t">
+  <title id="health-plate-t">How a ₹25 lakh hospital bill is paid by a ₹10 lakh base policy and a super top-up, and when cover starts after you buy.</title>
+
+  <text x="0" y="3.4" class="t-bd"><tspan class="b">Example.</tspan> A ₹25 lakh bill, with a ₹10 lakh policy and a super top-up.</text>
+
+  <!-- Row 1: the bill -->
+  <text x="0" y="12.6" class="t-cap">The bill</text>
+  <rect x="18" y="8.6" width="85" height="6" class="f-ink2"/>
+  <text x="20.4" y="12.6" class="t-sm b t-white">Hospital bill ₹25 lakh</text>
+
+  <!-- Row 2: who pays -->
+  <text x="0" y="21.6" class="t-cap job">Who pays</text>
+  <rect x="18" y="17.6" width="34" height="6" class="f-job"/>
+  <text x="20.4" y="21.6" class="t-sm b t-white">Base policy ₹10 lakh</text>
+  <rect x="52" y="17.6" width="51" height="6" class="f-deep"/>
+  <text x="54.4" y="21.6" class="t-sm b t-white">Super top-up ₹15 lakh</text>
+  <text x="105" y="21.6" class="t-sm b">You ₹0</text>
+
+  <!-- Row 3: the cover you hold -->
+  <text x="0" y="30.6" class="t-cap job">Your cover</text>
+  <rect x="18" y="26.6" width="34" height="6" class="f-tint s-job hair"/>
+  <text x="20.4" y="30.6" class="t-sm t-job">Base ₹10 lakh</text>
+  <path d="M52,26.6 H118.6 L121.6,29.6 L118.6,32.6 H52 Z" class="f-tint s-job hair"/>
+  <text x="54.4" y="30.6" class="t-sm t-job">Super top-up: ₹50 lakh above a ₹10 lakh deductible</text>
+
+  <!-- Axis in ₹ lakh -->
+  <line x1="18" y1="35.4" x2="120" y2="35.4" class="s-ink3 hair"/>
+  <g class="t-num">
+    <line x1="18" y1="34.6" x2="18" y2="36.2" class="s-ink3 hair"/><text x="18" y="38.8" class="t-sm mid">0</text>
+    <line x1="35" y1="34.6" x2="35" y2="36.2" class="s-ink3 hair"/><text x="35" y="38.8" class="t-sm mid">5</text>
+    <line x1="52" y1="34.6" x2="52" y2="36.2" class="s-ink3 hair"/><text x="52" y="38.8" class="t-sm mid">10</text>
+    <line x1="69" y1="34.6" x2="69" y2="36.2" class="s-ink3 hair"/><text x="69" y="38.8" class="t-sm mid">15</text>
+    <line x1="86" y1="34.6" x2="86" y2="36.2" class="s-ink3 hair"/><text x="86" y="38.8" class="t-sm mid">20</text>
+    <line x1="103" y1="34.6" x2="103" y2="36.2" class="s-ink3 hair"/><text x="103" y="38.8" class="t-sm mid">25</text>
+    <text x="120" y="38.8" class="t-sm end">30 lakh</text>
+  </g>
+  <text x="0" y="38.8" class="t-cap">₹ lakh</text>
+  <text x="0" y="43.6" class="t-sm">A super top-up pays once the year’s bills cross its deductible: a low-cost way to raise your cover.</text>
+
+  <!-- Waiting periods -->
+  <line x1="0" y1="47.2" x2="122" y2="47.2" class="s-rule hair"/>
+  <text x="0" y="51.2" class="t-cap job">When cover starts, from the day you buy</text>
+  <text x="122" y="51.2" class="t-cap end">Not to scale</text>
+
+  <text x="1" y="55.6" class="t-cap">Day 1</text>
+  <text x="22" y="55.6" class="t-cap">30 days</text>
+  <text x="80" y="55.6" class="t-cap mid">Up to 3 years</text>
+  <text x="121" y="55.6" class="t-cap end">5 years</text>
+
+  <rect x="1" y="57.2" width="21" height="4.2" class="f-tint"/>
+  <rect x="22" y="57.2" width="58" height="4.2" class="f-job" style="opacity:.5"/>
+  <rect x="80" y="57.2" width="41" height="4.2" class="f-job"/>
+  <line x1="22" y1="56.6" x2="22" y2="62" class="s-ink thin"/>
+  <line x1="80" y1="56.6" x2="80" y2="62" class="s-ink thin"/>
+  <line x1="121" y1="56.6" x2="121" y2="62" class="s-ink thin"/>
+  <line x1="1" y1="56.6" x2="1" y2="62" class="s-ink thin"/>
+
+  <text x="1" y="65" class="t-sm">Accidents</text><text x="1" y="68.2" class="t-sm">covered</text>
+  <text x="22" y="65" class="t-sm">Illnesses</text><text x="22" y="68.2" class="t-sm">covered</text>
+  <text x="80" y="65" class="t-sm mid">Pre-existing illnesses and</text><text x="80" y="68.2" class="t-sm mid">listed treatments covered</text>
+  <text x="121" y="65" class="t-sm end">Moratorium</text><text x="121" y="68.2" class="t-sm end">begins</text>
+
+  <text x="0" y="74" class="t-sm"><tspan class="b">Moratorium:</tspan> after 5 continuous years, a claim cannot be refused for non-disclosure, except in fraud.</text>
+</svg>
+  </figure>
+  <div class="lower">
+    <div>
+      <h2 class="label block-title">How to recognise it</h2>
+      <ul class="marks">
+        <li>Pays actual hospital bills up to the sum insured, for one person or the whole family (floater).</li>
+        <li>Claim-free years can raise your cover (no-claim bonus). Some policies refill cover used up in a year (restoration).</li>
+        <li>You can move to another insurer without losing waiting-period credit (portability).</li>
+      </ul>
+    </div>
+    <aside class="confused">
+      <h2 class="label block-title">Often confused with</h2>
+      <p><span class="vs">Critical illness cover.</span> Pays a fixed lump sum when a listed illness is diagnosed, whatever the bill. It adds to health insurance; it does not replace it.</p>
+      <p><span class="vs">Employer cover.</span> Usually ends when you change jobs or retire.</p>
+    </aside>
+  </div>
+  <footer class="folio"><span class="pg">6</span><span class="asof">Facts as of October 2026</span></footer>
+</section>
+<!-- /page --><section class="page recto" data-job="protect">
+  <header class="runhead"><span>02 · Health insurance</span><span class="chip">Protect</span></header>
+  <div class="label" style="display:flex;justify-content:space-between;padding-bottom:1.5mm"><span>At a glance</span><span class="muted" style="letter-spacing:.06em;text-transform:none;font-family:var(--text);font-stretch:100%;font-weight:500;font-size:6.6pt">The same six facts for every product</span></div>
+  <dl class="glance">
+      <dt>Regulator</dt><dd>IRDAI</dd>
+      <dt>What you pay</dt><dd>A yearly premium based on age, sum insured, city and health history. No upper age limit to buy since April 2024; insurers still assess each applicant.</dd>
+      <dt>Time commitment</dt><dd>One year at a time. Renew without a break to keep waiting-period credit and bonus.</dd>
+      <dt>When it pays</dt><dd>Cashless at network hospitals (the insurer must decide within 1 hour of a request, and approve discharge within 3 hours), or by reimbursement.</dd>
+      <dt>Costs</dt><dd>Only the premium. No GST on individual policies since 22 September 2025.</dd>
+      <dt>Tax in brief</dt><dd>Old regime: premium deductible under Sec. 126 (earlier 80D), up to ₹25,000 (₹50,000 for senior citizens), plus a separate limit for parents.</dd>
+  </dl>
+  <div class="section gauge">
+    <h2 class="label"><span>Read the fine print</span><span class="aside">Compare before you buy</span></h2>
+    <table class="fineprint">
+  <thead>
+    <tr><th>Term</th><th class="good">Look for</th><th class="watch">Watch out for</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Room rent</td><td class="good">No cap, or any single private room</td><td class="watch">A daily cap. Go above it and the whole bill can be cut in proportion.</td></tr>
+    <tr><td>Co-payment</td><td class="good">None</td><td class="watch">You pay a fixed share of every claim</td></tr>
+    <tr><td>Sub-limits</td><td class="good">None</td><td class="watch">Caps on treatments such as cataract or knee surgery</td></tr>
+    <tr><td>Restoration</td><td class="good">Cover refills if used up in a year</td><td class="watch">No refill</td></tr>
+    <tr><td>Waiting periods</td><td class="good">Short, or reducible with an add-on</td><td class="watch">The full 3 years for conditions you already have</td></tr>
+  </tbody>
+</table>
+  </div>
+  <div class="section">
+    <div class="fit">
+      <div class="yes"><h3 class="label">Suits you if</h3><ul><li>A large hospital bill would eat into your savings.</li><li>Your only cover today comes from your employer.</li><li>You have parents or senior family members to protect.</li></ul></div>
+      <div class="no"><h3 class="label">Think twice if</h3><ul><li>You are buying mainly for the tax deduction.</li><li>You have not checked the room-rent cap, co-payment and sub-limits.</li><li>You plan to let a policy lapse to switch insurers. Port it instead.</li></ul></div>
+    </div>
+  </div>
+  <div class="section">
+    <h2 class="label"><span>Ask before you sign</span><span class="aside">Tick when answered</span></h2>
+    <ul class="ask"><li>Is there a room-rent cap or a co-payment?</li><li>Which hospitals near me offer cashless treatment?</li><li>Which of my conditions have a waiting period, and how long is it?</li><li>Is the sum insured enough for hospital costs in my city?</li></ul>
+  </div>
+  <div class="section">
+    <h2 class="label"><span>My notes</span><span class="aside">Write your own numbers here</span></h2>
+    <div class="notes"><div class="field"><span>Insurer</span></div><div class="field"><span>Sum insured ₹</span></div><div class="field"><span>Renewal date</span></div><div class="field"><span>Claims helpline</span></div></div>
+  </div>
+  <p class="legal">Insurance is underwritten by the insurer. Ram Investments is [IRDAI registration type and number]. For details on risk factors, terms and conditions, read the sales brochure carefully before concluding a sale.</p>
+  <footer class="folio"><span class="pg">7</span><span class="asof">Ram Investments · Diary 2027</span></footer>
+</section>
+<!-- /page --></div>
+<div class="spread"><span class="spread-label">Pages 8–9</span><section class="page verso" data-job="build" id="mf">
+  <header class="runhead"><span class="chip">Build</span><span>Know your products · 03 of 08</span></header>
+  <div class="entry-head">
+    <div class="entry-no">03</div>
+    <div>
+      <h1 class="entry-title">Mutual Funds</h1>
+      <p class="entry-formal">Pooled, professionally managed · regulated by SEBI</p>
+    </div>
+  </div>
+  <p class="oneline">Many investors pool their money. A professional fund manager invests it in shares, bonds, gold or other assets, as the scheme’s rules allow. You own units of the pool, and their value (the NAV) is published every business day.</p>
+  <figure class="plate">
+    <figcaption class="plate-head"><span class="label">How it works</span><span class="fig">Fig. 03</span></figcaption>
+    <svg viewBox="0 0 122 84" role="img" aria-labelledby="mf-plate-t">
+  <title id="mf-plate-t">Investors buy units of one pool; a fund manager invests the pool in shares, bonds and gold; gains raise the NAV. Below, SEBI's five groups of schemes.</title>
+  <defs>
+    <marker id="ah-mf" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="3.2" markerHeight="3.2" orient="auto-start-reverse">
+      <path d="M0,0 L6,3 L0,6 z" class="f-ink2"/>
+    </marker>
+  </defs>
+
+  <!-- Fund manager -->
+  <rect x="37" y="0" width="36" height="8.4" class="f-panel"/>
+  <text x="55" y="3.6" class="t-sm b mid">Fund manager (AMC)</text>
+  <text x="55" y="6.8" class="t-sm mid">decides what to buy</text>
+  <line x1="55" y1="8.4" x2="55" y2="11.4" class="s-ink2 thin"/>
+
+  <!-- Investors -->
+  <g class="f-job">
+    <circle cx="4.5" cy="18.8" r="1.35"/><path d="M2.2,23.6 C2.2,20.7 6.8,20.7 6.8,23.6 Z"/>
+    <circle cx="11" cy="18.8" r="1.35"/><path d="M8.7,23.6 C8.7,20.7 13.3,20.7 13.3,23.6 Z"/>
+    <circle cx="17.5" cy="18.8" r="1.35"/><path d="M15.2,23.6 C15.2,20.7 19.8,20.7 19.8,23.6 Z"/>
+    <circle cx="4.5" cy="27.8" r="1.35"/><path d="M2.2,32.6 C2.2,29.7 6.8,29.7 6.8,32.6 Z"/>
+    <circle cx="11" cy="27.8" r="1.35"/><path d="M8.7,32.6 C8.7,29.7 13.3,29.7 13.3,32.6 Z"/>
+    <circle cx="17.5" cy="27.8" r="1.35"/><path d="M15.2,32.6 C15.2,29.7 19.8,29.7 19.8,32.6 Z"/>
+  </g>
+  <text x="11" y="37.6" class="t-sm mid">You and</text>
+  <text x="11" y="40.8" class="t-sm mid">other investors</text>
+
+  <line x1="23.5" y1="26" x2="39.4" y2="26" class="s-ink2 thin" marker-end="url(#ah-mf)"/>
+  <text x="31.4" y="23.8" class="t-cap mid">Buy units</text>
+
+  <!-- The pool -->
+  <circle cx="55" cy="26" r="14.5" class="f-tint s-job thin"/>
+  <text x="55" y="20.4" class="t-cap job mid">The fund</text>
+  <text x="55" y="25.4" class="t-md mid">One pool</text>
+  <text x="55" y="29" class="t-sm mid">held in trust</text>
+  <text x="55" y="32.4" class="t-sm mid">price per unit: NAV</text>
+
+  <line x1="70" y1="26" x2="82.6" y2="26" class="s-ink2 thin" marker-end="url(#ah-mf)"/>
+  <text x="76.3" y="23.8" class="t-cap mid">Invests</text>
+
+  <!-- What the pool owns -->
+  <rect x="84" y="9" width="38" height="9.6" class="f-panel"/>
+  <text x="86.6" y="13.2" class="t-bd b">Shares</text>
+  <text x="86.6" y="16.6" class="t-sm">stakes in companies</text>
+  <rect x="84" y="20.4" width="38" height="9.6" class="f-panel"/>
+  <text x="86.6" y="24.6" class="t-bd b">Bonds</text>
+  <text x="86.6" y="28" class="t-sm">loans to governments, firms</text>
+  <rect x="84" y="31.8" width="38" height="9.6" class="f-panel"/>
+  <text x="86.6" y="36" class="t-bd b">Gold and more</text>
+  <text x="86.6" y="39.4" class="t-sm">silver, REITs, InvITs</text>
+
+  <!-- Money comes back -->
+  <path d="M103,41.4 V45.6 H11 V43.2" class="f-none s-ink2 thin dash" marker-end="url(#ah-mf)"/>
+  <text x="57" y="49.6" class="t-sm mid">Gains and income raise the NAV. Sell your units back at that day’s NAV.</text>
+
+  <text x="0" y="56.2" class="t-cap job">Safeguards</text>
+  <text x="21" y="56.2" class="t-sm">SEBI regulates  ·  trustees oversee the AMC  ·  a custodian holds the assets</text>
+
+  <!-- Five groups -->
+  <line x1="0" y1="59.6" x2="122" y2="59.6" class="s-rule hair"/>
+  <text x="0" y="64" class="t-cap job">Five groups of schemes (SEBI, 2026)</text>
+
+  <rect x="0" y="66.4" width="22.8" height="17.2" class="f-tint"/>
+  <text x="2" y="70.8" class="t-bd b">Equity</text>
+  <text x="2" y="74.6" class="t-sm" style="font-size:2.25px">Mainly shares.</text>
+  <text x="2" y="77.9" class="t-sm" style="font-size:2.25px">Long-term growth.</text>
+
+  <rect x="24.8" y="66.4" width="22.8" height="17.2" class="f-tint"/>
+  <text x="26.8" y="70.8" class="t-bd b">Debt</text>
+  <text x="26.8" y="74.6" class="t-sm" style="font-size:2.25px">Bonds and</text>
+  <text x="26.8" y="77.9" class="t-sm" style="font-size:2.25px">money market.</text>
+
+  <rect x="49.6" y="66.4" width="22.8" height="17.2" class="f-tint"/>
+  <text x="51.6" y="70.8" class="t-bd b">Hybrid</text>
+  <text x="51.6" y="74.6" class="t-sm" style="font-size:2.25px">A mix of equity,</text>
+  <text x="51.6" y="77.9" class="t-sm" style="font-size:2.25px">debt and more.</text>
+
+  <rect x="74.4" y="66.4" width="22.8" height="17.2" class="f-tint"/>
+  <text x="76.4" y="70.8" class="t-bd b">Life Cycle</text>
+  <text x="76.4" y="74.6" class="t-sm" style="font-size:2.25px">Moves to debt</text>
+  <text x="76.4" y="77.9" class="t-sm" style="font-size:2.25px">as a goal nears.</text>
+  <text x="76.4" y="81.2" class="t-cap job" style="font-size:1.9px">New in 2026</text>
+
+  <rect x="99.2" y="66.4" width="22.8" height="17.2" class="f-tint"/>
+  <text x="101.2" y="70.8" class="t-bd b">Other</text>
+  <text x="101.2" y="74.6" class="t-sm" style="font-size:2.25px">Index funds,</text>
+  <text x="101.2" y="77.9" class="t-sm" style="font-size:2.25px">ETFs, FoFs.</text>
+</svg>
+  </figure>
+  <div class="lower">
+    <div>
+      <h2 class="label block-title">How to recognise it</h2>
+      <ul class="marks">
+        <li>You own units of a pool, not the shares or bonds themselves.</li>
+        <li>Every scheme has a Direct plan and a Regular plan. A Regular plan includes the distributor’s commission.</li>
+        <li>Schemes must stay true to their label: a large-cap fund, for example, keeps at least 80% in large companies.</li>
+      </ul>
+    </div>
+    <aside class="confused">
+      <h2 class="label block-title">Often confused with</h2>
+      <p><span class="vs">SIF.</span> Also run by mutual fund houses, but needs ₹10 lakh and can bet against markets (short) for up to 25%. See entry 05.</p>
+      <p><span class="vs">ULIP.</span> An insurance policy with an investment part, regulated by IRDAI. It is not a mutual fund.</p>
+    </aside>
+  </div>
+  <footer class="folio"><span class="pg">8</span><span class="asof">Facts as of October 2026</span></footer>
+</section>
+<!-- /page --><section class="page recto" data-job="build">
+  <header class="runhead"><span>03 · Mutual funds</span><span class="chip">Build</span></header>
+  <div class="label" style="display:flex;justify-content:space-between;padding-bottom:1.5mm"><span>At a glance</span><span class="muted" style="letter-spacing:.06em;text-transform:none;font-family:var(--text);font-stretch:100%;font-weight:500;font-size:6.6pt">The same six facts for every product</span></div>
+  <dl class="glance">
+      <dt>Regulator</dt><dd>SEBI. AMFI is the industry body.</dd>
+      <dt>Minimum</dt><dd>Set by each scheme. SIPs often start at ₹100–₹500 a month.<svg class="ruler" viewBox="0 0 99 9.2" role="img" aria-label="Minimum to invest: from ₹100">
+  <line x1="1.2" y1="5.2" x2="96.8" y2="5.2" class="s-rule" style="stroke-width:1.1;stroke-linecap:round"/>
+  <line x1="1.2" y1="5.2" x2="96.8" y2="5.2" class="s-job" style="stroke-width:1.1;stroke-linecap:round"/>
+  <line x1="1.2" y1="4.3" x2="1.2" y2="6.1000000000000005" class="s-ink3 hair"/><text x="1.2" y="8.8" class="t-sm t-num" style="font-size:2.05px;text-anchor:start">₹100</text><line x1="20.32" y1="4.3" x2="20.32" y2="6.1000000000000005" class="s-ink3 hair"/><text x="20.32" y="8.8" class="t-sm t-num" style="font-size:2.05px;text-anchor:middle">₹1,000</text><line x1="39.440000000000005" y1="4.3" x2="39.440000000000005" y2="6.1000000000000005" class="s-ink3 hair"/><text x="39.440000000000005" y="8.8" class="t-sm t-num" style="font-size:2.05px;text-anchor:middle">₹10,000</text><line x1="58.559999999999995" y1="4.3" x2="58.559999999999995" y2="6.1000000000000005" class="s-ink3 hair"/><text x="58.559999999999995" y="8.8" class="t-sm t-num" style="font-size:2.05px;text-anchor:middle">₹1 lakh</text><line x1="77.68" y1="4.3" x2="77.68" y2="6.1000000000000005" class="s-ink3 hair"/><text x="77.68" y="8.8" class="t-sm t-num" style="font-size:2.05px;text-anchor:middle">₹10 lakh</text><line x1="96.8" y1="4.3" x2="96.8" y2="6.1000000000000005" class="s-ink3 hair"/><text x="96.8" y="8.8" class="t-sm t-num" style="font-size:2.05px;text-anchor:end">₹1 crore</text>
+  
+  <path d="M0.09999999999999987,2.6 h2.2 l-1.1,1.6 z" class="f-deep"/>
+  <text x="1.2" y="2.1" class="t-cap job" style="font-size:2.05px;text-anchor:start">from ₹100</text>
+</svg></dd>
+      <dt>Time commitment</dt><dd>None for most open-ended funds. Tax-saving ELSS funds lock in for 3 years. Equity funds suit goals 5+ years away.</dd>
+      <dt>Money out</dt><dd>Sell units any business day. An exit load may apply if you leave early.</dd>
+      <dt>Costs</dt><dd>The total expense ratio (TER), taken daily from the NAV and capped by SEBI.</dd>
+      <dt>Tax in brief</dt><dd>Equity funds: 12.5% on long-term gains (held over 12 months) above ₹1.25 lakh a year; 20% if short-term. Debt funds: your slab rate.</dd>
+  </dl>
+  <div class="section gauge">
+    <h2 class="label"><span>Risk check: the riskometer</span><span class="aside">Printed on every scheme</span></h2>
+    <svg viewBox="0 0 122 27" role="img" aria-labelledby="mf-gauge-t">
+  <title id="mf-gauge-t">SEBI's six-level riskometer, from Low to Very High, and the 3 by 3 Potential Risk Class grid used for debt funds.</title>
+  <path d="M1.00,22.60 A17,17 0 0 1 3.28,14.10 L10.21,18.10 A9,9 0 0 0 9.00,22.60 Z" class="f-r1 s-paper" style="stroke-width:.35"/>
+  <text x="5.44" y="20.09" class="t-md mid t-white" style="font-size:2.5px">1</text>
+  <path d="M3.28,14.10 A17,17 0 0 1 9.50,7.88 L13.50,14.81 A9,9 0 0 0 10.21,18.10 Z" class="f-r2 s-paper" style="stroke-width:.35"/>
+  <text x="8.81" y="14.26" class="t-md mid" style="font-size:2.5px">2</text>
+  <path d="M9.50,7.88 A17,17 0 0 1 18.00,5.60 L18.00,13.60 A9,9 0 0 0 13.50,14.81 Z" class="f-r3 s-paper" style="stroke-width:.35"/>
+  <text x="14.64" y="10.89" class="t-md mid" style="font-size:2.5px">3</text>
+  <path d="M18.00,5.60 A17,17 0 0 1 26.50,7.88 L22.50,14.81 A9,9 0 0 0 18.00,13.60 Z" class="f-r4 s-paper" style="stroke-width:.35"/>
+  <text x="21.36" y="10.89" class="t-md mid" style="font-size:2.5px">4</text>
+  <path d="M26.50,7.88 A17,17 0 0 1 32.72,14.10 L25.79,18.10 A9,9 0 0 0 22.50,14.81 Z" class="f-r5 s-paper" style="stroke-width:.35"/>
+  <text x="27.19" y="14.26" class="t-md mid t-white" style="font-size:2.5px">5</text>
+  <path d="M32.72,14.10 A17,17 0 0 1 35.00,22.60 L27.00,22.60 A9,9 0 0 0 25.79,18.10 Z" class="f-r6 s-paper" style="stroke-width:.35"/>
+  <text x="30.56" y="20.09" class="t-md mid t-white" style="font-size:2.5px">6</text>
+  <text x="18" y="26.2" class="t-cap mid" style="font-size:1.9px">Riskometer</text>
+  <g class="t-sm">
+    <text x="41" y="6.40" class="t-sm"><tspan class="b">1  Low</tspan><tspan class="t-ink3">  e.g. overnight funds</tspan></text>
+    <text x="41" y="9.85" class="t-sm"><tspan class="b">2  Low to Moderate</tspan><tspan class="t-ink3">  e.g. liquid funds</tspan></text>
+    <text x="41" y="13.30" class="t-sm"><tspan class="b">3  Moderate</tspan></text>
+    <text x="41" y="16.75" class="t-sm"><tspan class="b">4  Moderately High</tspan></text>
+    <text x="41" y="20.20" class="t-sm"><tspan class="b">5  High</tspan></text>
+    <text x="41" y="23.65" class="t-sm"><tspan class="b">6  Very High</tspan><tspan class="t-ink3">  most equity funds</tspan></text>
+  </g>
+  <text x="122" y="2.6" class="t-cap job end">Debt funds: PRC grid</text>
+  <g class="t-cap" style="font-size:1.9px">
+    <text x="106.2" y="5.8" class="t-cap mid" style="font-size:1.9px">A</text>
+    <text x="111.8" y="5.8" class="t-cap mid" style="font-size:1.9px">B</text>
+    <text x="117.4" y="5.8" class="t-cap mid" style="font-size:1.9px">C</text>
+    <text x="102.4" y="10.1" class="t-cap end" style="font-size:1.9px">I</text>
+    <text x="102.4" y="15.7" class="t-cap end" style="font-size:1.9px">II</text>
+    <text x="102.4" y="21.3" class="t-cap end" style="font-size:1.9px">III</text>
+  </g>
+  <g class="s-paper" style="stroke-width:.35">
+    <rect x="103.4" y="6.6" width="5.6" height="5.6" class="f-job" style="opacity:0.18"/>
+    <rect x="109.0" y="6.6" width="5.6" height="5.6" class="f-job" style="opacity:0.32"/>
+    <rect x="114.6" y="6.6" width="5.6" height="5.6" class="f-job" style="opacity:0.46"/>
+    <rect x="103.4" y="12.2" width="5.6" height="5.6" class="f-job" style="opacity:0.32"/>
+    <rect x="109.0" y="12.2" width="5.6" height="5.6" class="f-job" style="opacity:0.46"/>
+    <rect x="114.6" y="12.2" width="5.6" height="5.6" class="f-job" style="opacity:0.60"/>
+    <rect x="103.4" y="17.8" width="5.6" height="5.6" class="f-job" style="opacity:0.46"/>
+    <rect x="109.0" y="17.8" width="5.6" height="5.6" class="f-job" style="opacity:0.60"/>
+    <rect x="114.6" y="17.8" width="5.6" height="5.6" class="f-job" style="opacity:0.74"/>
+  </g>
+  <text x="122" y="26.2" class="t-sm end" style="font-size:1.95px">credit risk (A–C) × rate risk (I–III)</text>
+</svg>
+  </div>
+  <div class="section">
+    <div class="fit">
+      <div class="yes"><h3 class="label">Suits you if</h3><ul><li>You are starting out, or want a core portfolio for long-term goals.</li><li>You want diversification and professional management with small amounts.</li><li>You like investing a fixed amount every month (SIP).</li></ul></div>
+      <div class="no"><h3 class="label">Think twice if</h3><ul><li>You need guaranteed returns or capital protection.</li><li>You may need the money within a year. Equity funds can fall sharply.</li><li>You are picking a fund on last year’s return alone.</li></ul></div>
+    </div>
+  </div>
+  <div class="section">
+    <h2 class="label"><span>Ask before you sign</span><span class="aside">Tick when answered</span></h2>
+    <ul class="ask"><li>What is the riskometer level, and does it match my comfort?</li><li>What are the expense ratio and the exit load?</li><li>How does this fund fit with what I already own?</li><li>Direct or Regular plan: what am I paying for, and what do I get?</li></ul>
+  </div>
+  <div class="section">
+    <h2 class="label"><span>My notes</span><span class="aside">Write your own numbers here</span></h2>
+    <div class="notes"><div class="field"><span>SIPs running</span></div><div class="field"><span>Monthly total ₹</span></div><div class="field"><span>Goal and year</span></div><div class="field"><span>Review month</span></div></div>
+  </div>
+  <p class="legal"><span class="warn">Mutual Fund investments are subject to market risks, read all scheme related documents carefully.</span> Ram Investments is an AMFI Registered Mutual Fund Distributor (ARN-[____]).</p>
+  <footer class="folio"><span class="pg">9</span><span class="asof">Ram Investments · Diary 2027</span></footer>
+</section>
+<!-- /page --></div>
+<div class="spread"><span class="spread-label">Pages 10–11</span><section class="page verso" data-job="build" id="ncd">
+  <header class="runhead"><span class="chip">Build</span><span>Know your products · 04 of 08</span></header>
+  <div class="entry-head">
+    <div class="entry-no">04</div>
+    <div>
+      <h1 class="entry-title">NCDs</h1>
+      <p class="entry-formal">Non-convertible debentures · regulated by SEBI</p>
+    </div>
+  </div>
+  <p class="oneline">An NCD is a loan you give a company for a fixed period. The company pays you interest at a fixed rate and returns your money at maturity. It can never turn into shares, hence “non-convertible”.</p>
+  <figure class="plate">
+    <figcaption class="plate-head"><span class="label">Where your money goes, and when it comes back</span><span class="fig">Fig. 04</span></figcaption>
+    <svg viewBox="0 0 122 80" role="img" aria-labelledby="ncd-plate-t">
+  <title id="ncd-plate-t">Cash flows of ₹1,00,000 in a 3-year NCD at 9% with yearly or cumulative payout, and who is paid first if the company fails.</title>
+  <defs>
+    <marker id="ah-ncd" viewBox="0 0 6 6" refX="3" refY="3" markerWidth="3" markerHeight="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 z" class="f-ink3"/>
+    </marker>
+  </defs>
+
+  <text x="0" y="3.4" class="t-bd"><tspan class="b">Example.</tspan> ₹1,00,000 in a 3-year NCD at 9% a year (illustration, not an offer).</text>
+
+  <g class="t-cap">
+    <text x="44" y="9.6" class="t-cap mid">Today</text>
+    <text x="67" y="9.6" class="t-cap mid">Year 1</text>
+    <text x="90" y="9.6" class="t-cap mid">Year 2</text>
+    <text x="113" y="9.6" class="t-cap mid">Year 3</text>
+  </g>
+
+  <!-- Yearly payout -->
+  <text x="0" y="16.4" class="t-cap job">Yearly payout</text>
+  <text x="0" y="19.8" class="t-sm">Interest every year,</text>
+  <text x="0" y="23.1" class="t-sm">money back at the end</text>
+  <line x1="44" y1="19" x2="113" y2="19" class="s-rule hair"/>
+  <circle cx="44" cy="19" r="4.7" class="f-paper s-ink2 thin"/>
+  <circle cx="67" cy="19" r="1.41" class="f-job"/>
+  <circle cx="90" cy="19" r="1.41" class="f-job"/>
+  <circle cx="113" cy="19" r="4.91" class="f-job"/>
+  <text x="44" y="28.6" class="t-sm mid t-num">−₹1,00,000</text>
+  <text x="67" y="28.6" class="t-sm mid t-num">+₹9,000</text>
+  <text x="90" y="28.6" class="t-sm mid t-num">+₹9,000</text>
+  <text x="113" y="28.6" class="t-sm mid b t-num">+₹1,09,000</text>
+
+  <!-- Cumulative -->
+  <text x="0" y="37.4" class="t-cap job">Cumulative</text>
+  <text x="0" y="40.8" class="t-sm">All interest, compounded,</text>
+  <text x="0" y="44.1" class="t-sm">paid at the end</text>
+  <line x1="44" y1="40" x2="113" y2="40" class="s-rule hair"/>
+  <circle cx="44" cy="40" r="4.7" class="f-paper s-ink2 thin"/>
+  <circle cx="67" cy="40" r="0.55" class="f-rule"/>
+  <circle cx="90" cy="40" r="0.55" class="f-rule"/>
+  <circle cx="113" cy="40" r="5.35" class="f-deep"/>
+  <text x="44" y="49.8" class="t-sm mid t-num">−₹1,00,000</text>
+  <text x="113" y="49.8" class="t-sm mid b t-num">+₹1,29,503</text>
+
+  <text x="0" y="54.6" class="t-sm">In all, ₹1,27,000 with yearly payouts and ₹1,29,503 cumulative. Circle areas are to scale.</text>
+
+  <!-- Who is paid first -->
+  <line x1="0" y1="57.8" x2="122" y2="57.8" class="s-rule hair"/>
+  <text x="0" y="62" class="t-cap job">If the company fails, who is paid first?</text>
+
+  <rect x="0" y="64.4" width="37" height="10.6" class="f-job"/>
+  <text x="2.6" y="68.8" class="t-bd b t-white">1  Secured lenders</text>
+  <text x="2.6" y="72.4" class="t-sm t-white">including secured NCDs</text>
+
+  <line x1="38" y1="69.7" x2="41.6" y2="69.7" class="s-ink3 thin" marker-end="url(#ah-ncd)"/>
+
+  <rect x="42.5" y="64.4" width="37" height="10.6" class="f-tint"/>
+  <text x="45.1" y="68.8" class="t-bd b">2  Unsecured lenders</text>
+  <text x="45.1" y="72.4" class="t-sm">including unsecured NCDs</text>
+
+  <line x1="80.5" y1="69.7" x2="84.1" y2="69.7" class="s-ink3 thin" marker-end="url(#ah-ncd)"/>
+
+  <rect x="85" y="64.4" width="37" height="10.6" class="f-panel"/>
+  <text x="87.6" y="68.8" class="t-bd b">3  Shareholders</text>
+  <text x="87.6" y="72.4" class="t-sm">paid last, if anything is left</text>
+
+  <text x="0" y="79" class="t-sm t-ink3">Simplified. What you recover depends on the assets and the legal process.</text>
+</svg>
+  </figure>
+  <div class="lower">
+    <div>
+      <h2 class="label block-title">How to recognise it</h2>
+      <ul class="marks">
+        <li>Fixed interest, paid monthly, yearly or all at maturity (cumulative).</li>
+        <li>Carries a credit rating from an agency such as CRISIL, ICRA, CARE or India Ratings.</li>
+        <li>Secured NCDs are backed by the company’s assets. Unsecured ones are not, and rank lower if the company fails.</li>
+      </ul>
+    </div>
+    <aside class="confused">
+      <h2 class="label block-title">Often confused with</h2>
+      <p><span class="vs">Bank fixed deposits.</span> Bank deposits are insured up to ₹5 lakh per depositor per bank by DICGC. NCDs are not insured. A higher NCD rate is payment for taking more risk.</p>
+    </aside>
+  </div>
+  <footer class="folio"><span class="pg">10</span><span class="asof">Facts as of October 2026</span></footer>
+</section>
+<!-- /page --><section class="page recto" data-job="build">
+  <header class="runhead"><span>04 · NCDs</span><span class="chip">Build</span></header>
+  <div class="label" style="display:flex;justify-content:space-between;padding-bottom:1.5mm"><span>At a glance</span><span class="muted" style="letter-spacing:.06em;text-transform:none;font-family:var(--text);font-stretch:100%;font-weight:500;font-size:6.6pt">The same six facts for every product</span></div>
+  <dl class="glance">
+      <dt>Regulator</dt><dd>SEBI (issue and listing). Issuers that are NBFCs are also regulated by RBI.</dd>
+      <dt>Minimum</dt><dd>Usually ₹10,000 in a public issue.<svg class="ruler" viewBox="0 0 99 9.2" role="img" aria-label="Minimum to invest: from ₹10,000">
+  <line x1="1.2" y1="5.2" x2="96.8" y2="5.2" class="s-rule" style="stroke-width:1.1;stroke-linecap:round"/>
+  <line x1="39.440000000000005" y1="5.2" x2="96.8" y2="5.2" class="s-job" style="stroke-width:1.1;stroke-linecap:round"/>
+  <line x1="1.2" y1="4.3" x2="1.2" y2="6.1000000000000005" class="s-ink3 hair"/><text x="1.2" y="8.8" class="t-sm t-num" style="font-size:2.05px;text-anchor:start">₹100</text><line x1="20.32" y1="4.3" x2="20.32" y2="6.1000000000000005" class="s-ink3 hair"/><text x="20.32" y="8.8" class="t-sm t-num" style="font-size:2.05px;text-anchor:middle">₹1,000</text><line x1="39.440000000000005" y1="4.3" x2="39.440000000000005" y2="6.1000000000000005" class="s-ink3 hair"/><text x="39.440000000000005" y="8.8" class="t-sm t-num" style="font-size:2.05px;text-anchor:middle">₹10,000</text><line x1="58.559999999999995" y1="4.3" x2="58.559999999999995" y2="6.1000000000000005" class="s-ink3 hair"/><text x="58.559999999999995" y="8.8" class="t-sm t-num" style="font-size:2.05px;text-anchor:middle">₹1 lakh</text><line x1="77.68" y1="4.3" x2="77.68" y2="6.1000000000000005" class="s-ink3 hair"/><text x="77.68" y="8.8" class="t-sm t-num" style="font-size:2.05px;text-anchor:middle">₹10 lakh</text><line x1="96.8" y1="4.3" x2="96.8" y2="6.1000000000000005" class="s-ink3 hair"/><text x="96.8" y="8.8" class="t-sm t-num" style="font-size:2.05px;text-anchor:end">₹1 crore</text>
+  
+  <path d="M38.34,2.6 h2.2 l-1.1,1.6 z" class="f-deep"/>
+  <text x="39.440000000000005" y="2.1" class="t-cap job" style="font-size:2.05px;text-anchor:middle">from ₹10,000</text>
+</svg></dd>
+      <dt>Time commitment</dt><dd>The tenure of the series you pick, usually 18 months to 10 years.</dd>
+      <dt>Money out</dt><dd>Interest as chosen, principal at maturity. You can sell earlier on the exchange, but the price may be lower and buyers few.</dd>
+      <dt>Costs</dt><dd>No fee to apply in a public issue. A demat account is needed; brokerage applies if you sell.</dd>
+      <dt>Tax in brief</dt><dd>Interest is taxed at your slab rate. Selling a listed NCD after 12 months: 12.5% on the gain; earlier, your slab rate.</dd>
+  </dl>
+  <div class="section gauge">
+    <h2 class="label"><span>Risk check: the credit rating</span><span class="aside">Read it before the interest rate</span></h2>
+    <svg viewBox="0 0 122 26" role="img" aria-labelledby="ncd-gauge-t">
+  <title id="ncd-gauge-t">Long-term credit rating scale from AAA, highest safety, to D, default, with investment grade covering AAA to BBB.</title>
+  <!-- brackets -->
+  <path d="M0.6,5 V3.9 H60 V5" class="f-none s-job thin"/>
+  <text x="30.3" y="2.7" class="t-cap job mid">Investment grade</text>
+  <path d="M61.9,5 V3.9 H106.2 V5" class="f-none s-ink3 thin"/>
+  <text x="84" y="2.7" class="t-cap mid">Speculative</text>
+  <path d="M107.9,5 V3.9 H121.6 V5" class="f-none s-ink3 thin"/>
+  <text x="114.7" y="2.7" class="t-cap mid">Default</text>
+
+  <!-- ladder -->
+  <rect x="0" y="5.6" width="14.55" height="6.4" class="f-r1"/>
+  <rect x="15.35" y="5.6" width="14.55" height="6.4" class="f-r1" style="opacity:.78"/>
+  <rect x="30.7" y="5.6" width="14.55" height="6.4" class="f-r2"/>
+  <rect x="46.05" y="5.6" width="14.55" height="6.4" class="f-r3"/>
+  <rect x="61.4" y="5.6" width="14.55" height="6.4" class="f-r4"/>
+  <rect x="76.75" y="5.6" width="14.55" height="6.4" class="f-r5"/>
+  <rect x="92.1" y="5.6" width="14.55" height="6.4" class="f-r6"/>
+  <rect x="107.45" y="5.6" width="14.55" height="6.4" class="f-ink"/>
+  <g class="t-md">
+    <text x="7.28" y="9.95" class="t-md mid t-white">AAA</text>
+    <text x="22.63" y="9.95" class="t-md mid t-white">AA</text>
+    <text x="37.98" y="9.95" class="t-md mid">A</text>
+    <text x="53.33" y="9.95" class="t-md mid">BBB</text>
+    <text x="68.68" y="9.95" class="t-md mid">BB</text>
+    <text x="84.03" y="9.95" class="t-md mid t-white">B</text>
+    <text x="99.38" y="9.95" class="t-md mid t-white">C</text>
+    <text x="114.73" y="9.95" class="t-md mid t-white">D</text>
+  </g>
+  <g class="t-sm" style="font-size:2.05px">
+    <text x="7.28" y="15.2" class="t-sm mid" style="font-size:2.05px">Highest</text><text x="7.28" y="17.9" class="t-sm mid" style="font-size:2.05px">safety</text>
+    <text x="22.63" y="15.2" class="t-sm mid" style="font-size:2.05px">High</text><text x="22.63" y="17.9" class="t-sm mid" style="font-size:2.05px">safety</text>
+    <text x="37.98" y="15.2" class="t-sm mid" style="font-size:2.05px">Adequate</text><text x="37.98" y="17.9" class="t-sm mid" style="font-size:2.05px">safety</text>
+    <text x="53.33" y="15.2" class="t-sm mid" style="font-size:2.05px">Moderate</text><text x="53.33" y="17.9" class="t-sm mid" style="font-size:2.05px">safety</text>
+    <text x="68.68" y="15.2" class="t-sm mid" style="font-size:2.05px">Moderate</text><text x="68.68" y="17.9" class="t-sm mid" style="font-size:2.05px">risk</text>
+    <text x="84.03" y="15.2" class="t-sm mid" style="font-size:2.05px">High</text><text x="84.03" y="17.9" class="t-sm mid" style="font-size:2.05px">risk</text>
+    <text x="99.38" y="15.2" class="t-sm mid" style="font-size:2.05px">Very high</text><text x="99.38" y="17.9" class="t-sm mid" style="font-size:2.05px">risk</text>
+    <text x="114.73" y="15.2" class="t-sm mid" style="font-size:2.05px">In</text><text x="114.73" y="17.9" class="t-sm mid" style="font-size:2.05px">default</text>
+  </g>
+  <text x="0" y="23.4" class="t-sm">A + or − fine-tunes a grade: AA+ is stronger than AA−. CRISIL, ICRA, CARE and India Ratings use similar scales.</text>
+</svg>
+  </div>
+  <div class="section">
+    <div class="fit">
+      <div class="yes"><h3 class="label">Suits you if</h3><ul><li>You want a predictable, regular income.</li><li>You can hold the NCD until it matures.</li><li>You accept that your money depends on the company’s ability to pay.</li></ul></div>
+      <div class="no"><h3 class="label">Think twice if</h3><ul><li>You are chasing the highest rate. High rates usually mean higher risk.</li><li>You may need the money before maturity.</li><li>The NCD is unrated, unsecured, or from a company you do not know.</li></ul></div>
+    </div>
+  </div>
+  <div class="section">
+    <h2 class="label"><span>Ask before you sign</span><span class="aside">Tick when answered</span></h2>
+    <ul class="ask"><li>What is the rating, from which agency, and is the outlook stable?</li><li>Is it secured, and what is the asset cover?</li><li>Which series: tenure, payout frequency and effective yield?</li><li>What happens if I need my money early?</li></ul>
+  </div>
+  <div class="section">
+    <h2 class="label"><span>My notes</span><span class="aside">Write your own numbers here</span></h2>
+    <div class="notes"><div class="field"><span>Issuer / series</span></div><div class="field"><span>Rate % and payout</span></div><div class="field"><span>Amount ₹</span></div><div class="field"><span>Matures on</span></div></div>
+  </div>
+  <p class="legal"><span class="warn">Investments in debt securities are subject to risks including delay and/or default in payment. Read all the offer related documents carefully.</span> Ratings are opinions, not guarantees. Ram Investments [stock broker / online bond platform registration: ____].</p>
+  <footer class="folio"><span class="pg">11</span><span class="asof">Ram Investments · Diary 2027</span></footer>
+</section>
+<!-- /page --></div>
+<div class="spread"><span class="spread-label">Pages 12–13</span><section class="page verso" data-job="special" id="sif">
+  <header class="runhead"><span class="chip">Specialise</span><span>Know your products · 05 of 08</span></header>
+  <div class="entry-head">
+    <div class="entry-no">05</div>
+    <div>
+      <h1 class="entry-title">SIF</h1>
+      <p class="entry-formal">Specialised investment funds · regulated by SEBI</p>
+    </div>
+  </div>
+  <p class="oneline">A SIF is a newer SEBI category, run by eligible mutual fund houses under a separate brand. It can use tools a regular mutual fund cannot, such as betting against (shorting) stocks or bonds for up to 25% of the portfolio.</p>
+  <figure class="plate">
+    <figcaption class="plate-head"><span class="label">Long-short, in one picture</span><span class="fig">Fig. 05</span></figcaption>
+    <svg viewBox="0 0 122 90" role="img" aria-labelledby="sif-plate-t">
+  <title id="sif-plate-t">A long position that gains when prices rise, a short position of up to 25% that gains when prices fall, and SEBI's seven SIF strategies in three families.</title>
+
+  <!-- Where a SIF sits on the ticket-size ladder -->
+  <text x="0" y="2.6" class="t-cap job">Where a SIF sits</text>
+  <text x="122" y="2.6" class="t-cap end">Minimum to invest</text>
+  <rect x="0" y="4.2" width="29.75" height="6" class="f-panel"/>
+  <text x="2" y="8.2" class="t-sm"><tspan class="b">Mutual funds</tspan>  ₹100+</text>
+  <rect x="30.75" y="4.2" width="29.75" height="6" class="f-job"/>
+  <text x="32.75" y="8.2" class="t-sm t-white"><tspan class="b">SIF</tspan>  ₹10 lakh+</text>
+  <rect x="61.5" y="4.2" width="29.75" height="6" class="f-panel"/>
+  <text x="63.5" y="8.2" class="t-sm"><tspan class="b">PMS</tspan>  ₹50 lakh+</text>
+  <rect x="92.25" y="4.2" width="29.75" height="6" class="f-panel"/>
+  <text x="94.25" y="8.2" class="t-sm"><tspan class="b">AIF</tspan>  ₹1 crore+</text>
+  <line x1="0" y1="13.4" x2="122" y2="13.4" class="s-rule hair"/>
+
+  <g transform="translate(0,15.6)">
+
+  <!-- Long and short bars -->
+  <line x1="4" y1="30" x2="60" y2="30" class="s-ink thin"/>
+  <rect x="8" y="6" width="18" height="24" class="f-job"/>
+  <text x="17" y="10.6" class="t-cap mid t-white">Long</text>
+  <rect x="32" y="30" width="18" height="6" class="f-deep"/>
+  <text x="41" y="34" class="t-cap mid t-white">Short</text>
+  <path d="M51.6,30.2 h1.2 v5.6 h-1.2" class="f-none s-ink2 thin"/>
+  <text x="54" y="34" class="t-sm b">up to 25%</text>
+
+  <text x="17" y="40.6" class="t-sm mid">Bets that gain</text>
+  <text x="17" y="43.9" class="t-sm mid">if prices rise</text>
+  <text x="41" y="40.6" class="t-sm mid">Bets that gain</text>
+  <text x="41" y="43.9" class="t-sm mid">if prices fall</text>
+
+  <!-- What it does -->
+  <text x="69" y="9" class="t-bd b">When markets fall</text>
+  <text x="69" y="12.4" class="t-sm">the short side can soften the loss.</text>
+  <text x="69" y="19.6" class="t-bd b">When markets rise</text>
+  <text x="69" y="23" class="t-sm">the short side can hold returns back.</text>
+  <text x="69" y="30.2" class="t-bd b">Unhedged</text>
+  <text x="69" y="33.6" class="t-sm">Shorts are taken through derivatives,</text>
+  <text x="69" y="36.9" class="t-sm">as bets in their own right, not just as</text>
+  <text x="69" y="40.2" class="t-sm">insurance on shares already held.</text>
+
+  <!-- Strategies -->
+  <line x1="0" y1="48.4" x2="122" y2="48.4" class="s-rule hair"/>
+  <text x="0" y="52.6" class="t-cap job">Seven strategies in three families</text>
+
+  <rect x="0" y="55" width="38" height="5.4" class="f-tint"/>
+  <text x="2" y="58.6" class="t-cap job">Equity · 3</text>
+  <rect x="0" y="62.6" width="1.1" height="1.1" class="f-job"/><text x="2.6" y="63.9" class="t-sm">Equity Long-Short</text>
+  <rect x="0" y="66.6" width="1.1" height="1.1" class="f-job"/><text x="2.6" y="67.9" class="t-sm">Equity Ex-Top 100 Long-Short</text>
+  <rect x="0" y="70.6" width="1.1" height="1.1" class="f-job"/><text x="2.6" y="71.9" class="t-sm">Sector Rotation Long-Short</text>
+
+  <rect x="42" y="55" width="38" height="5.4" class="f-tint"/>
+  <text x="44" y="58.6" class="t-cap job">Debt · 2</text>
+  <rect x="42" y="62.6" width="1.1" height="1.1" class="f-job"/><text x="44.6" y="63.9" class="t-sm">Debt Long-Short</text>
+  <rect x="42" y="66.6" width="1.1" height="1.1" class="f-job"/><text x="44.6" y="67.9" class="t-sm">Sectoral Debt Long-Short</text>
+
+  <rect x="84" y="55" width="38" height="5.4" class="f-tint"/>
+  <text x="86" y="58.6" class="t-cap job">Hybrid · 2</text>
+  <rect x="84" y="62.6" width="1.1" height="1.1" class="f-job"/><text x="86.6" y="63.9" class="t-sm">Active Asset Allocator</text>
+  <text x="86.6" y="67.1" class="t-sm">Long-Short</text>
+  <rect x="84" y="70" width="1.1" height="1.1" class="f-job"/><text x="86.6" y="71.3" class="t-sm">Hybrid Long-Short</text>
+  </g>
+</svg>
+  </figure>
+  <div class="lower">
+    <div>
+      <h2 class="label block-title">How to recognise it</h2>
+      <ul class="marks">
+        <li>Run by a mutual fund house under SEBI’s mutual fund rules, but sold under its own brand.</li>
+        <li>Every strategy is long-short: it can hold bets that gain if prices rise and bets that gain if they fall.</li>
+        <li>Uses a five-level Risk Band instead of the mutual fund riskometer.</li>
+      </ul>
+    </div>
+    <aside class="confused">
+      <h2 class="label block-title">Often confused with</h2>
+      <p><span class="vs">Mutual funds.</span> Lower minimum, and no unhedged shorting.</p>
+      <p><span class="vs">PMS.</span> ₹50 lakh minimum, with shares held in your own name. A SIF sits between the two.</p>
+    </aside>
+  </div>
+  <footer class="folio"><span class="pg">12</span><span class="asof">Facts as of October 2026</span></footer>
+</section>
+<!-- /page --><section class="page recto" data-job="special">
+  <header class="runhead"><span>05 · SIF</span><span class="chip">Specialise</span></header>
+  <div class="label" style="display:flex;justify-content:space-between;padding-bottom:1.5mm"><span>At a glance</span><span class="muted" style="letter-spacing:.06em;text-transform:none;font-family:var(--text);font-stretch:100%;font-weight:500;font-size:6.6pt">The same six facts for every product</span></div>
+  <dl class="glance">
+      <dt>Regulator</dt><dd>SEBI, under the mutual fund regulations. The first SIFs launched in 2025.</dd>
+      <dt>Minimum</dt><dd>₹10 lakh per investor, across strategies of one SIF.<svg class="ruler" viewBox="0 0 99 9.2" role="img" aria-label="Minimum to invest: from ₹10 lakh">
+  <line x1="1.2" y1="5.2" x2="96.8" y2="5.2" class="s-rule" style="stroke-width:1.1;stroke-linecap:round"/>
+  <line x1="77.68" y1="5.2" x2="96.8" y2="5.2" class="s-job" style="stroke-width:1.1;stroke-linecap:round"/>
+  <line x1="1.2" y1="4.3" x2="1.2" y2="6.1000000000000005" class="s-ink3 hair"/><text x="1.2" y="8.8" class="t-sm t-num" style="font-size:2.05px;text-anchor:start">₹100</text><line x1="20.32" y1="4.3" x2="20.32" y2="6.1000000000000005" class="s-ink3 hair"/><text x="20.32" y="8.8" class="t-sm t-num" style="font-size:2.05px;text-anchor:middle">₹1,000</text><line x1="39.440000000000005" y1="4.3" x2="39.440000000000005" y2="6.1000000000000005" class="s-ink3 hair"/><text x="39.440000000000005" y="8.8" class="t-sm t-num" style="font-size:2.05px;text-anchor:middle">₹10,000</text><line x1="58.559999999999995" y1="4.3" x2="58.559999999999995" y2="6.1000000000000005" class="s-ink3 hair"/><text x="58.559999999999995" y="8.8" class="t-sm t-num" style="font-size:2.05px;text-anchor:middle">₹1 lakh</text><line x1="77.68" y1="4.3" x2="77.68" y2="6.1000000000000005" class="s-ink3 hair"/><text x="77.68" y="8.8" class="t-sm t-num" style="font-size:2.05px;text-anchor:middle">₹10 lakh</text><line x1="96.8" y1="4.3" x2="96.8" y2="6.1000000000000005" class="s-ink3 hair"/><text x="96.8" y="8.8" class="t-sm t-num" style="font-size:2.05px;text-anchor:end">₹1 crore</text>
+  
+  <path d="M76.58000000000001,2.6 h2.2 l-1.1,1.6 z" class="f-deep"/>
+  <text x="77.68" y="2.1" class="t-cap job" style="font-size:2.05px;text-anchor:middle">from ₹10 lakh</text>
+</svg></dd>
+      <dt>Time commitment</dt><dd>Depends on the strategy. Some allow redemption only on set days or with notice.</dd>
+      <dt>Money out</dt><dd>As per the strategy’s redemption frequency and notice period.</dd>
+      <dt>Costs</dt><dd>An expense ratio taken from the NAV, as with mutual funds.</dd>
+      <dt>Tax in brief</dt><dd>Taxed like mutual funds. The rate depends on the strategy’s mix of equity and debt.</dd>
+  </dl>
+  <div class="section gauge">
+    <h2 class="label"><span>Risk check: the risk band</span><span class="aside">Disclosed for every strategy</span></h2>
+    <svg viewBox="0 0 122 25" role="img" aria-labelledby="sif-gauge-t">
+  <title id="sif-gauge-t">The five-level SIF risk band compared with the six-level mutual fund riskometer.</title>
+  <text x="0" y="2.6" class="t-cap job">SIF risk band</text>
+  <rect x="0" y="4" width="14.56" height="6.4" class="f-r1"/>
+  <rect x="15.36" y="4" width="14.56" height="6.4" class="f-r2"/>
+  <rect x="30.72" y="4" width="14.56" height="6.4" class="f-r3"/>
+  <rect x="46.08" y="4" width="14.56" height="6.4" class="f-r5"/>
+  <rect x="61.44" y="4" width="14.56" height="6.4" class="f-r6"/>
+  <text x="7.28" y="8.1" class="t-sm b mid t-white">Level 1</text>
+  <text x="22.64" y="8.1" class="t-sm b mid">Level 2</text>
+  <text x="38" y="8.1" class="t-sm b mid">Level 3</text>
+  <text x="53.36" y="8.1" class="t-sm b mid t-white">Level 4</text>
+  <text x="68.72" y="8.1" class="t-sm b mid t-white">Level 5</text>
+  <text x="0" y="13.4" class="t-sm">Lowest</text>
+  <text x="76" y="13.4" class="t-sm end">Highest</text>
+
+  <text x="0" y="18" class="t-cap">Mutual fund riskometer: 6 levels</text>
+  <g style="opacity:.5">
+    <rect x="0" y="19.4" width="12.17" height="2.8" class="f-r1"/>
+    <rect x="12.77" y="19.4" width="12.17" height="2.8" class="f-r2"/>
+    <rect x="25.54" y="19.4" width="12.17" height="2.8" class="f-r3"/>
+    <rect x="38.31" y="19.4" width="12.17" height="2.8" class="f-r4"/>
+    <rect x="51.08" y="19.4" width="12.17" height="2.8" class="f-r5"/>
+    <rect x="63.85" y="19.4" width="12.17" height="2.8" class="f-r6"/>
+  </g>
+
+  <text x="82" y="6" class="t-sm b">Set for each strategy</text>
+  <text x="82" y="9.3" class="t-sm">and reviewed every month.</text>
+  <text x="82" y="15.6" class="t-sm">A different scale from the</text>
+  <text x="82" y="18.9" class="t-sm">mutual fund riskometer, so</text>
+  <text x="82" y="22.2" class="t-sm">don’t compare levels directly.</text>
+</svg>
+  </div>
+  <div class="section">
+    <div class="fit">
+      <div class="yes"><h3 class="label">Suits you if</h3><ul><li>You can invest ₹10 lakh and it is a modest part of your portfolio.</li><li>You want a strategy that tries to soften falls, not just ride the market.</li><li>You are comfortable with derivatives being part of the strategy.</li></ul></div>
+      <div class="no"><h3 class="label">Think twice if</h3><ul><li>₹10 lakh is most of your investable money.</li><li>You may need daily access to the money.</li><li>You expect mutual-fund-like simplicity. These strategies are more complex.</li></ul></div>
+    </div>
+  </div>
+  <div class="section">
+    <h2 class="label"><span>Ask before you sign</span><span class="aside">Tick when answered</span></h2>
+    <ul class="ask"><li>Which strategy is this, and what is its Risk Band today?</li><li>How often can I redeem, and with how much notice?</li><li>How does the short side work, and when could it hurt returns?</li><li>What are the total costs?</li></ul>
+  </div>
+  <div class="section">
+    <h2 class="label"><span>My notes</span><span class="aside">Write your own numbers here</span></h2>
+    <div class="notes"><div class="field"><span>SIF / strategy</span></div><div class="field"><span>Amount ₹</span></div><div class="field"><span>Risk band</span></div><div class="field"><span>Redemption window</span></div></div>
+  </div>
+  <p class="legal"><span class="warn">Investments in SIFs are subject to market risks, read all investment strategy related documents carefully.</span> Ram Investments is an AMFI Registered Mutual Fund Distributor and SIF Distributor (ARN-[____]).</p>
+  <footer class="folio"><span class="pg">13</span><span class="asof">Ram Investments · Diary 2027</span></footer>
+</section>
+<!-- /page --></div>
+<div class="spread"><span class="spread-label">Pages 14–15</span><section class="page verso" data-job="special" id="pms">
+  <header class="runhead"><span class="chip">Specialise</span><span>Know your products · 06 of 08</span></header>
+  <div class="entry-head">
+    <div class="entry-no">06</div>
+    <div>
+      <h1 class="entry-title">PMS</h1>
+      <p class="entry-formal">Portfolio management services · regulated by SEBI</p>
+    </div>
+  </div>
+  <p class="oneline">A SEBI-registered portfolio manager runs a portfolio of stocks or bonds for you. Unlike a mutual fund, the securities sit in your own demat account, so you can see every holding and every trade.</p>
+  <figure class="plate">
+    <figcaption class="plate-head"><span class="label">Who owns what, and who decides</span><span class="fig">Fig. 06</span></figcaption>
+    <svg viewBox="0 0 122 75" role="img" aria-labelledby="pms-plate-t">
+  <title id="pms-plate-t">In a mutual fund you own units of a shared pool; in a PMS the shares sit in your own demat account and the manager trades there. Below, the three ways to work with a portfolio manager.</title>
+  <defs>
+    <marker id="ah-pms" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="3.2" markerHeight="3.2" orient="auto">
+      <path d="M0,0 L6,3 L0,6 z" class="f-ink2"/>
+    </marker>
+  </defs>
+
+  <!-- Mutual fund side -->
+  <text x="0" y="3" class="t-cap">Mutual fund</text>
+  <g class="f-ink3">
+    <circle cx="6" cy="8.6" r="1.25"/><path d="M3.9,13 C3.9,10.4 8.1,10.4 8.1,13 Z"/>
+    <circle cx="14" cy="8.6" r="1.25"/><path d="M11.9,13 C11.9,10.4 16.1,10.4 16.1,13 Z"/>
+    <circle cx="22" cy="8.6" r="1.25"/><path d="M19.9,13 C19.9,10.4 24.1,10.4 24.1,13 Z"/>
+    <circle cx="30" cy="8.6" r="1.25"/><path d="M27.9,13 C27.9,10.4 32.1,10.4 32.1,13 Z"/>
+    <circle cx="38" cy="8.6" r="1.25"/><path d="M35.9,13 C35.9,10.4 40.1,10.4 40.1,13 Z"/>
+  </g>
+  <g class="s-rule thin">
+    <line x1="6" y1="13.6" x2="17.5" y2="20.4"/><line x1="14" y1="13.6" x2="19.6" y2="19.6"/><line x1="22" y1="13.6" x2="22" y2="19.2"/>
+    <line x1="30" y1="13.6" x2="24.4" y2="19.6"/><line x1="38" y1="13.6" x2="26.5" y2="20.4"/>
+  </g>
+  <circle cx="22" cy="26.6" r="7.4" class="f-panel s-ink3 hair"/>
+  <text x="22" y="26.2" class="t-sm b mid">Shared</text>
+  <text x="22" y="29.4" class="t-sm b mid">pool</text>
+  <text x="0" y="39.6" class="t-sm">You own <tspan class="b">units</tspan> of a shared pool.</text>
+
+  <line x1="61" y1="0" x2="61" y2="41" class="s-rule hair dash"/>
+
+  <!-- PMS side -->
+  <text x="65" y="3" class="t-cap job">PMS</text>
+  <g class="f-job">
+    <circle cx="70" cy="9.4" r="1.35"/><path d="M67.7,14.2 C67.7,11.3 72.3,11.3 72.3,14.2 Z"/>
+  </g>
+  <text x="70" y="17.6" class="t-sm mid">You</text>
+  <line x1="73.4" y1="11.6" x2="79.6" y2="11.6" class="s-ink2 thin" marker-end="url(#ah-pms)"/>
+  <text x="76.4" y="10.2" class="t-cap mid" style="font-size:1.9px">Own</text>
+
+  <g class="f-ink3">
+    <circle cx="70" cy="25.4" r="1.35"/><path d="M67.7,30.2 C67.7,27.3 72.3,27.3 72.3,30.2 Z"/>
+  </g>
+  <text x="70" y="33.6" class="t-sm mid">Manager</text>
+  <line x1="73.4" y1="27.4" x2="79.6" y2="27.4" class="s-ink2 thin dash" marker-end="url(#ah-pms)"/>
+  <text x="76.4" y="26" class="t-cap mid" style="font-size:1.9px">Trades</text>
+
+  <rect x="81" y="5" width="41" height="29" class="f-tint s-job hair"/>
+  <text x="83.2" y="9.2" class="t-sm b">Your demat account</text>
+  <text x="83.2" y="12.4" class="t-sm">in your name</text>
+  <g class="f-paper s-job hair">
+    <rect x="83.2" y="14.6" width="11.4" height="5"/><rect x="96" y="14.6" width="11.4" height="5"/><rect x="108.8" y="14.6" width="11.4" height="5"/>
+    <rect x="83.2" y="20.8" width="11.4" height="5"/><rect x="96" y="20.8" width="11.4" height="5"/><rect x="108.8" y="20.8" width="11.4" height="5"/>
+    <rect x="83.2" y="27" width="11.4" height="5"/><rect x="96" y="27" width="11.4" height="5"/><rect x="108.8" y="27" width="11.4" height="5"/>
+  </g>
+  <g class="t-sm" style="font-size:2px">
+    <text x="88.9" y="17.8" class="t-sm mid" style="font-size:2px">Stock A</text><text x="101.7" y="17.8" class="t-sm mid" style="font-size:2px">Stock B</text><text x="114.5" y="17.8" class="t-sm mid" style="font-size:2px">Stock C</text>
+    <text x="88.9" y="24" class="t-sm mid" style="font-size:2px">Stock D</text><text x="101.7" y="24" class="t-sm mid" style="font-size:2px">Stock E</text><text x="114.5" y="24" class="t-sm mid" style="font-size:2px">Stock F</text>
+    <text x="88.9" y="30.2" class="t-sm mid" style="font-size:2px">Stock G</text><text x="101.7" y="30.2" class="t-sm mid" style="font-size:2px">Stock H</text><text x="114.5" y="30.2" class="t-sm mid" style="font-size:2px">Bond I</text>
+  </g>
+  <text x="65" y="39.6" class="t-sm">You own <tspan class="b">the shares themselves.</tspan></text>
+
+  <!-- Who decides -->
+  <line x1="0" y1="44.2" x2="122" y2="44.2" class="s-rule hair"/>
+  <text x="0" y="48.4" class="t-cap job">Three ways to work with a manager</text>
+  <rect x="0" y="50.6" width="40" height="6" class="f-job"/>
+  <rect x="41" y="50.6" width="40" height="6" class="f-job" style="opacity:.55"/>
+  <rect x="82" y="50.6" width="40" height="6" class="f-tint"/>
+  <text x="2.4" y="54.6" class="t-cap t-white">Manager decides</text>
+  <text x="119.6" y="54.6" class="t-cap job end">You decide</text>
+
+  <text x="0" y="61.8" class="t-bd b">Discretionary</text>
+  <text x="0" y="65.4" class="t-sm">The manager decides and trades</text>
+  <text x="0" y="68.7" class="t-sm">for you. The most common type.</text>
+
+  <text x="41" y="61.8" class="t-bd b">Non-discretionary</text>
+  <text x="41" y="65.4" class="t-sm">The manager suggests, you approve</text>
+  <text x="41" y="68.7" class="t-sm">each trade, the manager executes.</text>
+
+  <text x="82" y="61.8" class="t-bd b">Advisory</text>
+  <text x="82" y="65.4" class="t-sm">The manager advises; you decide</text>
+  <text x="82" y="68.7" class="t-sm">and place each trade yourself.</text>
+</svg>
+  </figure>
+  <div class="lower">
+    <div>
+      <h2 class="label block-title">How to recognise it</h2>
+      <ul class="marks">
+        <li>The shares sit in your own demat account, so you see every holding and every trade.</li>
+        <li>Every PMS reports returns against a common benchmark, so managers can be compared.</li>
+        <li>Upfront fees are not allowed. Fees are fixed, linked to performance above a hurdle, or both.</li>
+      </ul>
+    </div>
+    <aside class="confused">
+      <h2 class="label block-title">Often confused with</h2>
+      <p><span class="vs">Mutual funds.</span> A shared pool. You own units, not shares.</p>
+      <p><span class="vs">AIFs.</span> A pooled fund with a ₹1 crore minimum that can hold unlisted assets and lock you in for years.</p>
+    </aside>
+  </div>
+  <footer class="folio"><span class="pg">14</span><span class="asof">Facts as of October 2026</span></footer>
+</section>
+<!-- /page --><section class="page recto" data-job="special">
+  <header class="runhead"><span>06 · PMS</span><span class="chip">Specialise</span></header>
+  <div class="label" style="display:flex;justify-content:space-between;padding-bottom:1.5mm"><span>At a glance</span><span class="muted" style="letter-spacing:.06em;text-transform:none;font-family:var(--text);font-stretch:100%;font-weight:500;font-size:6.6pt">The same six facts for every product</span></div>
+  <dl class="glance">
+      <dt>Regulator</dt><dd>SEBI. The Portfolio Managers Regulations, 2026 apply from 1 April 2027.</dd>
+      <dt>Minimum</dt><dd>₹50 lakh. PRIM (mutual-fund-only route): ₹25 lakh from 1 April 2027.<svg class="ruler" viewBox="0 0 99 9.2" role="img" aria-label="Minimum to invest: ₹50 lakh">
+  <line x1="1.2" y1="5.2" x2="96.8" y2="5.2" class="s-rule" style="stroke-width:1.1;stroke-linecap:round"/>
+  <line x1="91.04430648290467" y1="5.2" x2="96.8" y2="5.2" class="s-job" style="stroke-width:1.1;stroke-linecap:round"/>
+  <line x1="1.2" y1="4.3" x2="1.2" y2="6.1000000000000005" class="s-ink3 hair"/><text x="1.2" y="8.8" class="t-sm t-num" style="font-size:2.05px;text-anchor:start">₹100</text><line x1="20.32" y1="4.3" x2="20.32" y2="6.1000000000000005" class="s-ink3 hair"/><text x="20.32" y="8.8" class="t-sm t-num" style="font-size:2.05px;text-anchor:middle">₹1,000</text><line x1="39.440000000000005" y1="4.3" x2="39.440000000000005" y2="6.1000000000000005" class="s-ink3 hair"/><text x="39.440000000000005" y="8.8" class="t-sm t-num" style="font-size:2.05px;text-anchor:middle">₹10,000</text><line x1="58.559999999999995" y1="4.3" x2="58.559999999999995" y2="6.1000000000000005" class="s-ink3 hair"/><text x="58.559999999999995" y="8.8" class="t-sm t-num" style="font-size:2.05px;text-anchor:middle">₹1 lakh</text><line x1="77.68" y1="4.3" x2="77.68" y2="6.1000000000000005" class="s-ink3 hair"/><text x="77.68" y="8.8" class="t-sm t-num" style="font-size:2.05px;text-anchor:middle">₹10 lakh</text><line x1="96.8" y1="4.3" x2="96.8" y2="6.1000000000000005" class="s-ink3 hair"/><text x="96.8" y="8.8" class="t-sm t-num" style="font-size:2.05px;text-anchor:end">₹1 crore</text>
+  <line x1="85.28861296580936" y1="5.2" x2="91.04430648290467" y2="5.2" class="s-job dash" style="stroke-width:1.1"/><circle cx="85.28861296580936" cy="5.2" r="0.95" class="f-paper s-job thin"/><text x="84.08861296580936" y="2.1" class="t-cap job" style="font-size:1.9px;text-anchor:end;opacity:.85">PRIM ₹25 lakh</text>
+  <path d="M89.94430648290468,2.6 h2.2 l-1.1,1.6 z" class="f-deep"/>
+  <text x="96.54430648290467" y="2.1" class="t-cap job" style="font-size:2.05px;text-anchor:end">₹50 lakh</text>
+</svg></dd>
+      <dt>Time commitment</dt><dd>No lock-in. Exit charges may apply in the early years.</dd>
+      <dt>Money out</dt><dd>Withdraw part or all. You receive cash, or the securities themselves.</dd>
+      <dt>Costs</dt><dd>Management fee and/or performance fee, plus brokerage, custody and GST.</dd>
+      <dt>Tax in brief</dt><dd>Every trade is taxed in your hands, as if you had made it yourself.</dd>
+  </dl>
+  <div class="section gauge">
+    <h2 class="label"><span>Risk check: concentration</span><span class="aside">Fewer stocks, bigger bets</span></h2>
+    <svg viewBox="0 0 122 26.6" role="img" aria-labelledby="pms-gauge-t">
+  <title id="pms-gauge-t">A typical equity mutual fund holds 40 to 80 stocks, a typical PMS 15 to 30, so each PMS holding carries more weight.</title>
+  <text x="0" y="2.6" class="t-cap">Equity mutual fund · 40–80 stocks</text>
+  <g class="f-ink3"><circle cx="1.2" cy="7.4" r=".8"/><circle cx="4.4" cy="7.4" r=".8"/><circle cx="7.6" cy="7.4" r=".8"/><circle cx="10.8" cy="7.4" r=".8"/><circle cx="14.0" cy="7.4" r=".8"/><circle cx="17.2" cy="7.4" r=".8"/><circle cx="20.4" cy="7.4" r=".8"/><circle cx="23.6" cy="7.4" r=".8"/><circle cx="26.8" cy="7.4" r=".8"/><circle cx="30.0" cy="7.4" r=".8"/><circle cx="33.2" cy="7.4" r=".8"/><circle cx="36.4" cy="7.4" r=".8"/><circle cx="39.6" cy="7.4" r=".8"/><circle cx="42.8" cy="7.4" r=".8"/><circle cx="46.0" cy="7.4" r=".8"/><circle cx="1.2" cy="10.6" r=".8"/><circle cx="4.4" cy="10.6" r=".8"/><circle cx="7.6" cy="10.6" r=".8"/><circle cx="10.8" cy="10.6" r=".8"/><circle cx="14.0" cy="10.6" r=".8"/><circle cx="17.2" cy="10.6" r=".8"/><circle cx="20.4" cy="10.6" r=".8"/><circle cx="23.6" cy="10.6" r=".8"/><circle cx="26.8" cy="10.6" r=".8"/><circle cx="30.0" cy="10.6" r=".8"/><circle cx="33.2" cy="10.6" r=".8"/><circle cx="36.4" cy="10.6" r=".8"/><circle cx="39.6" cy="10.6" r=".8"/><circle cx="42.8" cy="10.6" r=".8"/><circle cx="46.0" cy="10.6" r=".8"/><circle cx="1.2" cy="13.8" r=".8"/><circle cx="4.4" cy="13.8" r=".8"/><circle cx="7.6" cy="13.8" r=".8"/><circle cx="10.8" cy="13.8" r=".8"/><circle cx="14.0" cy="13.8" r=".8"/><circle cx="17.2" cy="13.8" r=".8"/><circle cx="20.4" cy="13.8" r=".8"/><circle cx="23.6" cy="13.8" r=".8"/><circle cx="26.8" cy="13.8" r=".8"/><circle cx="30.0" cy="13.8" r=".8"/><circle cx="33.2" cy="13.8" r=".8"/><circle cx="36.4" cy="13.8" r=".8"/><circle cx="39.6" cy="13.8" r=".8"/><circle cx="42.8" cy="13.8" r=".8"/><circle cx="46.0" cy="13.8" r=".8"/><circle cx="1.2" cy="17.0" r=".8"/><circle cx="4.4" cy="17.0" r=".8"/><circle cx="7.6" cy="17.0" r=".8"/><circle cx="10.8" cy="17.0" r=".8"/><circle cx="14.0" cy="17.0" r=".8"/><circle cx="17.2" cy="17.0" r=".8"/><circle cx="20.4" cy="17.0" r=".8"/><circle cx="23.6" cy="17.0" r=".8"/><circle cx="26.8" cy="17.0" r=".8"/><circle cx="30.0" cy="17.0" r=".8"/><circle cx="33.2" cy="17.0" r=".8"/><circle cx="36.4" cy="17.0" r=".8"/><circle cx="39.6" cy="17.0" r=".8"/><circle cx="42.8" cy="17.0" r=".8"/><circle cx="46.0" cy="17.0" r=".8"/></g>
+  <text x="60" y="2.6" class="t-cap job">PMS · often 15–30 stocks</text>
+  <g class="f-job"><circle cx="62.0" cy="9.0" r="1.75"/><circle cx="68.1" cy="9.0" r="1.75"/><circle cx="74.2" cy="9.0" r="1.75"/><circle cx="80.3" cy="9.0" r="1.75"/><circle cx="86.4" cy="9.0" r="1.75"/><circle cx="92.5" cy="9.0" r="1.75"/><circle cx="98.6" cy="9.0" r="1.75"/><circle cx="104.7" cy="9.0" r="1.75"/><circle cx="110.8" cy="9.0" r="1.75"/><circle cx="116.9" cy="9.0" r="1.75"/><circle cx="62.0" cy="15.4" r="1.75"/><circle cx="68.1" cy="15.4" r="1.75"/><circle cx="74.2" cy="15.4" r="1.75"/><circle cx="80.3" cy="15.4" r="1.75"/><circle cx="86.4" cy="15.4" r="1.75"/><circle cx="92.5" cy="15.4" r="1.75"/><circle cx="98.6" cy="15.4" r="1.75"/><circle cx="104.7" cy="15.4" r="1.75"/><circle cx="110.8" cy="15.4" r="1.75"/><circle cx="116.9" cy="15.4" r="1.75"/></g>
+  <text x="0" y="24.6" class="t-sm">If one stock halves, a fund of 60 equal holdings loses about 0.8%; a PMS of 20 loses about 2.5%.</text>
+</svg>
+  </div>
+  <div class="section">
+    <div class="fit">
+      <div class="yes"><h3 class="label">Suits you if</h3><ul><li>You have ₹50 lakh or more for equities and want a focused approach.</li><li>You want to see every stock and trade in your own account.</li><li>You accept that returns can differ widely from the index.</li></ul></div>
+      <div class="no"><h3 class="label">Think twice if</h3><ul><li>Low cost matters most to you. Compare fees with mutual funds.</li><li>You would rather not see many capital-gains entries in your tax return.</li><li>You are choosing a manager on last year’s return alone.</li></ul></div>
+    </div>
+  </div>
+  <div class="section">
+    <h2 class="label"><span>Ask before you sign</span><span class="aside">Tick when answered</span></h2>
+    <ul class="ask"><li>How has the strategy done against its benchmark over a full market cycle?</li><li>What are all the fees: fixed, performance, hurdle, high-water mark, exit?</li><li>Is the service discretionary or non-discretionary?</li><li>How many stocks will I hold, and of what size?</li></ul>
+  </div>
+  <div class="section">
+    <h2 class="label"><span>My notes</span><span class="aside">Write your own numbers here</span></h2>
+    <div class="notes"><div class="field"><span>Manager / strategy</span></div><div class="field"><span>Amount ₹</span></div><div class="field"><span>Fee model</span></div><div class="field"><span>Benchmark</span></div></div>
+  </div>
+  <p class="legal"><span class="warn">Investments in securities are subject to market risks. Read the disclosure document carefully before investing.</span> Past performance does not guarantee future returns. Ram Investments is an APMI Registered PMS Distributor (APRN-[____]).</p>
+  <footer class="folio"><span class="pg">15</span><span class="asof">Ram Investments · Diary 2027</span></footer>
+</section>
+<!-- /page --></div>
+<div class="spread"><span class="spread-label">Pages 16–17</span><section class="page verso" data-job="special" id="aif">
+  <header class="runhead"><span class="chip">Specialise</span><span>Know your products · 07 of 08</span></header>
+  <div class="entry-head">
+    <div class="entry-no">07</div>
+    <div>
+      <h1 class="entry-title">AIF</h1>
+      <p class="entry-formal">Alternative investment funds · regulated by SEBI</p>
+    </div>
+  </div>
+  <p class="oneline">An AIF is a privately pooled fund for sophisticated investors. It can invest where ordinary funds cannot: unlisted companies, private credit, real estate, start-ups, or complex strategies in listed markets.</p>
+  <figure class="plate">
+    <figcaption class="plate-head"><span class="label">The life of a closed-ended fund</span><span class="fig">Fig. 07</span></figcaption>
+    <svg viewBox="0 0 122 80" role="img" aria-labelledby="aif-plate-t">
+  <title id="aif-plate-t">Phases of a closed-ended AIF over eight years with an illustrative J-curve of net cash, and the three SEBI categories.</title>
+
+  <!-- Phases -->
+  <rect x="12" y="1" width="40.5" height="4.4" class="f-job"/>
+  <text x="13.6" y="4.1" class="t-cap t-white">Capital calls</text>
+  <rect x="25.5" y="6.4" width="54" height="4.4" class="f-job" style="opacity:.6"/>
+  <text x="27.1" y="9.5" class="t-cap t-white">Investing</text>
+  <rect x="66" y="11.8" width="54" height="4.4" class="f-deep"/>
+  <text x="67.6" y="14.9" class="t-cap t-white">Exits and payouts</text>
+  <text x="0" y="4.1" class="t-cap job">Phase</text>
+
+  <!-- J-curve -->
+  <line x1="12" y1="33" x2="120" y2="33" class="s-ink3 hair dash"/>
+  <text x="10.6" y="33.8" class="t-sm end">0</text>
+  <path d="M12,33 C24,39 38,43.5 52.5,42.5 C66,41.5 72,37.5 82,33 C94,27.5 106,24 120,22" class="f-none s-job" style="stroke-width:.85"/>
+  <circle cx="120" cy="22" r=".9" class="f-job"/>
+  <text x="120" y="19.8" class="t-sm b end t-job">Your net cash position</text>
+  <text x="22" y="46.6" class="t-sm t-ink3">Money out: capital called, fees paid</text>
+  <text x="84.5" y="37.6" class="t-sm t-job">Money back, if investments do well</text>
+
+  <!-- Year axis -->
+  <line x1="12" y1="49.4" x2="120" y2="49.4" class="s-ink thin"/>
+  <g class="t-num">
+    <line x1="12" y1="48.6" x2="12" y2="50.2" class="s-ink thin"/><text x="12" y="52.8" class="t-sm mid">0</text>
+    <line x1="25.5" y1="48.6" x2="25.5" y2="50.2" class="s-ink thin"/><text x="25.5" y="52.8" class="t-sm mid">1</text>
+    <line x1="39" y1="48.6" x2="39" y2="50.2" class="s-ink thin"/><text x="39" y="52.8" class="t-sm mid">2</text>
+    <line x1="52.5" y1="48.6" x2="52.5" y2="50.2" class="s-ink thin"/><text x="52.5" y="52.8" class="t-sm mid">3</text>
+    <line x1="66" y1="48.6" x2="66" y2="50.2" class="s-ink thin"/><text x="66" y="52.8" class="t-sm mid">4</text>
+    <line x1="79.5" y1="48.6" x2="79.5" y2="50.2" class="s-ink thin"/><text x="79.5" y="52.8" class="t-sm mid">5</text>
+    <line x1="93" y1="48.6" x2="93" y2="50.2" class="s-ink thin"/><text x="93" y="52.8" class="t-sm mid">6</text>
+    <line x1="106.5" y1="48.6" x2="106.5" y2="50.2" class="s-ink thin"/><text x="106.5" y="52.8" class="t-sm mid">7</text>
+    <line x1="120" y1="48.6" x2="120" y2="50.2" class="s-ink thin"/><text x="120" y="52.8" class="t-sm mid">8</text>
+  </g>
+  <text x="0" y="52.8" class="t-cap">Year</text>
+  <text x="0" y="57.4" class="t-sm t-ink3">Illustrative. Timelines and outcomes differ from fund to fund.</text>
+
+  <!-- Categories -->
+  <rect x="0" y="60.6" width="38" height="18.6" class="f-tint"/>
+  <text x="2" y="64.8" class="t-cap job">Category I</text>
+  <text x="2" y="68.8" class="t-sm">Start-ups, SMEs,</text>
+  <text x="2" y="72.1" class="t-sm">infrastructure and</text>
+  <text x="2" y="75.4" class="t-sm">social impact</text>
+
+  <rect x="42" y="60.6" width="38" height="18.6" class="f-tint"/>
+  <text x="44" y="64.8" class="t-cap job">Category II</text>
+  <text x="44" y="68.8" class="t-sm">Private equity, private</text>
+  <text x="44" y="72.1" class="t-sm">credit, real estate. No</text>
+  <text x="44" y="75.4" class="t-sm">borrowing to invest.</text>
+
+  <rect x="84" y="60.6" width="38" height="18.6" class="f-tint"/>
+  <text x="86" y="64.8" class="t-cap job">Category III</text>
+  <text x="86" y="68.8" class="t-sm">Hedge-fund-style</text>
+  <text x="86" y="72.1" class="t-sm">strategies in listed</text>
+  <text x="86" y="75.4" class="t-sm">markets; may use leverage.</text>
+</svg>
+  </figure>
+  <div class="lower">
+    <div>
+      <h2 class="label block-title">How to recognise it</h2>
+      <ul class="marks">
+        <li>You commit an amount, and the manager draws it in parts (capital calls) as deals are found.</li>
+        <li>There is no daily price. The fund’s value is reported only periodically.</li>
+        <li>Offered only by private placement, to at most 1,000 investors per scheme.</li>
+      </ul>
+    </div>
+    <aside class="confused">
+      <h2 class="label block-title">Often confused with</h2>
+      <p><span class="vs">PMS.</span> Your own account, mostly listed shares, and no lock-in. An AIF pools money and may hold assets that cannot be sold quickly.</p>
+    </aside>
+  </div>
+  <footer class="folio"><span class="pg">16</span><span class="asof">Facts as of October 2026</span></footer>
+</section>
+<!-- /page --><section class="page recto" data-job="special">
+  <header class="runhead"><span>07 · AIF</span><span class="chip">Specialise</span></header>
+  <div class="label" style="display:flex;justify-content:space-between;padding-bottom:1.5mm"><span>At a glance</span><span class="muted" style="letter-spacing:.06em;text-transform:none;font-family:var(--text);font-stretch:100%;font-weight:500;font-size:6.6pt">The same six facts for every product</span></div>
+  <dl class="glance">
+      <dt>Regulator</dt><dd>SEBI (Alternative Investment Funds Regulations, 2012).</dd>
+      <dt>Minimum</dt><dd>₹1 crore commitment, drawn in parts as the fund invests.<svg class="ruler" viewBox="0 0 99 9.2" role="img" aria-label="Minimum to invest: ₹1 crore">
+  <line x1="1.2" y1="5.2" x2="96.8" y2="5.2" class="s-rule" style="stroke-width:1.1;stroke-linecap:round"/>
+  <line x1="96.8" y1="5.2" x2="96.8" y2="5.2" class="s-job" style="stroke-width:1.1;stroke-linecap:round"/>
+  <line x1="1.2" y1="4.3" x2="1.2" y2="6.1000000000000005" class="s-ink3 hair"/><text x="1.2" y="8.8" class="t-sm t-num" style="font-size:2.05px;text-anchor:start">₹100</text><line x1="20.32" y1="4.3" x2="20.32" y2="6.1000000000000005" class="s-ink3 hair"/><text x="20.32" y="8.8" class="t-sm t-num" style="font-size:2.05px;text-anchor:middle">₹1,000</text><line x1="39.440000000000005" y1="4.3" x2="39.440000000000005" y2="6.1000000000000005" class="s-ink3 hair"/><text x="39.440000000000005" y="8.8" class="t-sm t-num" style="font-size:2.05px;text-anchor:middle">₹10,000</text><line x1="58.559999999999995" y1="4.3" x2="58.559999999999995" y2="6.1000000000000005" class="s-ink3 hair"/><text x="58.559999999999995" y="8.8" class="t-sm t-num" style="font-size:2.05px;text-anchor:middle">₹1 lakh</text><line x1="77.68" y1="4.3" x2="77.68" y2="6.1000000000000005" class="s-ink3 hair"/><text x="77.68" y="8.8" class="t-sm t-num" style="font-size:2.05px;text-anchor:middle">₹10 lakh</text><line x1="96.8" y1="4.3" x2="96.8" y2="6.1000000000000005" class="s-ink3 hair"/><text x="96.8" y="8.8" class="t-sm t-num" style="font-size:2.05px;text-anchor:end">₹1 crore</text>
+  
+  <path d="M95.7,2.6 h2.2 l-1.1,1.6 z" class="f-deep"/>
+  <text x="96.8" y="2.1" class="t-cap job" style="font-size:2.05px;text-anchor:end">₹1 crore</text>
+</svg></dd>
+      <dt>Time commitment</dt><dd>Category I and II: closed-ended, often 4–10 years. Category III: open or closed-ended.</dd>
+      <dt>Money out</dt><dd>Usually as the fund sells investments, towards the end of its life. Early exit is limited or not possible.</dd>
+      <dt>Costs</dt><dd>A management fee plus carried interest, a share of profits above the hurdle.</dd>
+      <dt>Tax in brief</dt><dd>Category I and II are pass-through: income is taxed in your hands. Category III pays tax in the fund; you receive post-tax returns.</dd>
+  </dl>
+  <div class="section gauge">
+    <h2 class="label"><span>Cost check: how profits are shared</span><span class="aside">The distribution waterfall</span></h2>
+    <svg viewBox="0 0 122 25" role="img" aria-labelledby="aif-gauge-t">
+  <title id="aif-gauge-t">The order in which an AIF shares out money: your capital first, then your hurdle return, then a catch-up for the manager in some funds, then the remaining profit, often 80 to you and 20 to the manager.</title>
+  <rect x="0" y="0.6" width="29.75" height="4.6" class="f-job"/>
+  <text x="1.8" y="3.85" class="t-sm b t-white">1  Capital back</text>
+  <text x="0" y="9.4" class="t-sm">All your capital comes</text>
+  <text x="0" y="12.6" class="t-sm">back to you first.</text>
+
+  <rect x="30.75" y="4.6" width="29.75" height="4.6" class="f-job" style="opacity:.72"/>
+  <text x="32.55" y="7.85" class="t-sm b t-white">2  Hurdle return</text>
+  <text x="30.75" y="13.4" class="t-sm">Then your hurdle return,</text>
+  <text x="30.75" y="16.6" class="t-sm">often 8–10% a year.</text>
+
+  <rect x="61.5" y="8.6" width="29.75" height="4.6" class="f-job" style="opacity:.45"/>
+  <text x="63.3" y="11.85" class="t-sm b">3  Catch-up</text>
+  <text x="61.5" y="17.4" class="t-sm">Then the manager catches</text>
+  <text x="61.5" y="20.6" class="t-sm">up, in some funds only.</text>
+
+  <rect x="92.25" y="12.6" width="29.75" height="4.6" class="f-tint s-job hair"/>
+  <text x="94.05" y="15.85" class="t-sm b">4  The rest is split</text>
+  <text x="92.25" y="21.4" class="t-sm">often 80% to you,</text>
+  <text x="92.25" y="24.6" class="t-sm">20% to the manager.</text>
+</svg>
+  </div>
+  <div class="section">
+    <div class="fit">
+      <div class="yes"><h3 class="label">Suits you if</h3><ul><li>You have a large portfolio and can leave money untouched for years.</li><li>You want access to private equity, private credit or venture capital.</li><li>You can judge the manager’s record across earlier funds.</li></ul></div>
+      <div class="no"><h3 class="label">Think twice if</h3><ul><li>You may need this money before the fund ends.</li><li>₹1 crore is a large share of your net worth.</li><li>You are not sure you can meet capital calls on time.</li></ul></div>
+    </div>
+  </div>
+  <div class="section">
+    <h2 class="label"><span>Ask before you sign</span><span class="aside">Tick when answered</span></h2>
+    <ul class="ask"><li>What does the fund invest in, and how did the manager’s earlier funds do?</li><li>How much will be called, and how often? What if I miss a call?</li><li>What are the fees, the hurdle and the carry?</li><li>How long is the fund’s life, and can it be extended?</li></ul>
+  </div>
+  <div class="section">
+    <h2 class="label"><span>My notes</span><span class="aside">Write your own numbers here</span></h2>
+    <div class="notes"><div class="field"><span>Fund / category</span></div><div class="field"><span>Commitment ₹</span></div><div class="field"><span>Called so far ₹</span></div><div class="field"><span>Fund ends</span></div></div>
+  </div>
+  <p class="legal">AIFs are offered only by private placement to eligible investors, through the fund’s private placement memorandum. This page is investor education. It is not an offer or a solicitation. Ram Investments [AIF distribution arrangement: ____].</p>
+  <footer class="folio"><span class="pg">17</span><span class="asof">Ram Investments · Diary 2027</span></footer>
+</section>
+<!-- /page --></div>
+<div class="spread"><span class="spread-label">Pages 18–19</span><section class="page verso" data-job="global" id="gift">
+  <header class="runhead"><span class="chip">Globalise</span><span>Know your products · 08 of 08</span></header>
+  <div class="entry-head">
+    <div class="entry-no">08</div>
+    <div>
+      <h1 class="entry-title">GIFT City</h1>
+      <p class="entry-formal">International investing via GIFT IFSC · regulated by IFSCA</p>
+    </div>
+  </div>
+  <p class="oneline">GIFT City in Gujarat is home to India’s International Financial Services Centre (IFSC). Resident Indians can invest there in US dollars, within their yearly LRS limit, through entities regulated by IFSCA.</p>
+  <figure class="plate">
+    <figcaption class="plate-head"><span class="label">The route from your bank account to the world</span><span class="fig">Fig. 08</span></figcaption>
+    <svg viewBox="0 0 122 80" role="img" aria-labelledby="gift-plate-t">
+  <title id="gift-plate-t">Money moves from your Indian bank account through LRS to GIFT IFSC, where it goes into US-dollar products that reach global markets; proceeds come back in dollars. Below, how the yearly LRS limit is shared.</title>
+  <defs>
+    <marker id="ah-gift" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="3.2" markerHeight="3.2" orient="auto">
+      <path d="M0,0 L6,3 L0,6 z" class="f-ink2"/>
+    </marker>
+  </defs>
+
+  <!-- You -->
+  <g class="f-job">
+    <circle cx="9" cy="14.2" r="1.9"/><path d="M5.8,21 C5.8,16.9 12.2,16.9 12.2,21 Z"/>
+  </g>
+  <text x="9" y="25.6" class="t-bd b mid">You, in India</text>
+  <text x="9" y="29" class="t-sm mid">rupee account</text>
+
+  <line x1="19" y1="18" x2="39.6" y2="18" class="s-ink2 med" marker-end="url(#ah-gift)"/>
+  <text x="28.6" y="15.8" class="t-cap job mid">LRS</text>
+  <text x="28.6" y="21.8" class="t-sm mid" style="font-size:2.15px">up to USD 2,50,000</text>
+  <text x="28.6" y="24.6" class="t-sm mid" style="font-size:2.15px">a year, per person</text>
+
+  <!-- GIFT IFSC -->
+  <rect x="41" y="2" width="49" height="49.4" class="f-tint"/>
+  <text x="43.4" y="6.6" class="t-cap job">GIFT IFSC, Gujarat</text>
+  <text x="43.4" y="10" class="t-sm">In US dollars · regulated by IFSCA</text>
+  <g class="f-paper">
+    <rect x="43.4" y="12.8" width="44.2" height="6.2"/>
+    <rect x="43.4" y="20.2" width="44.2" height="6.2"/>
+    <rect x="43.4" y="27.6" width="44.2" height="6.2"/>
+    <rect x="43.4" y="35" width="44.2" height="6.2"/>
+    <rect x="43.4" y="42.4" width="44.2" height="6.2"/>
+  </g>
+  <text x="45.4" y="16.9" class="t-sm">Global funds (retail schemes)</text>
+  <text x="45.4" y="24.3" class="t-sm">AIFs · from USD 1,50,000</text>
+  <text x="45.4" y="31.7" class="t-sm">PMS · from USD 75,000</text>
+  <text x="45.4" y="39.1" class="t-sm">Global stocks via NSE IX</text>
+  <text x="45.4" y="46.5" class="t-sm">US-dollar deposits (IFSC banks)</text>
+
+  <line x1="91" y1="26" x2="100.4" y2="26" class="s-ink2 med" marker-end="url(#ah-gift)"/>
+
+  <!-- Globe -->
+  <g class="f-none s-job thin">
+    <circle cx="111" cy="20" r="9" class="f-paper"/>
+    <ellipse cx="111" cy="20" rx="4" ry="9"/>
+    <line x1="102" y1="20" x2="120" y2="20"/>
+    <path d="M103.2,15.5 H118.8 M103.2,24.5 H118.8"/>
+  </g>
+  <text x="111" y="33.4" class="t-bd b mid">Global markets</text>
+  <text x="111" y="36.8" class="t-sm mid">US, Europe, Asia</text>
+
+  <!-- Coming back -->
+  <path d="M65.5,51.4 V55 H9 V31.6" class="f-none s-ink2 thin dash" marker-end="url(#ah-gift)"/>
+  <text x="38" y="58.6" class="t-sm mid">Proceeds come back in US dollars, to your Indian bank account</text>
+
+  <!-- LRS limit -->
+  <line x1="0" y1="61.4" x2="122" y2="61.4" class="s-rule hair"/>
+  <text x="0" y="65.4" class="t-cap job">Your LRS limit is shared</text>
+  <text x="122" y="65.4" class="t-cap end">USD 2,50,000 per financial year</text>
+  <rect x="0" y="67.2" width="9.76" height="5" class="f-panel"/>
+  <rect x="9.76" y="67.2" width="24.4" height="5" class="f-rule2"/>
+  <rect x="34.16" y="67.2" width="4.88" height="5" class="f-rule"/>
+  <rect x="39.04" y="67.2" width="58.56" height="5" class="f-job"/>
+  <rect x="97.6" y="67.2" width="24.4" height="5" class="f-paper s-ink3 hair dash"/>
+  <g class="t-sm" style="font-size:2.1px">
+    <text x="4.9" y="75.4" class="t-sm mid" style="font-size:2.1px">Travel</text>
+    <text x="21.96" y="75.4" class="t-sm mid" style="font-size:2.1px">Education</text>
+    <text x="36.6" y="75.4" class="t-sm mid" style="font-size:2.1px">Gifts</text>
+    <text x="68.3" y="75.4" class="t-sm mid b" style="font-size:2.1px">GIFT City investments</text>
+    <text x="109.8" y="75.4" class="t-sm mid" style="font-size:2.1px">Still available</text>
+  </g>
+  <text x="0" y="79.4" class="t-sm t-ink3">Example split. Each family member has a separate limit.</text>
+</svg>
+  </figure>
+  <div class="lower">
+    <div>
+      <h2 class="label block-title">How to recognise it</h2>
+      <ul class="marks">
+        <li>You invest in US dollars. Returns depend on the markets and on the rupee–dollar rate.</li>
+        <li>Uses your LRS limit of USD 2,50,000 per person per financial year, shared with travel, education and gifts.</li>
+        <li>TCS of 20% applies on investment remittances above ₹10 lakh a year. You can set it off against tax or claim a refund.</li>
+      </ul>
+    </div>
+    <aside class="confused">
+      <h2 class="label block-title">Often confused with</h2>
+      <p><span class="vs">International funds in rupees.</span> Sold in India in INR, but they can stop taking new money when industry overseas limits are reached.</p>
+      <p><span class="vs">Foreign broker accounts.</span> Your money sits overseas, under a foreign regulator.</p>
+    </aside>
+  </div>
+  <footer class="folio"><span class="pg">18</span><span class="asof">Facts as of October 2026</span></footer>
+</section>
+<!-- /page --><section class="page recto" data-job="global">
+  <header class="runhead"><span>08 · GIFT City</span><span class="chip">Globalise</span></header>
+  <div class="label" style="display:flex;justify-content:space-between;padding-bottom:1.5mm"><span>At a glance</span><span class="muted" style="letter-spacing:.06em;text-transform:none;font-family:var(--text);font-stretch:100%;font-weight:500;font-size:6.6pt">The same six facts for every product</span></div>
+  <dl class="glance">
+      <dt>Regulator</dt><dd>IFSCA, the regulator for GIFT City. Remittances follow RBI’s Liberalised Remittance Scheme (LRS).</dd>
+      <dt>Minimum</dt><dd>Depends on the product: retail funds set their own; PMS from USD 75,000; AIFs from USD 1,50,000 (accredited investors excepted).</dd>
+      <dt>Time commitment</dt><dd>Open-ended funds can be redeemed; AIFs run for a fixed term.</dd>
+      <dt>Money out</dt><dd>Proceeds are paid in US dollars and can be brought back to your Indian bank account.</dd>
+      <dt>Costs</dt><dd>Fund or service fees, plus currency conversion and bank remittance charges.</dd>
+      <dt>Tax in brief</dt><dd>Gains are taxable in India for residents. TCS is not an extra tax: it is adjusted against what you owe.</dd>
+  </dl>
+  <div class="section gauge">
+    <h2 class="label"><span>Risk check: the currency effect</span><span class="aside">Illustration only</span></h2>
+    <svg viewBox="0 0 122 25.4" role="img" aria-labelledby="gift-gauge-t">
+  <title id="gift-gauge-t">A fund that returns 8% in US dollars returns about 11% in rupees if the rupee weakens 3%, and about 5% if it strengthens 3%.</title>
+  <text x="50" y="4.5" class="t-sm end">Fund return in US dollars</text>
+  <rect x="52" y="1.4" width="32" height="4.4" class="f-ink3"/>
+  <text x="85.4" y="4.5" class="t-sm b t-num">+8%</text>
+
+  <text x="50" y="11.3" class="t-sm end">In rupees, if the rupee weakens 3%</text>
+  <rect x="52" y="8.2" width="44.96" height="4.4" class="f-job"/>
+  <text x="98.4" y="11.3" class="t-sm b t-num">about +11%</text>
+
+  <text x="50" y="18.1" class="t-sm end">In rupees, if the rupee strengthens 3%</text>
+  <rect x="52" y="15" width="19.04" height="4.4" class="f-tint s-job hair"/>
+  <text x="72.5" y="18.1" class="t-sm b t-num">about +5%</text>
+
+  <line x1="52" y1="0.6" x2="52" y2="20.2" class="s-ink thin"/>
+  <text x="0" y="24.4" class="t-sm t-ink3">Same fund, same year. Only the exchange rate differs.</text>
+</svg>
+  </div>
+  <div class="section">
+    <div class="fit">
+      <div class="yes"><h3 class="label">Suits you if</h3><ul><li>Most of your wealth is in India and you want global diversification.</li><li>You have goals in dollars: education abroad, travel, overseas property.</li><li>You prefer an Indian-regulated route and Indian time-zone service.</li></ul></div>
+      <div class="no"><h3 class="label">Think twice if</h3><ul><li>You may need the money soon. Currency swings can hurt in the short term.</li><li>You have already used most of this year’s LRS limit.</li><li>You have not planned for TCS holding back cash until you file your return.</li></ul></div>
+    </div>
+  </div>
+  <div class="section">
+    <h2 class="label"><span>Ask before you sign</span><span class="aside">Tick when answered</span></h2>
+    <ul class="ask"><li>What exactly does this product invest in, and where?</li><li>What is the minimum, and what are all costs, including currency conversion?</li><li>How much of my LRS limit have I used this financial year?</li><li>How will my gains be taxed?</li></ul>
+  </div>
+  <div class="section">
+    <h2 class="label"><span>My notes</span><span class="aside">Write your own numbers here</span></h2>
+    <div class="notes"><div class="field"><span>Product</span></div><div class="field"><span>Amount USD</span></div><div class="field"><span>LRS used this FY</span></div><div class="field"><span>TCS paid ₹</span></div></div>
+  </div>
+  <p class="legal">Investments in GIFT IFSC are subject to market and currency risks, and to RBI’s LRS and FEMA rules. Read all scheme related documents carefully. Ram Investments [IFSC distribution registration: ____].</p>
+  <footer class="folio"><span class="pg">19</span><span class="asof">Ram Investments · Diary 2027</span></footer>
+</section>
+<!-- /page --></div>
+<div class="spread"><span class="spread-label">Pages 20–21</span><section class="page verso" data-job="neutral" id="side-by-side-a">
+  <header class="runhead"><span>Know your products</span><span>Side by side · 1 of 2</span></header>
+  <div class="sbs-head">
+    <p class="label muted">All eight, side by side</p>
+    <h2 class="page-title">Protect and build</h2>
+    <p class="intro">Every row continues across both pages. Details and conditions are in each entry.</p>
+  </div>
+  <table class="sbs">
+    <colgroup><col style="width:21mm"><col><col><col><col></colgroup>
+    <thead>
+      <tr>
+        <th></th>
+        <th data-job="protect"><span class="bar"></span><span class="no">01</span><span class="nm">Term insurance</span><span class="pg">page 4</span></th>
+        <th data-job="protect"><span class="bar"></span><span class="no">02</span><span class="nm">Health insurance</span><span class="pg">page 6</span></th>
+        <th data-job="build"><span class="bar"></span><span class="no">03</span><span class="nm">Mutual funds</span><span class="pg">page 8</span></th>
+        <th data-job="build"><span class="bar"></span><span class="no">04</span><span class="nm">NCDs</span><span class="pg">page 10</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="h-line"><td class="rowlabel">In a line</td><td>Pays your family a lump sum if you die during the term.</td><td>Pays hospital bills up to your sum insured.</td><td>A pooled portfolio run by a professional manager.</td><td>A fixed-rate loan to a company, for a fixed term.</td></tr>
+      <tr class="h-reg"><td class="rowlabel">Regulator</td><td>IRDAI</td><td>IRDAI</td><td>SEBI</td><td>SEBI; RBI for NBFC issuers</td></tr>
+      <tr class="h-min"><td class="rowlabel">Minimum</td><td>A yearly premium, set by age, health and cover</td><td>A yearly premium, set by age, cover and city</td><td><b>SIPs from ₹100–₹500</b> a month</td><td><b>Usually ₹10,000</b> in a public issue</td></tr>
+      <tr class="h-time"><td class="rowlabel">Time commitment</td><td>The policy term, often to age 60–70</td><td>One year at a time; renew without a break</td><td>None for most funds; ELSS 3 years</td><td>18 months to 10 years</td></tr>
+      <tr class="h-out"><td class="rowlabel">Money out</td><td>Paid to your nominee on a claim</td><td>Cashless at the hospital, or reimbursed</td><td>Any business day, at that day’s NAV</td><td>At maturity, or sell on the exchange</td></tr>
+      <tr class="h-risk"><td class="rowlabel">Main risk to watch</td><td>Too little cover; non-disclosure</td><td>Room-rent caps, co-pays, waiting periods</td><td>Market falls. See the riskometer</td><td>The company failing to pay. See the rating</td></tr>
+      <tr class="h-tax"><td class="rowlabel">Tax in brief</td><td>Payout tax-free. Premium deductible in the old regime</td><td>Premium deductible in the old regime</td><td>Equity: 12.5% on gains above ₹1.25 lakh. Debt: slab rate</td><td>Interest at your slab rate</td></tr>
+      <tr class="h-best"><td class="rowlabel">Best for</td><td>Anyone whose family depends on their income</td><td>Every family, alongside any employer cover</td><td>Most investors, as the core of a portfolio</td><td>Income seekers who can hold to maturity</td></tr>
+    </tbody>
+  </table>
+  <footer class="folio"><span class="pg">20</span><span class="asof">Facts as of October 2026</span></footer>
+</section>
+<!-- /page --><section class="page recto" data-job="neutral" id="side-by-side-b">
+  <header class="runhead"><span>Side by side · 2 of 2</span><span>Know your products</span></header>
+  <div class="sbs-head">
+    <p class="label muted">All eight, side by side</p>
+    <h2 class="page-title">Specialise and globalise</h2>
+    <p class="intro">Minimums are the regulator’s floors. A provider may ask for more.</p>
+  </div>
+  <table class="sbs">
+    <colgroup><col><col><col><col><col style="width:21mm"></colgroup>
+    <thead>
+      <tr>
+        <th data-job="special"><span class="bar"></span><span class="no">05</span><span class="nm">SIF</span><span class="pg">page 12</span></th>
+        <th data-job="special"><span class="bar"></span><span class="no">06</span><span class="nm">PMS</span><span class="pg">page 14</span></th>
+        <th data-job="special"><span class="bar"></span><span class="no">07</span><span class="nm">AIF</span><span class="pg">page 16</span></th>
+        <th data-job="global"><span class="bar"></span><span class="no">08</span><span class="nm">GIFT City</span><span class="pg">page 18</span></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="h-line"><td>Mutual-fund-run strategies that can short up to 25%.</td><td>A manager runs a portfolio in your own demat account.</td><td>A private pooled fund for unlisted and complex assets.</td><td>Global investing in US dollars, from India.</td><td class="rowlabel right">In a line</td></tr>
+      <tr class="h-reg"><td>SEBI</td><td>SEBI</td><td>SEBI</td><td>IFSCA; RBI’s LRS</td><td class="rowlabel right">Regulator</td></tr>
+      <tr class="h-min"><td><b>₹10 lakh</b> per investor</td><td><b>₹50 lakh</b>; PRIM route ₹25 lakh from April 2027</td><td><b>₹1 crore</b> commitment</td><td>Varies: PMS USD 75,000; AIFs USD 1,50,000</td><td class="rowlabel right">Minimum</td></tr>
+      <tr class="h-time"><td>Depends on the strategy</td><td>No lock-in; early exit charges may apply</td><td>Often 4–10 years; closed-ended</td><td>Depends on the product</td><td class="rowlabel right">Time commitment</td></tr>
+      <tr class="h-out"><td>On the strategy’s redemption days</td><td>Withdraw cash or securities</td><td>As investments are sold, near the end</td><td>In US dollars, back to your Indian bank</td><td class="rowlabel right">Money out</td></tr>
+      <tr class="h-risk"><td>Strategy and derivatives. See the risk band</td><td>Concentration and the manager’s skill</td><td>Money locked in; the manager’s skill</td><td>Currency swings and overseas markets</td><td class="rowlabel right">Main risk to watch</td></tr>
+      <tr class="h-tax"><td>Like mutual funds, by asset mix</td><td>Each trade taxed in your hands</td><td>Cat I and II: in your hands. Cat III: in the fund</td><td>Taxable in India; TCS is adjustable</td><td class="rowlabel right">Tax in brief</td></tr>
+      <tr class="h-best"><td>Larger portfolios wanting long-short strategies</td><td>Equity investors wanting a focused portfolio</td><td>Large portfolios that can wait for years</td><td>Investors who want global, dollar exposure</td><td class="rowlabel right">Best for</td></tr>
+    </tbody>
+  </table>
+  <footer class="folio"><span class="pg">21</span><span class="asof">Ram Investments · Diary 2027</span></footer>
+</section>
+<!-- /page --></div>
+<div class="spread"><span class="spread-label">Pages 22–23</span><section class="page verso" data-job="neutral" id="glossary">
+  <header class="runhead"><span>Know your products</span><span>Words to know</span></header>
+  <h2 class="page-title">Words to know</h2>
+  <p class="intro">Terms used in this guide, in plain words.</p>
+  <div class="glossary">
+    <p><b>Accredited investor.</b> An investor certified as meeting income or net-worth thresholds, who can use some products with lower minimums.</p>
+    <p><b>AMC.</b> Asset management company: the firm that runs a mutual fund’s schemes.</p>
+    <p><b>Asset cover.</b> The value of assets backing a secured NCD, compared with what is owed.</p>
+    <p><b>Capital call.</b> A request from an AIF manager for part of the money you committed. Also called a drawdown.</p>
+    <p><b>Carried interest.</b> The AIF manager’s share of profits above the hurdle.</p>
+    <p><b>Cashless claim.</b> The insurer pays a network hospital directly, so you do not pay up front.</p>
+    <p><b>Co-payment.</b> The share of each health claim you pay yourself.</p>
+    <p><b>Credit rating.</b> An agency’s opinion of how likely a borrower is to pay on time, from AAA to D.</p>
+    <p><b>Deductible.</b> The part of a year’s bills that a top-up policy does not pay.</p>
+    <p><b>Exit load.</b> A charge for selling mutual fund units before a set period.</p>
+    <p><b>Free look.</b> 30 days to return a new insurance policy if it does not suit you.</p>
+    <p><b>High-water mark.</b> A performance fee is paid only on gains above the portfolio’s previous peak.</p>
+    <p><b>Hurdle rate.</b> The return investors must earn before the manager shares in profits.</p>
+    <p><b>IFSCA.</b> International Financial Services Centres Authority, the regulator in GIFT City.</p>
+    <p><b>LRS.</b> Liberalised Remittance Scheme. Each resident can send up to USD 2,50,000 abroad in a financial year.</p>
+    <p><b>Moratorium.</b> After 5 continuous years of health cover, a claim cannot be refused for non-disclosure, except fraud.</p>
+    <p><b>NAV.</b> Net asset value: the price of one mutual fund unit, worked out every business day.</p>
+    <p><b>Nominee.</b> The person who receives the money if the policyholder or investor dies.</p>
+    <p><b>Pass-through.</b> Income is taxed in the investor’s hands, not in the fund. Applies to AIF Category I and II.</p>
+    <p><b>Portability.</b> Moving a health policy to another insurer while keeping waiting-period credit.</p>
+    <p><b>Rider.</b> An add-on to an insurance policy, such as accidental death cover.</p>
+    <p><b>Risk band.</b> The five-level risk label shown for every SIF strategy.</p>
+    <p><b>Riskometer.</b> SEBI’s six-level risk label shown on every mutual fund scheme.</p>
+    <p><b>SIP.</b> Systematic investment plan: a fixed amount invested at regular intervals.</p>
+    <p><b>Sum assured, sum insured.</b> What a life policy pays on a claim; the most a health policy pays in a year.</p>
+    <p><b>TCS.</b> Tax collected at source by your bank on large overseas remittances, adjusted against your tax.</p>
+    <p><b>TER.</b> Total expense ratio: a fund’s yearly running costs, taken from the NAV.</p>
+    <p><b>Waiting period.</b> Time after buying health cover before some conditions are covered.</p>
+  </div>
+  <footer class="folio"><span class="pg">22</span></footer>
+</section>
+<!-- /page --><section class="page recto" data-job="neutral" id="check-up">
+  <header class="runhead"><span>Your money check-up</span><span>Know your products</span></header>
+  <h2 class="page-title">Your 2027 money check-up</h2>
+  <p class="intro">Fifteen minutes each quarter. Tick each line once it is done.</p>
+  <table class="checkup">
+    <thead><tr><th>Check</th><th>Jan–Mar</th><th>Apr–Jun</th><th>Jul–Sep</th><th>Oct–Dec</th></tr></thead>
+    <tbody>
+      <tr class="grp" data-job="protect"><td colspan="5">Protect</td></tr>
+      <tr><td>Term cover still matches my family’s needs</td><td class="box"></td><td class="box"></td><td class="box"></td><td class="box"></td></tr>
+      <tr><td>Health policy renewed; new family members added</td><td class="box"></td><td class="box"></td><td class="box"></td><td class="box"></td></tr>
+      <tr><td>Nominees up to date on every policy and investment</td><td class="box"></td><td class="box"></td><td class="box"></td><td class="box"></td></tr>
+      <tr class="grp" data-job="build"><td colspan="5">Build</td></tr>
+      <tr><td>SIPs running as planned</td><td class="box"></td><td class="box"></td><td class="box"></td><td class="box"></td></tr>
+      <tr><td>Asset mix checked against my plan</td><td class="box"></td><td class="box"></td><td class="box"></td><td class="box"></td></tr>
+      <tr><td>NCD interest received; maturities noted</td><td class="box"></td><td class="box"></td><td class="box"></td><td class="box"></td></tr>
+      <tr class="grp" data-job="special"><td colspan="5">Specialise</td></tr>
+      <tr><td>SIF, PMS and AIF statements read against benchmarks</td><td class="box"></td><td class="box"></td><td class="box"></td><td class="box"></td></tr>
+      <tr><td>Cash set aside for upcoming AIF capital calls</td><td class="box"></td><td class="box"></td><td class="box"></td><td class="box"></td></tr>
+      <tr class="grp" data-job="global"><td colspan="5">Globalise</td></tr>
+      <tr><td>LRS used this financial year noted</td><td class="box"></td><td class="box"></td><td class="box"></td><td class="box"></td></tr>
+      <tr><td>TCS credit claimed in my tax return</td><td class="box"></td><td class="box"></td><td class="box"></td><td class="box"></td></tr>
+      <tr class="grp" data-job="neutral"><td colspan="5">Every year</td></tr>
+      <tr><td>Emergency fund covers about six months</td><td class="box"></td><td class="box"></td><td class="box"></td><td class="box"></td></tr>
+      <tr><td>KYC, address and bank details up to date</td><td class="box"></td><td class="box"></td><td class="box"></td><td class="box"></td></tr>
+      <tr><td>Will written or reviewed</td><td class="box"></td><td class="box"></td><td class="box"></td><td class="box"></td></tr>
+    </tbody>
+  </table>
+  <div class="section" style="margin-top:5mm">
+    <h2 class="label"><span>Our review meetings</span><span class="aside">Dates we agree together</span></h2>
+    <div class="review">
+      <div class="field"><span>Q1</span></div><div class="field"><span>Q2</span></div><div class="field"><span>Q3</span></div><div class="field"><span>Q4</span></div>
+      <div class="field wide"><span>Your relationship manager</span></div><div class="field wide"><span>Phone</span></div>
+    </div>
+  </div>
+  <footer class="folio"><span class="pg">23</span></footer>
+</section>
+<!-- /page --></div>
+<div class="spread single-verso"><span class="spread-label">Page 24</span><section class="page verso" data-job="neutral" id="important">
+  <header class="runhead"><span>Know your products</span><span>Important information</span></header>
+  <h2 class="page-title">Important information</h2>
+  <div class="info">
+    <h3 class="label muted">About this guide</h3>
+    <p>This section is investor education. It is not an offer, solicitation or recommendation to buy or sell any product, and it is not investment, tax or legal advice. Facts are as of October 2026 and can change. Read the offer documents of any product before investing, and speak to your adviser or tax consultant about your own situation.</p>
+    <div class="us">
+      <p><b>Ram Investments</b></p>
+      <p>AMFI Registered Mutual Fund Distributor and SIF Distributor (SIFD) · ARN-[____]</p>
+      <p>APMI Registered PMS Distributor · APRN-[____]</p>
+      <p>Insurance: [IRDAI registration type and number]</p>
+      <p>NCDs: [stock broker / online bond platform registration] · AIF and GIFT IFSC: [distribution arrangements]</p>
+      <p>[Address] · [Phone] · [Email] · [Website]</p>
+    </div>
+    <h3 class="label muted">How we are paid</h3>
+    <p>We receive commission from the providers of the products we distribute. Details of the commission we earn on your investments are available on request.</p>
+    <h3 class="label muted">Standard warnings</h3>
+    <div class="warnings">
+      <p><b>Mutual Fund investments are subject to market risks, read all scheme related documents carefully.</b></p>
+      <p><b>Investments in SIFs are subject to market risks, read all investment strategy related documents carefully.</b></p>
+      <p><b>Investments in debt securities are subject to risks including delay and/or default in payment. Read all the offer related documents carefully.</b></p>
+      <p>Insurance: for details on risk factors, terms and conditions, read the sales brochure carefully before concluding a sale.</p>
+      <p>PMS: investments in securities are subject to market risks; read the disclosure document carefully. AIFs are offered only by private placement to eligible investors.</p>
+    </div>
+    <h3 class="label muted">If you have a complaint</h3>
+    <p>Contact us first at [email]. If it is not resolved: for securities products, SEBI SCORES (scores.sebi.gov.in) and the SMART ODR portal (smartodr.in); for insurance, IRDAI Bima Bharosa (bimabharosa.irdai.gov.in) and the Insurance Ombudsman; for GIFT IFSC products, IFSCA.</p>
+    <h3 class="label muted">Sources</h3>
+    <p>SEBI, AMFI, APMI, IRDAI, IFSCA, RBI and the Income-tax Act, 2025. Past performance does not guarantee future returns.</p>
+  </div>
+  <footer class="folio"><span class="pg">24</span></footer>
+</section>
+<!-- /page --><div class="blank"></div></div>
+</main>
+</body>
+</html>

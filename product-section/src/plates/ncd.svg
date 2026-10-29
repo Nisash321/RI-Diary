@@ -1,0 +1,67 @@
+<svg viewBox="0 0 122 80" role="img" aria-labelledby="ncd-plate-t">
+  <title id="ncd-plate-t">Cash flows of ₹1,00,000 in a 3-year NCD at 9% with yearly or cumulative payout, and who is paid first if the company fails.</title>
+  <defs>
+    <marker id="ah-ncd" viewBox="0 0 6 6" refX="3" refY="3" markerWidth="3" markerHeight="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 z" class="f-ink3"/>
+    </marker>
+  </defs>
+
+  <text x="0" y="3.4" class="t-bd"><tspan class="b">Example.</tspan> ₹1,00,000 in a 3-year NCD at 9% a year (illustration, not an offer).</text>
+
+  <g class="t-cap">
+    <text x="44" y="9.6" class="t-cap mid">Today</text>
+    <text x="67" y="9.6" class="t-cap mid">Year 1</text>
+    <text x="90" y="9.6" class="t-cap mid">Year 2</text>
+    <text x="113" y="9.6" class="t-cap mid">Year 3</text>
+  </g>
+
+  <!-- Yearly payout -->
+  <text x="0" y="16.4" class="t-cap job">Yearly payout</text>
+  <text x="0" y="19.8" class="t-sm">Interest every year,</text>
+  <text x="0" y="23.1" class="t-sm">money back at the end</text>
+  <line x1="44" y1="19" x2="113" y2="19" class="s-rule hair"/>
+  <circle cx="44" cy="19" r="4.7" class="f-paper s-ink2 thin"/>
+  <circle cx="67" cy="19" r="1.41" class="f-job"/>
+  <circle cx="90" cy="19" r="1.41" class="f-job"/>
+  <circle cx="113" cy="19" r="4.91" class="f-job"/>
+  <text x="44" y="28.6" class="t-sm mid t-num">−₹1,00,000</text>
+  <text x="67" y="28.6" class="t-sm mid t-num">+₹9,000</text>
+  <text x="90" y="28.6" class="t-sm mid t-num">+₹9,000</text>
+  <text x="113" y="28.6" class="t-sm mid b t-num">+₹1,09,000</text>
+
+  <!-- Cumulative -->
+  <text x="0" y="37.4" class="t-cap job">Cumulative</text>
+  <text x="0" y="40.8" class="t-sm">All interest, compounded,</text>
+  <text x="0" y="44.1" class="t-sm">paid at the end</text>
+  <line x1="44" y1="40" x2="113" y2="40" class="s-rule hair"/>
+  <circle cx="44" cy="40" r="4.7" class="f-paper s-ink2 thin"/>
+  <circle cx="67" cy="40" r="0.55" class="f-rule"/>
+  <circle cx="90" cy="40" r="0.55" class="f-rule"/>
+  <circle cx="113" cy="40" r="5.35" class="f-deep"/>
+  <text x="44" y="49.8" class="t-sm mid t-num">−₹1,00,000</text>
+  <text x="113" y="49.8" class="t-sm mid b t-num">+₹1,29,503</text>
+
+  <text x="0" y="54.6" class="t-sm">In all, ₹1,27,000 with yearly payouts and ₹1,29,503 cumulative. Circle areas are to scale.</text>
+
+  <!-- Who is paid first -->
+  <line x1="0" y1="57.8" x2="122" y2="57.8" class="s-rule hair"/>
+  <text x="0" y="62" class="t-cap job">If the company fails, who is paid first?</text>
+
+  <rect x="0" y="64.4" width="37" height="10.6" class="f-job"/>
+  <text x="2.6" y="68.8" class="t-bd b t-white">1  Secured lenders</text>
+  <text x="2.6" y="72.4" class="t-sm t-white">including secured NCDs</text>
+
+  <line x1="38" y1="69.7" x2="41.6" y2="69.7" class="s-ink3 thin" marker-end="url(#ah-ncd)"/>
+
+  <rect x="42.5" y="64.4" width="37" height="10.6" class="f-tint"/>
+  <text x="45.1" y="68.8" class="t-bd b">2  Unsecured lenders</text>
+  <text x="45.1" y="72.4" class="t-sm">including unsecured NCDs</text>
+
+  <line x1="80.5" y1="69.7" x2="84.1" y2="69.7" class="s-ink3 thin" marker-end="url(#ah-ncd)"/>
+
+  <rect x="85" y="64.4" width="37" height="10.6" class="f-panel"/>
+  <text x="87.6" y="68.8" class="t-bd b">3  Shareholders</text>
+  <text x="87.6" y="72.4" class="t-sm">paid last, if anything is left</text>
+
+  <text x="0" y="79" class="t-sm t-ink3">Simplified. What you recover depends on the assets and the legal process.</text>
+</svg>
