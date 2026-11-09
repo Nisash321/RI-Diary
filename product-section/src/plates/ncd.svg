@@ -43,7 +43,7 @@
   <text x="90" y="49.8" class="t-sm mid">Added</text>
   <text x="118.4" y="49.8" class="t-sm end b">Money + all interest</text>
 
-  <text x="0" y="54.6" class="t-sm">Regular payouts give you income along the way. Cumulative pays it all at maturity.</text>
+  <text x="0" y="54.6" class="t-sm">A regular payout gives you income along the way. Cumulative pays it all at maturity.</text>
 
   <!-- Who is paid first -->
   <line x1="0" y1="57.8" x2="122" y2="57.8" class="s-rule hair"/>

@@ -37,7 +37,7 @@
   <line x1="88.67" y1="42.0" x2="88.67" y2="43.2" class="s-ink3 hair"/><text x="88.67" y="46.0" class="t-sm mid">50</text>
   <line x1="103.33" y1="42.0" x2="103.33" y2="43.2" class="s-ink3 hair"/><text x="103.33" y="46.0" class="t-sm mid">55</text>
   <line x1="118.00" y1="42.0" x2="118.00" y2="43.2" class="s-ink3 hair"/><text x="118.00" y="46.0" class="t-sm mid">60</text>
-  <text x="0" y="51.2" class="t-sm t-ink3" style="font-size:2.2px">Each need gets smaller as the years pass. The term is chosen to last while the family relies on his income.</text>
+  <text x="0" y="51.2" class="t-sm t-ink3" style="font-size:2.2px">Each need gets smaller as the years pass. The term lasts as long as the family relies on his income.</text>
 
   <!-- outcomes -->
   <rect x="0" y="55" width="59" height="27" class="f-tint"/>

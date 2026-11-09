@@ -99,7 +99,7 @@ export function productSpread(p, { plate, gauge, verso, total, meta }) {
   <div class="section">
     <div class="fit">
       <div class="yes"><h3 class="label">Suits you if</h3><ul>${p.suits.map((s) => `<li>${s}</li>`).join("")}</ul></div>
-      <div class="no"><h3 class="label">Think twice if</h3><ul>${p.twice.map((s) => `<li>${s}</li>`).join("")}</ul></div>
+      <div class="no"><h3 class="label">Talk to us first if</h3><ul>${p.twice.map((s) => `<li>${s}</li>`).join("")}</ul></div>
     </div>
   </div>
   <div class="section">

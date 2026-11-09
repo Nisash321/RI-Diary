@@ -193,11 +193,10 @@ strong, b, .b { font-weight: 700; }
   content: ""; position: absolute; left: .45mm; top: .55mm;
   width: 1.1mm; height: 2.1mm; border: solid var(--job); border-width: 0 .45mm .45mm 0; transform: rotate(42deg);
 }
-.fit .no li::before, .fit .no li::after {   /* cross */
-  content: ""; position: absolute; left: .1mm; top: 1.6mm; width: 2.3mm; height: .42mm; background: var(--ink-3);
-  transform: rotate(45deg);
+.fit .no li::before {          /* small arrow: a next step, not a warning */
+  content: ""; position: absolute; left: .2mm; top: 1.05mm;
+  width: 1.4mm; height: 1.4mm; border: solid var(--ink-3); border-width: .42mm .42mm 0 0; transform: rotate(45deg);
 }
-.fit .no li::after { transform: rotate(-45deg); }
 .fit .yes h3 { color: var(--job-deep); }
 .fit .no h3 { color: var(--ink-2); }
 
@@ -426,3 +425,13 @@ svg text { font-family: var(--text); }
   .spread::after, .spread-label, .blank { display: none !important; }
   .page { break-after: page; box-shadow: none !important; }
 }
+
+/* Where to start: goal finder */
+.finder { width: 100%; border-collapse: collapse; margin-top: 5mm; font-size: 8.4pt; line-height: 1.28; }
+.finder th { font-family: var(--display); font-weight: 650; font-stretch: 87.5%; font-size: 6.2pt; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); text-align: left; padding: 0 0 1.4mm; border-bottom: .35mm solid var(--ink); }
+.finder th:last-child, .finder td.pg { text-align: right; }
+.finder td { padding: 2.9mm 0 2.7mm; border-bottom: .25mm solid var(--rule-2); vertical-align: baseline; text-wrap: pretty; }
+.finder td:first-child { padding-right: 4mm; color: var(--ink); }
+.finder td:nth-child(2) { width: 34mm; font-weight: 700; color: var(--job-deep); white-space: nowrap; }
+.finder .fno { display: inline-block; width: 5.4mm; font-family: var(--display); font-weight: 700; font-stretch: 87.5%; color: var(--job); }
+.finder td.pg { width: 9mm; font-family: var(--display); font-weight: 650; font-variant-numeric: tabular-nums; }

@@ -83,5 +83,5 @@
   <rect x="99.2" y="66.4" width="22.8" height="17.2" class="f-tint"/>
   <text x="101.2" y="70.8" class="t-bd b">Other</text>
   <text x="101.2" y="74.6" class="t-sm" style="font-size:2.25px">Index funds,</text>
-  <text x="101.2" y="77.9" class="t-sm" style="font-size:2.25px">ETFs, FoFs.</text>
+  <text x="101.2" y="77.9" class="t-sm" style="font-size:2.25px">ETFs, fund of funds.</text>
 </svg>

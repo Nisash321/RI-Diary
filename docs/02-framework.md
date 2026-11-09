@@ -6,13 +6,13 @@ The product section is a field guide. Eight products sit under four jobs a clien
 
 ## 1. Section plan (28 pages)
 
-The section starts on a right-hand page so every entry opens as a facing spread.
+The section starts on a right-hand page so every entry opens as a facing spread. The page count must stay even, and the front matter must stay at three pages (or another odd number), or the entries stop facing each other. That is why the "How to read an entry" page, removed in draft 3 as unclear, was replaced by the "Where to start" page rather than simply dropped.
 
 | Page | Content |
 |---|---|
 | 1 | Opener: title, how the guide works, contents |
-| 2 | How to read an entry (annotated miniature spread) |
-| 3 | Four jobs your money can do, ticket-size ladder, "before you move right" checklist |
+| 2 | Four jobs your money can do (each product in one line), "ready for the next step?" checklist |
+| 3 | Where to start: a goal finder ("if you want to… look at… page") and the minimum-to-start ladder |
 | 4–5 | 01 Term Insurance |
 | 6–7 | 02 Health Insurance |
 | 8–9 | 03 Mutual Funds |
@@ -24,7 +24,7 @@ The section starts on a right-hand page so every entry opens as a facing spread.
 | 20–21 | 07 AIF in depth: private markets, which AIFs invest when, choosing a manager, "Is it for you?" |
 | 22–23 | 08 GIFT City |
 | 24–25 | Side by side: all eight compared across the spread |
-| 26 | Words to know (35 terms) |
+| 26 | Words to know (34 terms) |
 | 27 | Your money check-up (quarterly tick boxes, review dates) |
 | 28 | Important information: registrations, warnings, grievances |
 
@@ -67,7 +67,7 @@ The job, not the product, sets the colour, so a reader can tell at a glance whic
 | At a glance | The same six rows for every product: Regulator, Minimum (or What you pay), Time commitment, Money out (or When it pays), Costs, Tax in brief |
 | Ticket ruler | For investments, the minimum on one log scale from ₹100 to ₹1 crore, identical on every page |
 | The check that matters most | The regulator's own scale where one exists (riskometer, credit rating). Otherwise the single most useful check: cover worksheet, fine-print table, tax wrapper, concentration, profit waterfall, currency effect |
-| Suits you if / Think twice if | Three each. "Think twice" names the people the product does not suit |
+| Suits you if / Talk to us first if | Three "Suits you if" points and two "Talk to us first if" points. The second list is an invitation to a conversation, not a warning: each point is gentle, never scary, and offers a next step where one exists ("Porting keeps your waiting-period credit", "We can look at funds with shorter terms"). We distribute these products, so the page should help a client choose well, not talk them out of it |
 | Ask before you sign | Four questions with tick boxes |
 | My notes | Four write-in fields specific to the product |
 | Legal line | The exact standard warning, plus the registration line for that product |
@@ -78,7 +78,7 @@ An in-depth spread follows its entry, keeps the entry's job colour and number ("
 
 | Spread | What it must get across | How |
 |---|---|---|
-| SIF in depth (pp.12–13) | A SIF borrows abilities from PMS and Category III AIFs while keeping the mutual fund structure and tax treatment; it covers conservative to adventurous strategies; it works in rising, falling and sideways markets | Ability matrix (MF, SIF, PMS, Cat III AIF); the seven SEBI strategies on one conservative-to-adventurous line; three ways to use a SIF, including as a whole portfolio; a timeline of when tax is paid in each wrapper; industry growth |
+| SIF in depth (pp.12–13) | A SIF borrows abilities from PMS and Category III AIFs while keeping the mutual fund structure and tax treatment; it covers conservative to adventurous strategies; it works in rising, falling and sideways markets | Ability matrix (MF, SIF, PMS, Cat III AIF); the seven SEBI strategies on one cautious-to-adventurous line; three ways to use a SIF, including as a whole portfolio; a timeline of when tax is paid in each product (a SIF only when you redeem or switch); industry growth |
 | AIF in depth (pp.20–21) | Companies now stay private for a decade or more, so much of their early growth happens before an IPO; AIFs are how eligible investors take part; results vary widely, so the manager matters | A company's life before and after listing; three dated facts (age at listing, private funding, share of large companies that are private); which AIF categories invest at each stage; a plain-words caution; an "Is it for you?" checklist |
 
 ## 4. Visual system
@@ -92,7 +92,11 @@ An in-depth spread follows its entry, keeps the entry's job colour and number ("
 
 ## 5. Writing rules
 
-- Plain words, short sentences, active voice. Explain a term the first time it appears, then use it consistently.
+- Write for a 14-year-old (an Indian 8th-grade reader): plain words, short sentences, active voice. Explain a term the first time it appears, in brackets or in "Words to know", then use it consistently.
+- Sound like a person, not a brochure. Avoid slogans, stacked colons and "not X, but Y" phrasing.
+- No vague time words. Say the period: "20% if you redeem or switch within 12 months", never "if sooner", "if short-term" or "if you leave early".
+- Wherever a SIF or fund redemption triggers tax, say "redeem or switch": a switch between schemes or strategies counts as a redemption for tax.
+- Tax rates are always the base rates in the law (12.5%, 20%, 30%, slab rate), the same on every page. Surcharge and cess are mentioned in words, not folded into the figures.
 - Indian number formats: ₹10 lakh, ₹1 crore, USD 2,50,000 (RBI style).
 - Typical values say "often" or "usually". Rules and limits are stated flatly and dated.
 - Every page carries "Facts as of October 2026".

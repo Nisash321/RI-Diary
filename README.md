@@ -8,7 +8,7 @@ The product section of the Ram Investments 2027 diary: a 28-page field guide to 
 
 | Pages | Content |
 |---|---|
-| 1–3 | Opener and contents · how to read an entry · four jobs your money can do |
+| 1–3 | Opener and contents · four jobs your money can do · where to start (goal finder and minimums) |
 | 4–9 | Term Insurance, Health Insurance, Mutual Funds |
 | 10–13 | SIF, then SIF in depth |
 | 14–17 | NCDs, PMS |

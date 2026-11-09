@@ -35,7 +35,7 @@
     <text x="120" y="38.8" class="t-sm end">30 lakh</text>
   </g>
   <text x="0" y="38.8" class="t-cap">₹ lakh</text>
-  <text x="0" y="43.6" class="t-sm">A super top-up pays once the year’s bills cross its deductible: a low-cost way to raise your cover.</text>
+  <text x="0" y="43.6" class="t-sm">A super top-up pays once the year’s bills cross its deductible. It is a low-cost way to raise your cover.</text>
 
   <!-- Waiting periods -->
   <line x1="0" y1="47.2" x2="122" y2="47.2" class="s-rule hair"/>
@@ -60,5 +60,5 @@
   <text x="80" y="65" class="t-sm mid">Pre-existing illnesses and</text><text x="80" y="68.2" class="t-sm mid">listed treatments covered</text>
   <text x="121" y="65" class="t-sm end">Moratorium</text><text x="121" y="68.2" class="t-sm end">begins</text>
 
-  <text x="0" y="74" class="t-sm"><tspan class="b">Moratorium:</tspan> after 5 continuous years, a claim cannot be refused for non-disclosure, except in fraud.</text>
+  <text x="0" y="74" class="t-sm"><tspan class="b">Moratorium:</tspan> after 5 years of continuous cover, a claim cannot be refused for a health detail left out, except in fraud.</text>
 </svg>
