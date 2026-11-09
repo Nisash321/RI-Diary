@@ -279,16 +279,15 @@ strong, b, .b { font-weight: 700; }
 .fit h3 { margin-bottom: 1.5mm; }
 .fit ul { display: grid; gap: 1.3mm; }
 .fit li { position: relative; padding-left: 3.6mm; font-size: 7.8pt; line-height: 1.24; text-wrap: pretty; }
-.fit .yes li::before {          /* tick */
+.fit .yes li::before {          /* goal: a solid square in the job colour */
+  content: ""; position: absolute; left: .3mm; top: 1.15mm; width: 1.6mm; height: 1.6mm; background: var(--job);
+}
+.fit .no li::before {           /* our help: a tick */
   content: ""; position: absolute; left: .45mm; top: .55mm;
   width: 1.1mm; height: 2.1mm; border: solid var(--job); border-width: 0 .45mm .45mm 0; transform: rotate(42deg);
 }
-.fit .no li::before {          /* small arrow: a next step, not a warning */
-  content: ""; position: absolute; left: .2mm; top: 1.05mm;
-  width: 1.4mm; height: 1.4mm; border: solid var(--ink-3); border-width: .42mm .42mm 0 0; transform: rotate(45deg);
-}
 .fit .yes h3 { color: var(--job-deep); }
-.fit .no h3 { color: var(--ink-2); }
+.fit .no h3 { color: var(--job-deep); }
 
 .ask { display: grid; grid-template-columns: 1fr 1fr; column-gap: 4.2mm; row-gap: 1.3mm; }
 .ask li { position: relative; padding-left: 4.2mm; font-size: 7.8pt; line-height: 1.24; text-wrap: pretty; }
@@ -587,6 +586,16 @@ table.tx.tx-cg td:nth-child(3), table.tx.tx-cg td:nth-child(5) { font-weight: 70
 table.tx.tx-sur td:not(:first-child) { font-weight: 700; }
 table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
 .df-reg { margin-bottom: 1.2mm; }
+
+/* SIF in depth: worked examples (adapted from fund-house decks) */
+.ex3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; margin-top: 4.5mm; }
+.ex3 .ex { background: var(--job-tint); padding: 2.4mm 2.6mm 2.8mm; border-top: 1mm solid var(--job); }
+.ex3 .ex-tag { font-family: var(--display); font-weight: 700; font-stretch: 87.5%; font-size: 6.2pt; letter-spacing: .1em; text-transform: uppercase; color: var(--job-deep); }
+.ex3 h3 { font-family: var(--display); font-weight: 700; font-size: 9.4pt; color: var(--ink); margin: .6mm 0 1.8mm; line-height: 1.1; }
+.ex3 ol { display: grid; gap: 1.6mm; counter-reset: ex; }
+.ex3 li { font-size: 7.3pt; line-height: 1.3; color: var(--ink); padding-left: 4.2mm; position: relative; counter-increment: ex; text-wrap: pretty; }
+.ex3 li::before { content: counter(ex); position: absolute; left: 0; top: .2mm; width: 3mm; height: 3mm; border-radius: 50%; background: var(--job); color: #fff; font-family: var(--display); font-weight: 700; font-size: 5.6pt; line-height: 3mm; text-align: center; }
+.ex3 li b { display: block; font-weight: 700; color: var(--job-deep); font-size: 6.9pt; }
 
 </style>
 </head>
@@ -898,8 +907,8 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
   </div>
   <div class="section">
     <div class="fit">
-      <div class="yes"><h3 class="label">Suits you if you want</h3><ul><li>A large cover for a low, fixed premium</li><li>Your family and your loans protected</li><li>A tax-free payout, at once or monthly</li></ul></div>
-      <div class="no"><h3 class="label">Good to know if</h3><ul><li>No one depends on your income yet. Premiums are lowest while you are young and healthy, so a starter cover can make sense now.</li><li>You also want money back at the end. We can plan that goal alongside your cover.</li></ul></div>
+      <div class="yes"><h3 class="label">Use it for</h3><ul><li>Replacing your income for your family</li><li>Clearing a home loan in your absence</li><li>Your children’s education, whatever happens</li></ul></div>
+      <div class="no"><h3 class="label">How we help</h3><ul><li>Work out the cover your family needs</li><li>Compare plans and claim records</li><li>Stand by your family at claim time</li></ul></div>
     </div>
   </div>
   <div class="section">
@@ -1037,8 +1046,8 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
   </div>
   <div class="section">
     <div class="fit">
-      <div class="yes"><h3 class="label">Suits you if you want</h3><ul><li>Hospital bills paid directly, cashless</li><li>Cover that stays when you change jobs</li><li>One policy for your whole family</li></ul></div>
-      <div class="no"><h3 class="label">Good to know if</h3><ul><li>You want to change insurer. Porting keeps your waiting-period credit.</li><li>You have an existing illness. Some policies have a shorter wait for it.</li></ul></div>
+      <div class="yes"><h3 class="label">Use it for</h3><ul><li>Hospital bills, without touching savings</li><li>Cover for parents and elders</li><li>Topping up your employer’s cover</li></ul></div>
+      <div class="no"><h3 class="label">How we help</h3><ul><li>Compare room rent, co-pays and waits</li><li>Help with cashless approval and claims</li><li>Renewal reminders, so cover never lapses</li></ul></div>
     </div>
   </div>
   <div class="section">
@@ -1238,8 +1247,8 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
   </div>
   <div class="section">
     <div class="fit">
-      <div class="yes"><h3 class="label">Suits you if you want</h3><ul><li>To start small, from ₹100 a month</li><li>Professional management, widely spread</li><li>Your money back any business day</li></ul></div>
-      <div class="no"><h3 class="label">Good to know if</h3><ul><li>You may need the money within a year. Some funds, such as liquid funds, suit short periods.</li><li>You have a lump sum to invest. A monthly SIP or a transfer plan (STP) can spread your entry.</li></ul></div>
+      <div class="yes"><h3 class="label">Use it for</h3><ul><li>Goals 5+ years away: education, retirement</li><li>Building wealth with a monthly SIP</li><li>Short-term money, in liquid funds</li></ul></div>
+      <div class="no"><h3 class="label">How we help</h3><ul><li>Match funds to each goal and your risk</li><li>Set up and track your SIPs</li><li>Review your funds with you every year</li></ul></div>
     </div>
   </div>
   <div class="section">
@@ -1265,64 +1274,55 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
   </div>
   <p class="oneline">A SIF is run by a mutual fund house under SEBI’s mutual fund rules, and is taxed like a mutual fund. Its manager has more tools: it can gain when prices fall, move between asset types, and turn market exposure up or down.</p>
   <figure class="plate">
-    <figcaption class="plate-head"><span class="label">One fund, three kinds of market</span><span class="fig">Fig. 04</span></figcaption>
+    <figcaption class="plate-head"><span class="label">Mutual fund rules, with PMS and AIF tools</span><span class="fig">Fig. 04</span></figcaption>
     <svg viewBox="0 0 122 80" role="img" aria-labelledby="sif-plate-t">
-  <title id="sif-plate-t">A SIF can move the share of the fund exposed to the stock market from as low as minus 25% to 100%, while an equity mutual fund stays between about 65% and 100%. In falling markets the manager can cut exposure and bet on falls; in sideways markets earn from arbitrage, option premiums and interest; in rising markets raise exposure.</title>
-
-  <!-- Exposure range: SIF vs equity mutual fund -->
-  <text x="0" y="2.6" class="t-cap job">How much of the fund moves with the stock market</text>
-  <text x="0" y="8" class="t-sm b">SIF</text>
-  <rect x="20" y="4.6" width="98" height="4.6" class="f-job"/>
-  <text x="21.4" y="7.75" class="t-cap t-white" style="font-size:1.9px">As low as −25%</text>
-  <text x="116.6" y="7.75" class="t-cap t-white end" style="font-size:1.9px">Up to 100%</text>
-  <text x="0" y="14" class="t-sm b" style="fill:var(--ink-2)">Equity MF</text>
-  <rect x="90.56" y="10.6" width="27.44" height="4.6" class="f-ink3"/>
-  <text x="104.3" y="13.75" class="t-cap t-white mid" style="font-size:1.9px">65–100%</text>
-  <line x1="39.6" y1="3.8" x2="39.6" y2="16.4" class="s-ink dash" style="stroke-width:.3"/>
-  <line x1="20" y1="17" x2="118" y2="17" class="s-ink3 hair"/>
-  <g class="t-sm" style="font-size:2px">
-    <line x1="20" y1="16.4" x2="20" y2="17.6" class="s-ink3 hair"/><text x="20" y="19.8" class="t-sm mid" style="font-size:2px">−25%</text>
-    <text x="39.6" y="19.8" class="t-sm mid b" style="font-size:2px">0</text>
-    <line x1="59.2" y1="16.4" x2="59.2" y2="17.6" class="s-ink3 hair"/><text x="59.2" y="19.8" class="t-sm mid" style="font-size:2px">25%</text>
-    <line x1="78.8" y1="16.4" x2="78.8" y2="17.6" class="s-ink3 hair"/><text x="78.8" y="19.8" class="t-sm mid" style="font-size:2px">50%</text>
-    <line x1="98.4" y1="16.4" x2="98.4" y2="17.6" class="s-ink3 hair"/><text x="98.4" y="19.8" class="t-sm mid" style="font-size:2px">75%</text>
-    <line x1="118" y1="16.4" x2="118" y2="17.6" class="s-ink3 hair"/><text x="118" y="19.8" class="t-sm mid" style="font-size:2px">100%</text>
-  </g>
-
-  <!-- Three markets -->
-  <g>
-    <rect x="0" y="23" width="39.3" height="12.6" class="f-tint"/>
-    <text x="2" y="26.6" class="t-cap job">When markets fall</text>
-    <polyline points="2,28.6 6,29.8 9,29.2 13,31.2 16,30.6 20,32.4 23,31.8 27,33.6 30,33.2 37.3,34.2" class="f-none s-job" style="stroke-width:.55;stroke-linejoin:round"/>
-
-    <rect x="41.35" y="23" width="39.3" height="12.6" class="f-tint"/>
-    <text x="43.35" y="26.6" class="t-cap job">When markets go sideways</text>
-    <polyline points="43.35,31.4 47,29.6 50.5,32.4 54,30 57.5,32.6 61,29.8 64.5,32.2 68,30.2 71.5,32 78.65,30.8" class="f-none s-job" style="stroke-width:.55;stroke-linejoin:round"/>
-
-    <rect x="82.7" y="23" width="39.3" height="12.6" class="f-tint"/>
-    <text x="84.7" y="26.6" class="t-cap job">When markets rise</text>
-    <polyline points="84.7,34.2 88.5,33.2 92,33.8 95.5,31.8 99,32.4 102.5,30.4 106,31 109.5,29.4 113,29.8 120,28.6" class="f-none s-job" style="stroke-width:.55;stroke-linejoin:round"/>
-  </g>
-
-  <g class="t-sm">
-    <rect x="0" y="38.4" width="1.1" height="1.1" class="f-job"/><text x="2.4" y="39.7" class="t-sm">Cut exposure, even to</text><text x="2.4" y="42.9" class="t-sm">below zero</text>
-    <rect x="0" y="45.8" width="1.1" height="1.1" class="f-job"/><text x="2.4" y="47.1" class="t-sm">Take short positions,</text><text x="2.4" y="50.3" class="t-sm">up to 25% of the fund</text>
-    <rect x="0" y="53.2" width="1.1" height="1.1" class="f-job"/><text x="2.4" y="54.5" class="t-sm">Hedge holdings with</text><text x="2.4" y="57.7" class="t-sm">futures and options</text>
-
-    <rect x="41.35" y="38.4" width="1.1" height="1.1" class="f-job"/><text x="43.75" y="39.7" class="t-sm">Earn the small price gap</text><text x="43.75" y="42.9" class="t-sm">between shares and futures</text>
-    <rect x="41.35" y="45.8" width="1.1" height="1.1" class="f-job"/><text x="43.75" y="47.1" class="t-sm">Earn extra income by</text><text x="43.75" y="50.3" class="t-sm">selling options</text>
-    <rect x="41.35" y="53.2" width="1.1" height="1.1" class="f-job"/><text x="43.75" y="54.5" class="t-sm">Earn interest on the</text><text x="43.75" y="57.7" class="t-sm">bonds it holds</text>
-
-    <rect x="82.7" y="38.4" width="1.1" height="1.1" class="f-job"/><text x="85.1" y="39.7" class="t-sm">Raise exposure, up to</text><text x="85.1" y="42.9" class="t-sm">100% of the fund</text>
-    <rect x="82.7" y="45.8" width="1.1" height="1.1" class="f-job"/><text x="85.1" y="47.1" class="t-sm">Back the sectors and</text><text x="85.1" y="50.3" class="t-sm">shares expected to lead</text>
-    <rect x="82.7" y="53.2" width="1.1" height="1.1" class="f-job"/><text x="85.1" y="54.5" class="t-sm">Remove hedges and bets</text><text x="85.1" y="57.7" class="t-sm">on falls, to gain from the rise</text>
-  </g>
-
-  <line x1="0" y1="62" x2="122" y2="62" class="s-rule hair"/>
-  <text x="0" y="66.4" class="t-bd"><tspan class="b">The difference: unlike an equity mutual fund, a SIF can gain from falls.</tspan></text>
-  <text x="0" y="69.9" class="t-sm">An equity mutual fund must stay mostly invested in shares. It can hedge, but it cannot take short positions.</text>
-  <text x="0" y="73.2" class="t-sm">A SIF can, with up to 25% of the fund, and never borrows to invest. The manager’s calls can be wrong.</text>
-  <text x="0" y="77.8" class="t-sm t-ink3" style="font-size:2.1px">Below zero: the fund is set to gain a little if the market falls. Range for equity long-short strategies; not a promise of returns.</text>
+  <title id="sif-plate-t">Two overlapping circles: mutual fund rules (SEBI oversight, daily NAV, tax only when you redeem or switch) and PMS and AIF tools (short positions, any asset type, focused ideas). Where they overlap is the SIF. Beside it, four key facts. Below, what the manager can do when markets rise, go sideways or fall.</title>
+  <circle cx="24" cy="24" r="22.5" class="f-build-t"/>
+  <circle cx="52" cy="24" r="22.5" class="f-special-t"/>
+  <path d="M38 6.3 A22.5 22.5 0 0 1 38 41.7 A22.5 22.5 0 0 1 38 6.3 Z" class="f-job"/>
+  <circle cx="24" cy="24" r="22.5" class="f-none s-job" style="stroke-width:.35"/>
+  <circle cx="52" cy="24" r="22.5" class="f-none" style="stroke:var(--special);stroke-width:.35"/>
+  <text x="38" y="23" class="t-lg t-white" style="text-anchor:middle;font-size:5.6px">SIF</text>
+  <text x="38" y="27.6" class="t-cap t-white" style="text-anchor:middle;font-size:1.8px">THE BEST</text><text x="38" y="30" class="t-cap t-white" style="text-anchor:middle;font-size:1.8px">OF BOTH</text>
+  <text x="17" y="12.0" class="t-sm b t-job" style="text-anchor:middle;font-size:2.5px">Mutual fund</text>
+  <text x="17" y="15.0" class="t-sm b t-job" style="text-anchor:middle;font-size:2.5px">rules</text>
+  <text x="17" y="20.2" class="t-sm" style="text-anchor:middle;font-size:2.15px">SEBI oversight</text>
+  <text x="17" y="23.4" class="t-sm" style="text-anchor:middle;font-size:2.15px">Daily NAV</text>
+  <text x="17" y="26.6" class="t-sm" style="text-anchor:middle;font-size:2.15px">Tax only when</text>
+  <text x="17" y="29.4" class="t-sm" style="text-anchor:middle;font-size:2.15px">you redeem</text>
+  <text x="17" y="32.2" class="t-sm" style="text-anchor:middle;font-size:2.15px">or switch</text>
+  <text x="59" y="12.0" class="t-sm b" style="text-anchor:middle;font-size:2.5px;fill:var(--special-deep)">PMS and AIF</text>
+  <text x="59" y="15.0" class="t-sm b" style="text-anchor:middle;font-size:2.5px;fill:var(--special-deep)">tools</text>
+  <text x="59" y="20.2" class="t-sm" style="text-anchor:middle;font-size:2.15px;">Short positions,</text>
+  <text x="59" y="23.0" class="t-sm" style="text-anchor:middle;font-size:2.15px;">up to 25%</text>
+  <text x="59" y="26.2" class="t-sm" style="text-anchor:middle;font-size:2.15px;">Any asset type</text>
+  <text x="59" y="29.4" class="t-sm" style="text-anchor:middle;font-size:2.15px;">Focused ideas</text>
+  <rect x="79" y="2" width="21" height="20.5" class="f-panel"/><rect x="79" y="2" width="21" height=".8" class="f-job"/>
+  <text x="80.8" y="10.6" class="t-lg t-job" style="font-size:4.4px">₹10 lakh</text>
+  <text x="80.8" y="15.6" class="t-sm" style="font-size:2.05px">minimum, per</text><text x="80.8" y="18.4" class="t-sm" style="font-size:2.05px">fund house</text>
+  <rect x="101" y="2" width="21" height="20.5" class="f-panel"/><rect x="101" y="2" width="21" height=".8" class="f-job"/>
+  <text x="102.8" y="10.6" class="t-lg t-job" style="font-size:4.4px">25%</text>
+  <text x="102.8" y="15.6" class="t-sm" style="font-size:2.05px">most of the fund</text><text x="102.8" y="18.4" class="t-sm" style="font-size:2.05px">in short positions</text>
+  <rect x="79" y="24.5" width="21" height="20.5" class="f-panel"/><rect x="79" y="24.5" width="21" height=".8" class="f-job"/>
+  <text x="80.8" y="33.1" class="t-lg t-job" style="font-size:4.4px">100%</text>
+  <text x="80.8" y="38.1" class="t-sm" style="font-size:2.05px">most total exposure:</text><text x="80.8" y="40.9" class="t-sm" style="font-size:2.05px">no borrowing</text>
+  <rect x="101" y="24.5" width="21" height="20.5" class="f-panel"/><rect x="101" y="24.5" width="21" height=".8" class="f-job"/>
+  <text x="102.8" y="33.1" class="t-lg t-job" style="font-size:4.4px">7</text>
+  <text x="102.8" y="38.1" class="t-sm" style="font-size:2.05px">strategies, cautious</text><text x="102.8" y="40.9" class="t-sm" style="font-size:2.05px">to adventurous</text>
+  <line x1="0" y1="50.4" x2="122" y2="50.4" class="s-rule" style="stroke-width:.25"/>
+  <text x="0" y="54.6" class="t-cap job">What the manager can do</text>
+  <rect x="0" y="57" width="39.33" height="22" class="f-tint"/>
+  <text x="2" y="61.2" class="t-cap job" style="font-size:1.95px">When markets rise</text>
+  <path d="M3 69.6 l5 -1.6 l4 .8 l5 -2.4 l4 .8 l6 -3.4" class="f-none s-job" style="stroke-width:.55;stroke-linejoin:round"/>
+  <text x="2" y="74.4" class="t-sm" style="font-size:2.1px">Invest up to 100%, in the</text><text x="2" y="77.3" class="t-sm" style="font-size:2.1px">shares expected to lead</text>
+  <rect x="41.33" y="57" width="39.33" height="22" class="f-tint"/>
+  <text x="43.33" y="61.2" class="t-cap job" style="font-size:1.95px">When markets go sideways</text>
+  <path d="M44.3 67.4 l4 -1.8 l4 1.8 l4 -1.8 l4 1.8 l4 -1.8 l4 1.8" class="f-none s-job" style="stroke-width:.55;stroke-linejoin:round"/>
+  <text x="43.33" y="74.4" class="t-sm" style="font-size:2.1px">Earn price gaps (arbitrage)</text><text x="43.33" y="77.3" class="t-sm" style="font-size:2.1px">and income from options</text>
+  <rect x="82.67" y="57" width="39.33" height="22" class="f-tint"/>
+  <text x="84.67" y="61.2" class="t-cap job" style="font-size:1.95px">When markets fall</text>
+  <path d="M85.7 63.6 l5 1.8 l4 -.8 l5 2.4 l4 -.8 l6 3.4" class="f-none s-job" style="stroke-width:.55;stroke-linejoin:round"/>
+  <text x="84.67" y="74.4" class="t-sm" style="font-size:2.1px">Hedge, cut exposure, and</text><text x="84.67" y="77.3" class="t-sm" style="font-size:2.1px">gain from falls, up to 25%</text>
 </svg>
   </figure>
   <div class="lower">
@@ -1390,8 +1390,8 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
   </div>
   <div class="section">
     <div class="fit">
-      <div class="yes"><h3 class="label">Suits you if you want</h3><ul><li>One fund for rising, falling and sideways markets</li><li>PMS and AIF tools, from ₹10 lakh</li><li>Tax only when you redeem or switch</li></ul></div>
-      <div class="no"><h3 class="label">Good to know if</h3><ul><li>You are new to <span class="nowrap">long-short</span> strategies. We will walk you through how each one works.</li><li>You may need your money on a particular day. Some strategies pay out only on set days.</li></ul></div>
+      <div class="yes"><h3 class="label">Use it for</h3><ul><li>A whole portfolio in one fund, or part of it</li><li>Rising, falling and sideways markets alike</li><li>Long-short strategies with mutual fund tax</li></ul></div>
+      <div class="no"><h3 class="label">How we help</h3><ul><li>Explain each strategy and its Risk Band</li><li>Fit the SIF to the portfolio you have</li><li>Track redemption days and tax on exits</li></ul></div>
     </div>
   </div>
   <div class="section">
@@ -1402,7 +1402,7 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
     <h2 class="label"><span>My notes</span><span class="aside">Write your own numbers here</span></h2>
     <div class="notes"><div class="field"><span>SIF / strategy</span></div><div class="field"><span>Amount ₹</span></div><div class="field"><span>Risk band</span></div><div class="field"><span>Redemption days</span></div></div>
   </div>
-  <p class="legal"><span class="warn">Investments in SIFs are subject to market risks, read all investment strategy related documents carefully.</span> SIFs are a separate category from mutual funds, with their own risks. Ram Investments: SIF Distributor (SIFD) Nishanth Ashok, ARN-328299.</p>
+  <p class="legal"><span class="warn">Investments in Specialized Investment Fund involves relatively higher risk including potential loss of capital, liquidity risk and market volatility. Please read all investment strategy related documents carefully before making the investment decision.</span> Ram Investments: SIF Distributor (SIFD) Nishanth Ashok, ARN-328299.</p>
   <footer class="folio"><span class="pg">11</span><span class="asof">Ram Investments · Diary 2027</span></footer>
 </section>
 <!-- /page --></div>
@@ -1410,10 +1410,39 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
   <header class="runhead"><span class="chip">Build</span><span>Know your products · 04 in depth</span></header>
   <div class="deep-head">
     <p class="label">SIF in depth</p>
-    <h2 class="page-title">PMS and AIF tools, mutual fund rules</h2>
-    <p class="intro">A SIF can use tools that were once found only in PMS (entry 06) and in Category III AIFs (entry 07), which are hedge-fund-style funds for large investors. It keeps mutual fund rules, a daily NAV and mutual fund tax treatment.</p>
+    <h2 class="page-title">What a SIF manager can do</h2>
+    <p class="intro">Fund houses explain SIFs with simple examples like these. Each shows one tool a SIF can use that an equity mutual fund cannot, or can use only in part.</p>
   </div>
-  <table class="abilities">
+  <div class="ex3">
+    <div class="ex">
+      <p class="ex-tag">Markets fall</p><h3>Protect the portfolio</h3>
+      <ol>
+        <li><b>What happens</b>A sudden shock threatens to pull the whole market down.</li>
+        <li><b>What the manager does</b>Sells index futures against part of the fund. This is a hedge.</li>
+        <li><b>What can follow</b>If the market falls, the hedge gains and offsets part of the loss. If it does not, the hedge costs a little.</li>
+      </ol>
+    </div>
+    <div class="ex">
+      <p class="ex-tag">One weak company</p><h3>Gain from its fall</h3>
+      <ol>
+        <li><b>What happens</b>A company looks overpriced, and its business is weakening.</li>
+        <li><b>What the manager does</b>Takes a short position in its futures, for a small part of the fund.</li>
+        <li><b>What can follow</b>If the price falls, the fund gains. If it rises, that position loses. An equity mutual fund cannot do this.</li>
+      </ol>
+    </div>
+    <div class="ex">
+      <p class="ex-tag">Markets go sideways</p><h3>Earn a price gap</h3>
+      <ol>
+        <li><b>What happens</b>A share and its one-month future trade at slightly different prices.</li>
+        <li><b>What the manager does</b>Buys the share and sells the future together. This is arbitrage.</li>
+        <li><b>What can follow</b>At expiry the two prices meet, so the gap is earned whether the share rises, stays or falls, less costs.</li>
+      </ol>
+    </div>
+  </div>
+  <p class="deep-note">Hypothetical examples, to show how the tools work. Real strategies differ, and the manager’s calls can be wrong.</p>
+  <div class="deep-section">
+    <h2 class="label"><span>Tools compared</span><span class="aside">Mutual fund, SIF, PMS and Category III AIF</span></h2>
+  <table class="abilities" style="margin-top:0">
     <colgroup><col style="width:31%"><col><col><col><col></colgroup>
     <thead><tr><th>What the manager can do</th><th>Mutual fund</th><th class="sif">SIF</th><th>PMS</th><th>Category III AIF</th></tr></thead>
     <tbody>
@@ -1428,9 +1457,19 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
     </tbody>
   </table>
   <p class="deep-note">A SIF cannot borrow to invest: its total exposure stays within 100% of the fund. *In the growth option.</p>
+  <p class="deep-note" style="margin-top:2.4mm;color:var(--job-deep);font-weight:600">A new, fast-growing category: by September 2026, 17 fund houses offered SIFs, with ₹38,287 crore invested and over 1.5 lakh investor accounts (AMFI data, as reported).</p>
+  </div>
+  <footer class="folio"><span class="pg">12</span><span class="asof">Facts as of October 2026</span></footer>
+</section>
+<!-- /page --><section class="page recto" data-job="build" id="sif-deep-b">
+  <header class="runhead"><span>04 in depth · SIF</span><span class="chip">Build</span></header>
+  <div class="deep-head">
+    <p class="label">SIF in depth</p>
+    <h2 class="page-title">Using a SIF in your portfolio</h2>
+  </div>
   <div class="deep-section">
     <h2 class="label"><span>Seven strategies, from cautious to adventurous</span><span class="aside">Where each one usually sits</span></h2>
-    <svg viewBox="0 8 122 44" role="img" aria-labelledby="sif-spec-t">
+    <svg viewBox="0 9.4 122 42.6" role="img" aria-labelledby="sif-spec-t">
 <title id="sif-spec-t">SEBI's seven SIF strategies arranged from cautious (debt long-short) to adventurous (sector rotation long-short).</title>
 <defs><linearGradient id="specgrad" x1="0" x2="1"><stop offset="0" style="stop-color:var(--build-tint)"/><stop offset="1" style="stop-color:var(--build)"/></linearGradient></defs>
 <rect x="2" y="25.8" width="114" height="2.4" fill="url(#specgrad)"/><path d="M116,24.4 L120.5,27.0 L116,29.6 Z" class="f-job"/>
@@ -1484,25 +1523,13 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
 </svg>
     <p class="deep-note">The usual order only. What counts is each strategy’s Risk Band, from Level 1 (lowest) to 5 (highest).</p>
   </div>
-  <div class="deep-callout" style="margin-top:4mm">
-    <h3>Same safeguards as a mutual fund</h3>
-    <p>SEBI’s rules, independent trustees and a custodian that holds the assets. The manager’s calls can still be wrong, so a SIF can lose money.</p>
-  </div>
-  <footer class="folio"><span class="pg">12</span><span class="asof">Facts as of October 2026</span></footer>
-</section>
-<!-- /page --><section class="page recto" data-job="build" id="sif-deep-b">
-  <header class="runhead"><span>04 in depth · SIF</span><span class="chip">Build</span></header>
-  <div class="deep-head">
-    <p class="label">SIF in depth</p>
-    <h2 class="page-title">Using a SIF in your portfolio</h2>
-  </div>
   <div class="deep-section">
     <h2 class="label"><span>Three ways to use a SIF</span><span class="aside">Mixes shown are examples</span></h2>
     <div class="cards3">
       <div class="card"><svg viewBox="0 0 38 17" aria-hidden="true"><path d="M8.00,0.90 A7.6,7.6 0 0 1 8.00,16.10 L8.00,12.70 A4.2,4.2 0 0 0 8.00,4.30 Z" class="f-job s-paper" style="stroke-width:.3"/><path d="M8.00,16.10 A7.6,7.6 0 0 1 1.85,4.03 L4.60,6.03 A4.2,4.2 0 0 0 8.00,12.70 Z" class="f-deep s-paper" style="stroke-width:.3"/><path d="M1.85,4.03 A7.6,7.6 0 0 1 5.65,1.27 L6.70,4.51 A4.2,4.2 0 0 0 4.60,6.03 Z" class="f-global s-paper" style="stroke-width:.3"/><path d="M5.65,1.27 A7.6,7.6 0 0 1 8.00,0.90 L8.00,4.30 A4.2,4.2 0 0 0 6.70,4.51 Z" class="f-ink3 s-paper" style="stroke-width:.3"/>
-<rect x="18.5" y="2.70" width="1.6" height="1.6" class="f-job"/><text x="20.9" y="4.40" class="t-sm" style="font-size:2.05px">Shares</text><rect x="18.5" y="5.60" width="1.6" height="1.6" class="f-deep"/><text x="20.9" y="7.30" class="t-sm" style="font-size:2.05px">Bonds</text><rect x="18.5" y="8.50" width="1.6" height="1.6" class="f-global"/><text x="20.9" y="10.20" class="t-sm" style="font-size:2.05px">Gold, silver</text><rect x="18.5" y="11.40" width="1.6" height="1.6" class="f-ink3"/><text x="20.9" y="13.10" class="t-sm" style="font-size:2.05px">REITs, InvITs</text></svg><h3>As your whole portfolio</h3><p>No mutual funds yet, or want one simple fund? An asset allocator strategy holds shares, bonds, gold, silver and REITs, and moves money between them.</p></div>
+<rect x="18.5" y="2.70" width="1.6" height="1.6" class="f-job"/><text x="20.9" y="4.40" class="t-sm" style="font-size:2.05px">Shares</text><rect x="18.5" y="5.60" width="1.6" height="1.6" class="f-deep"/><text x="20.9" y="7.30" class="t-sm" style="font-size:2.05px">Bonds</text><rect x="18.5" y="8.50" width="1.6" height="1.6" class="f-global"/><text x="20.9" y="10.20" class="t-sm" style="font-size:2.05px">Gold, silver</text><rect x="18.5" y="11.40" width="1.6" height="1.6" class="f-ink3"/><text x="20.9" y="13.10" class="t-sm" style="font-size:2.05px">REITs, InvITs</text></svg><h3>As your whole portfolio</h3><p>No mutual funds yet, or want one simple fund? An asset allocator strategy moves money across shares, bonds, gold and REITs.</p></div>
       <div class="card"><svg viewBox="0 0 38 17" aria-hidden="true"><path d="M8.00,0.90 A7.6,7.6 0 0 1 10.35,15.73 L9.30,12.49 A4.2,4.2 0 0 0 8.00,4.30 Z" class="f-ink3 s-paper" style="stroke-width:.3"/><path d="M10.35,15.73 A7.6,7.6 0 0 1 0.40,8.50 L3.80,8.50 A4.2,4.2 0 0 0 9.30,12.49 Z" class="f-deep s-paper" style="stroke-width:.3"/><path d="M0.40,8.50 A7.6,7.6 0 0 1 8.00,0.90 L8.00,4.30 A4.2,4.2 0 0 0 3.80,8.50 Z" class="f-job s-paper" style="stroke-width:.3"/>
-<rect x="18.5" y="4.10" width="1.6" height="1.6" class="f-ink3"/><text x="20.9" y="5.80" class="t-sm" style="font-size:2.05px">Arbitrage</text><rect x="18.5" y="7.00" width="1.6" height="1.6" class="f-deep"/><text x="20.9" y="8.70" class="t-sm" style="font-size:2.05px">Bonds</text><rect x="18.5" y="9.90" width="1.6" height="1.6" class="f-job"/><text x="20.9" y="11.60" class="t-sm" style="font-size:2.05px">Shares</text></svg><h3>As the steady part</h3><p>For money you might keep in debt funds. Hybrid strategies hold much of it in arbitrage and bonds, with a smaller part in shares, aiming for a steadier ride.</p></div>
+<rect x="18.5" y="4.10" width="1.6" height="1.6" class="f-ink3"/><text x="20.9" y="5.80" class="t-sm" style="font-size:2.05px">Arbitrage</text><rect x="18.5" y="7.00" width="1.6" height="1.6" class="f-deep"/><text x="20.9" y="8.70" class="t-sm" style="font-size:2.05px">Bonds</text><rect x="18.5" y="9.90" width="1.6" height="1.6" class="f-job"/><text x="20.9" y="11.60" class="t-sm" style="font-size:2.05px">Shares</text></svg><h3>As the steady part</h3><p>Hybrid strategies hold much of the money in arbitrage and bonds, with a smaller part in shares, aiming for a steadier ride.</p></div>
       <div class="card"><svg viewBox="0 0 38 17" aria-hidden="true">
 <line x1="1" y1="11.5" x2="23" y2="11.5" class="s-ink thin"/>
 <rect x="3" y="1.5" width="8" height="10" class="f-job"/><rect x="13.5" y="11.5" width="8" height="2.5" class="f-deep"/>
@@ -1577,23 +1604,9 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
 <circle cx="34.80" cy="31.90" r=".75" class="f-paper s-ink3 thin"/><text x="36.60" y="32.60" class="t-sm" style="font-size:2.05px">The manager sells a holding</text>
 <rect x="67.00" y="31.05" width="1.7" height="1.7" class="f-ink2"/><text x="69.60" y="32.60" class="t-sm" style="font-size:2.05px">Tax falls due</text>
 </svg>
-    <p class="deep-note">In the growth option, gains inside a SIF are not taxed along the way; that money stays invested until you redeem or switch. A switch counts as a redemption for tax. Rates are on page 11.</p>
+    <p class="deep-note">In the growth option, nothing is taxed along the way; a switch counts as a redemption. Rates are on page 11.</p>
   </div>
-  <div class="deep-section">
-    <h2 class="label"><span>A new, fast-growing category</span><span class="aside">Money invested in all SIFs, month-end</span></h2>
-    <svg viewBox="0 0 122 31" role="img" aria-labelledby="sif-growth-t">
-<title id="sif-growth-t">SIF industry assets grew from about ₹2,010 crore in October 2025 to ₹38,287 crore in September 2026.</title>
-<line x1="10" y1="27.00" x2="117.6" y2="27.00" class="s-rule hair"/><text x="8.6" y="27.70" class="t-sm end" style="font-size:1.9px">0</text><line x1="10" y1="21.25" x2="117.6" y2="21.25" class="s-rule hair"/><text x="8.6" y="21.95" class="t-sm end" style="font-size:1.9px">10,000</text><line x1="10" y1="15.50" x2="117.6" y2="15.50" class="s-rule hair"/><text x="8.6" y="16.20" class="t-sm end" style="font-size:1.9px">20,000</text><line x1="10" y1="9.75" x2="117.6" y2="9.75" class="s-rule hair"/><text x="8.6" y="10.45" class="t-sm end" style="font-size:1.9px">30,000</text><line x1="10" y1="4.00" x2="117.6" y2="4.00" class="s-rule hair"/><text x="8.6" y="4.70" class="t-sm end" style="font-size:1.9px">40,000</text>
-<path d="M10.00,27 L10.00,25.84 L19.60,25.31 L48.40,21.42 L58.00,20.89 L86.80,16.73 L115.60,4.98 L115.60,27 Z" class="f-tint"/>
-<polyline points="10.00,25.84 19.60,25.31 48.40,21.42 58.00,20.89 86.80,16.73 115.60,4.98" class="f-none s-job" style="stroke-width:.7;stroke-linejoin:round"/>
-<circle cx="10.00" cy="25.84" r=".9" class="f-job"/><text x="10.00" y="30.4" class="t-sm mid" style="font-size:1.9px">Oct 2025</text><circle cx="19.60" cy="25.31" r=".9" class="f-job"/><text x="19.60" y="30.4" class="t-sm mid" style="font-size:1.9px">Nov</text><circle cx="48.40" cy="21.42" r=".9" class="f-job"/><text x="48.40" y="30.4" class="t-sm mid" style="font-size:1.9px">Feb 2026</text><circle cx="58.00" cy="20.89" r=".9" class="f-job"/><text x="58.00" y="30.4" class="t-sm mid" style="font-size:1.9px">Mar</text><circle cx="86.80" cy="16.73" r=".9" class="f-job"/><text x="86.80" y="30.4" class="t-sm mid" style="font-size:1.9px">Jun</text><circle cx="115.60" cy="4.98" r=".9" class="f-job"/><text x="115.60" y="30.4" class="t-sm mid" style="font-size:1.9px">Sep 2026</text>
-<text x="11.60" y="23.84" class="t-sm b" style="font-size:2.2px">₹2,010 crore</text>
-<text x="113.00" y="2.60" class="t-sm b end t-job" style="font-size:2.4px">₹38,287 crore</text>
-<text x="2" y="2.2" class="t-cap" style="font-size:1.9px">₹ crore</text>
-</svg>
-    <p class="deep-note">By September 2026, 17 fund houses offered SIFs, with over 1.5 lakh investor accounts (folios). Source: AMFI data, as reported. Growth in money invested does not tell you anything about future returns.</p>
-  </div>
-  <p class="legal"><span class="warn">Investments in SIFs are subject to market risks, read all investment strategy related documents carefully.</span> Illustrations show what the rules allow and how tax works. They do not show or promise returns. SIFs are a separate category from mutual funds, with their own risks. Ram Investments: SIF Distributor (SIFD) Nishanth Ashok, ARN-328299.</p>
+  <p class="legal"><span class="warn">Investments in Specialized Investment Fund involves relatively higher risk including potential loss of capital, liquidity risk and market volatility. Please read all investment strategy related documents carefully before making the investment decision.</span> Illustrations do not show or promise returns. Ram Investments: SIF Distributor (SIFD) Nishanth Ashok, ARN-328299.</p>
   <footer class="folio"><span class="pg">13</span><span class="asof">Ram Investments · Diary 2027</span></footer>
 </section>
 <!-- /page --></div>
@@ -1759,8 +1772,8 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
   </div>
   <div class="section">
     <div class="fit">
-      <div class="yes"><h3 class="label">Suits you if you want</h3><ul><li>Interest at a fixed rate, on a set schedule</li><li>Payouts monthly, yearly or at maturity</li><li>An investment you can sell on the exchange</li></ul></div>
-      <div class="no"><h3 class="label">Good to know if</h3><ul><li>A very high rate has caught your eye. We can check the rating and security with you.</li><li>You may need the money before maturity. Selling on the exchange can mean a lower price.</li></ul></div>
+      <div class="yes"><h3 class="label">Use it for</h3><ul><li>A regular income, monthly or yearly</li><li>Money you can set aside for a fixed period</li><li>Fixed-rate income alongside your funds</li></ul></div>
+      <div class="no"><h3 class="label">How we help</h3><ul><li>Check the rating, security and company</li><li>Pick the series that suits your income</li><li>Track interest dates and maturity</li></ul></div>
     </div>
   </div>
   <div class="section">
@@ -1916,8 +1929,8 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
   </div>
   <div class="section">
     <div class="fit">
-      <div class="yes"><h3 class="label">Suits you if you want</h3><ul><li>A portfolio built just for you, in your name</li><li>To see every holding and trade, any time</li><li>A focused portfolio, from ₹50 lakh</li></ul></div>
-      <div class="no"><h3 class="label">Good to know if</h3><ul><li>You already hold shares. Ask whether they can count towards the ₹50 lakh.</li><li>You file your own return. The manager sends a yearly tax statement for your CA.</li></ul></div>
+      <div class="yes"><h3 class="label">Use it for</h3><ul><li>A focused portfolio built for you</li><li>Shares held in your own name</li><li>Seeing every holding and trade, any time</li></ul></div>
+      <div class="no"><h3 class="label">How we help</h3><ul><li>Compare managers and their full fees</li><li>Move your existing shares in, where allowed</li><li>Review statements against the benchmark</li></ul></div>
     </div>
   </div>
   <div class="section">
@@ -2067,8 +2080,8 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
   </div>
   <div class="section">
     <div class="fit">
-      <div class="yes"><h3 class="label">Suits you if you want</h3><ul><li>To invest in companies before they list</li><li>To lend to private companies (private credit)</li><li>Commercial real estate and other private assets</li></ul></div>
-      <div class="no"><h3 class="label">Good to know if</h3><ul><li>You may need this money before the fund’s term ends. We can look at funds with shorter terms.</li><li>₹1 crore would be a large share of your wealth. We can talk about building up to it.</li></ul></div>
+      <div class="yes"><h3 class="label">Use it for</h3><ul><li>Private companies, before they list</li><li>Private credit and commercial real estate</li><li>Money that can stay invested 4 to 10 years</li></ul></div>
+      <div class="no"><h3 class="label">How we help</h3><ul><li>Explain the fund, its term and its fees</li><li>Remind you before each capital call</li><li>Track investments and payouts for you</li></ul></div>
     </div>
   </div>
   <div class="section">
@@ -2328,8 +2341,8 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
   </div>
   <div class="section">
     <div class="fit">
-      <div class="yes"><h3 class="label">Suits you if you want</h3><ul><li>To invest abroad in US dollars</li><li>A route regulated in India, by IFSCA</li><li>Money for goals in dollars, like studies abroad</li></ul></div>
-      <div class="no"><h3 class="label">Good to know if</h3><ul><li>You may need the money within a year or two. Exchange rates can swing over short periods.</li><li>You have used most of this year’s LRS limit. Each family member has a limit of their own.</li></ul></div>
+      <div class="yes"><h3 class="label">Use it for</h3><ul><li>Investing abroad, in US dollars</li><li>Goals in dollars, such as studies abroad</li><li>Spreading wealth beyond India</li></ul></div>
+      <div class="no"><h3 class="label">How we help</h3><ul><li>Explain products, costs and currency risk</li><li>Track the LRS limit across your family</li><li>Help you get your TCS back at filing</li></ul></div>
     </div>
   </div>
   <div class="section">
@@ -2524,11 +2537,11 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
     <h3 class="label muted">Standard warnings</h3>
     <div class="warnings">
       <p><b>Mutual Fund investments are subject to market risks, read all scheme related documents carefully.</b></p>
-      <p><b>Investments in SIFs are subject to market risks, read all investment strategy related documents carefully.</b></p>
+      <p><b>Investments in Specialized Investment Fund involves relatively higher risk including potential loss of capital, liquidity risk and market volatility. Please read all investment strategy related documents carefully before making the investment decision.</b></p>
       <p><b>Investments in debt securities/municipal debt securities/securitised debt instruments are subject to risks including delay and/or default in payment. Read all the offer related documents carefully.</b></p>
       <p><b>For more details on risk factors, terms and conditions please read sales brochure carefully before concluding a sale.</b> (Insurance)</p>
       <p><b>Investments in securities are subject to market risks. Read the disclosure document carefully before investing.</b> (PMS)</p>
-      <p>AIFs are offered only by private placement to eligible investors. SIFs are a separate category from mutual funds, with their own risks.</p>
+      <p>AIFs are offered only by private placement to eligible investors.</p>
     </div>
     <h3 class="label muted">If you have a complaint</h3>
     <p>Contact us first at support@raminvestments.in or on the numbers above. If it is not resolved: for mutual funds and SIFs, also the fund house and AMFI; for securities products, SEBI SCORES (scores.sebi.gov.in) and the SMART ODR portal (smartodr.in); for insurance, IRDAI Bima Bharosa (bimabharosa.irdai.gov.in) and the Insurance Ombudsman; for GIFT IFSC products, IFSCA.</p>

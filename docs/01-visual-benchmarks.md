@@ -68,3 +68,19 @@ Researched for the term and health pages. Indian buyers avoid discussing death, 
 | [Apollo Academy, "Rethinking private vs public"](https://apolloacademy.com/wp-content/uploads/2024/10/RethinkingPrivateVsPublic-110124_v2.pdf) | One striking structural fact: most large US companies are private | Three dated, sourced facts, none of them returns | AIF in depth (p.20) |
 | Company life-cycle charts in VC reports (Orios, Blume, Bain) | Show how long companies now stay private, and where funding happens | A stylised company journey, private years against listed years, with no values on the value axis and the caveat that many companies never list | AIF in depth (p.20) |
 | [Moonfare and PitchBook](https://www.moonfare.com/white-papers/dispersion-of-returns-private-markets) on manager dispersion | Shows how much results differ between private-market managers | The idea in plain words, with what to ask a manager. Their return figures stay out | AIF in depth (p.21) |
+
+## How SIF fund houses explain SIFs (review of their own material, November 2026)
+
+We downloaded and read the SIF presentations that fund houses publish: quant (qsif: overall deck and four strategy decks), Sundaram (Select SIF NFO deck), SBI (Magnum SIF strategy notes), ITI (Diviniti SIF site), Mahindra Manulife (MSIF site) and HDFC Tru's SIF primer. Edelweiss (Altiva) and ICICI Prudential (iSIF) block automated downloads.
+
+| What they do | Who | What we adopted |
+|---|---|---|
+| Two overlapping circles: mutual fund on one side, PMS/AIF on the other, SIF in the overlap ("the regulatory and tax architecture of a mutual fund; the strategy flexibility of a PMS") | quant, Sundaram, HDFC Tru | The new SIF plate on p.10: the same overlap, labelled with what comes from each side, plus four key-fact tiles (₹10 lakh, 25% short, 100% exposure cap, 7 strategies), as Sundaram does |
+| Hypothetical examples in three steps: what happens, what we do, what we get, each with a caveat ("if our call is wrong…") | Sundaram (risk mitigation, pair trading, alpha generation) | p.12 "What a SIF manager can do": hedge in a fall, short a weak company, arbitrage in a flat market, each ending with what can follow, good or bad |
+| Arbitrage explained with three scenarios (price rises, stays, falls; the gap is kept) | quant | The arbitrage example on p.12, without rupee figures |
+| Feature table: SIF vs mutual fund vs PMS vs Category III AIF | quant, Sundaram, HDFC Tru | Kept as "Tools compared" on p.12 |
+| "Taxed only on redemption" against "each transaction taxed" in a PMS | Sundaram, quant | Kept: the tax check (p.11) and the tax timeline (p.13) |
+| Three reasons to add a SIF to a mutual fund portfolio (lower volatility, more diversification, an extra source of return) | quant | Reflected as aims in "Use it for", not as promises |
+| "Relative performance in different market phases" tables and allocation-by-age tables | quant | Not used: they compare performance or give allocation advice, against our house rules |
+| Mandatory SIF warning: "Investments in Specialized Investment Fund involves relatively higher risk including potential loss of capital, liquidity risk and market volatility. Please read all investment strategy related documents carefully before making the investment decision." | quant, Mahindra Manulife (on every page) | Now printed verbatim on pp.11, 13 and 28 |
+

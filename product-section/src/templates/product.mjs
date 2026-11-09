@@ -98,8 +98,8 @@ export function productSpread(p, { plate, gauge, verso, total, meta }) {
   </div>
   <div class="section">
     <div class="fit">
-      <div class="yes"><h3 class="label">Suits you if you want</h3><ul>${p.suits.map((s) => `<li>${s}</li>`).join("")}</ul></div>
-      <div class="no"><h3 class="label">Good to know if</h3><ul>${p.twice.map((s) => `<li>${s}</li>`).join("")}</ul></div>
+      <div class="yes"><h3 class="label">Use it for</h3><ul>${p.useFor.map((s) => `<li>${s}</li>`).join("")}</ul></div>
+      <div class="no"><h3 class="label">How we help</h3><ul>${p.help.map((s) => `<li>${s}</li>`).join("")}</ul></div>
     </div>
   </div>
   <div class="section">

@@ -1,58 +1,49 @@
 <svg viewBox="0 0 122 80" role="img" aria-labelledby="sif-plate-t">
-  <title id="sif-plate-t">A SIF can move the share of the fund exposed to the stock market from as low as minus 25% to 100%, while an equity mutual fund stays between about 65% and 100%. In falling markets the manager can cut exposure and bet on falls; in sideways markets earn from arbitrage, option premiums and interest; in rising markets raise exposure.</title>
-
-  <!-- Exposure range: SIF vs equity mutual fund -->
-  <text x="0" y="2.6" class="t-cap job">How much of the fund moves with the stock market</text>
-  <text x="0" y="8" class="t-sm b">SIF</text>
-  <rect x="20" y="4.6" width="98" height="4.6" class="f-job"/>
-  <text x="21.4" y="7.75" class="t-cap t-white" style="font-size:1.9px">As low as −25%</text>
-  <text x="116.6" y="7.75" class="t-cap t-white end" style="font-size:1.9px">Up to 100%</text>
-  <text x="0" y="14" class="t-sm b" style="fill:var(--ink-2)">Equity MF</text>
-  <rect x="90.56" y="10.6" width="27.44" height="4.6" class="f-ink3"/>
-  <text x="104.3" y="13.75" class="t-cap t-white mid" style="font-size:1.9px">65–100%</text>
-  <line x1="39.6" y1="3.8" x2="39.6" y2="16.4" class="s-ink dash" style="stroke-width:.3"/>
-  <line x1="20" y1="17" x2="118" y2="17" class="s-ink3 hair"/>
-  <g class="t-sm" style="font-size:2px">
-    <line x1="20" y1="16.4" x2="20" y2="17.6" class="s-ink3 hair"/><text x="20" y="19.8" class="t-sm mid" style="font-size:2px">−25%</text>
-    <text x="39.6" y="19.8" class="t-sm mid b" style="font-size:2px">0</text>
-    <line x1="59.2" y1="16.4" x2="59.2" y2="17.6" class="s-ink3 hair"/><text x="59.2" y="19.8" class="t-sm mid" style="font-size:2px">25%</text>
-    <line x1="78.8" y1="16.4" x2="78.8" y2="17.6" class="s-ink3 hair"/><text x="78.8" y="19.8" class="t-sm mid" style="font-size:2px">50%</text>
-    <line x1="98.4" y1="16.4" x2="98.4" y2="17.6" class="s-ink3 hair"/><text x="98.4" y="19.8" class="t-sm mid" style="font-size:2px">75%</text>
-    <line x1="118" y1="16.4" x2="118" y2="17.6" class="s-ink3 hair"/><text x="118" y="19.8" class="t-sm mid" style="font-size:2px">100%</text>
-  </g>
-
-  <!-- Three markets -->
-  <g>
-    <rect x="0" y="23" width="39.3" height="12.6" class="f-tint"/>
-    <text x="2" y="26.6" class="t-cap job">When markets fall</text>
-    <polyline points="2,28.6 6,29.8 9,29.2 13,31.2 16,30.6 20,32.4 23,31.8 27,33.6 30,33.2 37.3,34.2" class="f-none s-job" style="stroke-width:.55;stroke-linejoin:round"/>
-
-    <rect x="41.35" y="23" width="39.3" height="12.6" class="f-tint"/>
-    <text x="43.35" y="26.6" class="t-cap job">When markets go sideways</text>
-    <polyline points="43.35,31.4 47,29.6 50.5,32.4 54,30 57.5,32.6 61,29.8 64.5,32.2 68,30.2 71.5,32 78.65,30.8" class="f-none s-job" style="stroke-width:.55;stroke-linejoin:round"/>
-
-    <rect x="82.7" y="23" width="39.3" height="12.6" class="f-tint"/>
-    <text x="84.7" y="26.6" class="t-cap job">When markets rise</text>
-    <polyline points="84.7,34.2 88.5,33.2 92,33.8 95.5,31.8 99,32.4 102.5,30.4 106,31 109.5,29.4 113,29.8 120,28.6" class="f-none s-job" style="stroke-width:.55;stroke-linejoin:round"/>
-  </g>
-
-  <g class="t-sm">
-    <rect x="0" y="38.4" width="1.1" height="1.1" class="f-job"/><text x="2.4" y="39.7" class="t-sm">Cut exposure, even to</text><text x="2.4" y="42.9" class="t-sm">below zero</text>
-    <rect x="0" y="45.8" width="1.1" height="1.1" class="f-job"/><text x="2.4" y="47.1" class="t-sm">Take short positions,</text><text x="2.4" y="50.3" class="t-sm">up to 25% of the fund</text>
-    <rect x="0" y="53.2" width="1.1" height="1.1" class="f-job"/><text x="2.4" y="54.5" class="t-sm">Hedge holdings with</text><text x="2.4" y="57.7" class="t-sm">futures and options</text>
-
-    <rect x="41.35" y="38.4" width="1.1" height="1.1" class="f-job"/><text x="43.75" y="39.7" class="t-sm">Earn the small price gap</text><text x="43.75" y="42.9" class="t-sm">between shares and futures</text>
-    <rect x="41.35" y="45.8" width="1.1" height="1.1" class="f-job"/><text x="43.75" y="47.1" class="t-sm">Earn extra income by</text><text x="43.75" y="50.3" class="t-sm">selling options</text>
-    <rect x="41.35" y="53.2" width="1.1" height="1.1" class="f-job"/><text x="43.75" y="54.5" class="t-sm">Earn interest on the</text><text x="43.75" y="57.7" class="t-sm">bonds it holds</text>
-
-    <rect x="82.7" y="38.4" width="1.1" height="1.1" class="f-job"/><text x="85.1" y="39.7" class="t-sm">Raise exposure, up to</text><text x="85.1" y="42.9" class="t-sm">100% of the fund</text>
-    <rect x="82.7" y="45.8" width="1.1" height="1.1" class="f-job"/><text x="85.1" y="47.1" class="t-sm">Back the sectors and</text><text x="85.1" y="50.3" class="t-sm">shares expected to lead</text>
-    <rect x="82.7" y="53.2" width="1.1" height="1.1" class="f-job"/><text x="85.1" y="54.5" class="t-sm">Remove hedges and bets</text><text x="85.1" y="57.7" class="t-sm">on falls, to gain from the rise</text>
-  </g>
-
-  <line x1="0" y1="62" x2="122" y2="62" class="s-rule hair"/>
-  <text x="0" y="66.4" class="t-bd"><tspan class="b">The difference: unlike an equity mutual fund, a SIF can gain from falls.</tspan></text>
-  <text x="0" y="69.9" class="t-sm">An equity mutual fund must stay mostly invested in shares. It can hedge, but it cannot take short positions.</text>
-  <text x="0" y="73.2" class="t-sm">A SIF can, with up to 25% of the fund, and never borrows to invest. The manager’s calls can be wrong.</text>
-  <text x="0" y="77.8" class="t-sm t-ink3" style="font-size:2.1px">Below zero: the fund is set to gain a little if the market falls. Range for equity long-short strategies; not a promise of returns.</text>
+  <title id="sif-plate-t">Two overlapping circles: mutual fund rules (SEBI oversight, daily NAV, tax only when you redeem or switch) and PMS and AIF tools (short positions, any asset type, focused ideas). Where they overlap is the SIF. Beside it, four key facts. Below, what the manager can do when markets rise, go sideways or fall.</title>
+  <circle cx="24" cy="24" r="22.5" class="f-build-t"/>
+  <circle cx="52" cy="24" r="22.5" class="f-special-t"/>
+  <path d="M38 6.3 A22.5 22.5 0 0 1 38 41.7 A22.5 22.5 0 0 1 38 6.3 Z" class="f-job"/>
+  <circle cx="24" cy="24" r="22.5" class="f-none s-job" style="stroke-width:.35"/>
+  <circle cx="52" cy="24" r="22.5" class="f-none" style="stroke:var(--special);stroke-width:.35"/>
+  <text x="38" y="23" class="t-lg t-white" style="text-anchor:middle;font-size:5.6px">SIF</text>
+  <text x="38" y="27.6" class="t-cap t-white" style="text-anchor:middle;font-size:1.8px">THE BEST</text><text x="38" y="30" class="t-cap t-white" style="text-anchor:middle;font-size:1.8px">OF BOTH</text>
+  <text x="17" y="12.0" class="t-sm b t-job" style="text-anchor:middle;font-size:2.5px">Mutual fund</text>
+  <text x="17" y="15.0" class="t-sm b t-job" style="text-anchor:middle;font-size:2.5px">rules</text>
+  <text x="17" y="20.2" class="t-sm" style="text-anchor:middle;font-size:2.15px">SEBI oversight</text>
+  <text x="17" y="23.4" class="t-sm" style="text-anchor:middle;font-size:2.15px">Daily NAV</text>
+  <text x="17" y="26.6" class="t-sm" style="text-anchor:middle;font-size:2.15px">Tax only when</text>
+  <text x="17" y="29.4" class="t-sm" style="text-anchor:middle;font-size:2.15px">you redeem</text>
+  <text x="17" y="32.2" class="t-sm" style="text-anchor:middle;font-size:2.15px">or switch</text>
+  <text x="59" y="12.0" class="t-sm b" style="text-anchor:middle;font-size:2.5px;fill:var(--special-deep)">PMS and AIF</text>
+  <text x="59" y="15.0" class="t-sm b" style="text-anchor:middle;font-size:2.5px;fill:var(--special-deep)">tools</text>
+  <text x="59" y="20.2" class="t-sm" style="text-anchor:middle;font-size:2.15px;">Short positions,</text>
+  <text x="59" y="23.0" class="t-sm" style="text-anchor:middle;font-size:2.15px;">up to 25%</text>
+  <text x="59" y="26.2" class="t-sm" style="text-anchor:middle;font-size:2.15px;">Any asset type</text>
+  <text x="59" y="29.4" class="t-sm" style="text-anchor:middle;font-size:2.15px;">Focused ideas</text>
+  <rect x="79" y="2" width="21" height="20.5" class="f-panel"/><rect x="79" y="2" width="21" height=".8" class="f-job"/>
+  <text x="80.8" y="10.6" class="t-lg t-job" style="font-size:4.4px">₹10 lakh</text>
+  <text x="80.8" y="15.6" class="t-sm" style="font-size:2.05px">minimum, per</text><text x="80.8" y="18.4" class="t-sm" style="font-size:2.05px">fund house</text>
+  <rect x="101" y="2" width="21" height="20.5" class="f-panel"/><rect x="101" y="2" width="21" height=".8" class="f-job"/>
+  <text x="102.8" y="10.6" class="t-lg t-job" style="font-size:4.4px">25%</text>
+  <text x="102.8" y="15.6" class="t-sm" style="font-size:2.05px">most of the fund</text><text x="102.8" y="18.4" class="t-sm" style="font-size:2.05px">in short positions</text>
+  <rect x="79" y="24.5" width="21" height="20.5" class="f-panel"/><rect x="79" y="24.5" width="21" height=".8" class="f-job"/>
+  <text x="80.8" y="33.1" class="t-lg t-job" style="font-size:4.4px">100%</text>
+  <text x="80.8" y="38.1" class="t-sm" style="font-size:2.05px">most total exposure:</text><text x="80.8" y="40.9" class="t-sm" style="font-size:2.05px">no borrowing</text>
+  <rect x="101" y="24.5" width="21" height="20.5" class="f-panel"/><rect x="101" y="24.5" width="21" height=".8" class="f-job"/>
+  <text x="102.8" y="33.1" class="t-lg t-job" style="font-size:4.4px">7</text>
+  <text x="102.8" y="38.1" class="t-sm" style="font-size:2.05px">strategies, cautious</text><text x="102.8" y="40.9" class="t-sm" style="font-size:2.05px">to adventurous</text>
+  <line x1="0" y1="50.4" x2="122" y2="50.4" class="s-rule" style="stroke-width:.25"/>
+  <text x="0" y="54.6" class="t-cap job">What the manager can do</text>
+  <rect x="0" y="57" width="39.33" height="22" class="f-tint"/>
+  <text x="2" y="61.2" class="t-cap job" style="font-size:1.95px">When markets rise</text>
+  <path d="M3 69.6 l5 -1.6 l4 .8 l5 -2.4 l4 .8 l6 -3.4" class="f-none s-job" style="stroke-width:.55;stroke-linejoin:round"/>
+  <text x="2" y="74.4" class="t-sm" style="font-size:2.1px">Invest up to 100%, in the</text><text x="2" y="77.3" class="t-sm" style="font-size:2.1px">shares expected to lead</text>
+  <rect x="41.33" y="57" width="39.33" height="22" class="f-tint"/>
+  <text x="43.33" y="61.2" class="t-cap job" style="font-size:1.95px">When markets go sideways</text>
+  <path d="M44.3 67.4 l4 -1.8 l4 1.8 l4 -1.8 l4 1.8 l4 -1.8 l4 1.8" class="f-none s-job" style="stroke-width:.55;stroke-linejoin:round"/>
+  <text x="43.33" y="74.4" class="t-sm" style="font-size:2.1px">Earn price gaps (arbitrage)</text><text x="43.33" y="77.3" class="t-sm" style="font-size:2.1px">and income from options</text>
+  <rect x="82.67" y="57" width="39.33" height="22" class="f-tint"/>
+  <text x="84.67" y="61.2" class="t-cap job" style="font-size:1.95px">When markets fall</text>
+  <path d="M85.7 63.6 l5 1.8 l4 -.8 l5 2.4 l4 -.8 l6 3.4" class="f-none s-job" style="stroke-width:.55;stroke-linejoin:round"/>
+  <text x="84.67" y="74.4" class="t-sm" style="font-size:2.1px">Hedge, cut exposure, and</text><text x="84.67" y="77.3" class="t-sm" style="font-size:2.1px">gain from falls, up to 25%</text>
 </svg>

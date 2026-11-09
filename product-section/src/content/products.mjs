@@ -14,10 +14,13 @@
 // plans, not about death. "If something happens to you" and "in your
 // absence" are the phrases Indian insurers use.
 //
-// "Good to know if" (the `twice` lists) points out a situation worth
-// planning for, gently, with a next step. It never recommends a different
-// product instead of this one. "Suits you if" leads with the product's
-// strongest features.
+// The decision block on each right-hand page has two lists:
+// "Use it for" (`useFor`): the client goals the product serves, in the
+//   client's words, so the page connects to their own plans.
+// "How we help" (`help`): what the client gets by coming to us for this
+//   product. It answers "why go through a distributor?" and opens the
+//   conversation. Cautions live in the risk check, the six facts and
+//   "Ask before you sign", never as a list of reasons not to buy.
 
 export const meta = {
   firm: "Ram Investments",
@@ -66,14 +69,15 @@ export const products = [
     ],
     gaugeTitle: "Work out your cover",
     gaugeAside: "Rule of thumb: 10 to 15 times yearly income",
-    suits: [
-      "A large cover for a low, fixed premium",
-      "Your family and your loans protected",
-      "A tax-free payout, at once or monthly",
+    useFor: [
+      "Replacing your income for your family",
+      "Clearing a home loan in your absence",
+      "Your children’s education, whatever happens",
     ],
-    twice: [
-      "No one depends on your income yet. Premiums are lowest while you are young and healthy, so a starter cover can make sense now.",
-      "You also want money back at the end. We can plan that goal alongside your cover.",
+    help: [
+      "Work out the cover your family needs",
+      "Compare plans and claim records",
+      "Stand by your family at claim time",
     ],
     ask: [
       "Is the cover enough for my family’s plans, including my loans?",
@@ -121,14 +125,15 @@ export const products = [
     ],
     gaugeTitle: "Read the fine print",
     gaugeAside: "Compare before you buy",
-    suits: [
-      "Hospital bills paid directly, cashless",
-      "Cover that stays when you change jobs",
-      "One policy for your whole family",
+    useFor: [
+      "Hospital bills, without touching savings",
+      "Cover for parents and elders",
+      "Topping up your employer’s cover",
     ],
-    twice: [
-      "You want to change insurer. Porting keeps your waiting-period credit.",
-      "You have an existing illness. Some policies have a shorter wait for it.",
+    help: [
+      "Compare room rent, co-pays and waits",
+      "Help with cashless approval and claims",
+      "Renewal reminders, so cover never lapses",
     ],
     ask: [
       "Is there a limit on room rent, or a co-payment?",
@@ -176,14 +181,15 @@ export const products = [
     ],
     gaugeTitle: "Risk check: the riskometer",
     gaugeAside: "Printed on every scheme",
-    suits: [
-      "To start small, from ₹100 a month",
-      "Professional management, widely spread",
-      "Your money back any business day",
+    useFor: [
+      "Goals 5+ years away: education, retirement",
+      "Building wealth with a monthly SIP",
+      "Short-term money, in liquid funds",
     ],
-    twice: [
-      "You may need the money within a year. Some funds, such as liquid funds, suit short periods.",
-      "You have a lump sum to invest. A monthly SIP or a transfer plan (STP) can spread your entry.",
+    help: [
+      "Match funds to each goal and your risk",
+      "Set up and track your SIPs",
+      "Review your funds with you every year",
     ],
     ask: [
       "Is the riskometer level right for me?",
@@ -207,7 +213,7 @@ export const products = [
     oneLine:
       "A SIF is run by a mutual fund house under SEBI’s mutual fund rules, and is taxed like a mutual fund. " +
       "Its manager has more tools: it can gain when prices fall, move between asset types, and turn market exposure up or down.",
-    plateTitle: "One fund, three kinds of market",
+    plateTitle: "Mutual fund rules, with PMS and AIF tools",
     marks: [
       "Has tools for rising, falling and sideways markets: the manager can raise or cut exposure, and take short positions with up to 25% of the fund.",
       "Taxed like a mutual fund: nothing is taxed inside the fund. In the growth option, you pay tax only when you redeem or switch.",
@@ -233,14 +239,15 @@ export const products = [
     ],
     gaugeTitle: "Tax check: a long-short strategy, three products",
     gaugeAside: "Top tax slab, base rates",
-    suits: [
-      "One fund for rising, falling and sideways markets",
-      "PMS and AIF tools, from ₹10 lakh",
-      "Tax only when you redeem or switch",
+    useFor: [
+      "A whole portfolio in one fund, or part of it",
+      "Rising, falling and sideways markets alike",
+      "Long-short strategies with mutual fund tax",
     ],
-    twice: [
-      "You are new to long-short strategies. We will walk you through how each one works.",
-      "You may need your money on a particular day. Some strategies pay out only on set days.",
+    help: [
+      "Explain each strategy and its Risk Band",
+      "Fit the SIF to the portfolio you have",
+      "Track redemption days and tax on exits",
     ],
     ask: [
       "What is this strategy’s Risk Band today?",
@@ -250,8 +257,8 @@ export const products = [
     ],
     notes: ["SIF / strategy", "Amount ₹", "Risk band", "Redemption days"],
     legal:
-      '<span class="warn">Investments in SIFs are subject to market risks, read all investment strategy related documents carefully.</span> ' +
-      "SIFs are a separate category from mutual funds, with their own risks. {{firm}}: SIF Distributor (SIFD) Nishanth Ashok, ARN-328299.",
+      '<span class="warn">Investments in Specialized Investment Fund involves relatively higher risk including potential loss of capital, liquidity risk and market volatility. Please read all investment strategy related documents carefully before making the investment decision.</span> ' +
+      "{{firm}}: SIF Distributor (SIFD) Nishanth Ashok, ARN-328299.",
     extra: "extra-sif.html",
   },
 
@@ -287,14 +294,15 @@ export const products = [
     ],
     gaugeTitle: "Risk check: the credit rating",
     gaugeAside: "Check it before the interest rate",
-    suits: [
-      "Interest at a fixed rate, on a set schedule",
-      "Payouts monthly, yearly or at maturity",
-      "An investment you can sell on the exchange",
+    useFor: [
+      "A regular income, monthly or yearly",
+      "Money you can set aside for a fixed period",
+      "Fixed-rate income alongside your funds",
     ],
-    twice: [
-      "A very high rate has caught your eye. We can check the rating and security with you.",
-      "You may need the money before maturity. Selling on the exchange can mean a lower price.",
+    help: [
+      "Check the rating, security and company",
+      "Pick the series that suits your income",
+      "Track interest dates and maturity",
     ],
     ask: [
       "What is the rating, from which agency, and is it expected to hold (outlook)?",
@@ -338,14 +346,15 @@ export const products = [
     ],
     gaugeTitle: "Risk check: concentration",
     gaugeAside: "Fewer stocks, more weight on each",
-    suits: [
-      "A portfolio built just for you, in your name",
-      "To see every holding and trade, any time",
-      "A focused portfolio, from ₹50 lakh",
+    useFor: [
+      "A focused portfolio built for you",
+      "Shares held in your own name",
+      "Seeing every holding and trade, any time",
     ],
-    twice: [
-      "You already hold shares. Ask whether they can count towards the ₹50 lakh.",
-      "You file your own return. The manager sends a yearly tax statement for your CA.",
+    help: [
+      "Compare managers and their full fees",
+      "Move your existing shares in, where allowed",
+      "Review statements against the benchmark",
     ],
     ask: [
       "How has the strategy done against its benchmark, through good years and bad?",
@@ -391,14 +400,15 @@ export const products = [
     ],
     gaugeTitle: "Cost check: how profits are shared",
     gaugeAside: "The order in which money is paid out",
-    suits: [
-      "To invest in companies before they list",
-      "To lend to private companies (private credit)",
-      "Commercial real estate and other private assets",
+    useFor: [
+      "Private companies, before they list",
+      "Private credit and commercial real estate",
+      "Money that can stay invested 4 to 10 years",
     ],
-    twice: [
-      "You may need this money before the fund’s term ends. We can look at funds with shorter terms.",
-      "₹1 crore would be a large share of your wealth. We can talk about building up to it.",
+    help: [
+      "Explain the fund, its term and its fees",
+      "Remind you before each capital call",
+      "Track investments and payouts for you",
     ],
     ask: [
       "What does the fund invest in, and how did the manager’s earlier funds do?",
@@ -446,14 +456,15 @@ export const products = [
     ],
     gaugeTitle: "Risk check: the currency effect",
     gaugeAside: "Illustration only",
-    suits: [
-      "To invest abroad in US dollars",
-      "A route regulated in India, by IFSCA",
-      "Money for goals in dollars, like studies abroad",
+    useFor: [
+      "Investing abroad, in US dollars",
+      "Goals in dollars, such as studies abroad",
+      "Spreading wealth beyond India",
     ],
-    twice: [
-      "You may need the money within a year or two. Exchange rates can swing over short periods.",
-      "You have used most of this year’s LRS limit. Each family member has a limit of their own.",
+    help: [
+      "Explain products, costs and currency risk",
+      "Track the LRS limit across your family",
+      "Help you get your TCS back at filing",
     ],
     ask: [
       "What exactly does this product invest in, and where?",

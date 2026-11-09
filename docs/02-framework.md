@@ -67,7 +67,7 @@ The job, not the product, sets the colour, so a reader can tell at a glance whic
 | At a glance | The same six rows for every product: Regulator, Minimum (or What you pay), Time commitment, Money out (or When it pays), Costs, Tax in brief |
 | Ticket ruler | For investments, the minimum on one log scale from ₹100 to ₹1 crore, identical on every page |
 | The check that matters most | The regulator's own scale where one exists (riskometer, credit rating). Otherwise the single most useful check: cover worksheet, fine-print table, tax wrapper, concentration, profit waterfall, currency effect |
-| Suits you if / Talk to us first if | Three "Suits you if" points and two "Talk to us first if" points. The second list is an invitation to a conversation, not a warning: each point is gentle, never scary, and offers a next step where one exists ("Porting keeps your waiting-period credit", "We can look at funds with shorter terms"). We distribute these products, so the page should help a client choose well, not talk them out of it |
+| Use it for / How we help | "Use it for": three client goals the product serves, in the client's words. "How we help": three things the client gets by coming to Ram Investments for this product. Together they connect the product to the client's plans and answer "why go through a distributor?". Cautions are not repeated here: they sit in the risk check, the six facts and "Ask before you sign" |
 | Ask before you sign | Four questions with tick boxes |
 | My notes | Four write-in fields specific to the product |
 | Legal line | The exact standard warning, plus the registration line for that product |
