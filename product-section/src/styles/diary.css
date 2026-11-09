@@ -437,3 +437,7 @@ svg text { font-family: var(--text); }
 .finder td.pg { width: 9mm; font-family: var(--display); font-weight: 650; font-variant-numeric: tabular-nums; }
 
 .notes { margin-bottom: 1.6mm; }
+
+.deep-callout.two { display: grid; grid-template-columns: 1fr 1fr; column-gap: 5mm; }
+.deep-callout.two h3 { margin-bottom: 1mm; }
+.deep-callout.two p { font-size: 7.4pt; }

@@ -48,8 +48,8 @@
   <rect x="42" y="60.6" width="38" height="18.6" class="f-tint"/>
   <text x="44" y="64.8" class="t-cap job">Category II</text>
   <text x="44" y="68.8" class="t-sm">Private equity, private</text>
-  <text x="44" y="72.1" class="t-sm">credit, real estate. No</text>
-  <text x="44" y="75.4" class="t-sm">borrowing to invest.</text>
+  <text x="44" y="72.1" class="t-sm">credit, commercial real</text>
+  <text x="44" y="75.4" class="t-sm">estate. No borrowing.</text>
 
   <rect x="84" y="60.6" width="38" height="18.6" class="f-tint"/>
   <text x="86" y="64.8" class="t-cap job">Category III</text>

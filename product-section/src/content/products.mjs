@@ -5,17 +5,19 @@
 // can follow, short sentences, every term explained where it first appears,
 // no vague time words ("sooner", "short-term") without the actual period.
 //
-// Registration numbers printed: ARN-14532 and ARN-328299 (mutual funds),
-// ARN-328299 (SIFs), APRN-07532 (PMS). The firm chose not to print other
+// Registration numbers printed: ARN-14532 (L. Ashok) and ARN-328299
+// (Nishanth Ashok) for mutual funds; ARN-328299 for SIFs; APRN-07532
+// (Nishanth Ashok) for PMS. The firm chose not to print other
 // identifiers (insurance, NCD channel, AIF, GIFT IFSC).
 //
 // Insurance copy follows the tone guide: talk about the family and its
 // plans, not about death. "If something happens to you" and "in your
 // absence" are the phrases Indian insurers use.
 //
-// "Talk to us first if" (the `twice` lists) is an invitation to a
-// conversation, not a warning: two gentle points per product, each with a
-// helpful next step where one exists.
+// "Good to know if" (the `twice` lists) points out a situation worth
+// planning for, gently, with a next step. It never recommends a different
+// product instead of this one. "Suits you if" leads with the product's
+// strongest features.
 
 export const meta = {
   firm: "Ram Investments",
@@ -65,13 +67,13 @@ export const products = [
     gaugeTitle: "Work out your cover",
     gaugeAside: "Rule of thumb: 10 to 15 times yearly income",
     suits: [
-      "Your family depends on your income, now or in the years ahead.",
-      "You have a home loan or other loans your family would have to repay.",
-      "You want the most cover for the lowest premium.",
+      "A large cover for a low, fixed premium",
+      "Your family and your loans protected",
+      "A tax-free payout, at once or monthly",
     ],
     twice: [
       "No one depends on your income yet. Premiums are lowest while you are young and healthy, so a starter cover can make sense now.",
-      "You also want money back at the end. We can plan a SIP for that goal alongside your cover.",
+      "You also want money back at the end. We can plan that goal alongside your cover.",
     ],
     ask: [
       "Is the cover enough for my family’s plans, including my loans?",
@@ -120,9 +122,9 @@ export const products = [
     gaugeTitle: "Read the fine print",
     gaugeAside: "Compare before you buy",
     suits: [
-      "A big hospital bill would hurt your savings.",
-      "Your only cover is from your employer.",
-      "You look after parents or other elders.",
+      "Hospital bills paid directly, cashless",
+      "Cover that stays when you change jobs",
+      "One policy for your whole family",
     ],
     twice: [
       "You want to change insurer. Porting keeps your waiting-period credit.",
@@ -175,13 +177,13 @@ export const products = [
     gaugeTitle: "Risk check: the riskometer",
     gaugeAside: "Printed on every scheme",
     suits: [
-      "You want a core portfolio for long-term goals.",
-      "You want professional management, even for small sums.",
-      "You like a fixed monthly investment (SIP).",
+      "To start small, from ₹100 a month",
+      "Professional management, widely spread",
+      "Your money back any business day",
     ],
     twice: [
-      "You may need the money within a year. Some funds suit short periods better.",
-      "You want a fixed rate of interest. NCDs (entry 05) may suit you better.",
+      "You may need the money within a year. Some funds, such as liquid funds, suit short periods.",
+      "You have a lump sum to invest. A monthly SIP or a transfer plan (STP) can spread your entry.",
     ],
     ask: [
       "Is the riskometer level right for me?",
@@ -192,7 +194,7 @@ export const products = [
     notes: ["SIPs running", "Monthly total ₹", "Goal and year", "Review month"],
     legal:
       '<span class="warn">Mutual Fund investments are subject to market risks, read all scheme related documents carefully.</span> ' +
-      "{{firm}} is an AMFI Registered Mutual Fund Distributor (ARN-14532, ARN-328299).",
+      "{{firm}}: AMFI Registered Mutual Fund Distributors L. Ashok (ARN-14532) and Nishanth Ashok (ARN-328299).",
   },
 
   {
@@ -232,12 +234,12 @@ export const products = [
     gaugeTitle: "Tax check: a long-short strategy, three products",
     gaugeAside: "Top tax slab, base rates",
     suits: [
-      "You want one fund with tools for rising, falling and sideways markets.",
-      "You want one fund that can be your whole portfolio, or its steadier part.",
-      "You prefer mutual fund tax rules.",
+      "One fund for rising, falling and sideways markets",
+      "PMS and AIF tools, from ₹10 lakh",
+      "Tax only when you redeem or switch",
     ],
     twice: [
-      "₹10 lakh would be a large part of your savings. Mutual funds can be the first step.",
+      "You are new to long-short strategies. We will walk you through how each one works.",
       "You may need your money on a particular day. Some strategies pay out only on set days.",
     ],
     ask: [
@@ -249,7 +251,7 @@ export const products = [
     notes: ["SIF / strategy", "Amount ₹", "Risk band", "Redemption days"],
     legal:
       '<span class="warn">Investments in SIFs are subject to market risks, read all investment strategy related documents carefully.</span> ' +
-      "SIFs are a separate category from mutual funds, with their own risks. {{firm}} is an AMFI Registered SIF Distributor (SIFD), ARN-328299.",
+      "SIFs are a separate category from mutual funds, with their own risks. {{firm}}: SIF Distributor (SIFD) Nishanth Ashok, ARN-328299.",
     extra: "extra-sif.html",
   },
 
@@ -286,9 +288,9 @@ export const products = [
     gaugeTitle: "Risk check: the credit rating",
     gaugeAside: "Check it before the interest rate",
     suits: [
-      "You want regular interest at a fixed rate.",
-      "You can hold the NCD until it matures.",
-      "You have checked the rating and security, with us.",
+      "Interest at a fixed rate, on a set schedule",
+      "Payouts monthly, yearly or at maturity",
+      "An investment you can sell on the exchange",
     ],
     twice: [
       "A very high rate has caught your eye. We can check the rating and security with you.",
@@ -337,12 +339,12 @@ export const products = [
     gaugeTitle: "Risk check: concentration",
     gaugeAside: "Fewer stocks, more weight on each",
     suits: [
-      "You have ₹50 lakh or more for shares and want a focused portfolio.",
-      "You want to see every stock and trade in your own account.",
-      "You want a portfolio that does not just copy the index, knowing results will differ from it.",
+      "A portfolio built just for you, in your name",
+      "To see every holding and trade, any time",
+      "A focused portfolio, from ₹50 lakh",
     ],
     twice: [
-      "You are new to shares. We can compare a PMS with PRIM or mutual funds, fees included.",
+      "You already hold shares. Ask whether they can count towards the ₹50 lakh.",
       "You file your own return. The manager sends a yearly tax statement for your CA.",
     ],
     ask: [
@@ -354,7 +356,7 @@ export const products = [
     notes: ["Manager / strategy", "Amount ₹", "Fee model", "Benchmark"],
     legal:
       '<span class="warn">Investments in securities are subject to market risks. Read the disclosure document carefully before investing.</span> ' +
-      "Past performance does not guarantee future returns. {{firm}} is an APMI Registered PMS Distributor (APRN-07532).",
+      "Past performance does not guarantee future returns. {{firm}}: APMI Registered PMS Distributor Nishanth Ashok, APRN-07532.",
   },
 
   {
@@ -366,7 +368,7 @@ export const products = [
     formal: "Alternative investment funds · regulated by SEBI",
     oneLine:
       "An AIF is a private fund that pools money from a small group of investors. It can invest where most investors cannot: in companies before they list, " +
-      "loans to private companies, real estate and start-ups. Some AIFs also run specialist strategies in listed shares.",
+      "loans to private companies, commercial real estate and start-ups. Some AIFs also run specialist strategies in listed shares.",
     plateTitle: "The life of a fund with a fixed term",
     marks: [
       "Many AIFs give you a share of companies while they are still private, often years before they list.",
@@ -390,9 +392,9 @@ export const products = [
     gaugeTitle: "Cost check: how profits are shared",
     gaugeAside: "The order in which money is paid out",
     suits: [
-      "You have ₹1 crore or more that can stay invested for the fund’s full term.",
-      "You want a share of growth before companies list, or income from lending to them.",
-      "Your core portfolio is already in place.",
+      "To invest in companies before they list",
+      "To lend to private companies (private credit)",
+      "Commercial real estate and other private assets",
     ],
     twice: [
       "You may need this money before the fund’s term ends. We can look at funds with shorter terms.",
@@ -445,9 +447,9 @@ export const products = [
     gaugeTitle: "Risk check: the currency effect",
     gaugeAside: "Illustration only",
     suits: [
-      "Most of your wealth is in India and you want to spread it across the world.",
-      "You have goals in dollars: studies abroad, travel, overseas property.",
-      "You prefer a route regulated by IFSCA in India, with service in Indian hours.",
+      "To invest abroad in US dollars",
+      "A route regulated in India, by IFSCA",
+      "Money for goals in dollars, like studies abroad",
     ],
     twice: [
       "You may need the money within a year or two. Exchange rates can swing over short periods.",
