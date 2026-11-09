@@ -28,7 +28,7 @@ Diwali falls on Sunday 8 November 2026, so expect approvals and printers to slow
 
 | Week | Dates (2026) | Work |
 |---|---|---|
-| 1 | 2–6 Nov | Approve the framework and page order. Choose A5 or B5 and the paper. Fill every `[placeholder]` (ARN, APRN, IRDAI registration, NCD channel, AIF and GIFT arrangements, contact details). Brief the designer and the printer |
+| 1 | 2–6 Nov | Approve the framework and page order. Choose A5 or B5 and the paper. Confirm the printed registrations and contacts (ARN-14532 and ARN-328299 for mutual funds, ARN-328299 for SIFs, APRN-07532, address, phones, email). Insurance, NCD, AIF and GIFT IFSC identifiers are left out by the firm's decision; compliance to confirm that is acceptable. Brief the designer and the printer |
 | 2 | 9–13 Nov | Compliance checks the copy against the fact sheet and primary sources. Insurance pages go to insurers for approval. Designer starts the rebuild using the printer's specs |
 | 3 | 16–20 Nov | Read-test with five clients. Designer delivers a full proof. Corrections |
 | 4 | 23–27 Nov | Final compliance sign-off. Printer's hard proof and pen and pencil test on the chosen paper. **Files to printer by Friday 27 November** |

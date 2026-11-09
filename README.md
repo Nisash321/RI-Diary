@@ -47,7 +47,7 @@ The build warns if text runs off a page, past the side margins or into the folio
 
 ## Before printing
 
-1. Fill every `[placeholder]` (ARN, APRN, IRDAI registration, NCD channel, AIF and GIFT City arrangements, contact details).
+1. Confirm the printed registrations and contacts on pages 9, 11, 13, 17 and 28: ARN-14532 and ARN-328299 (mutual funds), ARN-328299 (SIFs), APRN-07532 (PMS), the Dindigul address, three phone numbers, support@raminvestments.in. Insurance, NCD, AIF and GIFT IFSC identifiers are left out by the firm's decision.
 2. Have compliance check each **Verify** item in the fact sheet against the primary regulation, and refresh the **Refresh** items (SIF assets, AIF commitments).
 3. Have a tax adviser sign off the SIF tax statements.
 4. Get written approval for the insurance pages from each insurer partner.

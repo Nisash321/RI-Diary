@@ -5,8 +5,9 @@
 // can follow, short sentences, every term explained where it first appears,
 // no vague time words ("sooner", "short-term") without the actual period.
 //
-// Placeholders in [square brackets] are registration details that only
-// the firm can fill in (ARN, APRN, IRDAI registration and so on).
+// Registration numbers printed: ARN-14532 and ARN-328299 (mutual funds),
+// ARN-328299 (SIFs), APRN-07532 (PMS). The firm chose not to print other
+// identifiers (insurance, NCD channel, AIF, GIFT IFSC).
 //
 // Insurance copy follows the tone guide: talk about the family and its
 // plans, not about death. "If something happens to you" and "in your
@@ -23,7 +24,7 @@ export const meta = {
 };
 
 const insuranceLegal =
-  "Insurance is underwritten by the insurer. {{firm}} is [IRDAI registration type and number]. " +
+  "Insurance is underwritten by the insurer. " +
   "For details on risk factors, terms and conditions, read the sales brochure carefully before concluding a sale.";
 
 export const products = [
@@ -165,7 +166,7 @@ export const products = [
       ["Time commitment", "None for most open-ended funds. Tax-saving ELSS funds lock in for 3 years. Equity funds suit goals at least 5 years away."],
       ["Money out", "Sell units any business day. An exit load (a small charge) may apply if you sell within a set period."],
       ["Costs", "The total expense ratio (TER), taken from the NAV daily, within limits set by SEBI."],
-      ["Tax in brief", "Equity funds: 20% on gains if sold within 12 months; 12.5% after that, on gains above ₹1.25 lakh a year. Debt funds: your slab rate (12.5% after 24 months for units bought before 1 April 2023)."],
+      ["Tax in brief", "Equity funds: 20% on gains if sold within 12 months; 12.5% after that, on gains above ₹1.25 lakh a year. Debt funds: your slab rate, however long you hold (units bought before 1 April 2023: 12.5% after 24 months). Most other funds, such as gold and overseas funds: 12.5% after 24 months."],
     ],
     gaugeTitle: "Risk check: the riskometer",
     gaugeAside: "Printed on every scheme",
@@ -187,7 +188,7 @@ export const products = [
     notes: ["SIPs running", "Monthly total ₹", "Goal and year", "Review month"],
     legal:
       '<span class="warn">Mutual Fund investments are subject to market risks, read all scheme related documents carefully.</span> ' +
-      "{{firm}} is an AMFI Registered Mutual Fund Distributor (ARN-[____]).",
+      "{{firm}} is an AMFI Registered Mutual Fund Distributor (ARN-14532, ARN-328299).",
   },
 
   {
@@ -244,7 +245,7 @@ export const products = [
     notes: ["SIF / strategy", "Amount ₹", "Risk band", "Redemption days"],
     legal:
       '<span class="warn">Investments in SIFs are subject to market risks, read all investment strategy related documents carefully.</span> ' +
-      "{{firm}} is an AMFI Registered Mutual Fund Distributor and SIF Distributor (ARN-[____]).",
+      "{{firm}} is an AMFI Registered Mutual Fund Distributor and SIF Distributor (ARN-328299).",
     extra: "extra-sif.html",
   },
 
@@ -298,7 +299,7 @@ export const products = [
     notes: ["Issuer / series", "Rate % and payout", "Amount ₹", "Matures on"],
     legal:
       '<span class="warn">Investments in debt securities are subject to risks including delay and/or default in payment. Read all the offer related documents carefully.</span> ' +
-      "Ratings are opinions, not guarantees. {{firm}} [stock broker / online bond platform registration: ____].",
+      "Ratings are opinions, not guarantees.",
   },
 
   {
@@ -349,7 +350,7 @@ export const products = [
     notes: ["Manager / strategy", "Amount ₹", "Fee model", "Benchmark"],
     legal:
       '<span class="warn">Investments in securities are subject to market risks. Read the disclosure document carefully before investing.</span> ' +
-      "Past performance does not guarantee future returns. {{firm}} is an APMI Registered PMS Distributor (APRN-[____]).",
+      "Past performance does not guarantee future returns. {{firm}} is an APMI Registered PMS Distributor (APRN-07532).",
   },
 
   {
@@ -402,7 +403,7 @@ export const products = [
     notes: ["Fund / category", "Commitment ₹", "Called so far ₹", "Fund ends"],
     legal:
       "AIFs are offered only by private placement to eligible investors, through the fund’s private placement memorandum. " +
-      "This page is investor education. It is not an offer or a solicitation. {{firm}} [AIF distribution arrangement: ____].",
+      "This page is investor education. It is not an offer or a solicitation.",
     extra: "extra-aif.html",
   },
 
@@ -456,7 +457,6 @@ export const products = [
     ],
     notes: ["Product", "Amount USD", "LRS used this FY", "TCS paid ₹"],
     legal:
-      "Investments in GIFT IFSC are subject to market and currency risks, and to RBI’s LRS and FEMA rules. Read all scheme related documents carefully. " +
-      "{{firm}} [IFSC distribution registration: ____].",
+      "Investments in GIFT IFSC are subject to market and currency risks, and to RBI’s LRS and FEMA rules. Read all scheme related documents carefully.",
   },
 ];
