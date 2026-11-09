@@ -17,7 +17,7 @@
   <circle cx="120" cy="37.6" r=".9" class="f-paper s-ink3 thin"/>
   <path d="M12,33 C24,39 38,43.5 52.5,42.5 C66,41.5 72,37.5 82,33 C94,27.5 106,24 120,22" class="f-none s-job" style="stroke-width:.85"/>
   <circle cx="120" cy="22" r=".9" class="f-job"/>
-  <text x="14" y="29.4" class="t-sm b t-job">Your net cash position</text>
+  <text x="14" y="29.4" class="t-sm b t-job">Money put in, minus money back</text>
   <text x="120" y="19.8" class="t-sm b end t-job">Money back, if investments do well</text>
   <text x="120" y="44.8" class="t-sm end t-ink3">Less than you put in, if they do not</text>
   <text x="22" y="46.6" class="t-sm t-ink3">Money out: capital called, fees paid</text>
@@ -36,7 +36,7 @@
     <line x1="120" y1="48.6" x2="120" y2="50.2" class="s-ink thin"/><text x="120" y="52.8" class="t-sm mid">8</text>
   </g>
   <text x="0" y="52.8" class="t-cap">Year</text>
-  <text x="0" y="57.4" class="t-sm t-ink3">Illustrative. Timelines and outcomes differ from fund to fund.</text>
+  <text x="0" y="57.4" class="t-sm t-ink3">Illustrative. Being below zero in the early years is normal. Timelines and outcomes differ by fund.</text>
 
   <!-- Categories -->
   <rect x="0" y="60.6" width="38" height="18.6" class="f-tint"/>

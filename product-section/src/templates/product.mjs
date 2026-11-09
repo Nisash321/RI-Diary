@@ -86,7 +86,7 @@ export function productSpread(p, { plate, gauge, verso, total, meta }) {
   <footer class="folio"><span class="pg">${verso}</span><span class="asof">Facts as of ${meta.asOf}</span></footer>
 </section>
 <!-- /page -->
-<section class="page recto" data-job="${p.job}">
+<section class="page recto" data-job="${p.job}" id="${p.id}-b">
   <header class="runhead"><span>${p.no} · ${p.short}</span><span class="chip">${job}</span></header>
   <div class="label" style="display:flex;justify-content:space-between;padding-bottom:1.5mm"><span>At a glance</span><span class="muted" style="letter-spacing:.06em;text-transform:none;font-family:var(--text);font-stretch:100%;font-weight:500;font-size:6.6pt">The same six facts for every product</span></div>
   <dl class="glance">

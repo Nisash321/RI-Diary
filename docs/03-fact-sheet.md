@@ -145,6 +145,23 @@ House rule: the pages give no returns and no projections (see section 5 of [02-f
 
 ---
 
+## Added in draft 4 (stakeholder review)
+
+| Claim | Where | Source | Status |
+|---|---|---|---|
+| Section 123 (old 80C) deduction capped at ₹1.5 lakh a year, shared with PF, PPF, ELSS | p.5 | [Income Tax Dept, s.123](https://www.incometaxindia.gov.in/w/section-123-96) | Confirmed |
+| Section 126 (old 80D): ₹25,000 for family (₹50,000 with a senior citizen), and the same again for parents | p.7 | [Income Tax Dept, s.126](https://www.incometaxindia.gov.in/w/section-126-96) | Confirmed |
+| IDCW (dividend) payouts are taxed when paid, so "tax only when you redeem or switch" is stated for the growth option | pp.10–13 | [HDFC MF tax reckoner TY 2026-27](https://files.hdfcfund.com/s3fs-public/2026-06/Tax%20Reckoner%20TY%202026-27_0.pdf) | Confirmed |
+| Category III AIF pays tax at the maximum marginal rate, so always the full surcharge (about 39% to 43% on business income) | p.11 | [Treelife](https://treelife.in/finance/aif-taxation-in-india/) | **Verify** with a tax adviser |
+| Surcharge applies above ₹50 lakh of income; on equity capital gains it is capped at 15% | p.11 | [Taxmann](https://www.taxmann.com/post/blog/tax-rates-surcharge-cess) | Confirmed |
+| Gold and overseas ETFs (listed): 12.5% after 12 months; fund of funds: after 24 months | p.9 | [Finnovate](https://www.finnovate.in/learn/blog/etf-taxation-india) | Confirmed |
+| SEBI caps the base expense ratio under the MF Regulations, 2026 | p.9, p.26 | [Business Today](https://www.businesstoday.in/mutual-funds/story/sebi-overhauls-mutual-fund-rules-changes-made-to-ter-framework-check-details-507113-2025-12-17) | **Verify** the effective date |
+| IRDAI standard insurance warning: "For more details on risk factors, terms and conditions please read sales brochure carefully before concluding a sale." | pp.5, 7, 28 | IRDAI advertisement norms | **Wording** |
+| Full SEBI debt warning ("debt securities/municipal debt securities/securitised debt instruments…") | p.15, p.28 | SEBI | **Wording** |
+| Proportionate deduction for room rent does not apply to pharmacy, consumables, implants and diagnostics, so "other charges can be cut" | p.7 | IRDAI health master circular, 2024 | Confirmed |
+| AIF commitments, June 2024: no clean SEBI figure found (March 2024 about ₹11.3 lakh crore; September 2024 ₹12.43 lakh crore), so the chart marks 2024 as not shown | p.21 | [Business Standard](https://www.business-standard.com/amp/markets/news/aif-investments-top-rs-4-trillion-commitments-cross-rs-11-trillion-124061901034_1.html); [Cafemutual](https://cafemutual.com/news/cafe-alt/33677-aif-aum-reaches-rs1250-lakh-crore-in-september-2024) | **Refresh**: add June 2024 from SEBI's AIF statistics |
+| Typical AIF term "often 4 to 10 years" (SEBI minimum 3 years for Category I and II) | pp.19, 21, 25 | SEBI AIF Regulations; market practice | **Verify** |
+
 ## Researched but not printed
 
 These figures came up in the research and are held back, mostly under the house rule against returns. They are recorded here so nobody adds them back without a decision.

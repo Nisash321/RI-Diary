@@ -3,25 +3,26 @@
   <div class="deep-head">
     <p class="label">SIF in depth</p>
     <h2 class="page-title">PMS and AIF tools, mutual fund rules</h2>
-    <p class="intro">A SIF can use tools that were once found only in PMS and in Category III AIFs, the hedge-fund-style funds. It keeps the mutual fund’s structure, its daily NAV and its tax rules.</p>
+    <p class="intro">A SIF can use tools that were once found only in PMS (entry 06) and in Category III AIFs (entry 07), which are hedge-fund-style funds for large investors. It keeps mutual fund rules, a daily NAV and mutual fund tax treatment.</p>
   </div>
   <table class="abilities">
     <colgroup><col style="width:31%"><col><col><col><col></colgroup>
-    <thead><tr><th>What the manager can do</th><th>Mutual fund</th><th class="sif">SIF</th><th>PMS</th><th>Cat III AIF</th></tr></thead>
+    <thead><tr><th>What the manager can do</th><th>Mutual fund</th><th class="sif">SIF</th><th>PMS</th><th>Category III AIF</th></tr></thead>
     <tbody>
       <tr><td>Buy shares and bonds</td><td><span class="mk y"></span>Yes</td><td class="sif"><span class="mk y"></span>Yes</td><td><span class="mk y"></span>Yes</td><td><span class="mk y"></span>Yes</td></tr>
-      <tr><td>Bet on falls, beyond hedging</td><td><span class="mk n"></span>No</td><td class="sif"><span class="mk y"></span>Up to 25%</td><td><span class="mk p"></span>Limited</td><td><span class="mk y"></span>Yes</td></tr>
+      <tr><td>Short positions</td><td><span class="mk n"></span>No</td><td class="sif"><span class="mk y"></span>Up to 25%</td><td><span class="mk p"></span>Limited</td><td><span class="mk y"></span>Yes</td></tr>
       <tr><td>Move across shares, bonds, gold, silver, REITs</td><td><span class="mk p"></span>Within its category</td><td class="sif"><span class="mk y"></span>Yes</td><td><span class="mk p"></span>Partly</td><td><span class="mk y"></span>Yes</td></tr>
       <tr><td>Borrow to invest (leverage)</td><td><span class="mk n"></span>No</td><td class="sif"><span class="mk n"></span>No</td><td><span class="mk n"></span>No</td><td><span class="mk y"></span>Up to 2× NAV</td></tr>
-      <tr><td>Daily price, all holdings shown</td><td><span class="mk y"></span>Yes</td><td class="sif"><span class="mk y"></span>Yes</td><td><span class="mk y"></span>Own account</td><td><span class="mk p"></span>Periodic</td></tr>
-      <tr><td>Tax only when you redeem or switch</td><td><span class="mk y"></span>Yes</td><td class="sif"><span class="mk y"></span>Yes</td><td><span class="mk n"></span>Taxed per trade</td><td><span class="mk n"></span>Taxed in fund</td></tr>
+      <tr><td>Price (NAV) published daily</td><td><span class="mk y"></span>Yes</td><td class="sif"><span class="mk y"></span>Yes</td><td><span class="mk y"></span>Own account</td><td><span class="mk p"></span>Periodic</td></tr>
+      <tr><td>A portfolio just for you</td><td><span class="mk n"></span>No</td><td class="sif"><span class="mk n"></span>No</td><td><span class="mk y"></span>Yes</td><td><span class="mk n"></span>No</td></tr>
+      <tr><td>Tax only when you redeem or switch*</td><td><span class="mk y"></span>Yes</td><td class="sif"><span class="mk y"></span>Yes</td><td><span class="mk n"></span>Taxed per trade</td><td><span class="mk n"></span>Taxed in fund</td></tr>
       <tr><td>Minimum</td><td>₹100</td><td class="sif">₹10 lakh</td><td>₹50 lakh</td><td>₹1 crore</td></tr>
     </tbody>
   </table>
-  <p class="deep-note">A SIF cannot borrow to invest. Its total exposure can never go above 100% of the fund.</p>
+  <p class="deep-note">A SIF cannot borrow to invest: its total exposure stays within 100% of the fund. *In the growth option.</p>
   <div class="deep-section">
     <h2 class="label"><span>Seven strategies, from cautious to adventurous</span><span class="aside">Where each one usually sits</span></h2>
-    <svg viewBox="0 0 122 52" role="img" aria-labelledby="sif-spec-t">
+    <svg viewBox="0 8 122 44" role="img" aria-labelledby="sif-spec-t">
 <title id="sif-spec-t">SEBI's seven SIF strategies arranged from cautious (debt long-short) to adventurous (sector rotation long-short).</title>
 <defs><linearGradient id="specgrad" x1="0" x2="1"><stop offset="0" style="stop-color:var(--build-tint)"/><stop offset="1" style="stop-color:var(--build)"/></linearGradient></defs>
 <rect x="2" y="25.8" width="114" height="2.4" fill="url(#specgrad)"/><path d="M116,24.4 L120.5,27.0 L116,29.6 Z" class="f-job"/>
@@ -73,7 +74,11 @@
 <text x="111.5" y="21.6" class="t-sm" style="font-size:2px;text-anchor:end">four sectors</text>
 <text x="2" y="51" class="t-cap job">Cautious</text><text x="120.5" y="51" class="t-cap job end">Adventurous</text>
 </svg>
-    <p class="deep-note">The name SIF does not tell you the risk. Each strategy shows its Risk Band (Level 1 to 5) every month. Check that, not just the strategy’s name.</p>
+    <p class="deep-note">The usual order only. What counts is each strategy’s Risk Band, from Level 1 (lowest) to 5 (highest).</p>
+  </div>
+  <div class="deep-callout" style="margin-top:4mm">
+    <h3>Same safeguards as a mutual fund</h3>
+    <p>SEBI’s rules, independent trustees and a custodian that holds the assets. The manager’s calls can still be wrong, so a SIF can lose money.</p>
   </div>
   <footer class="folio"><span class="pg">{{page}}</span><span class="asof">Facts as of {{asof}}</span></footer>
 </section>
@@ -88,9 +93,9 @@
     <h2 class="label"><span>Three ways to use a SIF</span><span class="aside">Mixes shown are examples</span></h2>
     <div class="cards3">
       <div class="card"><svg viewBox="0 0 38 17" aria-hidden="true"><path d="M8.00,0.90 A7.6,7.6 0 0 1 8.00,16.10 L8.00,12.70 A4.2,4.2 0 0 0 8.00,4.30 Z" class="f-job s-paper" style="stroke-width:.3"/><path d="M8.00,16.10 A7.6,7.6 0 0 1 1.85,4.03 L4.60,6.03 A4.2,4.2 0 0 0 8.00,12.70 Z" class="f-deep s-paper" style="stroke-width:.3"/><path d="M1.85,4.03 A7.6,7.6 0 0 1 5.65,1.27 L6.70,4.51 A4.2,4.2 0 0 0 4.60,6.03 Z" class="f-global s-paper" style="stroke-width:.3"/><path d="M5.65,1.27 A7.6,7.6 0 0 1 8.00,0.90 L8.00,4.30 A4.2,4.2 0 0 0 6.70,4.51 Z" class="f-ink3 s-paper" style="stroke-width:.3"/>
-<rect x="18.5" y="2.70" width="1.6" height="1.6" class="f-job"/><text x="20.9" y="4.40" class="t-sm" style="font-size:2.05px">Shares</text><rect x="18.5" y="5.60" width="1.6" height="1.6" class="f-deep"/><text x="20.9" y="7.30" class="t-sm" style="font-size:2.05px">Bonds</text><rect x="18.5" y="8.50" width="1.6" height="1.6" class="f-global"/><text x="20.9" y="10.20" class="t-sm" style="font-size:2.05px">Gold, silver</text><rect x="18.5" y="11.40" width="1.6" height="1.6" class="f-ink3"/><text x="20.9" y="13.10" class="t-sm" style="font-size:2.05px">REITs, InvITs</text></svg><h3>As your whole portfolio</h3><p>No mutual funds yet? An asset allocator strategy holds shares, bonds, gold, silver and REITs in one fund, and moves money between them.</p></div>
-      <div class="card"><svg viewBox="0 0 38 17" aria-hidden="true"><path d="M8.00,0.90 A7.6,7.6 0 0 1 10.35,15.73 L9.30,12.49 A4.2,4.2 0 0 0 8.00,4.30 Z" class="f-job s-paper" style="stroke-width:.3"/><path d="M10.35,15.73 A7.6,7.6 0 0 1 0.40,8.50 L3.80,8.50 A4.2,4.2 0 0 0 9.30,12.49 Z" class="f-deep s-paper" style="stroke-width:.3"/><path d="M0.40,8.50 A7.6,7.6 0 0 1 8.00,0.90 L8.00,4.30 A4.2,4.2 0 0 0 3.80,8.50 Z" class="f-ink3 s-paper" style="stroke-width:.3"/>
-<rect x="18.5" y="4.10" width="1.6" height="1.6" class="f-job"/><text x="20.9" y="5.80" class="t-sm" style="font-size:2.05px">Arbitrage</text><rect x="18.5" y="7.00" width="1.6" height="1.6" class="f-deep"/><text x="20.9" y="8.70" class="t-sm" style="font-size:2.05px">Bonds</text><rect x="18.5" y="9.90" width="1.6" height="1.6" class="f-ink3"/><text x="20.9" y="11.60" class="t-sm" style="font-size:2.05px">Shares</text></svg><h3>As the steady part</h3><p>Hybrid and debt strategies keep most of the money in arbitrage and bonds, with a little in shares. They aim to move up and down less than equity funds.</p></div>
+<rect x="18.5" y="2.70" width="1.6" height="1.6" class="f-job"/><text x="20.9" y="4.40" class="t-sm" style="font-size:2.05px">Shares</text><rect x="18.5" y="5.60" width="1.6" height="1.6" class="f-deep"/><text x="20.9" y="7.30" class="t-sm" style="font-size:2.05px">Bonds</text><rect x="18.5" y="8.50" width="1.6" height="1.6" class="f-global"/><text x="20.9" y="10.20" class="t-sm" style="font-size:2.05px">Gold, silver</text><rect x="18.5" y="11.40" width="1.6" height="1.6" class="f-ink3"/><text x="20.9" y="13.10" class="t-sm" style="font-size:2.05px">REITs, InvITs</text></svg><h3>As your whole portfolio</h3><p>No mutual funds yet, or want one simple fund? An asset allocator strategy holds shares, bonds, gold, silver and REITs, and moves money between them.</p></div>
+      <div class="card"><svg viewBox="0 0 38 17" aria-hidden="true"><path d="M8.00,0.90 A7.6,7.6 0 0 1 10.35,15.73 L9.30,12.49 A4.2,4.2 0 0 0 8.00,4.30 Z" class="f-ink3 s-paper" style="stroke-width:.3"/><path d="M10.35,15.73 A7.6,7.6 0 0 1 0.40,8.50 L3.80,8.50 A4.2,4.2 0 0 0 9.30,12.49 Z" class="f-deep s-paper" style="stroke-width:.3"/><path d="M0.40,8.50 A7.6,7.6 0 0 1 8.00,0.90 L8.00,4.30 A4.2,4.2 0 0 0 3.80,8.50 Z" class="f-job s-paper" style="stroke-width:.3"/>
+<rect x="18.5" y="4.10" width="1.6" height="1.6" class="f-ink3"/><text x="20.9" y="5.80" class="t-sm" style="font-size:2.05px">Arbitrage</text><rect x="18.5" y="7.00" width="1.6" height="1.6" class="f-deep"/><text x="20.9" y="8.70" class="t-sm" style="font-size:2.05px">Bonds</text><rect x="18.5" y="9.90" width="1.6" height="1.6" class="f-job"/><text x="20.9" y="11.60" class="t-sm" style="font-size:2.05px">Shares</text></svg><h3>As the steady part</h3><p>For money you might keep in debt funds. Hybrid strategies hold much of it in arbitrage and bonds, with a smaller part in shares, aiming for a steadier ride.</p></div>
       <div class="card"><svg viewBox="0 0 38 17" aria-hidden="true">
 <line x1="1" y1="11.5" x2="23" y2="11.5" class="s-ink thin"/>
 <rect x="3" y="1.5" width="8" height="10" class="f-job"/><rect x="13.5" y="11.5" width="8" height="2.5" class="f-deep"/>
@@ -101,7 +106,7 @@
   <div class="deep-section">
     <h2 class="label"><span>When the tax is paid</span><span class="aside">Same trades, three products</span></h2>
     <svg viewBox="0 0 122 34.4" role="img" aria-labelledby="sif-tax-t">
-<title id="sif-tax-t">The same trades by the manager over five years, in three products. In a SIF, tax is paid once, when you redeem or switch. In a PMS, every sale is taxed in your hands in the year it happens. In a Category III AIF, the fund pays tax every year.</title>
+<title id="sif-tax-t">The same trades by the manager over five years, in three products. In a SIF, tax is paid once, when you redeem or switch. In a PMS, every sale adds to your tax for that year. In a Category III AIF, the fund pays tax every year.</title>
 <text x="34.0" y="2.4" class="t-cap">You invest</text><text x="118.0" y="2.4" class="t-cap end">You redeem or switch</text>
 <text x="68.0" y="2.4" class="t-cap mid">Five years, the same trades</text>
 <line x1="50.80" y1="4.2" x2="50.80" y2="27.6" class="s-rule hair dash"/>
@@ -125,7 +130,7 @@
 <circle cx="105.40" cy="7.80" r=".75" class="f-paper s-ink3 thin"/>
 <circle cx="111.00" cy="7.80" r=".75" class="f-paper s-ink3 thin"/>
 <rect x="117.15" y="6.95" width="1.7" height="1.7" class="f-ink2"/>
-<text x="0" y="16.30" class="t-sm b">In a PMS</text><text x="0" y="19.00" class="t-sm" style="font-size:1.95px">taxed in your hands, every sale</text>
+<text x="0" y="16.30" class="t-sm b">In a PMS</text><text x="0" y="19.00" class="t-sm" style="font-size:1.95px">each sale adds to that year’s tax</text>
 <line x1="34.0" y1="16.50" x2="118.0" y2="16.50" class="s-ink3" style="stroke-width:0.3"/>
 <line x1="34.0" y1="15.10" x2="34.0" y2="17.90" class="s-ink thin"/>
 <rect x="37.55" y="15.65" width="1.7" height="1.7" class="f-ink2"/>
@@ -163,12 +168,12 @@
 <rect x="100.35" y="24.35" width="1.7" height="1.7" class="f-ink2"/>
 <rect x="117.15" y="24.35" width="1.7" height="1.7" class="f-ink2"/>
 <circle cx="34.80" cy="31.90" r=".75" class="f-paper s-ink3 thin"/><text x="36.60" y="32.60" class="t-sm" style="font-size:2.05px">The manager sells a holding</text>
-<rect x="67.00" y="31.05" width="1.7" height="1.7" class="f-ink2"/><text x="69.60" y="32.60" class="t-sm" style="font-size:2.05px">Tax is paid</text>
+<rect x="67.00" y="31.05" width="1.7" height="1.7" class="f-ink2"/><text x="69.60" y="32.60" class="t-sm" style="font-size:2.05px">Tax falls due</text>
 </svg>
-    <p class="deep-note">Gains made inside a SIF are not taxed along the way. That money stays invested until you redeem or switch, and you choose when. A switch to another strategy counts as a redemption for tax. Rates are in the tax check in entry 04.</p>
+    <p class="deep-note">In the growth option, gains inside a SIF are not taxed along the way; that money stays invested until you redeem or switch. A switch counts as a redemption for tax. Rates are on page {{pg:sif-b}}.</p>
   </div>
   <div class="deep-section">
-    <h2 class="label"><span>A fast-growing category</span><span class="aside">Money invested in all SIFs, month-end</span></h2>
+    <h2 class="label"><span>A new, fast-growing category</span><span class="aside">Money invested in all SIFs, month-end</span></h2>
     <svg viewBox="0 0 122 31" role="img" aria-labelledby="sif-growth-t">
 <title id="sif-growth-t">SIF industry assets grew from about ₹2,010 crore in October 2025 to ₹38,287 crore in September 2026.</title>
 <line x1="10" y1="27.00" x2="117.6" y2="27.00" class="s-rule hair"/><text x="8.6" y="27.70" class="t-sm end" style="font-size:1.9px">0</text><line x1="10" y1="21.25" x2="117.6" y2="21.25" class="s-rule hair"/><text x="8.6" y="21.95" class="t-sm end" style="font-size:1.9px">10,000</text><line x1="10" y1="15.50" x2="117.6" y2="15.50" class="s-rule hair"/><text x="8.6" y="16.20" class="t-sm end" style="font-size:1.9px">20,000</text><line x1="10" y1="9.75" x2="117.6" y2="9.75" class="s-rule hair"/><text x="8.6" y="10.45" class="t-sm end" style="font-size:1.9px">30,000</text><line x1="10" y1="4.00" x2="117.6" y2="4.00" class="s-rule hair"/><text x="8.6" y="4.70" class="t-sm end" style="font-size:1.9px">40,000</text>
@@ -176,12 +181,12 @@
 <polyline points="10.00,25.84 19.60,25.31 48.40,21.42 58.00,20.89 86.80,16.73 115.60,4.98" class="f-none s-job" style="stroke-width:.7;stroke-linejoin:round"/>
 <circle cx="10.00" cy="25.84" r=".9" class="f-job"/><text x="10.00" y="30.4" class="t-sm mid" style="font-size:1.9px">Oct 2025</text><circle cx="19.60" cy="25.31" r=".9" class="f-job"/><text x="19.60" y="30.4" class="t-sm mid" style="font-size:1.9px">Nov</text><circle cx="48.40" cy="21.42" r=".9" class="f-job"/><text x="48.40" y="30.4" class="t-sm mid" style="font-size:1.9px">Feb 2026</text><circle cx="58.00" cy="20.89" r=".9" class="f-job"/><text x="58.00" y="30.4" class="t-sm mid" style="font-size:1.9px">Mar</text><circle cx="86.80" cy="16.73" r=".9" class="f-job"/><text x="86.80" y="30.4" class="t-sm mid" style="font-size:1.9px">Jun</text><circle cx="115.60" cy="4.98" r=".9" class="f-job"/><text x="115.60" y="30.4" class="t-sm mid" style="font-size:1.9px">Sep 2026</text>
 <text x="11.60" y="23.84" class="t-sm b" style="font-size:2.2px">₹2,010 crore</text>
-<text x="114.00" y="5.88" class="t-sm b end t-job" style="font-size:2.4px">₹38,287 crore</text>
+<text x="113.00" y="2.60" class="t-sm b end t-job" style="font-size:2.4px">₹38,287 crore</text>
 <text x="2" y="2.2" class="t-cap" style="font-size:1.9px">₹ crore</text>
 </svg>
     <p class="deep-note">By September 2026, 17 fund houses offered SIFs, with over 1.5 lakh investor accounts (folios). Source: AMFI data, as reported. Growth in money invested does not tell you anything about future returns.</p>
   </div>
-  <p class="legal"><span class="warn">Investments in SIFs are subject to market risks, read all investment strategy related documents carefully.</span> Illustrations show what the rules allow and how tax works. They do not show or promise returns. {{firm}} is an AMFI Registered Mutual Fund Distributor and SIF Distributor (ARN-328299).</p>
+  <p class="legal"><span class="warn">Investments in SIFs are subject to market risks, read all investment strategy related documents carefully.</span> Illustrations show what the rules allow and how tax works. They do not show or promise returns. SIFs are a separate category from mutual funds, with their own risks. {{firm}} is an AMFI Registered SIF Distributor (SIFD), ARN-328299.</p>
   <footer class="folio"><span class="pg">{{page}}</span><span class="asof">{{firm}} · Diary {{year}}</span></footer>
 </section>
 <!-- /page -->

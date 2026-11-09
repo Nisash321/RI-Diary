@@ -24,8 +24,8 @@ export const meta = {
 };
 
 const insuranceLegal =
-  "Insurance is underwritten by the insurer. " +
-  "For details on risk factors, terms and conditions, read the sales brochure carefully before concluding a sale.";
+  '<span class="warn">For more details on risk factors, terms and conditions please read sales brochure carefully before concluding a sale.</span> ' +
+  "Insurance is underwritten by the insurer, which pays all claims.";
 
 export const products = [
   {
@@ -36,8 +36,8 @@ export const products = [
     title: "Term Insurance",
     formal: "Pure life cover for your family · regulated by IRDAI",
     oneLine:
-      "Term insurance keeps your family’s plans on track if you are not there to provide for them. You pay a premium every year. " +
-      "If something happens to you during the policy term, your family receives the full cover amount.",
+      "Term insurance keeps your family’s plans on track if you are not there to provide for them. You pay a premium, yearly or monthly. " +
+      "If something happens to you during the policy term, your family receives the full cover amount (the sum assured).",
     plateTitle: "How it protects a family",
     marks: [
       "It replaces your income for your family, so loans, school fees and monthly expenses stay covered.",
@@ -46,17 +46,21 @@ export const products = [
     ],
     confused: [
       {
-        name: "Return-of-premium and endowment plans",
-        text: "These pay money back at the end, so the premium is higher for the same cover. Some term plans offer a ‘special exit’: stop at a set age and get back the base premiums you paid.",
+        name: "Endowment and money-back plans",
+        text: "They combine savings with cover. Already have one? Talk to us before you stop it.",
+      },
+      {
+        name: "Health insurance",
+        text: "Pays hospital bills; term insurance does not (entry 02).",
       },
     ],
     glance: [
       ["Regulator", "IRDAI, the insurance regulator."],
       ["What you pay", "A premium, paid yearly or monthly, fixed when you buy. It depends on your age, health, habits such as smoking, the cover amount and the term."],
       ["Time commitment", "The term you choose, usually until your earning years end (age 60 to 70). You have 30 days to return a new policy if it does not suit you (free look)."],
-      ["When it pays", "To your family (your nominee) if something happens to you during the term. The insurer must settle a claim within 15 days, or 45 days if it needs to investigate."],
+      ["When it pays", "To your family (your nominee) if something happens to you during the term. Subject to policy terms, the insurer must pay within 15 days of getting all papers, or 45 days if it needs to check the claim."],
       ["Costs", "Only the premium. No GST on individual policies since 22 September 2025."],
-      ["Tax in brief", "Old tax regime: you can claim the premium as a deduction under Section 123 (earlier 80C). The money your family receives is tax-free."],
+      ["Tax in brief", "Old tax regime only: claim the premium under Section 123 (earlier 80C), within its ₹1.5 lakh yearly limit. The money your family receives is tax-free."],
     ],
     gaugeTitle: "Work out your cover",
     gaugeAside: "Rule of thumb: 10 to 15 times yearly income",
@@ -66,8 +70,8 @@ export const products = [
       "You want the most cover for the lowest premium.",
     ],
     twice: [
-      "No one depends on your income yet. Cover can be added as your family grows.",
-      "You also want money back at the end. We can plan that goal separately.",
+      "No one depends on your income yet. Premiums are lowest while you are young and healthy, so a starter cover can make sense now.",
+      "You also want money back at the end. We can plan a SIP for that goal alongside your cover.",
     ],
     ask: [
       "Is the cover enough for my family’s plans, including my loans?",
@@ -88,7 +92,7 @@ export const products = [
     formal: "Hospital cover for your family · regulated by IRDAI",
     oneLine:
       "You pay a premium every year. If you need hospital treatment, the insurer pays the bills up to your sum insured. " +
-      "It pays the hospital directly (cashless) or pays you back, so the focus stays on getting better.",
+      "It pays the hospital directly (cashless) or pays you back, so you can focus on getting well, not on the bill.",
     plateTitle: "How a big bill gets paid",
     marks: [
       "It pays actual hospital bills up to the sum insured, for one person or for the whole family on one policy (floater).",
@@ -109,9 +113,9 @@ export const products = [
       ["Regulator", "IRDAI, the insurance regulator."],
       ["What you pay", "A yearly premium, based on age, sum insured, city and health history. Since April 2024, there is no upper age limit to apply."],
       ["Time commitment", "One year at a time. Renew without a break to keep your waiting-period credit and bonus."],
-      ["When it pays", "Cashless at network hospitals (the insurer must reply within 1 hour, and approve discharge within 3 hours), or you pay and claim it back."],
+      ["When it pays", "Cashless at the insurer’s network hospitals (it must answer within 1 hour, and approve discharge within 3 hours), or you pay and claim it back."],
       ["Costs", "Only the premium. No GST on individual policies since 22 September 2025."],
-      ["Tax in brief", "Old tax regime: claim up to ₹25,000 of premium a year under Section 126 (earlier 80D), or ₹50,000 for senior citizens, plus a separate limit for parents."],
+      ["Tax in brief", "Old tax regime only, Section 126 (earlier 80D): up to ₹25,000 a year for your family (₹50,000 with a senior citizen), and the same again for parents."],
     ],
     gaugeTitle: "Read the fine print",
     gaugeAside: "Compare before you buy",
@@ -122,7 +126,7 @@ export const products = [
     ],
     twice: [
       "You want to change insurer. Porting keeps your waiting-period credit.",
-      "You have an existing illness. Waiting periods differ by policy.",
+      "You have an existing illness. Some policies have a shorter wait for it.",
     ],
     ask: [
       "Is there a limit on room rent, or a co-payment?",
@@ -147,13 +151,13 @@ export const products = [
     plateTitle: "How it works",
     marks: [
       "You own units of a pool, not the shares or bonds themselves.",
-      "Every scheme has a Direct plan and a Regular plan. A Regular plan includes the distributor’s commission.",
+      "Every scheme has a Direct and a Regular plan. A Regular plan, bought through a distributor like us, includes our commission for our service.",
       "Each scheme must stick to its label. For example, a large-cap fund keeps at least 80% in large companies.",
     ],
     confused: [
       {
         name: "SIF",
-        text: "Run by mutual fund houses, with the same tax rules, plus tools for falling and sideways markets. See entry 04, next.",
+        text: "Same fund houses and tax rules, with tools for rising, falling and sideways markets. Entry 04, next.",
       },
       {
         name: "ULIP",
@@ -162,11 +166,11 @@ export const products = [
     ],
     glance: [
       ["Regulator", "SEBI. AMFI is the industry body."],
-      ["Minimum", "Set by each scheme. A monthly SIP can start at ₹100 to ₹500.", { min: 100, label: "from ₹100" }],
+      ["Minimum", "Set by each scheme. A monthly SIP can often start from ₹100.", { min: 100, label: "from ₹100" }],
       ["Time commitment", "None for most open-ended funds. Tax-saving ELSS funds lock in for 3 years. Equity funds suit goals at least 5 years away."],
       ["Money out", "Sell units any business day. An exit load (a small charge) may apply if you sell within a set period."],
-      ["Costs", "The total expense ratio (TER), taken from the NAV daily, within limits set by SEBI."],
-      ["Tax in brief", "Equity funds: 20% on gains if sold within 12 months; 12.5% after that, on gains above ₹1.25 lakh a year. Debt funds: your slab rate, however long you hold (units bought before 1 April 2023: 12.5% after 24 months). Most other funds, such as gold and overseas funds: 12.5% after 24 months."],
+      ["Costs", "The expense ratio, taken from the NAV daily. SEBI caps its base part (the base expense ratio)."],
+      ["Tax in brief", "Equity funds: 20% STCG if you redeem or switch within 12 months; 12.5% LTCG after that, with ₹1.25 lakh of gains a year tax-free. Debt funds: your slab rate, however long you hold (units bought before 1 April 2023: 12.5% after 24 months). Gold and overseas funds: slab rate within 24 months, then 12.5% (12 months for ETFs)."],
     ],
     gaugeTitle: "Risk check: the riskometer",
     gaugeAside: "Printed on every scheme",
@@ -177,7 +181,7 @@ export const products = [
     ],
     twice: [
       "You may need the money within a year. Some funds suit short periods better.",
-      "You want a fixed, guaranteed return. Fund values move with markets.",
+      "You want a fixed rate of interest. NCDs (entry 05) may suit you better.",
     ],
     ask: [
       "Is the riskometer level right for me?",
@@ -199,53 +203,53 @@ export const products = [
     title: "SIF",
     formal: "Specialised investment funds · regulated by SEBI",
     oneLine:
-      "A SIF is a mutual fund with more tools. It follows SEBI’s mutual fund rules and is taxed the same way. " +
-      "But the manager can also bet on falls, move between asset types, and turn market exposure up or down.",
+      "A SIF is run by a mutual fund house under SEBI’s mutual fund rules, and is taxed like a mutual fund. " +
+      "Its manager has more tools: it can gain when prices fall, move between asset types, and turn market exposure up or down.",
     plateTitle: "One fund, three kinds of market",
     marks: [
-      "Built for rising, falling and sideways markets. The manager can raise or cut exposure, and bet on falls with up to 25% of the fund.",
-      "Taxed like a mutual fund: nothing is taxed inside the fund, only when you redeem or switch.",
-      "Can be cautious or adventurous, from arbitrage and bonds to equity long-short. The Risk Band (Level 1 to 5) tells you which.",
+      "Has tools for rising, falling and sideways markets: the manager can raise or cut exposure, and take short positions with up to 25% of the fund.",
+      "Taxed like a mutual fund: nothing is taxed inside the fund. In the growth option, you pay tax only when you redeem or switch.",
+      "Can be cautious or adventurous. Each strategy’s Risk Band, from Level 1 (lowest risk) to Level 5 (highest), tells you which.",
     ],
     confused: [
       {
         name: "Mutual funds",
-        text: "Same family, same tax rules. A SIF adds tools for falling and sideways markets, and starts at ₹10 lakh.",
+        text: "Same fund houses, tax rules and safeguards. A SIF adds tools for falling and sideways markets, and starts at ₹10 lakh.",
       },
       {
         name: "Category III AIFs and PMS",
-        text: "Similar long-short tools, but taxed every year. In a SIF, tax waits until you redeem or switch. More on the next two pages.",
+        text: "Similar tools (fewer in a PMS), but taxed every year. In a SIF, tax waits until you redeem or switch.",
       },
     ],
     glance: [
       ["Regulator", "SEBI, under the mutual fund rules, through eligible fund houses."],
-      ["Minimum", "₹10 lakh per investor, across one fund house’s SIF strategies.", { min: 1e6, label: "from ₹10 lakh" }],
-      ["Time commitment", "No lock-in for most strategies. A few have set redemption dates, or a fixed term."],
-      ["Money out", "Equity strategies: usually any business day. Hybrid strategies: on set days, at least twice a week, with up to 15 working days’ notice."],
+      ["Minimum", "₹10 lakh in total per fund house, split across its strategies as you like.", { min: 1e6, label: "from ₹10 lakh" }],
+      ["Time commitment", "No lock-in for most. A few have set redemption dates or a fixed term."],
+      ["Money out", "Equity: usually any business day. Hybrid: set days, at least twice a week; payment can take up to 15 working days."],
       ["Costs", "An expense ratio, taken from the NAV, as in a mutual fund."],
-      ["Tax in brief", "Same as mutual funds. Equity-oriented: 20% STCG if you redeem or switch within 12 months; 12.5% LTCG after that, on gains above ₹1.25 lakh a year. Debt: your slab rate."],
+      ["Tax in brief", "Same as mutual funds, by what it holds. Equity-oriented: 20% STCG if you redeem or switch within 12 months, 12.5% LTCG after. Mostly bonds: slab rate. Others: like similar funds."],
     ],
-    gaugeTitle: "Tax check: one strategy, three products",
-    gaugeAside: "Highest tax slab, base rates",
+    gaugeTitle: "Tax check: a long-short strategy, three products",
+    gaugeAside: "Top tax slab, base rates",
     suits: [
-      "You invest in mutual funds and want strategies that can also handle falling and flat markets.",
+      "You want one fund with tools for rising, falling and sideways markets.",
       "You want one fund that can be your whole portfolio, or its steadier part.",
-      "You want mutual fund tax rules for long-short strategies.",
+      "You prefer mutual fund tax rules.",
     ],
     twice: [
-      "₹10 lakh would be a large part of your savings.",
+      "₹10 lakh would be a large part of your savings. Mutual funds can be the first step.",
       "You may need your money on a particular day. Some strategies pay out only on set days.",
     ],
     ask: [
-      "Which strategy is this, and what is its Risk Band today?",
-      "How does the manager change exposure when markets rise, fall or move sideways?",
-      "Is it equity-oriented for tax, and on which days can I redeem?",
+      "What is this strategy’s Risk Band today?",
+      "How does the manager change exposure as markets move?",
+      "Is it equity-oriented, and when can I redeem?",
       "What are the total costs?",
     ],
     notes: ["SIF / strategy", "Amount ₹", "Risk band", "Redemption days"],
     legal:
       '<span class="warn">Investments in SIFs are subject to market risks, read all investment strategy related documents carefully.</span> ' +
-      "{{firm}} is an AMFI Registered Mutual Fund Distributor and SIF Distributor (ARN-328299).",
+      "SIFs are a separate category from mutual funds, with their own risks. {{firm}} is an AMFI Registered SIF Distributor (SIFD), ARN-328299.",
     extra: "extra-sif.html",
   },
 
@@ -253,7 +257,7 @@ export const products = [
     id: "ncd",
     no: "05",
     job: "build",
-    short: "NCDs",
+    short: 'NCD<span style="text-transform:none">s</span>',
     title: "NCDs",
     formal: "Non-convertible debentures · regulated by SEBI",
     oneLine:
@@ -268,13 +272,13 @@ export const products = [
     confused: [
       {
         name: "Bank fixed deposits",
-        text: "Bank deposits are insured up to ₹5 lakh per depositor per bank by DICGC. NCDs are not insured. The higher rate on an NCD comes with more risk.",
+        text: "Bank deposits are insured up to ₹5 lakh per depositor per bank by DICGC. NCDs are not insured; repayment depends on the company.",
       },
     ],
     glance: [
-      ["Regulator", "SEBI, for the issue and listing. If the company is an NBFC, RBI regulates it too."],
-      ["Minimum", "Usually ₹10,000 in a public issue.", { min: 1e4, label: "from ₹10,000" }],
-      ["Time commitment", "The period of the series you pick, usually 18 months to 10 years."],
+      ["Regulator", "SEBI, for the issue and listing. If the company is an NBFC (a finance company that is not a bank), RBI regulates it too."],
+      ["Minimum", "Usually ₹10,000 when a company offers NCDs to the public (a public issue).", { min: 1e4, label: "from ₹10,000" }],
+      ["Time commitment", "The period of the option (series) you pick, usually 18 months to 10 years."],
       ["Money out", "Interest as you chose, and your money back at maturity. You can sell earlier on the stock exchange, but the price may be lower and buyers may be few."],
       ["Costs", "No fee to apply in a public issue. You need a demat account, and brokerage applies if you sell."],
       ["Tax in brief", "Interest is taxed at your slab rate. If you sell a listed NCD after 12 months, 12.5% on the gain; within 12 months, your slab rate."],
@@ -282,23 +286,23 @@ export const products = [
     gaugeTitle: "Risk check: the credit rating",
     gaugeAside: "Check it before the interest rate",
     suits: [
-      "You want a steady, regular income.",
+      "You want regular interest at a fixed rate.",
       "You can hold the NCD until it matures.",
-      "You understand that repayment depends on the company.",
+      "You have checked the rating and security, with us.",
     ],
     twice: [
       "A very high rate has caught your eye. We can check the rating and security with you.",
       "You may need the money before maturity. Selling on the exchange can mean a lower price.",
     ],
     ask: [
-      "What is the rating, from which agency, and is the outlook stable?",
+      "What is the rating, from which agency, and is it expected to hold (outlook)?",
       "Is it secured, and what is the asset cover?",
-      "Which series: the period, how often interest is paid, and the effective yield?",
+      "Which series: how long, how often interest is paid, and the yearly rate after compounding?",
       "What if I need my money before maturity?",
     ],
     notes: ["Issuer / series", "Rate % and payout", "Amount ₹", "Matures on"],
     legal:
-      '<span class="warn">Investments in debt securities are subject to risks including delay and/or default in payment. Read all the offer related documents carefully.</span> ' +
+      '<span class="warn">Investments in debt securities/municipal debt securities/securitised debt instruments are subject to risks including delay and/or default in payment. Read all the offer related documents carefully.</span> ' +
       "Ratings are opinions, not guarantees.",
   },
 
@@ -315,7 +319,7 @@ export const products = [
     plateTitle: "Who owns what, and who decides",
     marks: [
       "The shares are bought in your name and held in your own demat account.",
-      "Every PMS reports its returns against a common benchmark, so managers can be compared.",
+      "Every PMS reports its returns against a set benchmark for its type of strategy, so managers can be compared.",
       "No upfront fees are allowed. Fees are fixed, linked to profits above a set level (the hurdle), or both.",
     ],
     confused: [
@@ -328,18 +332,18 @@ export const products = [
       ["Time commitment", "No lock-in. An exit charge may apply in the first three years."],
       ["Money out", "Withdraw part or all. You get cash, or the shares themselves."],
       ["Costs", "A management fee, a performance fee, or both, plus brokerage, custody charges and GST."],
-      ["Tax in brief", "Every trade is taxed in your hands, as if you had made it yourself."],
+      ["Tax in brief", "Every sale is taxed in your hands, as if you had made it yourself."],
     ],
     gaugeTitle: "Risk check: concentration",
     gaugeAside: "Fewer stocks, more weight on each",
     suits: [
       "You have ₹50 lakh or more for shares and want a focused portfolio.",
       "You want to see every stock and trade in your own account.",
-      "You are comfortable with results that can differ a lot from the market index.",
+      "You want a portfolio that does not just copy the index, knowing results will differ from it.",
     ],
     twice: [
-      "Low fees matter most to you. We can compare the costs with mutual funds.",
-      "You prefer a simple tax return. Every sale shows up as a gain or loss in your name.",
+      "You are new to shares. We can compare a PMS with PRIM or mutual funds, fees included.",
+      "You file your own return. The manager sends a yearly tax statement for your CA.",
     ],
     ask: [
       "How has the strategy done against its benchmark, through good years and bad?",
@@ -365,7 +369,7 @@ export const products = [
       "loans to private companies, real estate and start-ups. Some AIFs also run specialist strategies in listed shares.",
     plateTitle: "The life of a fund with a fixed term",
     marks: [
-      "It gives you a share of companies while they are still private, often years before they list.",
+      "Many AIFs give you a share of companies while they are still private, often years before they list.",
       "You promise (commit) an amount. The manager asks for it in parts (capital calls) as deals are found.",
       "Offered only privately (private placement), to at most 1,000 investors in each scheme.",
     ],
@@ -379,24 +383,24 @@ export const products = [
       ["Regulator", "SEBI, under the AIF Regulations, 2012."],
       ["Minimum", "₹1 crore commitment, paid in parts as the fund invests.", { min: 1e7, label: "₹1 crore" }],
       ["Time commitment", "Category I and II: a fixed term, often 4 to 10 years. Category III: open-ended, or a fixed term."],
-      ["Money out", "As the fund sells its investments, mostly in its later years. Leaving before the term ends is rarely possible."],
+      ["Money out", "As the fund sells its investments, mostly in its later years. Plan to stay for the full term."],
       ["Costs", "A management fee, plus carried interest: the manager’s share of profits above the hurdle."],
-      ["Tax in brief", "Category I and II: income is taxed in your hands (pass-through). Category III: the fund pays the tax before paying you."],
+      ["Tax in brief", "Category I and II: income is mostly taxed in your hands (pass-through). Category III: the fund pays the tax before paying you."],
     ],
     gaugeTitle: "Cost check: how profits are shared",
     gaugeAside: "The order in which money is paid out",
     suits: [
-      "You have ₹1 crore or more that you will not need for 7 to 10 years.",
-      "You want a share of the growth that happens before companies list.",
+      "You have ₹1 crore or more that can stay invested for the fund’s full term.",
+      "You want a share of growth before companies list, or income from lending to them.",
       "Your core portfolio is already in place.",
     ],
     twice: [
       "You may need this money before the fund’s term ends. We can look at funds with shorter terms.",
-      "₹1 crore would be a large share of your wealth.",
+      "₹1 crore would be a large share of your wealth. We can talk about building up to it.",
     ],
     ask: [
       "What does the fund invest in, and how did the manager’s earlier funds do?",
-      "How much will be called, and how often? What if I miss a call?",
+      "How much will the fund ask for, how often, and what if I pay late?",
       "What are the fees, the hurdle and the carried interest?",
       "How long is the fund’s term, and can it be extended?",
     ],
@@ -420,7 +424,7 @@ export const products = [
     plateTitle: "The route from your bank account to the world",
     marks: [
       "You invest in US dollars. What you get back depends on the markets and on the rupee–dollar rate.",
-      "It uses your Liberalised Remittance Scheme (LRS) limit of USD 2,50,000 per person per financial year. Travel, studies and gifts abroad share the same limit.",
+      "It uses your Liberalised Remittance Scheme (LRS) limit of USD 2,50,000 (over ₹2 crore) per person per financial year. Travel, studies and gifts abroad share it.",
       "Your bank collects 20% TCS on money sent abroad to invest above ₹10 lakh a year. You can adjust it against your tax or claim a refund.",
     ],
     confused: [
@@ -428,13 +432,13 @@ export const products = [
         name: "International funds in rupees",
         text: "Sold in India in rupees, but they can stop taking new money when the industry’s overseas limit is reached.",
       },
-      { name: "Foreign broker accounts", text: "Your money sits overseas, under a foreign regulator." },
+      { name: "Foreign broker accounts", text: "Your money is held overseas, under that country’s regulator." },
     ],
     glance: [
       ["Regulator", "IFSCA, the regulator for GIFT City. Money sent there follows RBI’s Liberalised Remittance Scheme (LRS)."],
-      ["Minimum", "Depends on the product. Retail funds set their own. PMS from USD 75,000. AIFs from USD 1,50,000 (accredited investors can invest less)."],
+      ["Minimum", "Depends on the product. Funds open to all set their own. PMS from USD 75,000. AIFs from USD 1,50,000 (accredited investors can invest less)."],
       ["Time commitment", "Open-ended funds: no fixed term. AIFs: a fixed term."],
-      ["Money out", "Paid in US dollars. You can bring the money back to your Indian bank account."],
+      ["Money out", "Paid in US dollars. It is changed into rupees when it reaches your Indian bank account."],
       ["Costs", "Fund or service fees, plus currency conversion and bank charges for sending money."],
       ["Tax in brief", "Gains are taxable in India for residents. TCS is not an extra tax: it is adjusted against the tax you owe."],
     ],
@@ -443,11 +447,11 @@ export const products = [
     suits: [
       "Most of your wealth is in India and you want to spread it across the world.",
       "You have goals in dollars: studies abroad, travel, overseas property.",
-      "You prefer an Indian-regulated route, with service in Indian hours.",
+      "You prefer a route regulated by IFSCA in India, with service in Indian hours.",
     ],
     twice: [
       "You may need the money within a year or two. Exchange rates can swing over short periods.",
-      "You have already used most of this year’s LRS limit.",
+      "You have used most of this year’s LRS limit. Each family member has a limit of their own.",
     ],
     ask: [
       "What exactly does this product invest in, and where?",

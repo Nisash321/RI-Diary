@@ -71,8 +71,8 @@
   <text x="0" y="68.7" class="t-sm">for you. The most common type.</text>
 
   <text x="41" y="61.8" class="t-bd b">Non-discretionary</text>
-  <text x="41" y="65.4" class="t-sm">The manager suggests, you approve</text>
-  <text x="41" y="68.7" class="t-sm">each trade, the manager executes.</text>
+  <text x="41" y="65.4" class="t-sm">The manager suggests; you approve</text>
+  <text x="41" y="68.7" class="t-sm">each trade, and it carries it out.</text>
 
   <text x="82" y="61.8" class="t-bd b">Advisory</text>
   <text x="82" y="65.4" class="t-sm">The manager advises; you decide</text>

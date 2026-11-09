@@ -72,6 +72,16 @@ async function build() {
   });
   pages = pages.replace(/\{\{asof\}\}/g, meta.asOf).replace(/\{\{year\}\}/g, meta.diaryYear).replace(/\{\{firm\}\}/g, meta.firm);
 
+  // Typesetting: keep numbers with their units and short hyphenated terms on
+  // one line, in running text only (SVG text never wraps, so it is skipped).
+  const tidy = (t) => t
+    .replace(/(\d) (days?|months?|years?|hours?|lakh|crore|working)\b/g, "$1 $2")
+    .replace(/\b(USD|earlier|Section|Level|entry|page) (\d)/g, "$1 $2")
+    .replace(/(\d) (to) (\d)/g, "$1 $2 $3")
+    .replace(/\b(long-short|large-cap|co-payments?|top-up|Pre-IPO)\b/g, '<span class="nowrap">$1</span>');
+  pages = pages.split(/(<svg[\s\S]*?<\/svg>|<title[\s\S]*?<\/title>|<style[\s\S]*?<\/style>)/).map((part, i) =>
+    i % 2 ? part : part.replace(/>([^<>]+)</g, (m, t) => ">" + tidy(t) + "<")).join("");
+
   // Group pages into spreads for screen view: [1], [2,3], [4,5] ... [24]
   const sections = pages.match(/<section class="page[\s\S]*?<\/section>\s*<!-- \/page -->/g) || [];
   const spreads = [];

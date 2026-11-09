@@ -38,7 +38,7 @@
 
   <g class="t-sm">
     <rect x="0" y="38.4" width="1.1" height="1.1" class="f-job"/><text x="2.4" y="39.7" class="t-sm">Cut exposure, even to</text><text x="2.4" y="42.9" class="t-sm">below zero</text>
-    <rect x="0" y="45.8" width="1.1" height="1.1" class="f-job"/><text x="2.4" y="47.1" class="t-sm">Bet on falls with derivatives,</text><text x="2.4" y="50.3" class="t-sm">up to 25% of the fund</text>
+    <rect x="0" y="45.8" width="1.1" height="1.1" class="f-job"/><text x="2.4" y="47.1" class="t-sm">Take short positions,</text><text x="2.4" y="50.3" class="t-sm">up to 25% of the fund</text>
     <rect x="0" y="53.2" width="1.1" height="1.1" class="f-job"/><text x="2.4" y="54.5" class="t-sm">Hedge holdings with</text><text x="2.4" y="57.7" class="t-sm">futures and options</text>
 
     <rect x="41.35" y="38.4" width="1.1" height="1.1" class="f-job"/><text x="43.75" y="39.7" class="t-sm">Earn the small price gap</text><text x="43.75" y="42.9" class="t-sm">between shares and futures</text>
@@ -51,8 +51,8 @@
   </g>
 
   <line x1="0" y1="62" x2="122" y2="62" class="s-rule hair"/>
-  <text x="0" y="66.4" class="t-bd"><tspan class="b">The difference: only a SIF can bet on falls.</tspan></text>
-  <text x="0" y="69.9" class="t-sm">An equity mutual fund must stay mostly invested in shares. It can hedge, but it cannot bet on falls.</text>
-  <text x="0" y="73.2" class="t-sm">A SIF can, with up to 25% of the fund. Its total exposure stays within 100%, so it never borrows to invest.</text>
-  <text x="0" y="77.8" class="t-sm t-ink3" style="font-size:2.1px">Range for equity long-short strategies; some funds state −25% as their lowest. It shows what the rules allow, not returns.</text>
+  <text x="0" y="66.4" class="t-bd"><tspan class="b">The difference: unlike an equity mutual fund, a SIF can gain from falls.</tspan></text>
+  <text x="0" y="69.9" class="t-sm">An equity mutual fund must stay mostly invested in shares. It can hedge, but it cannot take short positions.</text>
+  <text x="0" y="73.2" class="t-sm">A SIF can, with up to 25% of the fund, and never borrows to invest. The manager’s calls can be wrong.</text>
+  <text x="0" y="77.8" class="t-sm t-ink3" style="font-size:2.1px">Below zero: the fund is set to gain a little if the market falls. Range for equity long-short strategies; not a promise of returns.</text>
 </svg>

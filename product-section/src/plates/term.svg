@@ -37,7 +37,7 @@
   <line x1="88.67" y1="42.0" x2="88.67" y2="43.2" class="s-ink3 hair"/><text x="88.67" y="46.0" class="t-sm mid">50</text>
   <line x1="103.33" y1="42.0" x2="103.33" y2="43.2" class="s-ink3 hair"/><text x="103.33" y="46.0" class="t-sm mid">55</text>
   <line x1="118.00" y1="42.0" x2="118.00" y2="43.2" class="s-ink3 hair"/><text x="118.00" y="46.0" class="t-sm mid">60</text>
-  <text x="0" y="51.2" class="t-sm t-ink3" style="font-size:2.2px">Each need gets smaller as the years pass. The term lasts as long as the family relies on his income.</text>
+  <text x="0" y="51.2" class="t-sm t-ink3" style="font-size:2.2px">The home loan and the years of income to replace shrink with time. The cover lasts while the family relies on his income.</text>
 
   <!-- outcomes -->
   <rect x="0" y="55" width="59" height="27" class="f-tint"/>
@@ -49,7 +49,7 @@
 
   <rect x="63" y="55" width="59" height="27" class="f-panel"/>
   <text x="66" y="59.8" class="t-cap">When Rohan turns 60</text>
-  <text x="66" y="67.6" class="t-xl" style="fill:var(--ink-2)">Job done</text>
+  <text x="66" y="67.6" class="t-xl" style="fill:var(--ink-2)">Cover complete</text>
   <text x="66" y="72.8" class="t-sm">The cover ends. The loan is repaid, the</text>
   <text x="66" y="76.1" class="t-sm">children are independent, and paying only</text>
   <text x="66" y="79.4" class="t-sm">for protection kept the premium low.</text>

@@ -47,7 +47,7 @@
 
   <!-- Who is paid first -->
   <line x1="0" y1="57.8" x2="122" y2="57.8" class="s-rule hair"/>
-  <text x="0" y="62" class="t-cap job">If the company fails, who is paid first?</text>
+  <text x="0" y="62" class="t-cap job">If a company cannot repay, who is paid first?</text>
 
   <rect x="0" y="64.4" width="37" height="10.6" class="f-job"/>
   <text x="2.6" y="68.8" class="t-bd b t-white">1  Secured lenders</text>

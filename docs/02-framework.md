@@ -24,7 +24,7 @@ The section starts on a right-hand page so every entry opens as a facing spread.
 | 20–21 | 07 AIF in depth: private markets, which AIFs invest when, choosing a manager, "Is it for you?" |
 | 22–23 | 08 GIFT City |
 | 24–25 | Side by side: all eight compared across the spread |
-| 26 | Words to know (34 terms) |
+| 26 | Words to know (45 terms) |
 | 27 | Your money check-up (quarterly tick boxes, review dates) |
 | 28 | Important information: registrations, warnings, grievances |
 
@@ -129,11 +129,20 @@ Indian buyers avoid talking about death, and insurers have learned to sell prote
 
 - The section explains **categories**, never named schemes, funds, insurers or issuers, so it reads as investor education.
 - Standard warnings are printed **verbatim** in bold where a regulator prescribes them.
-- Each entry carries the registration line for that product (ARN, SIFD, APRN, IRDAI registration and so on).
+- Registration lines: ARN-14532 and ARN-328299 on the mutual fund pages, ARN-328299 (SIFD) on the SIF pages, APRN-07532 on the PMS page, all repeated on the Important information page. The firm chose not to print insurance, NCD, AIF or GIFT IFSC identifiers.
 - The AIF entry and the AIF in-depth spread state that AIFs are offered only by private placement to eligible investors, and that the page is not an offer. The private-markets case is made with structural facts (age at listing, private funding, the share of companies that are private), never with returns, and is balanced on the same spread by "results vary widely", "Is it for you?" and the risk that companies never list.
 - SIF tax statements (highest-bracket rates, when tax is paid) need sign-off from a tax adviser before print.
 - Insurance pages need written approval from each insurer whose products are distributed (IRDAI advertising rules).
 - See [03-fact-sheet.md](03-fact-sheet.md) for every claim and its source.
+
+## 6a. Stakeholder review (Elephant Goldfish model)
+
+Before each print-ready draft, the section is reviewed by one "elephant" and several "goldfish":
+
+- **Elephant:** a reviewer with every instruction, house rule and fact-sheet source in hand. It checks that each instruction is met and that facts, page references and terms agree across all 28 pages.
+- **Goldfish:** reviewers with no background, who read only the pages, each from one stakeholder's seat: a first-time client in Dindigul, a compliance officer (SEBI, AMFI, APMI, IRDAI, IFSCA), a chartered accountant, the business owner and relationship manager, and a proofreader and print designer.
+
+Where a goldfish finding conflicts with a client instruction (for example, removing the private-markets pages or the tax comparison), the instruction stands; the wording is made fair and accurate, and the residual risk is listed for the client to decide. Draft 4 (November 2026) went through this review.
 
 ## 7. Changing or adding a product
 

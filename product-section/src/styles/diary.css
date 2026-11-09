@@ -282,17 +282,17 @@ strong, b, .b { font-weight: 700; }
 }
 .sbs .right .rowlabel, .sbs td.rowlabel.right { text-align: right; padding-right: 0; padding-left: 1.4mm; }
 .sbs td b { font-weight: 700; }
-.sbs tr.h-line td { height: 15.2mm; }
-.sbs tr.h-reg td { height: 10.2mm; }
-.sbs tr.h-min td { height: 15.2mm; }
-.sbs tr.h-time td { height: 12.8mm; }
-.sbs tr.h-out td { height: 12.8mm; }
-.sbs tr.h-risk td { height: 12.8mm; }
-.sbs tr.h-tax td { height: 15.2mm; }
-.sbs tr.h-best td { height: 12.8mm; }
+.sbs tr.h-line td { height: 16.4mm; }
+.sbs tr.h-reg td { height: 10.8mm; }
+.sbs tr.h-min td { height: 16.4mm; }
+.sbs tr.h-time td { height: 13.8mm; }
+.sbs tr.h-out td { height: 13.8mm; }
+.sbs tr.h-risk td { height: 13.8mm; }
+.sbs tr.h-tax td { height: 17.6mm; }
+.sbs tr.h-best td { height: 13.8mm; }
 
-.glossary { columns: 2; column-gap: 5mm; margin-top: 4mm; font-size: 7.6pt; line-height: 1.3; }
-.glossary p { break-inside: avoid; margin-bottom: 1.35mm; text-wrap: pretty; }
+.glossary { columns: 2; column-gap: 5mm; margin-top: 2.6mm; font-size: 6.8pt; line-height: 1.22; }
+.glossary p { break-inside: avoid; margin-bottom: .85mm; text-wrap: pretty; }
 .glossary b { font-weight: 700; color: var(--ink); }
 
 .checkup { width: 100%; border-collapse: collapse; margin-top: 4mm; font-size: 7.8pt; line-height: 1.25; }
@@ -310,7 +310,7 @@ strong, b, .b { font-weight: 700; }
 .review .field span { font-family: var(--display); font-weight: 600; font-stretch: 87.5%; font-size: 6.2pt; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); padding-bottom: .7mm; }
 .review .field.wide { grid-column: span 2; }
 
-.info { font-size: 7.3pt; line-height: 1.34; color: var(--ink-2); }
+.info { font-size: 7.6pt; line-height: 1.36; color: var(--ink-2); }
 .info h3 { margin-top: 3.4mm; margin-bottom: 1.1mm; }
 .info p + p { margin-top: 1.2mm; }
 .info .warnings p { padding-left: 2.6mm; border-left: .5mm solid var(--rule); }
@@ -435,3 +435,5 @@ svg text { font-family: var(--text); }
 .finder td:nth-child(2) { width: 34mm; font-weight: 700; color: var(--job-deep); white-space: nowrap; }
 .finder .fno { display: inline-block; width: 5.4mm; font-family: var(--display); font-weight: 700; font-stretch: 87.5%; color: var(--job); }
 .finder td.pg { width: 9mm; font-family: var(--display); font-weight: 650; font-variant-numeric: tabular-nums; }
+
+.notes { margin-bottom: 1.6mm; }

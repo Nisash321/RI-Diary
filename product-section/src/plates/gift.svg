@@ -32,7 +32,7 @@
   <text x="45.4" y="16.9" class="t-sm">Global funds (retail schemes)</text>
   <text x="45.4" y="24.3" class="t-sm">AIFs · from USD 1,50,000</text>
   <text x="45.4" y="31.7" class="t-sm">PMS · from USD 75,000</text>
-  <text x="45.4" y="39.1" class="t-sm">Global stocks via NSE IX</text>
+  <text x="45.4" y="39.1" class="t-sm">Global shares on NSE IX, GIFT City’s exchange</text>
   <text x="45.4" y="46.5" class="t-sm">US-dollar deposits (IFSC banks)</text>
 
   <line x1="91" y1="26" x2="100.4" y2="26" class="s-ink2 med" marker-end="url(#ah-gift)"/>
@@ -49,7 +49,7 @@
 
   <!-- Coming back -->
   <path d="M65.5,51.4 V55 H9 V31.6" class="f-none s-ink2 thin dash" marker-end="url(#ah-gift)"/>
-  <text x="38" y="58.6" class="t-sm mid">Proceeds come back in US dollars, to your Indian bank account</text>
+  <text x="38" y="58.6" class="t-sm mid">Money comes back in dollars, changed into rupees at your bank</text>
 
   <!-- LRS limit -->
   <line x1="0" y1="61.4" x2="122" y2="61.4" class="s-rule hair"/>
