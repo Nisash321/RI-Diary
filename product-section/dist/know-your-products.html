@@ -399,8 +399,8 @@ strong, b, .b { font-weight: 700; }
 .review .field span { font-family: var(--display); font-weight: 600; font-stretch: 87.5%; font-size: 6.2pt; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); padding-bottom: .7mm; }
 .review .field.wide { grid-column: span 2; }
 
-.info { font-size: 7.6pt; line-height: 1.36; color: var(--ink-2); }
-.info h3 { margin-top: 3.4mm; margin-bottom: 1.1mm; }
+.info { font-size: 7.2pt; line-height: 1.32; color: var(--ink-2); }
+.info h3 { margin-top: 2.8mm; margin-bottom: 1mm; }
 .info p + p { margin-top: 1.2mm; }
 .info .warnings p { padding-left: 2.6mm; border-left: .5mm solid var(--rule); }
 .info .warnings p b { color: var(--ink); }
@@ -607,12 +607,15 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
 .help-call span { display: block; color: var(--ink-2); font-size: 7.4pt; }
 .help-call b { display: block; font-variant-numeric: tabular-nums; font-size: 9pt; }
 .help-call .help-mail { grid-column: 2 / -1; color: var(--ink-2); margin-top: 1mm; }
+.info-help { display: grid; grid-template-columns: 1fr 1fr; column-gap: 4mm; row-gap: .8mm; }
+.info-help li { position: relative; padding-left: 3.4mm; }
+.info-help li::before { content: ""; position: absolute; left: .45mm; top: .5mm; width: 1.1mm; height: 2.1mm; border: solid var(--build); border-width: 0 .4mm .4mm 0; transform: rotate(42deg); }
 
 </style>
 </head>
 <body>
 <main class="book">
-<div class="spread single-recto"><span class="spread-label">Page 1</span><div class="blank"></div><section class="page recto" data-job="neutral" id="opener">
+<div class="spread"><span class="spread-label">Pages 1–2</span><section class="page verso" data-job="neutral" id="opener">
   <header class="runhead"><span>Ram Investments · Diary 2027</span><span>Product guide</span></header>
   <p class="label muted opener-eyebrow">A field guide to eight products</p>
   <h1 class="opener-title">Know Your<br>Products</h1>
@@ -622,61 +625,60 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
     <div class="toc-group" data-job="protect">
       <span class="label">Protect</span>
       <div class="toc-rows">
-        <div class="toc-row"><span class="toc-no">01</span><span class="toc-name"><b>Term Insurance</b></span><span class="toc-dots"></span><span class="toc-pg">4</span></div>
-        <div class="toc-row"><span class="toc-no">02</span><span class="toc-name"><b>Health Insurance</b></span><span class="toc-dots"></span><span class="toc-pg">6</span></div>
+        <div class="toc-row"><span class="toc-no">01</span><span class="toc-name"><b>Term Insurance</b></span><span class="toc-dots"></span><span class="toc-pg">3</span></div>
+        <div class="toc-row"><span class="toc-no">02</span><span class="toc-name"><b>Health Insurance</b></span><span class="toc-dots"></span><span class="toc-pg">5</span></div>
       </div>
     </div>
     <div class="toc-group" data-job="build">
       <span class="label">Build</span>
       <div class="toc-rows">
-        <div class="toc-row"><span class="toc-no">03</span><span class="toc-name"><b>Mutual Funds</b></span><span class="toc-dots"></span><span class="toc-pg">8</span></div>
-        <div class="toc-row"><span class="toc-no">04</span><span class="toc-name"><b>SIF</b> <span class="sub">Specialised investment funds, plus two pages in depth</span></span><span class="toc-dots"></span><span class="toc-pg">10</span></div>
-        <div class="toc-row"><span class="toc-no">05</span><span class="toc-name"><b>NCDs</b> <span class="sub">Non-convertible debentures</span></span><span class="toc-dots"></span><span class="toc-pg">14</span></div>
+        <div class="toc-row"><span class="toc-no">03</span><span class="toc-name"><b>Mutual Funds</b></span><span class="toc-dots"></span><span class="toc-pg">7</span></div>
+        <div class="toc-row"><span class="toc-no">04</span><span class="toc-name"><b>SIF</b> <span class="sub">Specialised investment funds, plus two pages in depth</span></span><span class="toc-dots"></span><span class="toc-pg">9</span></div>
+        <div class="toc-row"><span class="toc-no">05</span><span class="toc-name"><b>NCDs</b> <span class="sub">Non-convertible debentures</span></span><span class="toc-dots"></span><span class="toc-pg">13</span></div>
       </div>
     </div>
     <div class="toc-group" data-job="special">
       <span class="label">Specialise</span>
       <div class="toc-rows">
-        <div class="toc-row"><span class="toc-no">06</span><span class="toc-name"><b>PMS</b> <span class="sub">Portfolio management services</span></span><span class="toc-dots"></span><span class="toc-pg">16</span></div>
-        <div class="toc-row"><span class="toc-no">07</span><span class="toc-name"><b>AIF</b> <span class="sub">Alternative investment funds, plus two pages on private markets</span></span><span class="toc-dots"></span><span class="toc-pg">18</span></div>
+        <div class="toc-row"><span class="toc-no">06</span><span class="toc-name"><b>PMS</b> <span class="sub">Portfolio management services</span></span><span class="toc-dots"></span><span class="toc-pg">15</span></div>
+        <div class="toc-row"><span class="toc-no">07</span><span class="toc-name"><b>AIF</b> <span class="sub">Alternative investment funds, plus two pages on private markets</span></span><span class="toc-dots"></span><span class="toc-pg">17</span></div>
       </div>
     </div>
     <div class="toc-group" data-job="global">
       <span class="label">Globalise</span>
       <div class="toc-rows">
-        <div class="toc-row"><span class="toc-no">08</span><span class="toc-name"><b>GIFT City</b> <span class="sub">International investing</span></span><span class="toc-dots"></span><span class="toc-pg">22</span></div>
+        <div class="toc-row"><span class="toc-no">08</span><span class="toc-name"><b>GIFT City</b> <span class="sub">International investing</span></span><span class="toc-dots"></span><span class="toc-pg">21</span></div>
       </div>
     </div>
     <div class="toc-group" data-job="neutral">
       <span class="label muted">Also inside</span>
       <div class="toc-rows">
-        <div class="toc-row"><span class="toc-no"></span><span class="toc-name">Where to start, and how we help you</span><span class="toc-dots"></span><span class="toc-pg">2–3</span></div>
-        <div class="toc-row"><span class="toc-no"></span><span class="toc-name">Side by side: all eight compared</span><span class="toc-dots"></span><span class="toc-pg">24</span></div>
-        <div class="toc-row"><span class="toc-no"></span><span class="toc-name">Words to know</span><span class="toc-dots"></span><span class="toc-pg">26</span></div>
-        <div class="toc-row"><span class="toc-no"></span><span class="toc-name">Your 2027 money check-up</span><span class="toc-dots"></span><span class="toc-pg">27</span></div>
-        <div class="toc-row"><span class="toc-no"></span><span class="toc-name">Important information</span><span class="toc-dots"></span><span class="toc-pg">28</span></div>
+        <div class="toc-row"><span class="toc-no"></span><span class="toc-name">Where to start</span><span class="toc-dots"></span><span class="toc-pg">2</span></div>
+        <div class="toc-row"><span class="toc-no"></span><span class="toc-name">Side by side: all eight compared</span><span class="toc-dots"></span><span class="toc-pg">23</span></div>
+        <div class="toc-row"><span class="toc-no"></span><span class="toc-name">Words to know</span><span class="toc-dots"></span><span class="toc-pg">25</span></div>
+        <div class="toc-row"><span class="toc-no"></span><span class="toc-name">Your 2027 money check-up</span><span class="toc-dots"></span><span class="toc-pg">26</span></div>
+        <div class="toc-row"><span class="toc-no"></span><span class="toc-name">How we help you, and important information</span><span class="toc-dots"></span><span class="toc-pg">27</span></div>
       </div>
     </div>
   </nav>
   <p class="opener-note">Facts are as of October 2026. Rules change, so check the latest with us before you invest. This section is investor education. It is not advice, and not an offer to buy or sell any product.</p>
   <footer class="folio"><span class="pg">1</span></footer>
 </section>
-<!-- /page --></div>
-<div class="spread"><span class="spread-label">Pages 2–3</span><section class="page verso" data-job="neutral" id="start">
-  <header class="runhead"><span>Know your products</span><span>Where to start</span></header>
+<!-- /page --><section class="page recto" data-job="neutral" id="start">
+  <header class="runhead"><span>Where to start</span><span>Know your products</span></header>
   <h2 class="page-title">Where to start</h2>
   <p class="intro">Begin with what you want your money to do. Each line points to the product, and the page that explains it.</p>
   <table class="finder">
     <thead><tr><th>If you want to</th><th>Look at</th><th>Page</th></tr></thead>
     <tbody>
-      <tr data-job="protect"><td>Keep your family’s plans on track if something happens to you</td><td><span class="fno">01</span>Term insurance</td><td class="pg">4</td></tr>
-      <tr data-job="protect"><td>Pay hospital bills without dipping into your savings</td><td><span class="fno">02</span>Health insurance</td><td class="pg">6</td></tr>
-      <tr data-job="build"><td>Grow wealth for long-term goals, a little every month</td><td><span class="fno">03</span>Mutual funds</td><td class="pg">8</td></tr>
-      <tr data-job="build"><td>Hold one fund with tools for rising, falling and sideways markets</td><td><span class="fno">04</span>SIF</td><td class="pg">10</td></tr>
-      <tr data-job="build"><td>Earn interest at a fixed rate for a set period</td><td><span class="fno">05</span>NCDs</td><td class="pg">14</td></tr>
-      <tr data-job="special"><td>Own a focused portfolio, held in your own name</td><td><span class="fno">06</span>PMS</td><td class="pg">16</td></tr>
-      <tr data-job="special"><td>Invest in private companies before they list, or lend to them</td><td><span class="fno">07</span>AIF</td><td class="pg">18</td></tr>
-      <tr data-job="global"><td>Invest abroad, in US dollars</td><td><span class="fno">08</span>GIFT City</td><td class="pg">22</td></tr>
+      <tr data-job="protect"><td>Keep your family’s plans on track if something happens to you</td><td><span class="fno">01</span>Term insurance</td><td class="pg">3</td></tr>
+      <tr data-job="protect"><td>Pay hospital bills without dipping into your savings</td><td><span class="fno">02</span>Health insurance</td><td class="pg">5</td></tr>
+      <tr data-job="build"><td>Grow wealth for long-term goals, a little every month</td><td><span class="fno">03</span>Mutual funds</td><td class="pg">7</td></tr>
+      <tr data-job="build"><td>Hold one fund with tools for rising, falling and sideways markets</td><td><span class="fno">04</span>SIF</td><td class="pg">9</td></tr>
+      <tr data-job="build"><td>Earn interest at a fixed rate for a set period</td><td><span class="fno">05</span>NCDs</td><td class="pg">13</td></tr>
+      <tr data-job="special"><td>Own a focused portfolio, held in your own name</td><td><span class="fno">06</span>PMS</td><td class="pg">15</td></tr>
+      <tr data-job="special"><td>Invest in private companies before they list, or lend to them</td><td><span class="fno">07</span>AIF</td><td class="pg">17</td></tr>
+      <tr data-job="global"><td>Invest abroad, in US dollars</td><td><span class="fno">08</span>GIFT City</td><td class="pg">21</td></tr>
     </tbody>
   </table>
   <div class="section" style="margin-top:7mm">
@@ -709,35 +711,8 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
   <p class="opener-note">PRIM is a new kind of PMS, starting on 1 April 2027, that invests only in mutual funds. Insurance has no minimum, only a premium, and GIFT City minimums are in US dollars, so neither is on the scale above.</p>
   <footer class="folio"><span class="pg">2</span><span class="asof">Facts as of October 2026</span></footer>
 </section>
-<!-- /page --><section class="page recto" data-job="neutral" id="help">
-  <header class="runhead"><span>How we help you</span><span>Know your products</span></header>
-  <h2 class="page-title">How we help you</h2>
-  <p class="intro">Many of these products can be bought online. Families still come to us, because the hard part is not buying: it is choosing well and staying on course for years. This is what we do for you.</p>
-  <ol class="helpgrid">
-    <li><b>We stay with you when markets fall</b>We talk it through with you, so a bad month does not undo a long-term plan, and your SIPs keep going.</li>
-    <li><b>We match each product to a goal</b>We start from your goals, timelines and comfort with risk, and explain what you are buying before you sign.</li>
-    <li><b>We look at everything together</b>Funds, SIFs, NCDs, PMS, AIFs and insurance, reviewed side by side with you, at least once a year.</li>
-    <li><b>We handle the paperwork</b>KYC, nominees, bank and address changes, SIPs, switches and redemptions, so nothing stalls.</li>
-    <li><b>We help at tax time</b>Capital gains statements and the papers your tax consultant asks for, for every product you hold with us.</li>
-    <li><b>We stand by your family</b>If something happens to you, we help your family with insurance claims and with moving investments into their names.</li>
-    <li><b>We keep you up to date</b>When rules or taxes change, we tell you what it means for you, such as the new PMS rules from April 2027.</li>
-    <li><b>We are a phone call away</b>The same local team in Dindigul since 1985, for you and for the next generation of your family.</li>
-  </ol>
-  <div class="deep-callout df-callout">
-    <h3>How we are paid</h3>
-    <p>We receive commission from the providers of the products we distribute. It pays for this service, for as long as you invest with us.</p>
-  </div>
-  <div class="help-call">
-    <p class="label">Call us</p>
-    <p><span>L. Ashok</span> <b>98421 01574</b></p>
-    <p><span>N. Alagar</span> <b>99651 01999</b></p>
-    <p><span>Nishanth Ashok</span> <b>98421 01374</b></p>
-    <p class="help-mail">support@raminvestments.in · www.raminvestments.in</p>
-  </div>
-  <footer class="folio"><span class="pg">3</span><span class="asof">Ram Investments · Diary 2027</span></footer>
-</section>
 <!-- /page --></div>
-<div class="spread"><span class="spread-label">Pages 4–5</span><section class="page verso" data-job="protect" id="term">
+<div class="spread"><span class="spread-label">Pages 3–4</span><section class="page verso" data-job="protect" id="term">
   <header class="runhead"><span class="chip">Protect</span><span>Know your products · 01 of 08</span></header>
   <div class="entry-head">
     <div class="entry-no">01</div>
@@ -821,7 +796,7 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
       <p><span class="vs">Health insurance.</span> Pays hospital bills; term insurance does not (entry 02).</p>
     </aside>
   </div>
-  <footer class="folio"><span class="pg">4</span><span class="asof">Facts as of October 2026</span></footer>
+  <footer class="folio"><span class="pg">3</span><span class="asof">Facts as of October 2026</span></footer>
 </section>
 <!-- /page --><section class="page recto" data-job="protect" id="term-b">
   <header class="runhead"><span>01 · Term insurance</span><span class="chip">Protect</span></header>
@@ -861,10 +836,10 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
     <div class="notes"><div class="field"><span>Insurer</span></div><div class="field"><span>Cover ₹</span></div><div class="field"><span>Premium due</span></div><div class="field"><span>Nominee</span></div></div>
   </div>
   <p class="legal"><span class="warn">For more details on risk factors, terms and conditions please read sales brochure carefully before concluding a sale.</span> Insurance is underwritten by the insurer, which pays all claims.</p>
-  <footer class="folio"><span class="pg">5</span><span class="asof">Ram Investments · Diary 2027</span></footer>
+  <footer class="folio"><span class="pg">4</span><span class="asof">Ram Investments · Diary 2027</span></footer>
 </section>
 <!-- /page --></div>
-<div class="spread"><span class="spread-label">Pages 6–7</span><section class="page verso" data-job="protect" id="health">
+<div class="spread"><span class="spread-label">Pages 5–6</span><section class="page verso" data-job="protect" id="health">
   <header class="runhead"><span class="chip">Protect</span><span>Know your products · 02 of 08</span></header>
   <div class="entry-head">
     <div class="entry-no">02</div>
@@ -957,7 +932,7 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
       <p><span class="vs">Employer cover.</span> Usually ends when you change jobs or retire.</p>
     </aside>
   </div>
-  <footer class="folio"><span class="pg">6</span><span class="asof">Facts as of October 2026</span></footer>
+  <footer class="folio"><span class="pg">5</span><span class="asof">Facts as of October 2026</span></footer>
 </section>
 <!-- /page --><section class="page recto" data-job="protect" id="health-b">
   <header class="runhead"><span>02 · Health insurance</span><span class="chip">Protect</span></header>
@@ -1000,10 +975,10 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
     <div class="notes"><div class="field"><span>Insurer</span></div><div class="field"><span>Sum insured ₹</span></div><div class="field"><span>Renewal date</span></div><div class="field"><span>Claims helpline</span></div></div>
   </div>
   <p class="legal"><span class="warn">For more details on risk factors, terms and conditions please read sales brochure carefully before concluding a sale.</span> Insurance is underwritten by the insurer, which pays all claims.</p>
-  <footer class="folio"><span class="pg">7</span><span class="asof">Ram Investments · Diary 2027</span></footer>
+  <footer class="folio"><span class="pg">6</span><span class="asof">Ram Investments · Diary 2027</span></footer>
 </section>
 <!-- /page --></div>
-<div class="spread"><span class="spread-label">Pages 8–9</span><section class="page verso" data-job="build" id="mf">
+<div class="spread"><span class="spread-label">Pages 7–8</span><section class="page verso" data-job="build" id="mf">
   <header class="runhead"><span class="chip">Build</span><span>Know your products · 03 of 08</span></header>
   <div class="entry-head">
     <div class="entry-no">03</div>
@@ -1118,7 +1093,7 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
       <p><span class="vs">ULIP.</span> An insurance policy with an investment part, regulated by IRDAI. It is not a mutual fund.</p>
     </aside>
   </div>
-  <footer class="folio"><span class="pg">8</span><span class="asof">Facts as of October 2026</span></footer>
+  <footer class="folio"><span class="pg">7</span><span class="asof">Facts as of October 2026</span></footer>
 </section>
 <!-- /page --><section class="page recto" data-job="build" id="mf-b">
   <header class="runhead"><span>03 · Mutual funds</span><span class="chip">Build</span></header>
@@ -1201,10 +1176,10 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
     <div class="notes"><div class="field"><span>SIPs running</span></div><div class="field"><span>Monthly total ₹</span></div><div class="field"><span>Goal and year</span></div><div class="field"><span>Review month</span></div></div>
   </div>
   <p class="legal"><span class="warn">Mutual Fund investments are subject to market risks, read all scheme related documents carefully.</span> Ram Investments: AMFI Registered Mutual Fund Distributors L. Ashok (ARN-14532) and Nishanth Ashok (ARN-328299).</p>
-  <footer class="folio"><span class="pg">9</span><span class="asof">Ram Investments · Diary 2027</span></footer>
+  <footer class="folio"><span class="pg">8</span><span class="asof">Ram Investments · Diary 2027</span></footer>
 </section>
 <!-- /page --></div>
-<div class="spread"><span class="spread-label">Pages 10–11</span><section class="page verso" data-job="build" id="sif">
+<div class="spread"><span class="spread-label">Pages 9–10</span><section class="page verso" data-job="build" id="sif">
   <header class="runhead"><span class="chip">Build</span><span>Know your products · 04 of 08</span></header>
   <div class="entry-head">
     <div class="entry-no">04</div>
@@ -1281,7 +1256,7 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
       <p><span class="vs">Category III AIFs and PMS.</span> Similar tools (fewer in a PMS), but taxed every year. In a SIF, tax waits until you redeem or switch.</p>
     </aside>
   </div>
-  <footer class="folio"><span class="pg">10</span><span class="asof">Facts as of October 2026</span></footer>
+  <footer class="folio"><span class="pg">9</span><span class="asof">Facts as of October 2026</span></footer>
 </section>
 <!-- /page --><section class="page recto" data-job="build" id="sif-b">
   <header class="runhead"><span>04 · SIF</span><span class="chip">Build</span></header>
@@ -1344,10 +1319,10 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
     <div class="notes"><div class="field"><span>SIF / strategy</span></div><div class="field"><span>Amount ₹</span></div><div class="field"><span>Risk band</span></div><div class="field"><span>Redemption days</span></div></div>
   </div>
   <p class="legal"><span class="warn">Investments in Specialized Investment Fund involves relatively higher risk including potential loss of capital, liquidity risk and market volatility. Please read all investment strategy related documents carefully before making the investment decision.</span> Ram Investments: SIF Distributor (SIFD) Nishanth Ashok, ARN-328299.</p>
-  <footer class="folio"><span class="pg">11</span><span class="asof">Ram Investments · Diary 2027</span></footer>
+  <footer class="folio"><span class="pg">10</span><span class="asof">Ram Investments · Diary 2027</span></footer>
 </section>
 <!-- /page --></div>
-<div class="spread"><span class="spread-label">Pages 12–13</span><section class="page verso" data-job="build" id="sif-deep">
+<div class="spread"><span class="spread-label">Pages 11–12</span><section class="page verso" data-job="build" id="sif-deep">
   <header class="runhead"><span class="chip">Build</span><span>Know your products · 04 in depth</span></header>
   <div class="deep-head">
     <p class="label">SIF in depth</p>
@@ -1400,7 +1375,7 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
   <p class="deep-note">A SIF cannot borrow to invest: its total exposure stays within 100% of the fund. *In the growth option.</p>
   <p class="deep-note" style="margin-top:2.4mm;color:var(--job-deep);font-weight:600">A new, fast-growing category: by September 2026, 17 fund houses offered SIFs, with ₹38,287 crore invested and over 1.5 lakh investor accounts (AMFI data, as reported).</p>
   </div>
-  <footer class="folio"><span class="pg">12</span><span class="asof">Facts as of October 2026</span></footer>
+  <footer class="folio"><span class="pg">11</span><span class="asof">Facts as of October 2026</span></footer>
 </section>
 <!-- /page --><section class="page recto" data-job="build" id="sif-deep-b">
   <header class="runhead"><span>04 in depth · SIF</span><span class="chip">Build</span></header>
@@ -1545,13 +1520,13 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
 <circle cx="34.80" cy="31.90" r=".75" class="f-paper s-ink3 thin"/><text x="36.60" y="32.60" class="t-sm" style="font-size:2.05px">The manager sells a holding</text>
 <rect x="67.00" y="31.05" width="1.7" height="1.7" class="f-ink2"/><text x="69.60" y="32.60" class="t-sm" style="font-size:2.05px">Tax falls due</text>
 </svg>
-    <p class="deep-note">In the growth option, nothing is taxed along the way; a switch counts as a redemption. Rates are on page 11.</p>
+    <p class="deep-note">In the growth option, nothing is taxed along the way; a switch counts as a redemption. Rates are on page 10.</p>
   </div>
   <p class="legal"><span class="warn">Investments in Specialized Investment Fund involves relatively higher risk including potential loss of capital, liquidity risk and market volatility. Please read all investment strategy related documents carefully before making the investment decision.</span> Illustrations do not show or promise returns. Ram Investments: SIF Distributor (SIFD) Nishanth Ashok, ARN-328299.</p>
-  <footer class="folio"><span class="pg">13</span><span class="asof">Ram Investments · Diary 2027</span></footer>
+  <footer class="folio"><span class="pg">12</span><span class="asof">Ram Investments · Diary 2027</span></footer>
 </section>
 <!-- /page --></div>
-<div class="spread"><span class="spread-label">Pages 14–15</span><section class="page verso" data-job="build" id="ncd">
+<div class="spread"><span class="spread-label">Pages 13–14</span><section class="page verso" data-job="build" id="ncd">
   <header class="runhead"><span class="chip">Build</span><span>Know your products · 05 of 08</span></header>
   <div class="entry-head">
     <div class="entry-no">05</div>
@@ -1647,7 +1622,7 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
       <p><span class="vs">Bank fixed deposits.</span> Bank deposits are insured up to ₹5 lakh per depositor per bank by DICGC. NCDs are not insured; repayment depends on the company.</p>
     </aside>
   </div>
-  <footer class="folio"><span class="pg">14</span><span class="asof">Facts as of October 2026</span></footer>
+  <footer class="folio"><span class="pg">13</span><span class="asof">Facts as of October 2026</span></footer>
 </section>
 <!-- /page --><section class="page recto" data-job="build" id="ncd-b">
   <header class="runhead"><span>05 · NCD<span style="text-transform:none">s</span></span><span class="chip">Build</span></header>
@@ -1726,10 +1701,10 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
     <div class="notes"><div class="field"><span>Issuer / series</span></div><div class="field"><span>Rate % and payout</span></div><div class="field"><span>Amount ₹</span></div><div class="field"><span>Matures on</span></div></div>
   </div>
   <p class="legal"><span class="warn">Investments in debt securities/municipal debt securities/securitised debt instruments are subject to risks including delay and/or default in payment. Read all the offer related documents carefully.</span> Ratings are opinions, not guarantees.</p>
-  <footer class="folio"><span class="pg">15</span><span class="asof">Ram Investments · Diary 2027</span></footer>
+  <footer class="folio"><span class="pg">14</span><span class="asof">Ram Investments · Diary 2027</span></footer>
 </section>
 <!-- /page --></div>
-<div class="spread"><span class="spread-label">Pages 16–17</span><section class="page verso" data-job="special" id="pms">
+<div class="spread"><span class="spread-label">Pages 15–16</span><section class="page verso" data-job="special" id="pms">
   <header class="runhead"><span class="chip">Specialise</span><span>Know your products · 06 of 08</span></header>
   <div class="entry-head">
     <div class="entry-no">06</div>
@@ -1837,7 +1812,7 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
       <p><span class="vs">AIFs.</span> A pooled fund with a ₹1 crore minimum. It can hold unlisted companies and may lock in your money for years.</p>
     </aside>
   </div>
-  <footer class="folio"><span class="pg">16</span><span class="asof">Facts as of October 2026</span></footer>
+  <footer class="folio"><span class="pg">15</span><span class="asof">Facts as of October 2026</span></footer>
 </section>
 <!-- /page --><section class="page recto" data-job="special" id="pms-b">
   <header class="runhead"><span>06 · PMS</span><span class="chip">Specialise</span></header>
@@ -1883,10 +1858,10 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
     <div class="notes"><div class="field"><span>Manager / strategy</span></div><div class="field"><span>Amount ₹</span></div><div class="field"><span>Fee model</span></div><div class="field"><span>Benchmark</span></div></div>
   </div>
   <p class="legal"><span class="warn">Investments in securities are subject to market risks. Read the disclosure document carefully before investing.</span> Past performance does not guarantee future returns. Ram Investments: APMI Registered PMS Distributor Nishanth Ashok, APRN-07532.</p>
-  <footer class="folio"><span class="pg">17</span><span class="asof">Ram Investments · Diary 2027</span></footer>
+  <footer class="folio"><span class="pg">16</span><span class="asof">Ram Investments · Diary 2027</span></footer>
 </section>
 <!-- /page --></div>
-<div class="spread"><span class="spread-label">Pages 18–19</span><section class="page verso" data-job="special" id="aif">
+<div class="spread"><span class="spread-label">Pages 17–18</span><section class="page verso" data-job="special" id="aif">
   <header class="runhead"><span class="chip">Specialise</span><span>Know your products · 07 of 08</span></header>
   <div class="entry-head">
     <div class="entry-no">07</div>
@@ -1972,7 +1947,7 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
       <p><span class="vs">PMS.</span> Your own account, mostly listed shares, and no lock-in. An AIF pools money and may hold assets that take time to sell.</p>
     </aside>
   </div>
-  <footer class="folio"><span class="pg">18</span><span class="asof">Facts as of October 2026</span></footer>
+  <footer class="folio"><span class="pg">17</span><span class="asof">Facts as of October 2026</span></footer>
 </section>
 <!-- /page --><section class="page recto" data-job="special" id="aif-b">
   <header class="runhead"><span>07 · AIF</span><span class="chip">Specialise</span></header>
@@ -2034,10 +2009,10 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
     <div class="notes"><div class="field"><span>Fund / category</span></div><div class="field"><span>Commitment ₹</span></div><div class="field"><span>Called so far ₹</span></div><div class="field"><span>Fund ends</span></div></div>
   </div>
   <p class="legal">AIFs are offered only by private placement to eligible investors, through the fund’s private placement memorandum. This page is investor education. It is not an offer or a solicitation.</p>
-  <footer class="folio"><span class="pg">19</span><span class="asof">Ram Investments · Diary 2027</span></footer>
+  <footer class="folio"><span class="pg">18</span><span class="asof">Ram Investments · Diary 2027</span></footer>
 </section>
 <!-- /page --></div>
-<div class="spread"><span class="spread-label">Pages 20–21</span><section class="page verso" data-job="special" id="aif-deep">
+<div class="spread"><span class="spread-label">Pages 19–20</span><section class="page verso" data-job="special" id="aif-deep">
   <header class="runhead"><span class="chip">Specialise</span><span>Know your products · 07 in depth</span></header>
   <div class="deep-head">
     <p class="label">Private markets</p>
@@ -2081,7 +2056,7 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
     <h3>What this means for you</h3>
     <p>At an IPO, early investors often sell part of their stake to the public. To own a share of a company while it is still private, you need to invest before it lists, through an AIF. This means waiting several years. Some companies never list, and some list below their private value.</p>
   </div>
-  <footer class="folio"><span class="pg">20</span><span class="asof">Facts as of October 2026</span></footer>
+  <footer class="folio"><span class="pg">19</span><span class="asof">Facts as of October 2026</span></footer>
 </section>
 <!-- /page --><section class="page recto" data-job="special" id="aif-deep-b">
   <header class="runhead"><span>07 in depth · AIF</span><span class="chip">Specialise</span></header>
@@ -2136,10 +2111,10 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
     </ul>
   </div>
   <p class="legal">AIFs are offered only by private placement to eligible investors, through the fund’s private placement memorandum. This page is investor education. It is not an offer or a solicitation.</p>
-  <footer class="folio"><span class="pg">21</span><span class="asof">Ram Investments · Diary 2027</span></footer>
+  <footer class="folio"><span class="pg">20</span><span class="asof">Ram Investments · Diary 2027</span></footer>
 </section>
 <!-- /page --></div>
-<div class="spread"><span class="spread-label">Pages 22–23</span><section class="page verso" data-job="global" id="gift">
+<div class="spread"><span class="spread-label">Pages 21–22</span><section class="page verso" data-job="global" id="gift">
   <header class="runhead"><span class="chip">Globalise</span><span>Know your products · 08 of 08</span></header>
   <div class="entry-head">
     <div class="entry-no">08</div>
@@ -2238,7 +2213,7 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
       <p><span class="vs">Foreign broker accounts.</span> Your money is held overseas, under that country’s regulator.</p>
     </aside>
   </div>
-  <footer class="folio"><span class="pg">22</span><span class="asof">Facts as of October 2026</span></footer>
+  <footer class="folio"><span class="pg">21</span><span class="asof">Facts as of October 2026</span></footer>
 </section>
 <!-- /page --><section class="page recto" data-job="global" id="gift-b">
   <header class="runhead"><span>08 · GIFT City</span><span class="chip">Globalise</span></header>
@@ -2295,10 +2270,10 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
     <div class="notes"><div class="field"><span>Product</span></div><div class="field"><span>Amount USD</span></div><div class="field"><span>LRS used this FY</span></div><div class="field"><span>TCS paid ₹</span></div></div>
   </div>
   <p class="legal">Investments in GIFT IFSC are subject to market and currency risks, and to RBI’s LRS and FEMA rules. Read all scheme related documents carefully.</p>
-  <footer class="folio"><span class="pg">23</span><span class="asof">Ram Investments · Diary 2027</span></footer>
+  <footer class="folio"><span class="pg">22</span><span class="asof">Ram Investments · Diary 2027</span></footer>
 </section>
 <!-- /page --></div>
-<div class="spread"><span class="spread-label">Pages 24–25</span><section class="page verso" data-job="neutral" id="side-by-side-a">
+<div class="spread"><span class="spread-label">Pages 23–24</span><section class="page verso" data-job="neutral" id="side-by-side-a">
   <header class="runhead"><span>Know your products</span><span>Side by side · 1 of 2</span></header>
   <div class="sbs-head">
     <p class="label muted">All eight, side by side</p>
@@ -2310,10 +2285,10 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
     <thead>
       <tr>
         <th></th>
-        <th data-job="protect"><span class="bar"></span><span class="no">01</span><span class="nm">Term insurance</span><span class="pg">page 4</span></th>
-        <th data-job="protect"><span class="bar"></span><span class="no">02</span><span class="nm">Health insurance</span><span class="pg">page 6</span></th>
-        <th data-job="build"><span class="bar"></span><span class="no">03</span><span class="nm">Mutual funds</span><span class="pg">page 8</span></th>
-        <th data-job="build"><span class="bar"></span><span class="no">04</span><span class="nm">SIF</span><span class="pg">page 10</span></th>
+        <th data-job="protect"><span class="bar"></span><span class="no">01</span><span class="nm">Term insurance</span><span class="pg">page 3</span></th>
+        <th data-job="protect"><span class="bar"></span><span class="no">02</span><span class="nm">Health insurance</span><span class="pg">page 5</span></th>
+        <th data-job="build"><span class="bar"></span><span class="no">03</span><span class="nm">Mutual funds</span><span class="pg">page 7</span></th>
+        <th data-job="build"><span class="bar"></span><span class="no">04</span><span class="nm">SIF</span><span class="pg">page 9</span></th>
       </tr>
     </thead>
     <tbody>
@@ -2327,7 +2302,7 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
       <tr class="h-best"><td class="rowlabel">Best for</td><td>Anyone whose family depends on their income</td><td>Every family, alongside any employer cover</td><td>Most investors, as the core of a portfolio</td><td>A whole portfolio or part of one, from ₹10 lakh</td></tr>
     </tbody>
   </table>
-  <footer class="folio"><span class="pg">24</span><span class="asof">Facts as of October 2026</span></footer>
+  <footer class="folio"><span class="pg">23</span><span class="asof">Facts as of October 2026</span></footer>
 </section>
 <!-- /page --><section class="page recto" data-job="neutral" id="side-by-side-b">
   <header class="runhead"><span>Side by side · 2 of 2</span><span>Know your products</span></header>
@@ -2341,10 +2316,10 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
     <thead>
       <tr>
         <th></th>
-        <th data-job="build"><span class="bar"></span><span class="no">05</span><span class="nm">NCDs</span><span class="pg">page 14</span></th>
-        <th data-job="special"><span class="bar"></span><span class="no">06</span><span class="nm">PMS</span><span class="pg">page 16</span></th>
-        <th data-job="special"><span class="bar"></span><span class="no">07</span><span class="nm">AIF</span><span class="pg">page 18</span></th>
-        <th data-job="global"><span class="bar"></span><span class="no">08</span><span class="nm">GIFT City</span><span class="pg">page 22</span></th>
+        <th data-job="build"><span class="bar"></span><span class="no">05</span><span class="nm">NCDs</span><span class="pg">page 13</span></th>
+        <th data-job="special"><span class="bar"></span><span class="no">06</span><span class="nm">PMS</span><span class="pg">page 15</span></th>
+        <th data-job="special"><span class="bar"></span><span class="no">07</span><span class="nm">AIF</span><span class="pg">page 17</span></th>
+        <th data-job="global"><span class="bar"></span><span class="no">08</span><span class="nm">GIFT City</span><span class="pg">page 21</span></th>
       </tr>
     </thead>
     <tbody>
@@ -2362,10 +2337,10 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
     <h3>Not sure which fits?</h3>
     <p>Bring this diary to your next review, and we will go through it with you.</p>
   </div>
-  <footer class="folio"><span class="pg">25</span><span class="asof">Ram Investments · Diary 2027</span></footer>
+  <footer class="folio"><span class="pg">24</span><span class="asof">Ram Investments · Diary 2027</span></footer>
 </section>
 <!-- /page --></div>
-<div class="spread"><span class="spread-label">Pages 26–27</span><section class="page verso" data-job="neutral" id="glossary">
+<div class="spread"><span class="spread-label">Pages 25–26</span><section class="page verso" data-job="neutral" id="glossary">
   <header class="runhead"><span>Know your products</span><span>Words to know</span></header>
   <h2 class="page-title">Words to know</h2>
   <p class="intro">Terms used in this guide, in plain words.</p>
@@ -2416,7 +2391,7 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
     <p><b>Venture capital.</b> Money for young, fast-growing private companies, years before they list.</p>
     <p><b>Waiting period.</b> The time after you buy health cover before some illnesses are covered.</p>
   </div>
-  <footer class="folio"><span class="pg">26</span><span class="asof">Facts as of October 2026</span></footer>
+  <footer class="folio"><span class="pg">25</span><span class="asof">Facts as of October 2026</span></footer>
 </section>
 <!-- /page --><section class="page recto" data-job="neutral" id="check-up">
   <header class="runhead"><span>Your money check-up</span><span>Know your products</span></header>
@@ -2455,15 +2430,15 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
       <div class="field wide"><span>Your contact at Ram Investments</span></div><div class="field wide"><span>Phone</span></div>
     </div>
   </div>
-  <footer class="folio"><span class="pg">27</span><span class="asof">Facts as of October 2026</span></footer>
+  <footer class="folio"><span class="pg">26</span><span class="asof">Facts as of October 2026</span></footer>
 </section>
 <!-- /page --></div>
-<div class="spread single-verso"><span class="spread-label">Page 28</span><section class="page verso" data-job="neutral" id="important">
+<div class="spread single-verso"><span class="spread-label">Page 27</span><section class="page verso" data-job="neutral" id="important">
   <header class="runhead"><span>Know your products</span><span>Important information</span></header>
   <h2 class="page-title">Important information</h2>
   <div class="info">
     <h3 class="label muted">About this guide</h3>
-    <p>This section is investor education. It is not an offer, solicitation or recommendation to buy or sell any product, and it is not investment, tax or legal advice. Facts are as of October 2026 and can change. Read the offer documents of any product before investing, and speak to a tax consultant about your own situation.</p>
+    <p>Investor education only: not an offer, a recommendation, or investment, tax or legal advice. Facts are as of October 2026 and can change. Read a product’s offer documents before investing. Sources: SEBI, AMFI, APMI, IRDAI, IFSCA, RBI, the Income-tax Act, 2025, and the reports named on each page. This guide does not show or project returns.</p>
     <div class="us">
       <p><b>Ram Investments</b></p>
       <p>AMFI Registered Mutual Fund Distributors · L. Ashok, ARN-14532 · Nishanth Ashok, ARN-328299</p>
@@ -2473,8 +2448,17 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
       <p>L. Ashok 98421 01574 · N. Alagar 99651 01999 · Nishanth Ashok 98421 01374</p>
       <p>support@raminvestments.in · www.raminvestments.in</p>
     </div>
+    <h3 class="label muted">How we help you</h3>
+    <ul class="info-help">
+      <li>We stay with you when markets fall, so a bad month does not undo a long-term plan.</li>
+      <li>We match each product to a goal, and explain it before you sign.</li>
+      <li>We review everything you hold with us, once a year at least.</li>
+      <li>We handle the paperwork: KYC, nominees, SIPs, switches and redemptions.</li>
+      <li>We give you the papers your tax consultant needs.</li>
+      <li>If something happens to you, we help your family with claims and transfers.</li>
+    </ul>
     <h3 class="label muted">How we are paid</h3>
-    <p>We receive commission from the providers of the products we distribute. It pays for the service on page 3: helping you choose, staying with you when markets fall, handling the paperwork, yearly reviews, tax-time papers, and help for your family with claims.</p>
+    <p>We receive commission from the providers of the products we distribute. It pays for this service, for as long as you invest with us.</p>
     <h3 class="label muted">Standard warnings</h3>
     <div class="warnings">
       <p><b>Mutual Fund investments are subject to market risks, read all scheme related documents carefully.</b></p>
@@ -2486,10 +2470,9 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
     </div>
     <h3 class="label muted">If you have a complaint</h3>
     <p>Contact us first at support@raminvestments.in or on the numbers above. If it is not resolved: for mutual funds and SIFs, also the fund house and AMFI; for securities products, SEBI SCORES (scores.sebi.gov.in) and the SMART ODR portal (smartodr.in); for insurance, IRDAI Bima Bharosa (bimabharosa.irdai.gov.in) and the Insurance Ombudsman; for GIFT IFSC products, IFSCA.</p>
-    <h3 class="label muted">Sources</h3>
-    <p>SEBI, AMFI, APMI, IRDAI, IFSCA, RBI, the Income-tax Act, 2025, and the industry reports named on each page. This guide does not show or project the returns of any product. Past performance does not guarantee future returns.</p>
+
   </div>
-  <footer class="folio"><span class="pg">28</span></footer>
+  <footer class="folio"><span class="pg">27</span></footer>
 </section>
 <!-- /page --><div class="blank"></div></div>
 </main>

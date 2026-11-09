@@ -2,7 +2,7 @@
 
 ## Recommendation
 
-Treat this repository as the approved **design master**: structure, copy, diagrams and the full page layout are already resolved. Hire one experienced editorial or information designer to rebuild it in InDesign for print. Run compliance review in parallel, test the proof with five clients, and print the section as a 28-page insert on matt art paper.
+Treat this repository as the approved **design master**: structure, copy, diagrams and the full page layout are already resolved. Hire one experienced editorial or information designer to rebuild it in InDesign for print. Run compliance review in parallel, test the proof with five clients, and print the section as a 28-page insert on matt art paper (27 pages plus one notes page).
 
 This is faster and cheaper than briefing an agency from scratch, because the slow parts (deciding what goes on each page and checking every fact) are done. The designer's job is craft and prepress.
 
@@ -61,7 +61,7 @@ Diwali falls on Sunday 8 November 2026, so expect approvals and printers to slow
 |---|---|
 | Trim | A5, 148 × 210 mm portrait. B5 (176 × 250 mm) is a straight 119% scale-up |
 | Bleed | 3 mm on all sides |
-| Extent | 28 pages, four colours both sides. Section starts on a right-hand page |
+| Extent | 27 pages, four colours both sides. Section starts on a left-hand page. As a separate insert, add one ruled notes page after page 27 to make 28 |
 | Paper | 100–120 gsm matt art (coated). It takes ballpoint and pencil and holds colour better than maplitho. If the diary body is 70 gsm maplitho, print this section as a separate insert |
 | Finish | No gloss lamination or varnish on these pages, so people can write on them |
 | Binding | As for the diary. Section-sewn case binding lies flat; a 15 mm inside margin is built in |
@@ -111,7 +111,7 @@ Before the final proof goes to the printer, give it to five clients of different
 2. Pick a product for a scenario you describe ("I want regular income and can wait three years").
 3. Fill in "Work out your cover" for themselves, then say whether anything on the term pages felt uncomfortable to read.
 4. Explain in their own words what a SIF can do that a mutual fund cannot, and when the tax is paid.
-5. Say whether an AIF suits them, using the "Is it for you?" list on page 21.
+5. Say whether an AIF suits them, using the AIF entry on pages 17–18 and the private-markets pages 19–20.
 
 Watch where they hesitate or misread. If two of the five stumble on the same line, rewrite it. Consumer-testing research on financial disclosures finds that small wording changes make a measurable difference to understanding.
 

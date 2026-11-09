@@ -36,8 +36,8 @@ function paginate(html, startPage) {
 async function build() {
   const css = (await read("styles/tokens.css")) + "\n" + (await read("styles/diary.css"));
 
-  // Page order. Page 1 is a right-hand page, so every product spread starts
-  // on an even (left-hand) page: 4-5, 6-7 ... 18-19.
+  // Page order. Page 1 is a left-hand page, so every product spread starts
+  // on an odd (left-hand) page: 3-4, 5-6 ... and its two pages face.
   const front = await matter("front.html");
   const back = await matter("back.html");
   const countPages = (html) => (html.match(/<section class="page/g) || []).length;
@@ -85,11 +85,12 @@ async function build() {
   // Group pages into spreads for screen view: [1], [2,3], [4,5] ... [24]
   const sections = pages.match(/<section class="page[\s\S]*?<\/section>\s*<!-- \/page -->/g) || [];
   const spreads = [];
-  spreads.push(`<div class="spread single-recto"><span class="spread-label">Page 1</span><div class="blank"></div>${sections[0]}</div>`);
-  for (let i = 1; i < sections.length - 1; i += 2) {
+  // The section starts on a left-hand page, so pages pair up 1-2, 3-4 ...
+  // and every product's two pages face each other.
+  for (let i = 0; i < sections.length - 1; i += 2) {
     spreads.push(`<div class="spread"><span class="spread-label">Pages ${i + 1}–${i + 2}</span>${sections[i]}${sections[i + 1] || ""}</div>`);
   }
-  if (sections.length % 2 === 0) {
+  if (sections.length % 2 === 1) {
     const last = sections.length;
     spreads.push(`<div class="spread single-verso"><span class="spread-label">Page ${last}</span>${sections[last - 1]}<div class="blank"></div></div>`);
   }

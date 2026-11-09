@@ -4,31 +4,30 @@
 
 The product section is a field guide. Eight products sit under four jobs a client's money can do: **Protect, Build, Specialise, Globalise.** Every product gets the same two-page entry: the left page helps the reader recognise it, the right page helps them decide whether it fits. Two products the firm wants clients to understand in depth, SIF and AIF, get a second spread straight after their entry. Risk is shown only on scales the regulators already use, and no page shows or projects returns. Each entry ends with space for the client's own numbers, which turns a brochure into a page they keep using all year.
 
-## 1. Section plan (28 pages)
+## 1. Section plan (27 pages)
 
-The section starts on a right-hand page so every entry opens as a facing spread. The page count must stay even, and the front matter must stay at three pages (or another odd number), or the entries stop facing each other. That is why the "How to read an entry" page (removed in draft 3) and the "Four jobs" page (removed in draft 7, as each entry already carries its job) were each replaced rather than simply dropped: first by "Where to start", then by "How we help you".
+The section starts on a left-hand page, so every entry's two pages face each other with no filler pages. Pages pair 1–2, 3–4 and so on; when a page is added or removed in the front matter, the build re-pairs the spreads and the entries still face. The "How to read an entry", "Four jobs" and "How we help you" pages were removed in drafts 3, 7 and 8. The service points from "How we help you" now sit, briefly, on the Important information page.
 
 | Page | Content |
 |---|---|
-| 1 | Opener: title, how the guide works, contents |
+| 1 | Opener: title, how the guide works, contents (left-hand page) |
 | 2 | Where to start: a goal finder ("if you want to… look at… page") and the minimum-to-start ladder |
-| 3 | How we help you: eight things clients get from us (staying steady when markets fall, matching products to goals, yearly reviews, paperwork, tax-time papers, help for the family at claim time, rule changes explained, a local team), how we are paid, and phone numbers |
-| 4–5 | 01 Term Insurance |
-| 6–7 | 02 Health Insurance |
-| 8–9 | 03 Mutual Funds |
-| 10–11 | 04 SIF |
-| 12–13 | 04 SIF in depth: borrowed abilities, seven strategies, three ways to use a SIF, when tax is paid, category growth |
-| 14–15 | 05 NCDs |
-| 16–17 | 06 PMS |
-| 18–19 | 07 AIF |
-| 20–21 | 07 AIF in depth: private markets, which AIFs invest when, choosing a manager, "Is it for you?" |
-| 22–23 | 08 GIFT City |
-| 24–25 | Side by side: all eight compared across the spread |
-| 26 | Words to know (45 terms) |
-| 27 | Your money check-up (quarterly tick boxes, review dates) |
-| 28 | Important information: registrations, warnings, grievances |
+| 3–4 | 01 Term Insurance |
+| 5–6 | 02 Health Insurance |
+| 7–8 | 03 Mutual Funds |
+| 9–10 | 04 SIF |
+| 11–12 | 04 SIF in depth: what a SIF manager can do, seven strategies, three ways to use a SIF, when tax is paid |
+| 13–14 | 05 NCDs |
+| 15–16 | 06 PMS |
+| 17–18 | 07 AIF |
+| 19–20 | 07 AIF in depth: private markets, private credit and commercial real estate, which AIFs invest when, choosing a manager |
+| 21–22 | 08 GIFT City |
+| 23–24 | Side by side: all eight compared across the spread |
+| 25 | Words to know (45 terms) |
+| 26 | Your money check-up (quarterly tick boxes, review dates) |
+| 27 | Important information: registrations and contacts, how we help you, how we are paid, warnings, complaints (a single left-hand page) |
 
-28 pages make one 16-page and one 12-page signature, or a single insert on heavier paper. Page numbers are worked out by the build, so adding or removing a spread never leaves a stale cross-reference.
+Within the diary's own page sequence, 27 pages need nothing extra. Printed as a separate insert, the printer needs a multiple of four: add one notes page after page 27 to make 28 (one 16-page and one 12-page signature). Page numbers are worked out by the build, so adding or removing a spread never leaves a stale cross-reference.
 
 ## 2. The four jobs
 
@@ -139,7 +138,7 @@ Indian buyers avoid talking about death, and insurers have learned to sell prote
 
 Before each print-ready draft, the section is reviewed by one "elephant" and several "goldfish":
 
-- **Elephant:** a reviewer with every instruction, house rule and fact-sheet source in hand. It checks that each instruction is met and that facts, page references and terms agree across all 28 pages.
+- **Elephant:** a reviewer with every instruction, house rule and fact-sheet source in hand. It checks that each instruction is met and that facts, page references and terms agree across all 27 pages.
 - **Goldfish:** reviewers with no background, who read only the pages, each from one stakeholder's seat: a first-time client in Dindigul, a compliance officer (SEBI, AMFI, APMI, IRDAI, IFSCA), a chartered accountant, the business owner and relationship manager, and a proofreader and print designer.
 
 Where a goldfish finding conflicts with a client instruction (for example, removing the private-markets pages or the tax comparison), the instruction stands; the wording is made fair and accurate, and the residual risk is listed for the client to decide. Draft 4 (November 2026) went through this review.

@@ -399,8 +399,8 @@ strong, b, .b { font-weight: 700; }
 .review .field span { font-family: var(--display); font-weight: 600; font-stretch: 87.5%; font-size: 6.2pt; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); padding-bottom: .7mm; }
 .review .field.wide { grid-column: span 2; }
 
-.info { font-size: 7.6pt; line-height: 1.36; color: var(--ink-2); }
-.info h3 { margin-top: 3.4mm; margin-bottom: 1.1mm; }
+.info { font-size: 7.2pt; line-height: 1.32; color: var(--ink-2); }
+.info h3 { margin-top: 2.8mm; margin-bottom: 1mm; }
 .info p + p { margin-top: 1.2mm; }
 .info .warnings p { padding-left: 2.6mm; border-left: .5mm solid var(--rule); }
 .info .warnings p b { color: var(--ink); }
@@ -607,6 +607,9 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
 .help-call span { display: block; color: var(--ink-2); font-size: 7.4pt; }
 .help-call b { display: block; font-variant-numeric: tabular-nums; font-size: 9pt; }
 .help-call .help-mail { grid-column: 2 / -1; color: var(--ink-2); margin-top: 1mm; }
+.info-help { display: grid; grid-template-columns: 1fr 1fr; column-gap: 4mm; row-gap: .8mm; }
+.info-help li { position: relative; padding-left: 3.4mm; }
+.info-help li::before { content: ""; position: absolute; left: .45mm; top: .5mm; width: 1.1mm; height: 2.1mm; border: solid var(--build); border-width: 0 .4mm .4mm 0; transform: rotate(42deg); }
 
 </style>
 </head>
