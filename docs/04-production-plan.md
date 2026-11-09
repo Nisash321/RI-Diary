@@ -94,12 +94,12 @@ Diwali falls on Sunday 8 November 2026, so expect approvals and printers to slow
 - [ ] NCD page shows the channel's registration (stock broker or online bond platform). No named issues or rates.
 - [ ] GIFT City page: LRS and TCS figures current at print. IFSC distribution arrangement disclosed. No tax claims beyond what is printed.
 - [ ] **Open items from the stakeholder review (draft 4)**, for compliance to decide:
-  - ARN display: confirm which person or entity holds ARN-14532 and ARN-328299. One ARN belongs to one holder, so both printed under "Ram Investments" may need to name the holder of each. Confirm the holder of APRN-07532.
-  - Insurance pages: no IRDAI registration is printed (firm's decision). IRDAI expects an intermediary's registration on insurance communications, and insurer approval before use.
+  - ARN display: resolved. L. Ashok holds ARN-14532; Nishanth Ashok holds ARN-328299 (mutual funds and SIF) and APRN-07532 (PMS). Each line names the holder.
+  - Insurance pages: no IRDAI registration is printed (firm's decision, confirmed; no action). IRDAI expects an intermediary's registration on insurance communications, and insurer approval before use.
   - AIF pages: education only, but a mass-printed diary with a private-markets case could be read as solicitation under the private placement rule. Keep the balance lines; consider legal review.
   - SIF "as your whole portfolio" and the tax comparison: kept at the firm's direction, reworded to be like-for-like (one long-short strategy, base rates, full surcharge for Category III, PMS share sales also 12.5%). Needs tax adviser sign-off, and AMFI's SIF risk-profiling rule applies at sale.
-  - SEBI's Common Advertisement Code takes effect around April 2027, during the diary year: put the section through formal advertisement approval and keep the record.
-  - The two phone numbers 98421 01574 and 98421 01374 differ by one digit: confirm both.
+  - SEBI's Common Advertisement Code (from about April 2027): parked by the firm for now.
+  - Phone numbers: confirmed by the firm.
 - [ ] No assured-return language, no celebrities, and the firm is not described as an "adviser" (AMFI naming rules for distributors).
 - [ ] Commission disclosure and grievance routes present and correct.
 
