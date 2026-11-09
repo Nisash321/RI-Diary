@@ -6,13 +6,13 @@ The product section is a field guide. Eight products sit under four jobs a clien
 
 ## 1. Section plan (28 pages)
 
-The section starts on a right-hand page so every entry opens as a facing spread. The page count must stay even, and the front matter must stay at three pages (or another odd number), or the entries stop facing each other. That is why the "How to read an entry" page, removed in draft 3 as unclear, was replaced by the "Where to start" page rather than simply dropped.
+The section starts on a right-hand page so every entry opens as a facing spread. The page count must stay even, and the front matter must stay at three pages (or another odd number), or the entries stop facing each other. That is why the "How to read an entry" page (removed in draft 3) and the "Four jobs" page (removed in draft 7, as each entry already carries its job) were each replaced rather than simply dropped: first by "Where to start", then by "How we help you".
 
 | Page | Content |
 |---|---|
 | 1 | Opener: title, how the guide works, contents |
-| 2 | Four jobs your money can do (each product in one line), "ready for the next step?" checklist |
-| 3 | Where to start: a goal finder ("if you want to… look at… page") and the minimum-to-start ladder |
+| 2 | Where to start: a goal finder ("if you want to… look at… page") and the minimum-to-start ladder |
+| 3 | How we help you: eight things clients get from us (staying steady when markets fall, matching products to goals, yearly reviews, paperwork, tax-time papers, help for the family at claim time, rule changes explained, a local team), how we are paid, and phone numbers |
 | 4–5 | 01 Term Insurance |
 | 6–7 | 02 Health Insurance |
 | 8–9 | 03 Mutual Funds |

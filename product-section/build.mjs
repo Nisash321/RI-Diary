@@ -241,5 +241,14 @@ const result = await build();
 if (render) await renderOutputs(result);
 if (existsSync(path.join(src, "pages/diary-front.html"))) {
   const front = await buildFront();
-  if (render) await renderOutputs(front);
+  if (render) {
+    await renderOutputs(front);
+    // One file for review: opening pages, then the product guide.
+    const { execFileSync } = await import("node:child_process");
+    const combined = path.join(dist, "ram-investments-diary-2027-proof.pdf");
+    try {
+      execFileSync("pdfunite", [path.join(dist, "diary-front-proof.pdf"), path.join(dist, "know-your-products-proof.pdf"), combined]);
+      console.log(`wrote ${path.relative(process.cwd(), combined)}`);
+    } catch { console.warn("pdfunite not found: combined PDF not written"); }
+  }
 }

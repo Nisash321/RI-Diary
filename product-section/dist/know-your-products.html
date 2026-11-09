@@ -597,6 +597,17 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
 .ex3 li::before { content: counter(ex); position: absolute; left: 0; top: .2mm; width: 3mm; height: 3mm; border-radius: 50%; background: var(--job); color: #fff; font-family: var(--display); font-weight: 700; font-size: 5.6pt; line-height: 3mm; text-align: center; }
 .ex3 li b { display: block; font-weight: 700; color: var(--job-deep); font-size: 6.9pt; }
 
+/* How we help you */
+.helpgrid { margin-top: 5mm; display: grid; grid-template-columns: 1fr 1fr; column-gap: 5mm; row-gap: 3.6mm; counter-reset: hp; }
+.helpgrid li { position: relative; padding: 2.2mm 0 0 7.4mm; border-top: .25mm solid var(--rule); font-size: 8pt; line-height: 1.34; color: var(--ink-2); counter-increment: hp; text-wrap: pretty; }
+.helpgrid li::before { content: counter(hp); position: absolute; left: 0; top: 2.2mm; width: 5mm; height: 5mm; border-radius: 50%; background: var(--build); color: #fff; font-family: var(--display); font-weight: 700; font-size: 8pt; line-height: 5mm; text-align: center; }
+.helpgrid li b { display: block; font-family: var(--display); font-weight: 700; font-size: 9.2pt; color: var(--ink); margin-bottom: .6mm; line-height: 1.15; }
+.help-call { margin-top: auto; margin-bottom: 1mm; padding-top: 2.4mm; border-top: .25mm solid var(--rule); display: grid; grid-template-columns: auto 1fr 1fr 1fr; column-gap: 4mm; row-gap: 1mm; align-items: baseline; font-size: 8.2pt; }
+.help-call .label { color: var(--build-deep); }
+.help-call span { display: block; color: var(--ink-2); font-size: 7.4pt; }
+.help-call b { display: block; font-variant-numeric: tabular-nums; font-size: 9pt; }
+.help-call .help-mail { grid-column: 2 / -1; color: var(--ink-2); margin-top: 1mm; }
+
 </style>
 </head>
 <body>
@@ -639,7 +650,7 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
     <div class="toc-group" data-job="neutral">
       <span class="label muted">Also inside</span>
       <div class="toc-rows">
-        <div class="toc-row"><span class="toc-no"></span><span class="toc-name">Four jobs your money can do, and where to start</span><span class="toc-dots"></span><span class="toc-pg">2–3</span></div>
+        <div class="toc-row"><span class="toc-no"></span><span class="toc-name">Where to start, and how we help you</span><span class="toc-dots"></span><span class="toc-pg">2–3</span></div>
         <div class="toc-row"><span class="toc-no"></span><span class="toc-name">Side by side: all eight compared</span><span class="toc-dots"></span><span class="toc-pg">24</span></div>
         <div class="toc-row"><span class="toc-no"></span><span class="toc-name">Words to know</span><span class="toc-dots"></span><span class="toc-pg">26</span></div>
         <div class="toc-row"><span class="toc-no"></span><span class="toc-name">Your 2027 money check-up</span><span class="toc-dots"></span><span class="toc-pg">27</span></div>
@@ -651,105 +662,8 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
   <footer class="folio"><span class="pg">1</span></footer>
 </section>
 <!-- /page --></div>
-<div class="spread"><span class="spread-label">Pages 2–3</span><section class="page verso" data-job="neutral" id="four-jobs">
-  <header class="runhead"><span>Know your products</span><span>Four jobs</span></header>
-  <h2 class="page-title">Four jobs your money can do</h2>
-  <p class="intro">Read from left to right. Each job works best once the one before it is in place: protect your family before you invest, and build a core portfolio before you add PMS or AIF.</p>
-  <div class="figure">
-    <svg viewBox="0 0 122 100" role="img" aria-labelledby="jobs-t">
-      <title id="jobs-t">Four columns: Protect with term and health insurance, Build with mutual funds, SIFs and NCDs, Specialise with PMS and AIF, and Globalise with GIFT City, each with a one-line description and when to start.</title>
-      <g data-job="protect">
-        <rect x="0.0" y="0" width="28.75" height="7.6" class="f-job"/>
-        <text x="2.00" y="5" class="t-cap t-white" style="font-size:2.4px">1 · Protect</text>
-        <text x="0.0" y="12.6" class="t-bd">If something happens</text>
-        <text x="0.0" y="16.0" class="t-bd">to me, is my family</text>
-        <text x="0.0" y="19.4" class="t-bd">covered?</text>
-        <rect x="0.0" y="24" width="28.75" height="19" class="f-tint"/>
-        <text x="2.00" y="27.6" class="t-cap job">01</text><text x="2.00" y="31.6" class="t-bd b">Term insurance</text>
-        <text x="2.00" y="35.0" class="t-sm" style="font-size:2.2px">A lump sum for your</text>
-        <text x="2.00" y="37.8" class="t-sm" style="font-size:2.2px">family if something</text>
-        <text x="2.00" y="40.6" class="t-sm" style="font-size:2.2px">happens to you</text>
-        <rect x="0.0" y="45" width="28.75" height="19" class="f-tint"/>
-        <text x="2.00" y="48.6" class="t-cap job">02</text><text x="2.00" y="52.6" class="t-bd b">Health insurance</text>
-        <text x="2.00" y="56.0" class="t-sm" style="font-size:2.2px">Pays hospital bills,</text>
-        <text x="2.00" y="58.8" class="t-sm" style="font-size:2.2px">cashless or by</text>
-        <text x="2.00" y="61.6" class="t-sm" style="font-size:2.2px">paying you back</text>
-        <text x="0.0" y="93" class="t-cap job">Start</text>
-        <text x="0.0" y="96.4" class="t-sm">Before you invest.</text>
-      </g>
-      <g data-job="build">
-        <rect x="31.08" y="0" width="28.75" height="7.6" class="f-job"/>
-        <text x="33.08" y="5" class="t-cap t-white" style="font-size:2.4px">2 · Build</text>
-        <text x="31.08" y="12.6" class="t-bd">How do I grow wealth</text>
-        <text x="31.08" y="16.0" class="t-bd">and earn an income?</text>
-        <rect x="31.08" y="24" width="28.75" height="19" class="f-tint"/>
-        <text x="33.08" y="27.6" class="t-cap job">03</text><text x="33.08" y="31.6" class="t-bd b">Mutual funds</text>
-        <text x="33.08" y="35.0" class="t-sm" style="font-size:2.2px">A pool run by a</text>
-        <text x="33.08" y="37.8" class="t-sm" style="font-size:2.2px">professional. SIPs</text>
-        <text x="33.08" y="40.6" class="t-sm" style="font-size:2.2px">from ₹100 a month</text>
-        <rect x="31.08" y="45" width="28.75" height="19" class="f-tint"/>
-        <text x="33.08" y="48.6" class="t-cap job">04</text><text x="33.08" y="52.6" class="t-bd b">SIF</text>
-        <text x="33.08" y="56.0" class="t-sm" style="font-size:2.2px">Mutual fund rules,</text>
-        <text x="33.08" y="58.8" class="t-sm" style="font-size:2.2px">tools for rising, falling</text>
-        <text x="33.08" y="61.6" class="t-sm" style="font-size:2.2px">and sideways markets</text>
-        <rect x="31.08" y="66" width="28.75" height="19" class="f-tint"/>
-        <text x="33.08" y="69.6" class="t-cap job">05</text><text x="33.08" y="73.6" class="t-bd b">NCDs</text>
-        <text x="33.08" y="77.0" class="t-sm" style="font-size:2.2px">A fixed-rate loan to</text>
-        <text x="33.08" y="79.8" class="t-sm" style="font-size:2.2px">a company, for a</text>
-        <text x="33.08" y="82.6" class="t-sm" style="font-size:2.2px">fixed period</text>
-        <text x="31.08" y="93" class="t-cap job">Start</text>
-        <text x="31.08" y="96.4" class="t-sm">Once your family</text>
-        <text x="31.08" y="99.6" class="t-sm">is protected.</text>
-      </g>
-      <g data-job="special">
-        <rect x="62.17" y="0" width="28.75" height="7.6" class="f-job"/>
-        <text x="64.17" y="5" class="t-cap t-white" style="font-size:2.4px">3 · Specialise</text>
-        <text x="62.17" y="12.6" class="t-bd">My portfolio is large.</text>
-        <text x="62.17" y="16.0" class="t-bd">What more can I do?</text>
-        <rect x="62.17" y="24" width="28.75" height="19" class="f-tint"/>
-        <text x="64.17" y="27.6" class="t-cap job">06</text><text x="64.17" y="31.6" class="t-bd b">PMS</text>
-        <text x="64.17" y="35.0" class="t-sm" style="font-size:2.2px">A portfolio run just</text>
-        <text x="64.17" y="37.8" class="t-sm" style="font-size:2.2px">for you, in your own</text>
-        <text x="64.17" y="40.6" class="t-sm" style="font-size:2.2px">demat account</text>
-        <rect x="62.17" y="45" width="28.75" height="19" class="f-tint"/>
-        <text x="64.17" y="48.6" class="t-cap job">07</text><text x="64.17" y="52.6" class="t-bd b">AIF</text>
-        <text x="64.17" y="56.0" class="t-sm" style="font-size:2.2px">A private fund that</text>
-        <text x="64.17" y="58.8" class="t-sm" style="font-size:2.2px">invests in, or lends to,</text>
-        <text x="64.17" y="61.6" class="t-sm" style="font-size:2.2px">private companies</text>
-        <text x="62.17" y="93" class="t-cap job">Start</text>
-        <text x="62.17" y="96.4" class="t-sm">When a core portfolio</text>
-        <text x="62.17" y="99.6" class="t-sm">is in place.</text>
-      </g>
-      <g data-job="global">
-        <rect x="93.25" y="0" width="28.75" height="7.6" class="f-job"/>
-        <text x="95.25" y="5" class="t-cap t-white" style="font-size:2.4px">4 · Globalise</text>
-        <text x="93.25" y="12.6" class="t-bd">How do I invest</text>
-        <text x="93.25" y="16.0" class="t-bd">beyond India?</text>
-        <rect x="93.25" y="24" width="28.75" height="19" class="f-tint"/>
-        <text x="95.25" y="27.6" class="t-cap job">08</text><text x="95.25" y="31.6" class="t-bd b">GIFT City</text>
-        <text x="95.25" y="35.0" class="t-sm" style="font-size:2.2px">Invest abroad in US</text>
-        <text x="95.25" y="37.8" class="t-sm" style="font-size:2.2px">dollars, from India,</text>
-        <text x="95.25" y="40.6" class="t-sm" style="font-size:2.2px">within your LRS limit</text>
-        <text x="93.25" y="93" class="t-cap job">Start</text>
-        <text x="93.25" y="96.4" class="t-sm">Once your core</text>
-        <text x="93.25" y="99.6" class="t-sm">portfolio is in place.</text>
-      </g>
-    </svg>
-  </div>
-  <div class="section" style="margin-top:12mm">
-    <h2 class="label"><span>Ready for the next step?</span><span class="aside">Tick what is already in place</span></h2>
-    <ul class="ask">
-      <li>Term cover that matches your family’s needs, often 10 to 15 times yearly income</li>
-      <li>Health cover for every member of your family, not only through an employer</li>
-      <li>An emergency fund of about six months’ expenses, easy to reach</li>
-      <li>A core portfolio in mutual funds or SIFs, linked to your goals</li>
-    </ul>
-    <p class="deep-note" style="margin-top:3mm;font-size:7.6pt">Any box still empty? That is where we start together.</p>
-  </div>
-  <footer class="folio"><span class="pg">2</span><span class="asof">Facts as of October 2026</span></footer>
-</section>
-<!-- /page --><section class="page recto" data-job="neutral" id="start">
-  <header class="runhead"><span>Where to start</span><span>Know your products</span></header>
+<div class="spread"><span class="spread-label">Pages 2–3</span><section class="page verso" data-job="neutral" id="start">
+  <header class="runhead"><span>Know your products</span><span>Where to start</span></header>
   <h2 class="page-title">Where to start</h2>
   <p class="intro">Begin with what you want your money to do. Each line points to the product, and the page that explains it.</p>
   <table class="finder">
@@ -793,7 +707,34 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
     </svg>
   </div>
   <p class="opener-note">PRIM is a new kind of PMS, starting on 1 April 2027, that invests only in mutual funds. Insurance has no minimum, only a premium, and GIFT City minimums are in US dollars, so neither is on the scale above.</p>
-  <footer class="folio"><span class="pg">3</span><span class="asof">Facts as of October 2026</span></footer>
+  <footer class="folio"><span class="pg">2</span><span class="asof">Facts as of October 2026</span></footer>
+</section>
+<!-- /page --><section class="page recto" data-job="neutral" id="help">
+  <header class="runhead"><span>How we help you</span><span>Know your products</span></header>
+  <h2 class="page-title">How we help you</h2>
+  <p class="intro">Many of these products can be bought online. Families still come to us, because the hard part is not buying: it is choosing well and staying on course for years. This is what we do for you.</p>
+  <ol class="helpgrid">
+    <li><b>We stay with you when markets fall</b>We talk it through with you, so a bad month does not undo a long-term plan, and your SIPs keep going.</li>
+    <li><b>We match each product to a goal</b>We start from your goals, timelines and comfort with risk, and explain what you are buying before you sign.</li>
+    <li><b>We look at everything together</b>Funds, SIFs, NCDs, PMS, AIFs and insurance, reviewed side by side with you, at least once a year.</li>
+    <li><b>We handle the paperwork</b>KYC, nominees, bank and address changes, SIPs, switches and redemptions, so nothing stalls.</li>
+    <li><b>We help at tax time</b>Capital gains statements and the papers your tax consultant asks for, for every product you hold with us.</li>
+    <li><b>We stand by your family</b>If something happens to you, we help your family with insurance claims and with moving investments into their names.</li>
+    <li><b>We keep you up to date</b>When rules or taxes change, we tell you what it means for you, such as the new PMS rules from April 2027.</li>
+    <li><b>We are a phone call away</b>The same local team in Dindigul since 1985, for you and for the next generation of your family.</li>
+  </ol>
+  <div class="deep-callout df-callout">
+    <h3>How we are paid</h3>
+    <p>We receive commission from the providers of the products we distribute. It pays for this service, for as long as you invest with us.</p>
+  </div>
+  <div class="help-call">
+    <p class="label">Call us</p>
+    <p><span>L. Ashok</span> <b>98421 01574</b></p>
+    <p><span>N. Alagar</span> <b>99651 01999</b></p>
+    <p><span>Nishanth Ashok</span> <b>98421 01374</b></p>
+    <p class="help-mail">support@raminvestments.in · www.raminvestments.in</p>
+  </div>
+  <footer class="folio"><span class="pg">3</span><span class="asof">Ram Investments · Diary 2027</span></footer>
 </section>
 <!-- /page --></div>
 <div class="spread"><span class="spread-label">Pages 4–5</span><section class="page verso" data-job="protect" id="term">
@@ -2533,7 +2474,7 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
       <p>support@raminvestments.in · www.raminvestments.in</p>
     </div>
     <h3 class="label muted">How we are paid</h3>
-    <p>We receive commission from the providers of the products we distribute. It pays for our service: helping you choose, handling the paperwork, and regular reviews. The commission on your mutual funds and SIFs is shown in your Consolidated Account Statement (CAS); ask us for the details on any product.</p>
+    <p>We receive commission from the providers of the products we distribute. It pays for the service on page 3: helping you choose, staying with you when markets fall, handling the paperwork, yearly reviews, tax-time papers, and help for your family with claims.</p>
     <h3 class="label muted">Standard warnings</h3>
     <div class="warnings">
       <p><b>Mutual Fund investments are subject to market risks, read all scheme related documents carefully.</b></p>

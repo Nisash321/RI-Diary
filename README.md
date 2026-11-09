@@ -8,7 +8,7 @@ The product section of the Ram Investments 2027 diary: a 28-page field guide to 
 
 | Pages | Content |
 |---|---|
-| 1–3 | Opener and contents · four jobs your money can do · where to start (goal finder and minimums) |
+| 1–3 | Opener and contents · where to start (goal finder and minimums) · how we help you |
 | 4–9 | Term Insurance, Health Insurance, Mutual Funds |
 | 10–13 | SIF, then SIF in depth |
 | 14–17 | NCDs, PMS |
@@ -25,6 +25,7 @@ Two house rules run through every page: **no returns** (no return figures, proje
 
 | Path | What it is |
 |---|---|
+| [`product-section/dist/ram-investments-diary-2027-proof.pdf`](product-section/dist/ram-investments-diary-2027-proof.pdf) | Everything in one file: the four opening pages, then the 28-page product guide (32 pages) |
 | [`product-section/dist/know-your-products-proof.pdf`](product-section/dist/know-your-products-proof.pdf) | 28-page A5 proof for review |
 | [`product-section/dist/diary-front-proof.pdf`](product-section/dist/diary-front-proof.pdf) | The diary's four opening pages: compliments and contacts, income tax at a glance (tax year 2026–27, two pages), and our story |
 | [`product-section/dist/previews/`](product-section/dist/previews/) | One image per spread |
