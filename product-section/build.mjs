@@ -119,7 +119,7 @@ ${spreads.join("\n")}
   return { out, pageCount: sections.length, spreadCount: spreads.length };
 }
 
-async function renderOutputs({ out, spreadCount }) {
+async function renderOutputs({ out, spreadCount, name = "know-your-products", prefix = "" }) {
   // Playwright is installed globally; createRequire honours NODE_PATH.
   const { chromium } = createRequire(import.meta.url)("playwright");
   const browser = await chromium.launch();
@@ -187,16 +187,59 @@ async function renderOutputs({ out, spreadCount }) {
   await mkdir(previews, { recursive: true });
   const spreads = await page.$$(".spread");
   for (const [i, el] of spreads.entries()) {
-    await el.screenshot({ path: path.join(previews, `spread-${String(i).padStart(2, "0")}.png`) });
+    await el.screenshot({ path: path.join(previews, `${prefix}spread-${String(i).padStart(2, "0")}.png`) });
   }
   console.log(`wrote ${spreads.length} spread previews`);
 
-  const pdfPath = path.join(dist, "know-your-products-proof.pdf");
+  const pdfPath = path.join(dist, `${name}-proof.pdf`);
   await page.emulateMedia({ media: "print" });
   await page.pdf({ path: pdfPath, width: "148mm", height: "210mm", printBackground: true, preferCSSPageSize: true });
   console.log(`wrote ${path.relative(process.cwd(), pdfPath)}`);
   await browser.close();
 }
 
+// The diary's own opening pages (compliments, tax highlights, our story).
+// They share the styles but are a separate document with roman folios.
+async function buildFront() {
+  const css = (await read("styles/tokens.css")) + "\n" + (await read("styles/diary.css"));
+  const roman = ["i", "ii", "iii", "iv", "v", "vi", "vii", "viii"];
+  let n = 1; // page i (the compliments page) carries no folio
+  let html = (await read("pages/diary-front.html")).replace(/\{\{page\}\}/g, () => roman[n++]);
+  html = html.replace(/\{\{asof\}\}/g, meta.asOf).replace(/\{\{year\}\}/g, meta.diaryYear).replace(/\{\{firm\}\}/g, meta.firm);
+  const sections = html.match(/<section class="page[\s\S]*?<\/section>\s*<!-- \/page -->/g) || [];
+  const spreads = [`<div class="spread single-recto"><span class="spread-label">Page i</span><div class="blank"></div>${sections[0]}</div>`];
+  for (let i = 1; i < sections.length - 1; i += 2) {
+    spreads.push(`<div class="spread"><span class="spread-label">Pages ${roman[i]}–${roman[i + 1]}</span>${sections[i]}${sections[i + 1]}</div>`);
+  }
+  if (sections.length % 2 === 0) {
+    spreads.push(`<div class="spread single-verso"><span class="spread-label">Page ${roman[sections.length - 1]}</span>${sections[sections.length - 1]}<div class="blank"></div></div>`);
+  }
+  const doc = `<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Opening pages · ${meta.firm} Diary ${meta.diaryYear} (proof)</title>
+<style>
+${css}
+</style>
+</head>
+<body>
+<main class="book">
+${spreads.join("\n")}
+</main>
+</body>
+</html>
+`;
+  const out = path.join(dist, "diary-front.html");
+  await writeFile(out, doc);
+  console.log(`wrote ${path.relative(process.cwd(), out)} (${sections.length} pages, ${spreads.length} spreads)`);
+  return { out, pageCount: sections.length, spreadCount: spreads.length, name: "diary-front", prefix: "front-" };
+}
+
 const result = await build();
 if (render) await renderOutputs(result);
+if (existsSync(path.join(src, "pages/diary-front.html"))) {
+  const front = await buildFront();
+  if (render) await renderOutputs(front);
+}

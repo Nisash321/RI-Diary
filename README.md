@@ -26,6 +26,7 @@ Two house rules run through every page: **no returns** (no return figures, proje
 | Path | What it is |
 |---|---|
 | [`product-section/dist/know-your-products-proof.pdf`](product-section/dist/know-your-products-proof.pdf) | 28-page A5 proof for review |
+| [`product-section/dist/diary-front-proof.pdf`](product-section/dist/diary-front-proof.pdf) | The diary's four opening pages: compliments and contacts, income tax at a glance (tax year 2026–27, two pages), and our story |
 | [`product-section/dist/previews/`](product-section/dist/previews/) | One image per spread |
 | [`docs/01-visual-benchmarks.md`](docs/01-visual-benchmarks.md) | What asset managers, insurers and regulators do well visually, how Indian insurers talk about protection, and what we adopted |
 | [`docs/02-framework.md`](docs/02-framework.md) | The framework: section plan, four jobs, anatomy of an entry and of the in-depth spreads, visual and writing rules, the no-returns rule and the insurance tone guide |
@@ -54,3 +55,5 @@ The build warns if text runs off a page, past the side margins or into the folio
 5. Have the designer rebuild the pages for press (CMYK, 3 mm bleed). The HTML proof is the layout master, not the press file.
 
 Facts are as of October 2026.
+
+The logo on the opening pages is cropped from a scan of the 2026 diary, for the proof only. The designer should replace it with the original artwork.

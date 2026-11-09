@@ -532,6 +532,62 @@ svg text { font-family: var(--text); }
 .deep-callout.two h3 { margin-bottom: 1mm; }
 .deep-callout.two p { font-size: 7.4pt; }
 
+/* ---------- Diary opening pages ---------- */
+.df-welcome { justify-content: flex-start; }
+.df-brand { text-align: center; margin-top: 9mm; }
+.df-logo { width: 25mm; height: auto; display: block; margin: 0 auto 7mm; }
+.df-eyebrow { letter-spacing: .14em; }
+.df-firm { font-family: var(--display); font-weight: 750; font-stretch: 108%; font-size: 30pt; line-height: 1; letter-spacing: -.015em; color: var(--build); margin-top: 2.6mm; }
+.df-since { margin-top: 2.2mm; font-family: var(--display); font-weight: 600; font-stretch: 87.5%; font-size: 8pt; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-3); }
+.df-people { margin-top: 4mm; font-size: 11pt; font-weight: 600; color: var(--ink); }
+.df-offer { margin-top: 12mm; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.4mm; }
+.df-offer > div { border-top: 1.4mm solid var(--job); background: var(--job-tint); padding: 2.2mm 2.4mm 2.6mm; }
+.df-offer .df-job { display: block; font-family: var(--display); font-weight: 700; font-stretch: 87.5%; font-size: 6.6pt; letter-spacing: .12em; text-transform: uppercase; color: var(--job-deep); margin-bottom: 1.2mm; }
+.df-offer p { font-size: 8.4pt; line-height: 1.3; font-weight: 600; color: var(--ink); }
+.df-contact { margin-top: 11mm; display: grid; grid-template-columns: 1.1fr 1fr; gap: 6mm; }
+.df-contact .label { padding-bottom: 1.4mm; border-bottom: .25mm solid var(--rule); margin-bottom: 2mm; }
+.df-phones dl { display: grid; grid-template-columns: auto 1fr; column-gap: 4mm; row-gap: 1.2mm; font-size: 9pt; }
+.df-phones dt { color: var(--ink-2); }
+.df-phones dd { font-weight: 700; font-variant-numeric: tabular-nums; text-align: right; }
+.df-visit p { font-size: 9pt; line-height: 1.4; }
+.df-visit p + p { margin-top: 1.2mm; }
+.df-reg { margin-top: auto; padding-top: 2.4mm; border-top: .25mm solid var(--rule); font-size: 6.8pt; line-height: 1.4; color: var(--ink-2); text-align: center; }
+
+.df-two { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; margin-top: 3.2mm; }
+.df-h { display: block; padding-bottom: 1.4mm; border-bottom: .25mm solid var(--rule); margin-bottom: 1.2mm; }
+.df-h .muted { font-family: var(--text); font-weight: 500; font-stretch: 100%; letter-spacing: .02em; text-transform: none; font-size: 6.6pt; color: var(--ink-3); }
+table.tx { width: 100%; border-collapse: collapse; font-size: 7.8pt; line-height: 1.25; }
+table.tx th { font-family: var(--display); font-weight: 650; font-stretch: 87.5%; font-size: 6.2pt; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); text-align: left; padding: 0 1.4mm 1.1mm 0; border-bottom: .3mm solid var(--ink); vertical-align: bottom; }
+table.tx td { padding: .8mm 1.4mm .7mm 0; border-bottom: .25mm solid var(--rule-2); vertical-align: top; }
+table.tx td:last-child, table.tx th:last-child { text-align: right; padding-right: 0; font-weight: 700; }
+table.tx.tx-wide td:last-child, table.tx.tx-wide th:last-child { text-align: left; }
+table.tx.tx-wide td:nth-child(2n) { font-weight: 700; }
+table.tx.tx-cg td:nth-child(2n) { font-weight: 400; }
+table.tx.tx-cg td:nth-child(3), table.tx.tx-cg td:nth-child(5) { font-weight: 700; }
+.df-note { font-size: 6.9pt; line-height: 1.32; color: var(--ink-2); margin-top: 1.4mm; text-wrap: pretty; }
+.df-callout { margin-top: 3.4mm; padding-top: 2.6mm; padding-bottom: 2.8mm; }
+.df-list { display: grid; gap: 1mm; }
+.df-list li { position: relative; padding-left: 3.2mm; font-size: 7.8pt; line-height: 1.3; text-wrap: pretty; }
+.df-list li::before { content: ""; position: absolute; left: .3mm; top: 1.4mm; width: 1.3mm; height: 1.3mm; background: var(--ink-3); }
+.df-dates { display: grid; grid-template-columns: repeat(4, 1fr); column-gap: 3mm; row-gap: 1.6mm; }
+.df-dates li { font-size: 7.4pt; line-height: 1.25; border-left: .6mm solid var(--build); padding-left: 1.8mm; }
+.df-dates b { display: block; font-family: var(--display); font-weight: 700; font-size: 8.6pt; color: var(--build-deep); }
+.df-lead { font-size: 10pt; color: var(--ink); max-width: none; }
+.df-timeline { margin-top: 6mm; display: grid; gap: 0; }
+.df-timeline li { display: grid; grid-template-columns: 22mm 1fr; column-gap: 4mm; padding: 3mm 0; border-top: .25mm solid var(--rule); }
+.df-timeline li:last-child { border-bottom: .25mm solid var(--rule); }
+.df-timeline b { font-family: var(--display); font-weight: 700; font-stretch: 100%; font-size: 13pt; color: var(--build); line-height: 1.1; }
+.df-timeline h3 { font-family: var(--display); font-weight: 700; font-size: 9.2pt; color: var(--ink); margin-bottom: .8mm; }
+.df-timeline p { font-size: 8.6pt; line-height: 1.38; color: var(--ink-2); text-wrap: pretty; }
+.df-promise { margin-top: 7mm; }
+.df-promise p { font-size: 9pt; }
+.df-wishes { margin-top: auto; padding-bottom: 2mm; }
+.df-wishes p { font-size: 9.4pt; line-height: 1.4; color: var(--ink); }
+.df-sign { margin-top: 2.4mm; font-family: var(--display); font-weight: 700; font-size: 11pt; color: var(--build); }
+table.tx.tx-sur td:not(:first-child) { font-weight: 700; }
+table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
+.df-reg { margin-bottom: 1.2mm; }
+
 </style>
 </head>
 <body>

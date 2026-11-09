@@ -162,6 +162,21 @@ House rule: the pages give no returns and no projections (see section 5 of [02-f
 | AIF commitments, June 2024: no clean SEBI figure found (March 2024 about ₹11.3 lakh crore; September 2024 ₹12.43 lakh crore), so the chart marks 2024 as not shown | p.21 | [Business Standard](https://www.business-standard.com/amp/markets/news/aif-investments-top-rs-4-trillion-commitments-cross-rs-11-trillion-124061901034_1.html); [Cafemutual](https://cafemutual.com/news/cafe-alt/33677-aif-aum-reaches-rs1250-lakh-crore-in-september-2024) | **Refresh**: add June 2024 from SEBI's AIF statistics |
 | Typical AIF term "often 4 to 10 years" (SEBI minimum 3 years for Category I and II) | pp.19, 21, 25 | SEBI AIF Regulations; market practice | **Verify** |
 
+## Diary opening pages (pages i–iv, separate document)
+
+| Claim | Source | Status |
+|---|---|---|
+| New regime slabs (nil to ₹4 lakh, then 5% steps to 30% above ₹24 lakh), rebate to ₹12 lakh (₹12.75 lakh salaried), standard deduction ₹75,000; old regime slabs, ₹5 lakh rebate, ₹50,000 standard deduction; unchanged by Budget 2026 | [Business Today, 1 Apr 2026](https://www.businesstoday.in/amp/personal-finance/tax/story/income-tax-slabs-fy-2026-27-will-rates-change-from-april-1-under-new-tax-rules-details-523303-2026-04-01); [BankBazaar](https://www.bankbazaar.com/tax/income-tax-slabs.html) | **Verify** against the Income Tax Department |
+| Surcharge 10/15/25/37% (new regime capped at 25%); 15% cap on dividends and equity capital gains; 4% cess | [Taxmann](https://www.taxmann.com/post/blog/tax-rates-surcharge-cess) | Confirmed |
+| Firms 30%; companies with turnover up to ₹400 crore 25%; concessional regime 22%; others 30% | Finance Acts; carried into the 2025 Act | **Verify** the turnover base year |
+| MAT 14% from tax year 2026–27 (old regime), proposed in Budget 2026 | [Lexplosion summary of the Finance Bill, 2026](https://lexplosion.in/key-amendments-proposed-under-direct-and-indirect-tax-laws-in-the-finance-bill-2026/) | **Verify** it was enacted as proposed |
+| Return due dates: 31 July (ITR-1 and 2), 31 August (business without audit), 31 October (audit) | [Taxscan](https://www.taxscan.in/top-stories/budget-2026-itr-due-dates-revised-for-all-taxpayer-categories-1442591) | **Verify** |
+| TDS: interest ₹50,000 (₹1 lakh seniors) 10%; dividends ₹10,000 10%; rent by individuals ₹50,000 a month 2%; property ₹50 lakh 1%; contractors and professionals paid by individuals without audit ₹50 lakh 2%; TCS on LRS investment 20% above ₹10 lakh | Finance Act 2025 thresholds; [TDSMAN rate chart 2026-27](https://blog.tdsman.com/2026/03/tds-tcs-rate-chart-fy-2026-27/) | **Verify** against the official chart |
+| Cash receipts of ₹2 lakh or more barred; cash loans or deposits of ₹20,000 or more barred; gifts above ₹50,000 from non-relatives taxable; stamp-duty value rule for property | Long-standing provisions, carried into the 2025 Act | Confirmed |
+| Capital gains: property bought before 23 July 2024 may use 20% with indexation (resident individuals and HUFs) | Finance (No. 2) Act 2024 | Confirmed |
+| Sujeetha Nishanth, 95668 49617 | 2026 diary compliments page | Confirm with the firm |
+| "Top 10 performers at the state level", government awards including honours from the Chief Minister of Tamil Nadu | 2026 diary "about us" | Firm's own record |
+
 ## Researched but not printed
 
 These figures came up in the research and are held back, mostly under the house rule against returns. They are recorded here so nobody adds them back without a decision.
