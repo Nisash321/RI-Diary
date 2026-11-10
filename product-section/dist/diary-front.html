@@ -550,7 +550,8 @@ svg text { font-family: var(--text); }
 .df-phones dd { font-weight: 700; font-variant-numeric: tabular-nums; text-align: right; }
 .df-visit p { font-size: 9pt; line-height: 1.4; }
 .df-visit p + p { margin-top: 1.2mm; }
-.df-reg { margin-top: auto; padding-top: 2.4mm; border-top: .25mm solid var(--rule); font-size: 6.8pt; line-height: 1.4; color: var(--ink-2); text-align: center; }
+.df-reg { margin-top: auto; padding-top: 2.4mm; border-top: .25mm solid var(--rule); font-size: 6.8pt; line-height: 1.45; color: var(--ink-2); text-align: center; }
+.df-reg p + p { margin-top: .3mm; }
 
 .df-two { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; margin-top: 3.2mm; }
 .df-h { display: block; padding-bottom: 1.4mm; border-bottom: .25mm solid var(--rule); margin-bottom: 1.2mm; }
@@ -638,6 +639,9 @@ th .rk-n { color: var(--build-deep); }
 .rk-legal { margin-top: 1.6mm; }
 .rk-key { font-weight: 700; color: var(--build-deep); }
 
+/* The "x+" from the logo, after the firm name wherever it is used as a wordmark. */
+.brand-x { font-size: max(.58em, 4.6pt); line-height: 0; vertical-align: super; margin-left: .14em; text-transform: none; letter-spacing: 0; font-weight: 700; color: var(--build); }
+
 </style>
 </head>
 <body>
@@ -646,7 +650,7 @@ th .rk-n { color: var(--build-deep); }
   <div class="df-brand">
     <img class="df-logo" src="../assets/brand/ri-logo-from-2026-diary.png" alt="Ram Investments logo">
     <p class="label muted df-eyebrow">With best compliments from</p>
-    <h1 class="df-firm">Ram Investments</h1>
+    <h1 class="df-firm">Ram Investments<sup class="brand-x">x+</sup></h1>
     <p class="df-since">Dindigul · Since 1985</p>
     <p class="df-people">L. Ashok · N. Alagar · Nishanth Ashok</p>
   </div>
@@ -676,146 +680,149 @@ th .rk-n { color: var(--build-deep); }
     </div>
   </div>
 
-  <p class="df-reg">AMFI Registered Mutual Fund Distributors: L. Ashok, ARN-14532 · Nishanth Ashok, ARN-328299. SIF Distributor (SIFD): Nishanth Ashok, ARN-328299. APMI Registered PMS Distributor: Nishanth Ashok, APRN-07532. Insurance advisor: <span class="nowrap">Sujeetha Nishanth</span>, <span class="nowrap">IRDAI Advisor Code 9504277</span>.</p>
+  <div class="df-reg">
+    <p>AMFI Registered Mutual Fund Distributors · <span class="nowrap">L. Ashok, ARN-14532</span> · <span class="nowrap">Nishanth Ashok, ARN-328299</span></p>
+    <p>SIF Distributor (SIFD) · <span class="nowrap">Nishanth Ashok, ARN-328299</span></p>
+    <p>APMI Registered PMS Distributor · <span class="nowrap">Nishanth Ashok, APRN-07532</span></p>
+    <p>Insurance advisor · <span class="nowrap">Sujeetha Nishanth, IRDAI Advisor Code 9504277</span></p>
+  </div>
 </section>
 <!-- /page --></div>
-<div class="spread"><span class="spread-label">Pages ii–iii</span><section class="page verso" data-job="neutral" id="tax-a">
-  <header class="runhead"><span>Ram Investments · Diary 2027</span><span>Income tax at a glance</span></header>
+<div class="spread"><span class="spread-label">Pages ii–iii</span><section class="page verso rk" data-job="neutral" id="tax-a">
+  <header class="runhead"><span>Ram Investments<sup class="brand-x">x+</sup> · Diary 2027</span><span>Tax reckoner 2026–27</span></header>
   <p class="label muted">Tax year 2026–27 · 1 April 2026 to 31 March 2027</p>
-  <h2 class="page-title">Income tax at a glance</h2>
-  <p class="intro">Under the new Income-tax Act, 2025. Rates as of October 2026. The Union Budget on 1 February 2027 may change them from 1 April 2027.</p>
+  <h2 class="page-title">Tax reckoner 2026–27</h2>
+  <p class="intro rk-intro">Income-tax rates for investors, under the Income-tax Act, 2025 as amended by the Finance Act, 2026. Rates are before surcharge and cess. The Union Budget on 1 February 2027 may change them from 1 April 2027.</p>
 
-  <div class="df-two">
-    <div>
-      <h3 class="label df-h">New regime <span class="muted">applies unless you choose the old one</span></h3>
-      <table class="tx">
-        <thead><tr><th>Income</th><th>Rate</th></tr></thead>
-        <tbody>
-          <tr><td>Up to ₹4 lakh</td><td>Nil</td></tr>
-          <tr><td>₹4 lakh to ₹8 lakh</td><td>5%</td></tr>
-          <tr><td>₹8 lakh to ₹12 lakh</td><td>10%</td></tr>
-          <tr><td>₹12 lakh to ₹16 lakh</td><td>15%</td></tr>
-          <tr><td>₹16 lakh to ₹20 lakh</td><td>20%</td></tr>
-          <tr><td>₹20 lakh to ₹24 lakh</td><td>25%</td></tr>
-          <tr><td>Above ₹24 lakh</td><td>30%</td></tr>
-        </tbody>
-      </table>
-      <p class="df-note">Standard deduction for salaried people: ₹75,000.</p>
-    </div>
-    <div>
-      <h3 class="label df-h">Old regime <span class="muted">if you choose it</span></h3>
-      <table class="tx">
-        <thead><tr><th>Income</th><th>Rate</th></tr></thead>
-        <tbody>
-          <tr><td>Up to ₹2.5 lakh</td><td>Nil</td></tr>
-          <tr><td>₹2.5 lakh to ₹5 lakh</td><td>5%</td></tr>
-          <tr><td>₹5 lakh to ₹10 lakh</td><td>20%</td></tr>
-          <tr><td>Above ₹10 lakh</td><td>30%</td></tr>
-        </tbody>
-      </table>
-      <p class="df-note">Nil band: ₹3 lakh at age 60 to 79; ₹5 lakh at 80 and above. Standard deduction: ₹50,000. Deductions such as Sections 123 and 126 apply (page iii).</p>
-    </div>
-  </div>
+  <div class="rk-band"><h3>Capital gains on mutual funds</h3><span class="aside">Tax when you redeem or switch</span></div>
+  <table class="rk rk-4">
+    <colgroup><col style="width:34%"><col><col><col></colgroup>
+    <thead><tr><th></th><th>Individual or HUF</th><th>Domestic company</th><th>NRI<sup class="rk-n">b</sup></th></tr></thead>
+    <tbody>
+      <tr class="rk-sub"><td colspan="4"><b>Equity-oriented funds and SIF strategies,</b> 65% or more in Indian shares · long term: held over 12 months</td></tr>
+      <tr><td>Long-term gains</td><td>12.5%<sup class="rk-n">a</sup></td><td>12.5%<sup class="rk-n">a</sup></td><td>12.5%<sup class="rk-n">a</sup></td></tr>
+      <tr><td>Short-term gains</td><td>20%</td><td>20%</td><td>20%</td></tr>
+      <tr class="rk-sub"><td colspan="4"><b>Debt funds</b> (over 65% in debt) bought on or after 1 April 2023<sup class="rk-n">c</sup></td></tr>
+      <tr><td>Any gain, however long you hold</td><td>Slab rate</td><td>Normal rate</td><td>Slab rate</td></tr>
+      <tr class="rk-sub"><td colspan="4"><b>Other funds:</b> gold and silver ETFs and FoFs, overseas FoFs · long term: held over 24 months (12 for ETFs)</td></tr>
+      <tr><td>Long-term gains</td><td>12.5%</td><td>12.5%</td><td>12.5%</td></tr>
+      <tr><td>Short-term gains</td><td>Slab rate</td><td>Normal rate</td><td>Slab rate</td></tr>
+    </tbody>
+  </table>
 
-  <div class="deep-callout df-callout">
-    <h3>No tax on income up to ₹12 lakh</h3>
-    <p>New regime: a rebate makes the tax nil if total income is up to ₹12 lakh (₹12.75 lakh for salaried people). Old regime: up to ₹5 lakh. Income taxed at special rates, such as capital gains, is not covered.</p>
-  </div>
+  <div class="rk-band"><h3>Tax deducted on fund payouts (IDCW)</h3><span class="aside">Counts towards the tax you owe</span></div>
+  <table class="rk rk-2">
+    <colgroup><col style="width:34%"><col></colgroup>
+    <thead><tr><th>Investor</th><th>Tax deducted at source</th></tr></thead>
+    <tbody>
+      <tr><td>Resident</td><td>10%, if payouts are over ₹10,000 in the tax year<sup class="rk-n">d</sup></td></tr>
+      <tr><td>NRI</td><td>20%, plus surcharge and cess</td></tr>
+    </tbody>
+  </table>
 
-  <div class="section">
-    <h2 class="label"><span>Surcharge and cess</span><span class="aside">Individuals and HUFs</span></h2>
-    <table class="tx tx-wide tx-sur">
-      <thead><tr><th>Total income</th><th>₹50 lakh to ₹1 crore</th><th>₹1 crore to ₹2 crore</th><th>₹2 crore to ₹5 crore</th><th>Above ₹5 crore</th></tr></thead>
-      <tbody><tr><td>Surcharge on tax</td><td>10%</td><td>15%</td><td>25%</td><td>25% new · 37% old</td></tr></tbody>
-    </table>
-    <p class="df-note">On dividends and capital gains from shares and equity funds, the surcharge is at most 15%. A 4% cess is then added to the tax and surcharge, for everyone.</p>
-  </div>
-
-  <div class="section">
-    <h2 class="label"><span>Firms and companies</span><span class="aside">Before surcharge and cess</span></h2>
-    <table class="tx tx-wide">
+  <div class="rk-band"><h3>Income tax rates</h3><span class="aside">Individuals and HUFs</span></div>
+  <div class="rk-two">
+    <table class="rk rk-slab">
+      <thead><tr><th>Old regime<sup class="rk-n">e</sup></th><th>Rate</th></tr></thead>
       <tbody>
-        <tr><td>Firms and LLPs</td><td>30%</td><td>Companies with turnover up to ₹400 crore</td><td>25%</td></tr>
-        <tr><td>Companies in the concessional regime</td><td>22%</td><td>Other domestic companies</td><td>30%</td></tr>
-        <tr><td>Minimum alternate tax (old regime)</td><td>14%</td><td>New credit for MAT paid</td><td>None</td></tr>
+        <tr><td>Up to ₹2.5 lakh</td><td>Nil</td></tr>
+        <tr><td>₹2.5 lakh to ₹5 lakh</td><td>5%</td></tr>
+        <tr><td>₹5 lakh to ₹10 lakh</td><td>20%</td></tr>
+        <tr><td>Above ₹10 lakh</td><td>30%</td></tr>
+      </tbody>
+    </table>
+    <table class="rk rk-slab">
+      <thead><tr><th>New regime, the default<sup class="rk-n">f</sup></th><th>Rate</th></tr></thead>
+      <tbody>
+        <tr><td>Up to ₹4 lakh</td><td>Nil</td></tr>
+        <tr><td>₹4 lakh to ₹8 lakh</td><td>5%</td></tr>
+        <tr><td>₹8 lakh to ₹12 lakh</td><td>10%</td></tr>
+        <tr><td>₹12 lakh to ₹16 lakh</td><td>15%</td></tr>
+        <tr><td>₹16 lakh to ₹20 lakh</td><td>20%</td></tr>
+        <tr><td>₹20 lakh to ₹24 lakh</td><td>25%</td></tr>
+        <tr><td>Above ₹24 lakh</td><td>30%</td></tr>
       </tbody>
     </table>
   </div>
-  <div class="section">
-    <h2 class="label"><span>Cash, gifts and property</span></h2>
-    <ul class="df-list">
-      <li>No cash receipts of ₹2 lakh or more from one person in a day, or for one event.</li>
-      <li>Do not take or give a loan or deposit of ₹20,000 or more in cash.</li>
-      <li>Gifts above ₹50,000 a year from non-relatives are taxed as your income.</li>
-      <li>Property sales are taxed on the stamp-duty value if it is higher than the price.</li>
-    </ul>
-  </div>
-
+  <div class="rk-band"><h3>Notes</h3></div>
+  <ol class="rk-notes">
+    <li><b>a</b>On long-term gains above ₹1.25 lakh a year in total.</li>
+    <li><b>b</b>The fund deducts the tax when an NRI redeems or switches.</li>
+    <li><b>c</b>Units bought before 1 April 2023 and held over 24 months: 12.5%.</li>
+    <li><b>d</b>20% if your PAN is not linked to Aadhaar.</li>
+    <li><b>e</b>No tax up to ₹5 lakh of income, through a rebate. Nil band ₹3 lakh at 60 to 79, ₹5 lakh at 80+. Standard deduction ₹50,000. Sec. 123 (80C) up to ₹1.5 lakh; Sec. 126 (80D) health cover up to ₹25,000 (₹50,000 for seniors), and the same for parents.</li>
+    <li><b>f</b><span class="rk-key">No tax up to ₹12 lakh of income</span> (₹12.75 lakh for salaried people), through a rebate; it does not cover capital gains at special rates. Standard deduction ₹75,000; most deductions are not allowed.</li>
+  </ol>
   <footer class="folio"><span class="pg">ii</span><span class="asof">Rates as of October 2026</span></footer>
 </section>
-<!-- /page --><section class="page recto" data-job="neutral" id="tax-b">
-  <header class="runhead"><span>Income tax at a glance</span><span>Ram Investments · Diary 2027</span></header>
-  <p class="label muted">Tax year 2026–27</p>
-  <h2 class="page-title">Investments, deductions and dates</h2>
+<!-- /page --><section class="page recto rk" data-job="neutral" id="tax-b">
+  <header class="runhead"><span>Tax reckoner 2026–27</span><span>Ram Investments<sup class="brand-x">x+</sup> · Diary 2027</span></header>
 
-  <div class="section" style="margin-top:4mm">
-    <h2 class="label"><span>Capital gains</span><span class="aside">Tax on profit when you sell, redeem or switch</span></h2>
-    <table class="tx tx-wide tx-cg">
-      <thead><tr><th>What you sell</th><th>Held up to</th><th>Rate</th><th>Held longer</th><th>Rate</th></tr></thead>
-      <tbody>
-        <tr><td>Listed shares, equity funds, equity-oriented SIFs</td><td>12 months</td><td>20%</td><td>over 12 months</td><td>12.5% on gains above ₹1.25 lakh a year</td></tr>
-        <tr><td>Debt funds bought from 1 April 2023</td><td colspan="4">Your slab rate, however long you hold</td></tr>
-        <tr><td>Gold and overseas funds, property, unlisted shares</td><td>24 months</td><td>Slab rate</td><td>over 24 months</td><td>12.5%</td></tr>
-        <tr><td>Listed bonds and NCDs, gold and overseas ETFs</td><td>12 months</td><td>Slab rate</td><td>over 12 months</td><td>12.5%</td></tr>
-      </tbody>
-    </table>
-    <p class="df-note">Property or land bought before 23 July 2024: resident individuals and HUFs may instead pay 20% with indexation, whichever is lower.</p>
-  </div>
+  <div class="rk-band rk-first"><h3>Surcharge and cess</h3><span class="aside">Added on top of the tax<sup class="rk-n">g</sup></span></div>
+  <table class="rk rk-3">
+    <colgroup><col style="width:40%"><col><col></colgroup>
+    <thead><tr><th>Total income</th><th>Old regime</th><th>New regime</th></tr></thead>
+    <tbody>
+      <tr><td>₹50 lakh to ₹1 crore</td><td>10%</td><td>10%</td></tr>
+      <tr><td>₹1 crore to ₹2 crore</td><td>15%</td><td>15%</td></tr>
+      <tr><td>₹2 crore to ₹5 crore</td><td>25%</td><td>25%</td></tr>
+      <tr><td>Above ₹5 crore</td><td>37%</td><td>25%</td></tr>
+    </tbody>
+  </table>
 
-  <div class="section">
-    <h2 class="label"><span>Deductions</span><span class="aside">Old regime only</span></h2>
-    <ul class="df-list">
-      <li><b>Section 123</b> (earlier 80C): up to ₹1.5 lakh a year in all, for PF, PPF, ELSS, life insurance premiums and home-loan principal.</li>
-      <li><b>Section 126</b> (earlier 80D): health insurance premiums up to ₹25,000 a year for your family (₹50,000 if a senior citizen is covered), and the same again for parents.</li>
-    </ul>
-  </div>
+  <div class="rk-band"><h3>Capital gains on other investments</h3><span class="aside">Shares, bonds, property, gold</span></div>
+  <table class="rk rk-3">
+    <colgroup><col style="width:48%"><col><col></colgroup>
+    <thead><tr><th>Sale of</th><th>Short-term gains</th><th>Long-term gains<sup class="rk-n">h</sup></th></tr></thead>
+    <tbody>
+      <tr><td>Listed shares and equity-fund units, with STT paid</td><td>20%</td><td>12.5%<sup class="rk-n">a</sup></td></tr>
+      <tr class="rk-sub"><td colspan="3"><b>Anything else,</b> sold by</td></tr>
+      <tr><td>Individuals and HUFs, resident or NRI</td><td>Slab rate</td><td>12.5%</td></tr>
+      <tr><td>Firms and LLPs</td><td>30%</td><td>12.5%</td></tr>
+      <tr><td>Resident companies</td><td>30% · 25% · 22% · 15%<sup class="rk-n">i</sup></td><td>12.5%</td></tr>
+    </tbody>
+  </table>
 
-  <div class="section">
-    <h2 class="label"><span>Tax deducted or collected at source</span><span class="aside">Selected payments</span></h2>
-    <table class="tx tx-wide tx-tds">
-      <thead><tr><th>Payment</th><th>Above</th><th>Rate</th></tr></thead>
-      <tbody>
-        <tr><td>Bank and post office interest</td><td>₹50,000 a year; ₹1 lakh for seniors</td><td>10%</td></tr>
-        <tr><td>Dividends</td><td>₹10,000 a year</td><td>10%</td></tr>
-        <tr><td>Rent paid by an individual</td><td>₹50,000 a month</td><td>2%</td></tr>
-        <tr><td>Buying property (higher of price or stamp-duty value)</td><td>₹50 lakh</td><td>1%</td></tr>
-        <tr><td>Contractors and professionals, paid by an individual without audit</td><td>₹50 lakh a year</td><td>2%</td></tr>
-        <tr><td>Money sent abroad to invest (LRS), collected by your bank</td><td>₹10 lakh a year</td><td>20%</td></tr>
-      </tbody>
-    </table>
-    <p class="df-note">Tax deducted or collected is not an extra tax. It counts towards what you owe, and any excess is refunded when you file.</p>
-  </div>
+  <div class="rk-band"><h3>Securities transaction tax (STT)</h3><span class="aside">On the value traded</span></div>
+  <table class="rk rk-3">
+    <colgroup><col style="width:56%"><col><col></colgroup>
+    <thead><tr><th>Transaction</th><th>Rate</th><th>Paid by</th></tr></thead>
+    <tbody>
+      <tr><td>Buying or selling shares, with delivery</td><td>0.1%</td><td>Buyer and seller</td></tr>
+      <tr><td>Selling equity-fund units on the exchange, or to the fund</td><td>0.001%</td><td>Seller</td></tr>
+      <tr><td>Selling shares or equity-fund units the same day (intraday)</td><td>0.025%</td><td>Seller</td></tr>
+      <tr><td>Futures<sup class="rk-n">j</sup></td><td>0.05%</td><td>Seller</td></tr>
+      <tr><td>Options sold (on the premium)<sup class="rk-n">j</sup></td><td>0.15%</td><td>Seller</td></tr>
+      <tr><td>Options exercised<sup class="rk-n">j</sup></td><td>0.15%</td><td>Buyer</td></tr>
+    </tbody>
+  </table>
 
-  <div class="section">
-    <h2 class="label"><span>Key dates in 2027</span><span class="aside">Advance tax and returns</span></h2>
-    <ol class="df-dates">
-      <li><b>15 Mar</b><span>Advance tax: 100% for 2026–27</span></li>
-      <li><b>31 Mar</b><span>Revised <span class="nowrap">2025–26</span> returns, with fee</span></li>
-      <li><b>15 Jun</b><span>Advance tax: 15% for 2027–28</span></li>
-      <li><b>31 Jul</b><span>Returns: most individuals</span></li>
-      <li><b>31 Aug</b><span>Returns: business, no audit</span></li>
-      <li><b>15 Sep</b><span>Advance tax: 45%</span></li>
-      <li><b>31 Oct</b><span>Returns: audit cases, companies</span></li>
-      <li><b>15 Dec</b><span>Advance tax: 75%</span></li>
-      <li><b>31 Dec</b><span>Late <span class="nowrap">2026–27</span> returns, with fee</span></li>
-    </ol>
-  </div>
-  <p class="legal">A summary for general information, not tax advice. Check with your tax consultant before you act.</p>
-  <footer class="folio"><span class="pg">iii</span><span class="asof">Ram Investments · Diary 2027</span></footer>
+  <div class="rk-band"><h3>Key dates in 2027</h3><span class="aside">Advance tax and returns</span></div>
+  <ol class="df-dates rk-dates">
+    <li><b>15 Mar</b><span>Advance tax: 100% for <span class="nowrap">2026–27</span></span></li>
+    <li><b>31 Mar</b><span>Revised <span class="nowrap">2025–26</span> returns, with fee</span></li>
+    <li><b>15 Jun</b><span>Advance tax: 15% for <span class="nowrap">2027–28</span></span></li>
+    <li><b>31 Jul</b><span>Returns: most individuals</span></li>
+    <li><b>31 Aug</b><span>Returns: business, no audit</span></li>
+    <li><b>15 Sep</b><span>Advance tax: 45%</span></li>
+    <li><b>31 Oct</b><span>Returns: audit cases, companies</span></li>
+    <li><b>15 Dec</b><span>Advance tax: 75%</span></li>
+    <li><b>31 Dec</b><span>Late <span class="nowrap">2026–27</span> returns, with fee</span></li>
+  </ol>
+
+  <div class="rk-band"><h3>Notes</h3></div>
+  <ol class="rk-notes">
+    <li><b>g</b>At most 15% on dividends and on capital gains taxed at special rates. Companies: 7% above ₹1 crore, 12% above ₹10 crore; 10% in the concessional regimes. Cess: 4% of tax plus surcharge, for all.</li>
+    <li><b>h</b>Long term: over 12 months if listed, 24 months if not. Property bought before 23 July 2024: resident individuals and HUFs may choose 20% with indexation.</li>
+    <li><b>i</b>25% if 2024–25 turnover was up to ₹400 crore; 22% and 15% are optional regimes.</li>
+    <li><b>j</b>Rates raised from 1 April 2026.</li>
+  </ol>
+  <p class="legal rk-legal"><b>Mutual Fund investments are subject to market risks, read all scheme related documents carefully.</b> A summary for general information, not tax advice. Check with your tax consultant before you act.</p>
+  <footer class="folio"><span class="pg">iii</span><span class="asof">Ram Investments<sup class="brand-x">x+</sup> · Diary 2027</span></footer>
 </section>
 <!-- /page --></div>
 <div class="spread single-verso"><span class="spread-label">Page iv</span><section class="page verso" data-job="build" id="our-story">
-  <header class="runhead"><span>Ram Investments · Diary 2027</span><span>Our story</span></header>
+  <header class="runhead"><span>Ram Investments<sup class="brand-x">x+</sup> · Diary 2027</span><span>Our story</span></header>
   <p class="label">Since 1985</p>
   <h2 class="page-title">Four decades of trust</h2>
   <p class="intro df-lead">In 1985, L. Ashok and N. Alagar founded Ram Investments in Dindigul with one aim: to help people invest their hard-earned money with confidence and clarity. Forty years on, our clients’ success still comes first.</p>

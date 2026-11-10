@@ -460,7 +460,8 @@ svg text { font-family: var(--text); }
 .df-phones dd { font-weight: 700; font-variant-numeric: tabular-nums; text-align: right; }
 .df-visit p { font-size: 9pt; line-height: 1.4; }
 .df-visit p + p { margin-top: 1.2mm; }
-.df-reg { margin-top: auto; padding-top: 2.4mm; border-top: .25mm solid var(--rule); font-size: 6.8pt; line-height: 1.4; color: var(--ink-2); text-align: center; }
+.df-reg { margin-top: auto; padding-top: 2.4mm; border-top: .25mm solid var(--rule); font-size: 6.8pt; line-height: 1.45; color: var(--ink-2); text-align: center; }
+.df-reg p + p { margin-top: .3mm; }
 
 .df-two { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; margin-top: 3.2mm; }
 .df-h { display: block; padding-bottom: 1.4mm; border-bottom: .25mm solid var(--rule); margin-bottom: 1.2mm; }
@@ -547,3 +548,6 @@ th .rk-n { color: var(--build-deep); }
 .rk-notes li b { position: absolute; left: 0; color: var(--build); font-family: var(--display); font-weight: 700; }
 .rk-legal { margin-top: 1.6mm; }
 .rk-key { font-weight: 700; color: var(--build-deep); }
+
+/* The "x+" from the logo, after the firm name wherever it is used as a wordmark. */
+.brand-x { font-size: max(.58em, 4.6pt); line-height: 0; vertical-align: super; margin-left: .14em; text-transform: none; letter-spacing: 0; font-weight: 700; color: var(--build); }

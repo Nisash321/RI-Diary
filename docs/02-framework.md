@@ -87,6 +87,7 @@ An in-depth spread follows its entry, keeps the entry's job colour and number ("
 - **Sizes:** body 8.6 pt, lead sentences 10.2 pt, smallest legal text 6.3 pt. On B5 these become about 10.2, 12.1 and 7.5 pt.
 - **Colour:** four job colours plus their tints, a warm near-black, and a separate SEBI-style green-to-red ramp used only for risk scales. Job colours never carry risk meaning.
 - **Charts:** marks drawn to scale (the exposure bars, the ticket ladder on a ten-times scale, the tax bars). Anything schematic says "not to scale" or "illustration".
+- **Brand mark:** where the firm name stands as a wordmark (the welcome page title, running heads, folios, the contact box on the Important information page) it carries a superscript "x+", as the logo does. In sentences, legal lines and registration lines the name is printed plain, exactly as registered.
 - **No photographs, emoji or decorative icons.** Every graphic explains something.
 
 ## 5. Writing rules
@@ -128,7 +129,7 @@ Indian buyers avoid talking about death, and insurers have learned to sell prote
 
 - The section explains **categories**, never named schemes, funds, insurers or issuers, so it reads as investor education.
 - Standard warnings are printed **verbatim** in bold where a regulator prescribes them.
-- Registration lines: ARN-14532 and ARN-328299 on the mutual fund pages, ARN-328299 (SIFD) on the SIF pages, APRN-07532 on the PMS page, IRDAI Advisor Code 9504277 (Sujeetha Nishanth) on the term and health pages, all repeated on the Important information page. The firm chose not to print NCD, AIF or GIFT IFSC identifiers.
+- Registration lines: ARN-14532 and ARN-328299 on the mutual fund pages, ARN-328299 (SIFD) on the SIF pages, APRN-07532 on the PMS page, IRDAI Advisor Code 9504277 (Sujeetha Nishanth) on the term and health pages, all repeated on the Important information page and on the diary's welcome page, one registration to a line so each name stays with its number. The firm chose not to print NCD, AIF or GIFT IFSC identifiers.
 - The AIF entry and the AIF in-depth spread state that AIFs are offered only by private placement to eligible investors, and that the page is not an offer. The private-markets case is made with structural facts (age at listing, private funding, the share of companies that are private), never with returns, and is balanced on the same spread by "results vary widely", "Is it for you?" and the risk that companies never list.
 - SIF tax statements (highest-bracket rates, when tax is paid) need sign-off from a tax adviser before print.
 - Insurance pages need written approval from each insurer whose products are distributed (IRDAI advertising rules).

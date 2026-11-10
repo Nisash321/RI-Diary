@@ -30,7 +30,7 @@ export const meta = {
 
 const insuranceLegal =
   '<span class="warn">For more details on risk factors, terms and conditions please read sales brochure carefully before concluding a sale.</span> ' +
-  "Insurance is underwritten by the insurer, which pays all claims. {{firm}}: Insurance advisor Sujeetha Nishanth, <span class=\"nowrap\">IRDAI Advisor Code 9504277</span>.";
+  "Insurance is underwritten by the insurer, which pays all claims. {{firm}}: Insurance advisor <span class='nowrap'>Sujeetha Nishanth, IRDAI Advisor Code 9504277</span>.";
 
 export const products = [
   {
@@ -200,7 +200,7 @@ export const products = [
     notes: ["SIPs running", "Monthly total ₹", "Goal and year", "Review month"],
     legal:
       '<span class="warn">Mutual Fund investments are subject to market risks, read all scheme related documents carefully.</span> ' +
-      "{{firm}}: AMFI Registered Mutual Fund Distributors L. Ashok (ARN-14532) and Nishanth Ashok (ARN-328299).",
+      "{{firm}}: AMFI Registered Mutual Fund Distributors <span class='nowrap'>L. Ashok (ARN-14532)</span> and <span class='nowrap'>Nishanth Ashok (ARN-328299)</span>.",
   },
 
   {
@@ -258,7 +258,7 @@ export const products = [
     notes: ["SIF / strategy", "Amount ₹", "Risk band", "Redemption days"],
     legal:
       '<span class="warn">Investments in Specialized Investment Fund involves relatively higher risk including potential loss of capital, liquidity risk and market volatility. Please read all investment strategy related documents carefully before making the investment decision.</span> ' +
-      "{{firm}}: SIF Distributor (SIFD) Nishanth Ashok, ARN-328299.",
+      "{{firm}}: SIF Distributor (SIFD) <span class='nowrap'>Nishanth Ashok, ARN-328299</span>.",
     extra: "extra-sif.html",
   },
 
@@ -365,7 +365,7 @@ export const products = [
     notes: ["Manager / strategy", "Amount ₹", "Fee model", "Benchmark"],
     legal:
       '<span class="warn">Investments in securities are subject to market risks. Read the disclosure document carefully before investing.</span> ' +
-      "Past performance does not guarantee future returns. {{firm}}: APMI Registered PMS Distributor Nishanth Ashok, APRN-07532.",
+      "Past performance does not guarantee future returns. {{firm}}: APMI Registered PMS Distributor <span class='nowrap'>Nishanth Ashok, APRN-07532</span>.",
   },
 
   {

@@ -111,7 +111,7 @@ export function productSpread(p, { plate, gauge, verso, total, meta }) {
     <div class="notes">${notes}</div>
   </div>
   <p class="legal">${p.legal}</p>
-  <footer class="folio"><span class="pg">${recto}</span><span class="asof">${meta.firm} · Diary ${meta.diaryYear}</span></footer>
+  <footer class="folio"><span class="pg">${recto}</span><span class="asof">{{brand}} · Diary ${meta.diaryYear}</span></footer>
 </section>
 <!-- /page -->`;
 }

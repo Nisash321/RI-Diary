@@ -164,6 +164,8 @@ House rule: the pages give no returns and no projections (see section 5 of [02-f
 
 ## Diary opening pages (pages i–iv, separate document)
 
+Since draft 9, pages ii–iii use the tax reckoner layout (next section). The rows here on tax deducted on other payments, the cash and gift rules, and the firm, company and MAT rates are no longer printed; they stay as checked reference.
+
 | Claim | Source | Status |
 |---|---|---|
 | New regime slabs (nil to ₹4 lakh, then 5% steps to 30% above ₹24 lakh), rebate to ₹12 lakh (₹12.75 lakh salaried), standard deduction ₹75,000; old regime slabs, ₹5 lakh rebate, ₹50,000 standard deduction; unchanged by Budget 2026 | [Business Today, 1 Apr 2026](https://www.businesstoday.in/amp/personal-finance/tax/story/income-tax-slabs-fy-2026-27-will-rates-change-from-april-1-under-new-tax-rules-details-523303-2026-04-01); [BankBazaar](https://www.bankbazaar.com/tax/income-tax-slabs.html) | **Verify** against the Income Tax Department |
@@ -177,9 +179,9 @@ House rule: the pages give no returns and no projections (see section 5 of [02-f
 | Sujeetha Nishanth, 95668 49617 | 2026 diary compliments page | Confirm with the firm |
 | "Top 10 performers at the state level", government awards including honours from the Chief Minister of Tamil Nadu | 2026 diary "about us" | Firm's own record |
 
-## Tax reckoner variant of pages ii–iii (`src/pages/tax-reckoner.html`)
+## Tax reckoner, pages ii–iii (in `src/pages/diary-front.html`)
 
-Same rates as the pages above, plus these facts that only the variant prints.
+The printed tax pages since draft 9. Slabs, surcharge, capital gains rates and key dates are sourced above; these are the facts only the reckoner adds.
 
 | Claim | Source | Status |
 |---|---|---|

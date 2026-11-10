@@ -550,7 +550,8 @@ svg text { font-family: var(--text); }
 .df-phones dd { font-weight: 700; font-variant-numeric: tabular-nums; text-align: right; }
 .df-visit p { font-size: 9pt; line-height: 1.4; }
 .df-visit p + p { margin-top: 1.2mm; }
-.df-reg { margin-top: auto; padding-top: 2.4mm; border-top: .25mm solid var(--rule); font-size: 6.8pt; line-height: 1.4; color: var(--ink-2); text-align: center; }
+.df-reg { margin-top: auto; padding-top: 2.4mm; border-top: .25mm solid var(--rule); font-size: 6.8pt; line-height: 1.45; color: var(--ink-2); text-align: center; }
+.df-reg p + p { margin-top: .3mm; }
 
 .df-two { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; margin-top: 3.2mm; }
 .df-h { display: block; padding-bottom: 1.4mm; border-bottom: .25mm solid var(--rule); margin-bottom: 1.2mm; }
@@ -638,12 +639,15 @@ th .rk-n { color: var(--build-deep); }
 .rk-legal { margin-top: 1.6mm; }
 .rk-key { font-weight: 700; color: var(--build-deep); }
 
+/* The "x+" from the logo, after the firm name wherever it is used as a wordmark. */
+.brand-x { font-size: max(.58em, 4.6pt); line-height: 0; vertical-align: super; margin-left: .14em; text-transform: none; letter-spacing: 0; font-weight: 700; color: var(--build); }
+
 </style>
 </head>
 <body>
 <main class="book">
 <div class="spread"><span class="spread-label">Pages 1–2</span><section class="page verso" data-job="neutral" id="opener">
-  <header class="runhead"><span>Ram Investments · Diary 2027</span><span>Product guide</span></header>
+  <header class="runhead"><span>Ram Investments<sup class="brand-x">x+</sup> · Diary 2027</span><span>Product guide</span></header>
   <p class="label muted opener-eyebrow">A field guide to eight products</p>
   <h1 class="opener-title">Know Your<br>Products</h1>
   <p class="opener-lead">Eight products, grouped by the job they do for your money. Each gets two facing pages: the left explains how it works, and the right helps you decide if it suits you. Write your own numbers in the spaces, so everything stays in one place all year.</p>
@@ -862,8 +866,8 @@ th .rk-n { color: var(--build-deep); }
     <h2 class="label"><span>My notes</span><span class="aside">Write your own numbers here</span></h2>
     <div class="notes"><div class="field"><span>Insurer</span></div><div class="field"><span>Cover ₹</span></div><div class="field"><span>Premium due</span></div><div class="field"><span>Nominee</span></div></div>
   </div>
-  <p class="legal"><span class="warn">For more details on risk factors, terms and conditions please read sales brochure carefully before concluding a sale.</span> Insurance is underwritten by the insurer, which pays all claims. Ram Investments: Insurance advisor Sujeetha Nishanth, <span class="nowrap">IRDAI Advisor Code 9504277</span>.</p>
-  <footer class="folio"><span class="pg">4</span><span class="asof">Ram Investments · Diary 2027</span></footer>
+  <p class="legal"><span class="warn">For more details on risk factors, terms and conditions please read sales brochure carefully before concluding a sale.</span> Insurance is underwritten by the insurer, which pays all claims. Ram Investments: Insurance advisor <span class='nowrap'>Sujeetha Nishanth, IRDAI Advisor Code 9504277</span>.</p>
+  <footer class="folio"><span class="pg">4</span><span class="asof">Ram Investments<sup class="brand-x">x+</sup> · Diary 2027</span></footer>
 </section>
 <!-- /page --></div>
 <div class="spread"><span class="spread-label">Pages 5–6</span><section class="page verso" data-job="protect" id="health">
@@ -1001,8 +1005,8 @@ th .rk-n { color: var(--build-deep); }
     <h2 class="label"><span>My notes</span><span class="aside">Write your own numbers here</span></h2>
     <div class="notes"><div class="field"><span>Insurer</span></div><div class="field"><span>Sum insured ₹</span></div><div class="field"><span>Renewal date</span></div><div class="field"><span>Claims helpline</span></div></div>
   </div>
-  <p class="legal"><span class="warn">For more details on risk factors, terms and conditions please read sales brochure carefully before concluding a sale.</span> Insurance is underwritten by the insurer, which pays all claims. Ram Investments: Insurance advisor Sujeetha Nishanth, <span class="nowrap">IRDAI Advisor Code 9504277</span>.</p>
-  <footer class="folio"><span class="pg">6</span><span class="asof">Ram Investments · Diary 2027</span></footer>
+  <p class="legal"><span class="warn">For more details on risk factors, terms and conditions please read sales brochure carefully before concluding a sale.</span> Insurance is underwritten by the insurer, which pays all claims. Ram Investments: Insurance advisor <span class='nowrap'>Sujeetha Nishanth, IRDAI Advisor Code 9504277</span>.</p>
+  <footer class="folio"><span class="pg">6</span><span class="asof">Ram Investments<sup class="brand-x">x+</sup> · Diary 2027</span></footer>
 </section>
 <!-- /page --></div>
 <div class="spread"><span class="spread-label">Pages 7–8</span><section class="page verso" data-job="build" id="mf">
@@ -1202,8 +1206,8 @@ th .rk-n { color: var(--build-deep); }
     <h2 class="label"><span>My notes</span><span class="aside">Write your own numbers here</span></h2>
     <div class="notes"><div class="field"><span>SIPs running</span></div><div class="field"><span>Monthly total ₹</span></div><div class="field"><span>Goal and year</span></div><div class="field"><span>Review month</span></div></div>
   </div>
-  <p class="legal"><span class="warn">Mutual Fund investments are subject to market risks, read all scheme related documents carefully.</span> Ram Investments: AMFI Registered Mutual Fund Distributors L. Ashok (ARN-14532) and Nishanth Ashok (ARN-328299).</p>
-  <footer class="folio"><span class="pg">8</span><span class="asof">Ram Investments · Diary 2027</span></footer>
+  <p class="legal"><span class="warn">Mutual Fund investments are subject to market risks, read all scheme related documents carefully.</span> Ram Investments: AMFI Registered Mutual Fund Distributors <span class='nowrap'>L. Ashok (ARN-14532)</span> and <span class='nowrap'>Nishanth Ashok (ARN-328299)</span>.</p>
+  <footer class="folio"><span class="pg">8</span><span class="asof">Ram Investments<sup class="brand-x">x+</sup> · Diary 2027</span></footer>
 </section>
 <!-- /page --></div>
 <div class="spread"><span class="spread-label">Pages 9–10</span><section class="page verso" data-job="build" id="sif">
@@ -1345,8 +1349,8 @@ th .rk-n { color: var(--build-deep); }
     <h2 class="label"><span>My notes</span><span class="aside">Write your own numbers here</span></h2>
     <div class="notes"><div class="field"><span>SIF / strategy</span></div><div class="field"><span>Amount ₹</span></div><div class="field"><span>Risk band</span></div><div class="field"><span>Redemption days</span></div></div>
   </div>
-  <p class="legal"><span class="warn">Investments in Specialized Investment Fund involves relatively higher risk including potential loss of capital, liquidity risk and market volatility. Please read all investment strategy related documents carefully before making the investment decision.</span> Ram Investments: SIF Distributor (SIFD) Nishanth Ashok, ARN-328299.</p>
-  <footer class="folio"><span class="pg">10</span><span class="asof">Ram Investments · Diary 2027</span></footer>
+  <p class="legal"><span class="warn">Investments in Specialized Investment Fund involves relatively higher risk including potential loss of capital, liquidity risk and market volatility. Please read all investment strategy related documents carefully before making the investment decision.</span> Ram Investments: SIF Distributor (SIFD) <span class='nowrap'>Nishanth Ashok, ARN-328299</span>.</p>
+  <footer class="folio"><span class="pg">10</span><span class="asof">Ram Investments<sup class="brand-x">x+</sup> · Diary 2027</span></footer>
 </section>
 <!-- /page --></div>
 <div class="spread"><span class="spread-label">Pages 11–12</span><section class="page verso" data-job="build" id="sif-deep">
@@ -1549,8 +1553,8 @@ th .rk-n { color: var(--build-deep); }
 </svg>
     <p class="deep-note">In the growth option, nothing is taxed along the way; a switch counts as a redemption. Rates are on page 10.</p>
   </div>
-  <p class="legal"><span class="warn">Investments in Specialized Investment Fund involves relatively higher risk including potential loss of capital, liquidity risk and market volatility. Please read all investment strategy related documents carefully before making the investment decision.</span> Illustrations do not show or promise returns. Ram Investments: SIF Distributor (SIFD) Nishanth Ashok, ARN-328299.</p>
-  <footer class="folio"><span class="pg">12</span><span class="asof">Ram Investments · Diary 2027</span></footer>
+  <p class="legal"><span class="warn">Investments in Specialized Investment Fund involves relatively higher risk including potential loss of capital, liquidity risk and market volatility. Please read all investment strategy related documents carefully before making the investment decision.</span> Illustrations do not show or promise returns. Ram Investments: SIF Distributor (SIFD) <span class="nowrap">Nishanth Ashok, ARN-328299</span>.</p>
+  <footer class="folio"><span class="pg">12</span><span class="asof">Ram Investments<sup class="brand-x">x+</sup> · Diary 2027</span></footer>
 </section>
 <!-- /page --></div>
 <div class="spread"><span class="spread-label">Pages 13–14</span><section class="page verso" data-job="build" id="ncd">
@@ -1728,7 +1732,7 @@ th .rk-n { color: var(--build-deep); }
     <div class="notes"><div class="field"><span>Issuer / series</span></div><div class="field"><span>Rate % and payout</span></div><div class="field"><span>Amount ₹</span></div><div class="field"><span>Matures on</span></div></div>
   </div>
   <p class="legal"><span class="warn">Investments in debt securities/municipal debt securities/securitised debt instruments are subject to risks including delay and/or default in payment. Read all the offer related documents carefully.</span> Ratings are opinions, not guarantees.</p>
-  <footer class="folio"><span class="pg">14</span><span class="asof">Ram Investments · Diary 2027</span></footer>
+  <footer class="folio"><span class="pg">14</span><span class="asof">Ram Investments<sup class="brand-x">x+</sup> · Diary 2027</span></footer>
 </section>
 <!-- /page --></div>
 <div class="spread"><span class="spread-label">Pages 15–16</span><section class="page verso" data-job="special" id="pms">
@@ -1884,8 +1888,8 @@ th .rk-n { color: var(--build-deep); }
     <h2 class="label"><span>My notes</span><span class="aside">Write your own numbers here</span></h2>
     <div class="notes"><div class="field"><span>Manager / strategy</span></div><div class="field"><span>Amount ₹</span></div><div class="field"><span>Fee model</span></div><div class="field"><span>Benchmark</span></div></div>
   </div>
-  <p class="legal"><span class="warn">Investments in securities are subject to market risks. Read the disclosure document carefully before investing.</span> Past performance does not guarantee future returns. Ram Investments: APMI Registered PMS Distributor Nishanth Ashok, APRN-07532.</p>
-  <footer class="folio"><span class="pg">16</span><span class="asof">Ram Investments · Diary 2027</span></footer>
+  <p class="legal"><span class="warn">Investments in securities are subject to market risks. Read the disclosure document carefully before investing.</span> Past performance does not guarantee future returns. Ram Investments: APMI Registered PMS Distributor <span class='nowrap'>Nishanth Ashok, APRN-07532</span>.</p>
+  <footer class="folio"><span class="pg">16</span><span class="asof">Ram Investments<sup class="brand-x">x+</sup> · Diary 2027</span></footer>
 </section>
 <!-- /page --></div>
 <div class="spread"><span class="spread-label">Pages 17–18</span><section class="page verso" data-job="special" id="aif">
@@ -2036,7 +2040,7 @@ th .rk-n { color: var(--build-deep); }
     <div class="notes"><div class="field"><span>Fund / category</span></div><div class="field"><span>Commitment ₹</span></div><div class="field"><span>Called so far ₹</span></div><div class="field"><span>Fund ends</span></div></div>
   </div>
   <p class="legal">AIFs are offered only by private placement to eligible investors, through the fund’s private placement memorandum. This page is investor education. It is not an offer or a solicitation.</p>
-  <footer class="folio"><span class="pg">18</span><span class="asof">Ram Investments · Diary 2027</span></footer>
+  <footer class="folio"><span class="pg">18</span><span class="asof">Ram Investments<sup class="brand-x">x+</sup> · Diary 2027</span></footer>
 </section>
 <!-- /page --></div>
 <div class="spread"><span class="spread-label">Pages 19–20</span><section class="page verso" data-job="special" id="aif-deep">
@@ -2138,7 +2142,7 @@ th .rk-n { color: var(--build-deep); }
     </ul>
   </div>
   <p class="legal">AIFs are offered only by private placement to eligible investors, through the fund’s private placement memorandum. This page is investor education. It is not an offer or a solicitation.</p>
-  <footer class="folio"><span class="pg">20</span><span class="asof">Ram Investments · Diary 2027</span></footer>
+  <footer class="folio"><span class="pg">20</span><span class="asof">Ram Investments<sup class="brand-x">x+</sup> · Diary 2027</span></footer>
 </section>
 <!-- /page --></div>
 <div class="spread"><span class="spread-label">Pages 21–22</span><section class="page verso" data-job="global" id="gift">
@@ -2297,7 +2301,7 @@ th .rk-n { color: var(--build-deep); }
     <div class="notes"><div class="field"><span>Product</span></div><div class="field"><span>Amount USD</span></div><div class="field"><span>LRS used this FY</span></div><div class="field"><span>TCS paid ₹</span></div></div>
   </div>
   <p class="legal">Investments in GIFT IFSC are subject to market and currency risks, and to RBI’s LRS and FEMA rules. Read all scheme related documents carefully.</p>
-  <footer class="folio"><span class="pg">22</span><span class="asof">Ram Investments · Diary 2027</span></footer>
+  <footer class="folio"><span class="pg">22</span><span class="asof">Ram Investments<sup class="brand-x">x+</sup> · Diary 2027</span></footer>
 </section>
 <!-- /page --></div>
 <div class="spread"><span class="spread-label">Pages 23–24</span><section class="page verso" data-job="neutral" id="side-by-side-a">
@@ -2364,7 +2368,7 @@ th .rk-n { color: var(--build-deep); }
     <h3>Not sure which fits?</h3>
     <p>Bring this diary to your next review, and we will go through it with you.</p>
   </div>
-  <footer class="folio"><span class="pg">24</span><span class="asof">Ram Investments · Diary 2027</span></footer>
+  <footer class="folio"><span class="pg">24</span><span class="asof">Ram Investments<sup class="brand-x">x+</sup> · Diary 2027</span></footer>
 </section>
 <!-- /page --></div>
 <div class="spread"><span class="spread-label">Pages 25–26</span><section class="page verso" data-job="neutral" id="glossary">
@@ -2467,7 +2471,7 @@ th .rk-n { color: var(--build-deep); }
     <h3 class="label muted">About this guide</h3>
     <p>Investor education only: not an offer, a recommendation, or investment, tax or legal advice. Facts are as of October 2026 and can change. Read a product’s offer documents before investing. Sources: SEBI, AMFI, APMI, IRDAI, IFSCA, RBI, the Income-tax Act, 2025, and the reports named on each page. This guide does not show or project returns.</p>
     <div class="us">
-      <p><b>Ram Investments</b></p>
+      <p><b>Ram Investments<sup class="brand-x">x+</sup></b></p>
       <p>AMFI Registered Mutual Fund Distributors · L. Ashok, ARN-14532 · Nishanth Ashok, ARN-328299</p>
       <p>SIF Distributor (SIFD) · Nishanth Ashok, ARN-328299</p>
       <p>APMI Registered PMS Distributor · Nishanth Ashok, APRN-07532</p>
