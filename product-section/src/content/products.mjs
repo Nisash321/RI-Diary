@@ -30,7 +30,7 @@ export const meta = {
 
 const insuranceLegal =
   '<span class="warn">For more details on risk factors, terms and conditions please read sales brochure carefully before concluding a sale.</span> ' +
-  "Insurance is underwritten by the insurer, which pays all claims.";
+  "Insurance is underwritten by the insurer, which pays all claims. {{firm}}: Insurance advisor Sujeetha Nishanth, <span class=\"nowrap\">IRDAI Advisor Code 9504277</span>.";
 
 export const products = [
   {

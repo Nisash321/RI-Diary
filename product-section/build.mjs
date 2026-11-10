@@ -201,11 +201,21 @@ async function renderOutputs({ out, spreadCount, name = "know-your-products", pr
 
 // The diary's own opening pages (compliments, tax highlights, our story).
 // They share the styles but are a separate document with roman folios.
-async function buildFront() {
+// variant "reckoner" swaps in pages/tax-reckoner.html for the two tax pages.
+async function buildFront(variant = "") {
   const css = (await read("styles/tokens.css")) + "\n" + (await read("styles/diary.css"));
   const roman = ["i", "ii", "iii", "iv", "v", "vi", "vii", "viii"];
   let n = 1; // page i (the compliments page) carries no folio
-  let html = (await read("pages/diary-front.html")).replace(/\{\{page\}\}/g, () => roman[n++]);
+  let source = await read("pages/diary-front.html");
+  if (variant) {
+    const swap = await read(`pages/tax-${variant}.html`);
+    const pageRe = (id) => new RegExp(`<section class="page[^"]*"[^>]*id="${id}"[\\s\\S]*?<\\/section>\\s*<!-- \\/page -->`);
+    for (const m of swap.matchAll(/<section class="page[^"]*"[^>]*id="([^"]+)"[\s\S]*?<\/section>\s*<!-- \/page -->/g)) {
+      if (!pageRe(m[1]).test(source)) throw new Error(`variant page ${m[1]} has no match in diary-front.html`);
+      source = source.replace(pageRe(m[1]), () => m[0]);
+    }
+  }
+  let html = source.replace(/\{\{page\}\}/g, () => roman[n++]);
   html = html.replace(/\{\{asof\}\}/g, meta.asOf).replace(/\{\{year\}\}/g, meta.diaryYear).replace(/\{\{firm\}\}/g, meta.firm);
   const sections = html.match(/<section class="page[\s\S]*?<\/section>\s*<!-- \/page -->/g) || [];
   const spreads = [`<div class="spread single-recto"><span class="spread-label">Page i</span><div class="blank"></div>${sections[0]}</div>`];
@@ -232,10 +242,11 @@ ${spreads.join("\n")}
 </body>
 </html>
 `;
-  const out = path.join(dist, "diary-front.html");
+  const name = variant ? `diary-front-${variant}` : "diary-front";
+  const out = path.join(dist, `${name}.html`);
   await writeFile(out, doc);
   console.log(`wrote ${path.relative(process.cwd(), out)} (${sections.length} pages, ${spreads.length} spreads)`);
-  return { out, pageCount: sections.length, spreadCount: spreads.length, name: "diary-front", prefix: "front-" };
+  return { out, pageCount: sections.length, spreadCount: spreads.length, name, prefix: variant ? `front-${variant}-` : "front-" };
 }
 
 const result = await build();
@@ -251,5 +262,10 @@ if (existsSync(path.join(src, "pages/diary-front.html"))) {
       execFileSync("pdfunite", [path.join(dist, "diary-front-proof.pdf"), path.join(dist, "know-your-products-proof.pdf"), combined]);
       console.log(`wrote ${path.relative(process.cwd(), combined)}`);
     } catch { console.warn("pdfunite not found: combined PDF not written"); }
+  }
+  // Variant tax pages, laid out like a fund-house tax reckoner, for comparison.
+  if (existsSync(path.join(src, "pages/tax-reckoner.html"))) {
+    const variant = await buildFront("reckoner");
+    if (render) await renderOutputs(variant);
   }
 }

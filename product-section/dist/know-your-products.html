@@ -611,6 +611,33 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
 .info-help li { position: relative; padding-left: 3.4mm; }
 .info-help li::before { content: ""; position: absolute; left: .45mm; top: .5mm; width: 1.1mm; height: 2.1mm; border: solid var(--build); border-width: 0 .4mm .4mm 0; transform: rotate(42deg); }
 
+/* Tax reckoner variant of pages ii-iii: banded sections and rate tables by type of investor. */
+.rk .rk-intro { font-size: 8.4pt; line-height: 1.38; margin-bottom: 0; }
+.rk-band { display: flex; align-items: flex-end; gap: 3mm; margin-top: 2.9mm; margin-bottom: 1.3mm; border-bottom: .45mm solid var(--build); flex: none; }
+.rk-band.rk-first { margin-top: 0; }
+.rk-band h3 { margin: 0; background: var(--build); color: #fff; font-family: var(--display); font-weight: 700; font-stretch: 92%; font-size: 7.4pt; letter-spacing: .03em; padding: .95mm 5.2mm .8mm 2mm; clip-path: polygon(0 0, 100% 0, calc(100% - 2.2mm) 100%, 0 100%); }
+.rk-band .aside { margin-left: auto; padding-bottom: .7mm; font-size: 6.4pt; color: var(--ink-3); }
+table.rk { width: 100%; border-collapse: collapse; font-size: 7.3pt; line-height: 1.24; flex: none; }
+table.rk th { background: var(--build-tint); color: var(--build-deep); font-family: var(--display); font-weight: 700; font-stretch: 92%; font-size: 6.6pt; letter-spacing: .02em; padding: .85mm 1.4mm .75mm; text-align: center; vertical-align: bottom; }
+table.rk th:first-child, table.rk td:first-child { text-align: left; }
+table.rk td { padding: .7mm 1.4mm .6mm; border-bottom: .25mm solid var(--rule-2); text-align: center; vertical-align: top; }
+table.rk td:not(:first-child) { font-weight: 700; color: var(--ink); }
+table.rk.rk-2 td:last-child { text-align: left; font-weight: 400; }
+table.rk tr.rk-sub td { background: var(--panel); color: var(--ink-2); font-weight: 400; font-size: 6.7pt; text-align: left; padding-top: .65mm; padding-bottom: .55mm; }
+table.rk tr.rk-sub td b { color: var(--ink); font-weight: 700; }
+table.rk.rk-slab td:last-child, table.rk.rk-slab th:last-child { text-align: right; }
+.rk-n { font-size: 4.9pt; line-height: 0; vertical-align: super; margin-left: .25mm; color: var(--build); font-weight: 700; font-family: var(--display); }
+th .rk-n { color: var(--build-deep); }
+.rk-two { display: grid; grid-template-columns: 1fr 1fr; column-gap: 4mm; align-items: start; flex: none; }
+.rk-rebate { margin-top: 2.2mm; padding: 1.6mm 2.4mm; background: var(--build-tint); border-left: .8mm solid var(--build); font-size: 7.3pt; line-height: 1.32; flex: none; }
+.rk-rebate b { color: var(--build-deep); }
+.rk-dates { flex: none; }
+.rk-notes { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 4mm; font-size: 6.2pt; line-height: 1.28; color: var(--ink-2); flex: none; }
+.rk-notes li { break-inside: avoid; position: relative; padding-left: 2.4mm; margin-bottom: .55mm; }
+.rk-notes li b { position: absolute; left: 0; color: var(--build); font-family: var(--display); font-weight: 700; }
+.rk-legal { margin-top: 1.6mm; }
+.rk-key { font-weight: 700; color: var(--build-deep); }
+
 </style>
 </head>
 <body>
@@ -835,7 +862,7 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
     <h2 class="label"><span>My notes</span><span class="aside">Write your own numbers here</span></h2>
     <div class="notes"><div class="field"><span>Insurer</span></div><div class="field"><span>Cover ₹</span></div><div class="field"><span>Premium due</span></div><div class="field"><span>Nominee</span></div></div>
   </div>
-  <p class="legal"><span class="warn">For more details on risk factors, terms and conditions please read sales brochure carefully before concluding a sale.</span> Insurance is underwritten by the insurer, which pays all claims.</p>
+  <p class="legal"><span class="warn">For more details on risk factors, terms and conditions please read sales brochure carefully before concluding a sale.</span> Insurance is underwritten by the insurer, which pays all claims. Ram Investments: Insurance advisor Sujeetha Nishanth, <span class="nowrap">IRDAI Advisor Code 9504277</span>.</p>
   <footer class="folio"><span class="pg">4</span><span class="asof">Ram Investments · Diary 2027</span></footer>
 </section>
 <!-- /page --></div>
@@ -974,7 +1001,7 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
     <h2 class="label"><span>My notes</span><span class="aside">Write your own numbers here</span></h2>
     <div class="notes"><div class="field"><span>Insurer</span></div><div class="field"><span>Sum insured ₹</span></div><div class="field"><span>Renewal date</span></div><div class="field"><span>Claims helpline</span></div></div>
   </div>
-  <p class="legal"><span class="warn">For more details on risk factors, terms and conditions please read sales brochure carefully before concluding a sale.</span> Insurance is underwritten by the insurer, which pays all claims.</p>
+  <p class="legal"><span class="warn">For more details on risk factors, terms and conditions please read sales brochure carefully before concluding a sale.</span> Insurance is underwritten by the insurer, which pays all claims. Ram Investments: Insurance advisor Sujeetha Nishanth, <span class="nowrap">IRDAI Advisor Code 9504277</span>.</p>
   <footer class="folio"><span class="pg">6</span><span class="asof">Ram Investments · Diary 2027</span></footer>
 </section>
 <!-- /page --></div>
@@ -2444,8 +2471,9 @@ table.tx.tx-tds td:nth-child(2) { font-weight: 400; white-space: nowrap; }
       <p>AMFI Registered Mutual Fund Distributors · L. Ashok, ARN-14532 · Nishanth Ashok, ARN-328299</p>
       <p>SIF Distributor (SIFD) · Nishanth Ashok, ARN-328299</p>
       <p>APMI Registered PMS Distributor · Nishanth Ashok, APRN-07532</p>
+      <p>Insurance advisor · Sujeetha Nishanth, IRDAI Advisor Code 9504277</p>
       <p>50, A &amp; B New Agraharam, Palani Road, Dindigul – 624001</p>
-      <p>L. Ashok 98421 01574 · N. Alagar 99651 01999 · Nishanth Ashok 98421 01374</p>
+      <p><span class="nowrap">L. Ashok 98421 01574</span> · <span class="nowrap">N. Alagar 99651 01999</span> · <span class="nowrap">Nishanth Ashok 98421 01374</span> · <span class="nowrap">Sujeetha Nishanth 95668 49617</span></p>
       <p>support@raminvestments.in · www.raminvestments.in</p>
     </div>
     <h3 class="label muted">How we help you</h3>

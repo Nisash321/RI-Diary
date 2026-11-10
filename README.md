@@ -28,6 +28,7 @@ Two house rules run through every page: **no returns** (no return figures, proje
 | [`product-section/dist/ram-investments-diary-2027-proof.pdf`](product-section/dist/ram-investments-diary-2027-proof.pdf) | Everything in one file: the four opening pages, then the 27-page product guide (31 pages) |
 | [`product-section/dist/know-your-products-proof.pdf`](product-section/dist/know-your-products-proof.pdf) | 27-page A5 proof for review |
 | [`product-section/dist/diary-front-proof.pdf`](product-section/dist/diary-front-proof.pdf) | The diary's four opening pages: compliments and contacts, income tax at a glance (tax year 2026–27, two pages), and our story |
+| [`product-section/dist/diary-front-reckoner-proof.pdf`](product-section/dist/diary-front-reckoner-proof.pdf) | Variant of the opening pages: the two tax pages laid out like a fund-house tax reckoner (rates by type of investor, STT, lettered notes). Source: `src/pages/tax-reckoner.html` |
 | [`product-section/dist/previews/`](product-section/dist/previews/) | One image per spread |
 | [`docs/01-visual-benchmarks.md`](docs/01-visual-benchmarks.md) | What asset managers, insurers and regulators do well visually, how Indian insurers talk about protection, and what we adopted |
 | [`docs/02-framework.md`](docs/02-framework.md) | The framework: section plan, four jobs, anatomy of an entry and of the in-depth spreads, visual and writing rules, the no-returns rule and the insurance tone guide |
@@ -49,7 +50,7 @@ The build warns if text runs off a page, past the side margins or into the folio
 
 ## Before printing
 
-1. Confirm the printed registrations and contacts on pages 8, 10, 12, 16 and 27: ARN-14532 and ARN-328299 (mutual funds), ARN-328299 (SIFs), APRN-07532 (PMS), the Dindigul address, three phone numbers, support@raminvestments.in. Insurance, NCD, AIF and GIFT IFSC identifiers are left out by the firm's decision.
+1. Confirm the printed registrations and contacts on pages 4, 6, 8, 10, 12, 16 and 27 and on the welcome page: ARN-14532 and ARN-328299 (mutual funds), ARN-328299 (SIFs), APRN-07532 (PMS), IRDAI Advisor Code 9504277 (insurance, Sujeetha Nishanth), the Dindigul address, four phone numbers, support@raminvestments.in. NCD, AIF and GIFT IFSC identifiers are left out by the firm's decision.
 2. Have compliance check each **Verify** item in the fact sheet against the primary regulation, and refresh the **Refresh** items (SIF assets, AIF commitments).
 3. Have a tax adviser sign off the SIF tax statements.
 4. Get written approval for the insurance pages from each insurer partner.
