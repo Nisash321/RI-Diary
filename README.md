@@ -26,6 +26,7 @@ Two house rules run through every page: **no returns** (no return figures, proje
 | Path | What it is |
 |---|---|
 | [`product-section/dist/ram-investments-diary-2027-proof.pdf`](product-section/dist/ram-investments-diary-2027-proof.pdf) | Everything in one file: the four opening pages, then the 27-page product guide (31 pages) |
+| [`product-section/dist/ram-investments-diary-2027-print-cmyk-curves.pdf`](product-section/dist/ram-investments-diary-2027-print-cmyk-curves.pdf) | Print copy of the 31-page proof for the printer (CorelDRAW-friendly): same pages, colours in CMYK (builds from the printer brief; greys and ink in black only) and all text converted to curves, so no fonts are needed. Made with `product-section/tools/make-print-pdf.py` |
 | [`product-section/dist/know-your-products-proof.pdf`](product-section/dist/know-your-products-proof.pdf) | 27-page A5 proof for review |
 | [`product-section/dist/diary-front-proof.pdf`](product-section/dist/diary-front-proof.pdf) | The diary's four opening pages: compliments and contacts, a two-page tax reckoner for tax year 2026–27 (laid out like a fund-house reckoner: rates by type of investor, STT, key dates, lettered notes), and our story |
 | [`product-section/dist/previews/`](product-section/dist/previews/) | One image per spread |
