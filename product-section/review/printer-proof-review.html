@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<title>Proof review: two fixes before printing</title>
+<style>
+@font-face { font-family: "Anek Latin"; src: url("../assets/fonts/AnekLatin[wdth,wght].ttf") format("truetype"); font-weight: 100 800; font-stretch: 75% 125%; }
+@font-face { font-family: "Mukta"; src: url("../assets/fonts/Mukta-Regular.ttf") format("truetype"); font-weight: 400; }
+@font-face { font-family: "Mukta"; src: url("../assets/fonts/Mukta-SemiBold.ttf") format("truetype"); font-weight: 600; }
+@font-face { font-family: "Mukta"; src: url("../assets/fonts/Mukta-Bold.ttf") format("truetype"); font-weight: 700; }
+@page { size: A4; margin: 16mm 16mm 16mm 16mm; }
+:root { --ink: #1e1c1a; --ink-2: #4a4740; --ink-3: #78746b; --rule: #cdc8be; --panel: #f1f1ed; --build: #2b3f87; --build-deep: #1d2c63; --build-tint: #e3e7f4; --bad: #b3202a; --bad-tint: #f9e3e4; --good: #1f6b45; --good-tint: #e2efe7; }
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { margin: 0; font-family: "Mukta", sans-serif; font-size: 10.5pt; line-height: 1.45; color: var(--ink); background: #fff; }
+h1, h2, h3 { font-family: "Anek Latin", "Mukta", sans-serif; margin: 0; color: var(--ink); }
+.eyebrow { font-family: "Anek Latin", sans-serif; font-weight: 650; font-stretch: 87.5%; font-size: 8.5pt; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); }
+h1 { font-weight: 720; font-stretch: 106%; font-size: 24pt; line-height: 1.05; margin-top: 2mm; }
+.meta { margin-top: 2.5mm; color: var(--ink-2); font-size: 9.5pt; }
+.summary { margin-top: 6mm; border: .4mm solid var(--build); }
+.summary h2 { background: var(--build); color: #fff; font-weight: 700; font-stretch: 92%; font-size: 11pt; letter-spacing: .02em; padding: 2mm 4mm; }
+.summary ol { margin: 0; padding: 3mm 4mm 3mm 10mm; }
+.summary li { margin: 1.2mm 0; padding-left: 1mm; }
+.summary li b { font-weight: 700; }
+.summary .files { border-top: .25mm solid var(--rule); padding: 2.5mm 4mm 3mm; font-size: 9.5pt; color: var(--ink-2); background: var(--panel); }
+.summary .files code { font-family: "Mukta", sans-serif; font-weight: 600; color: var(--ink); }
+section.issue { margin-top: 8mm; break-inside: avoid; }
+.issue-head { display: flex; align-items: baseline; gap: 3mm; border-bottom: .3mm solid var(--ink); padding-bottom: 1.5mm; }
+.issue-head .n { font-family: "Anek Latin", sans-serif; font-weight: 750; font-size: 20pt; color: var(--bad); line-height: 1; }
+.issue-head h2 { font-weight: 700; font-stretch: 100%; font-size: 15pt; line-height: 1.1; }
+.issue-head .tag { margin-left: auto; font-family: "Anek Latin", sans-serif; font-weight: 650; font-stretch: 87.5%; font-size: 8pt; letter-spacing: .1em; text-transform: uppercase; color: var(--bad); }
+.issue p { margin: 2.5mm 0 0; }
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; margin-top: 3.5mm; }
+.compare.stack { grid-template-columns: 1fr; gap: 2.5mm; }
+figure { margin: 0; }
+figure img { display: block; width: 100%; height: auto; border: .25mm solid var(--rule); }
+figcaption { margin-top: 1.2mm; font-family: "Anek Latin", sans-serif; font-weight: 650; font-stretch: 87.5%; font-size: 8pt; letter-spacing: .1em; text-transform: uppercase; }
+.ours figcaption { color: var(--good); }
+.theirs figcaption { color: var(--bad); }
+.todo { margin-top: 3.5mm; padding: 2.5mm 4mm; background: var(--build-tint); border-left: 1mm solid var(--build); }
+.todo b { color: var(--build-deep); }
+.thumbs { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 4mm; align-items: end; margin-top: 3.5mm; }
+.fine { margin-top: 8mm; padding-top: 2.5mm; border-top: .25mm solid var(--rule); color: var(--ink-2); font-size: 9.5pt; }
+.page-break { break-before: page; }
+</style>
+</head>
+<body>
+
+<p class="eyebrow">Ram Investments · Diary 2027 · Product guide</p>
+<h1>Proof review: two fixes before printing</h1>
+<p class="meta">For the printer · 25 November 2026 · About your PDF “Ram Investment Final” (32 pages)</p>
+
+<div class="summary">
+  <h2>What to do</h2>
+  <ol>
+    <li><b>Replace our pages with the corrected file attached.</b> In your PDF, some letters and numbers are broken (section 1). The corrected file fixes this, and the letters will stay intact when you open it in CorelDRAW. You can keep your notes page and your page placement as they are.</li>
+    <li><b>Remove the thin black frame line</b> around every page (section 2), unless it is the standard border used on every page of the diary.</li>
+    <li><b>Send us a PDF proof</b> before printing.</li>
+  </ol>
+  <div class="files">Corrected file: <code>ram-investments-diary-2027-print-cmyk-curves.pdf</code> (31 pages, A5, CMYK, all text as curves, no fonts needed). Your notes page makes 32.</div>
+</div>
+
+<section class="issue">
+  <div class="issue-head"><span class="n">1</span><h2>Broken letters and numbers</h2><span class="tag">Must fix</span></div>
+  <p>On most pages, the entry numbers (01, 02 …) and the small capital labels have pieces missing. In the example below, the “1” of “01” is cut through, and letters such as E, F, L and Y in “PURE LIFE COVER FOR YOUR FAMILY” have notches. Body text is not affected.</p>
+  <div class="compare stack">
+    <figure class="ours"><img src="img/letters-zoom-o.jpg" alt="Our file: the entry number 01 and the label Pure life cover for your family, with every letter complete."><figcaption>Our file, page 7 (enlarged)</figcaption></figure>
+    <figure class="theirs"><img src="img/letters-zoom-f.jpg" alt="Your proof: the 1 in 01 is cut through, and several letters in the label have notches."><figcaption>Your proof, page 7 (enlarged): the “1” is cut, letters have notches</figcaption></figure>
+  </div>
+  <div class="compare">
+    <figure class="ours"><img src="img/letters-p7-o.jpg" alt="Our file, top of page 7 at normal size."><figcaption>Our file, page 7</figcaption></figure>
+    <figure class="theirs"><img src="img/letters-p7-f.jpg" alt="Your proof, top of page 7 at normal size, with the broken 01."><figcaption>Your proof, page 7</figcaption></figure>
+  </div>
+  <p><b>Why it happened:</b> the typeface draws many letters from overlapping pieces. When CorelDRAW opened our earlier file, it turned some of those overlaps into holes.</p>
+  <div class="todo"><b>Please:</b> use the corrected file attached. In it, every letter is a single solid shape, so this cannot happen again. Nothing else in the file has changed: it looks exactly the same as before.</div>
+</section>
+
+<section class="issue">
+  <div class="issue-head"><span class="n">2</span><h2>Frame line around every page</h2><span class="tag">Please remove</span></div>
+  <p>Your proof has a thin black line around all 32 pages, 1.8 mm from the side edges and 3.9 mm from the top and bottom. It is not part of our design. This close to the edge, small differences in cutting will make it look uneven.</p>
+  <div class="thumbs">
+    <figure class="ours"><img src="img/page1-o.jpg" alt="Our page 1, with no frame line."><figcaption>Our file, page 1</figcaption></figure>
+    <figure class="theirs"><img src="img/page1-f.jpg" alt="Your page 1, with a thin frame line near the edges."><figcaption>Your proof, page 1</figcaption></figure>
+    <figure class="ours"><img src="img/frame-o.jpg" alt="Top-left corner of our page: no line."><figcaption>Our corner</figcaption></figure>
+    <figure class="theirs"><img src="img/frame-f.jpg" alt="Top-left corner of your page: frame line near the edge."><figcaption>Your corner</figcaption></figure>
+  </div>
+  <div class="todo"><b>Please:</b> remove the frame line, unless it is the standard border printed on every page of the diary.</div>
+</section>
+
+<p class="fine">We also checked the wording, the page order and the colours in your proof: all are as we supplied. Thank you.</p>
+
+</body>
+</html>
