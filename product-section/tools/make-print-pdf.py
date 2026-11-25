@@ -12,6 +12,7 @@ Usage: make-print-pdf.py in.pdf out.pdf
 Needs: pikepdf, Pillow, Ghostscript (gs).
 """
 import io, subprocess, sys, tempfile, zlib
+from decimal import Decimal
 import pikepdf
 from PIL import Image, ImageCms
 
@@ -143,6 +144,125 @@ def recolour_image(x):
             del x[k]
 
 
+def _num(v):
+    s = f"{v:.4f}".rstrip("0").rstrip(".")
+    return "0" if s in ("-0", "") else s
+
+
+def merge_overlaps(path_pdf):
+    """Merge the overlapping pieces of every filled shape into one clean outline.
+
+    Anek Latin builds many letters from overlapping pieces. They print correctly
+    with the PDF's non-zero fill rule, but CorelDRAW X7 turned the overlaps into
+    holes when it opened the file. After this step each shape looks the same
+    under either fill rule, so there is nothing for CorelDRAW to break.
+    """
+    import pathops
+
+    pdf = pikepdf.open(path_pdf, allow_overwriting_input=True)
+    done = set()
+    stats = {"shapes": 0, "merged": 0}
+
+    def flush(cur, out, op):
+        if op not in ("f", "F") or not cur:
+            out.extend(cur)
+            return
+        stats["shapes"] += 1
+        p = pathops.Path()
+        pen = p.getPen()
+        start = last = None
+        open_ = False
+        for operands, o in cur:
+            v = [float(x) for x in operands]
+            if o == "m":
+                if open_:
+                    pen.closePath()
+                pen.moveTo((v[0], v[1])); start = last = (v[0], v[1]); open_ = True
+            elif o == "l":
+                pen.lineTo((v[0], v[1])); last = (v[0], v[1])
+            elif o == "c":
+                pen.curveTo((v[0], v[1]), (v[2], v[3]), (v[4], v[5])); last = (v[4], v[5])
+            elif o == "v":
+                pen.curveTo(last, (v[0], v[1]), (v[2], v[3])); last = (v[2], v[3])
+            elif o == "y":
+                pen.curveTo((v[0], v[1]), (v[2], v[3]), (v[2], v[3])); last = (v[2], v[3])
+            elif o == "h":
+                if open_:
+                    pen.closePath(); open_ = False; last = start
+            elif o == "re":
+                if open_:
+                    pen.closePath()
+                x, y, w, h = v
+                pen.moveTo((x, y)); pen.lineTo((x + w, y)); pen.lineTo((x + w, y + h)); pen.lineTo((x, y + h)); pen.closePath()
+                open_ = False
+        if open_:
+            pen.closePath()
+        if not list(p.contours):
+            out.extend(cur)
+            return
+        p.simplify(fix_winding=True, keep_starting_points=False)
+        stats["merged"] += 1
+        for verb, pts in p:
+            if verb == pathops.PathVerb.MOVE:
+                out.append(([Decimal(_num(c)) for c in pts[0]], pikepdf.Operator("m")))
+            elif verb == pathops.PathVerb.LINE:
+                out.append(([Decimal(_num(c)) for c in pts[0]], pikepdf.Operator("l")))
+            elif verb == pathops.PathVerb.CUBIC:
+                out.append(([Decimal(_num(c)) for pt in pts for c in pt], pikepdf.Operator("c")))
+            elif verb == pathops.PathVerb.QUAD:
+                (x1, y1), (x2, y2) = pts
+                lx, ly = last_pt[0]
+                c1 = (lx + 2 / 3 * (x1 - lx), ly + 2 / 3 * (y1 - ly))
+                c2 = (x2 + 2 / 3 * (x1 - x2), y2 + 2 / 3 * (y1 - y2))
+                out.append(([Decimal(_num(c)) for c in (*c1, *c2, x2, y2)], pikepdf.Operator("c")))
+            elif verb == pathops.PathVerb.CLOSE:
+                out.append(([], pikepdf.Operator("h")))
+            if verb != pathops.PathVerb.CLOSE and pts:
+                last_pt[0] = pts[-1]
+
+    last_pt = [(0.0, 0.0)]
+
+    def rewrite(obj):
+        out, cur = [], []
+        for operands, op in pikepdf.parse_content_stream(obj):
+            o = str(op)
+            if o in ("m", "l", "c", "v", "y", "h", "re"):
+                cur.append((operands, o))
+            elif o in ("f", "F", "f*", "S", "s", "B", "B*", "b", "b*", "n"):
+                if o in ("f", "F"):
+                    flush(cur, out, o)
+                else:
+                    out.extend((ops, pikepdf.Operator(oo)) for ops, oo in cur)
+                cur = []
+                out.append((operands, op))
+            elif o in ("W", "W*"):
+                # clipping path: keep the construction ops as they are; they are flushed by the following 'n'
+                cur.append((operands, o))
+            else:
+                out.extend(cur)
+                cur = []
+                out.append((operands, op))
+        fixed = [(ops, pikepdf.Operator(o) if isinstance(o, str) else o) for ops, o in out]
+        obj.write(pikepdf.unparse_content_stream(fixed))
+
+    def walk(res):
+        if res is None:
+            return
+        for x in list(res.get("/XObject", {}).values()) + [p for p in res.get("/Pattern", {}).values() if p.get("/PatternType") == 1]:
+            if x.objgen in done or x.get("/Subtype") == "/Image":
+                continue
+            done.add(x.objgen)
+            rewrite(x)
+            walk(x.get("/Resources"))
+
+    for page in pdf.pages:
+        page.contents_coalesce()
+        rewrite(page.obj.Contents)
+        walk(page.obj.get("/Resources"))
+    pdf.save(path_pdf)
+    print(f"cleaned the outlines of {stats['merged']} filled shapes (overlaps merged, self-crossings resolved)")
+
+
 def main(src, dst):
     pdf = pikepdf.open(src)
     done = set()
@@ -194,6 +314,8 @@ def main(src, dst):
             "-dDownsampleMonoImages=false", "-dAutoFilterColorImages=false", "-dColorImageFilter=/FlateEncode",
             "-dAutoFilterGrayImages=false", "-dGrayImageFilter=/FlateEncode", mid,
         ], check=True)
+
+    merge_overlaps(dst)
 
     print("colour map (RGB -> CMYK %):")
     for rgb, c in sorted(_cache.items(), key=lambda kv: kv[1]):
